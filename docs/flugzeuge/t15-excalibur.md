@@ -1,10 +1,10 @@
 # T-15 Excalibur
 
-> Das "Energie-Monster" - Ein Instrument der vertikalen Dominanz.
+> Der "Energy Fighter" - Vertikale Dominanz durch überlegenen Schub.
 
 ## Übersicht
 
-Die T-15 Excalibur, modelliert nach der **F-15C Eagle**, definiert sich durch ihre zweistrahlige Konfiguration und die gekappten Deltaflügel. Sie ist kein Flugzeug für den engen "Telefonzellen-Kampf", sondern ein **Energy Fighter** - ein Instrument der vertikalen Dominanz.
+Die T-15 Excalibur ist ein schwerer, zweimotoriger Luftüberlegenheitsjäger. Ihre Hauptstärken sind das beste Schub-Gewichts-Verhältnis und die höchste Instantaneous Turn Rate im Spiel. Sie ist als **Energy Fighter** klassifiziert.
 
 ::: info REALES VORBILD
 | VFM | DCS/Real |
@@ -12,95 +12,61 @@ Die T-15 Excalibur, modelliert nach der **F-15C Eagle**, definiert sich durch ih
 | T-15 Excalibur | F-15C Eagle |
 :::
 
-## Leistungsdaten
+## Performance-Daten
 
-| Parameter | Wert | Bewertung |
-|-----------|------|-----------|
-| **Corner Speed** | 400-450 kts | Optimal für Turn Rate |
-| **Sustained Turn Rate** | Gut | Leicht unter T-16 |
-| **Instantaneous Turn Rate** | Mittel | Nicht die beste |
-| **Turn Radius** | Groß | Schwäche im One-Circle |
-| **Schub/Gewicht (TWR)** | **Beste im Spiel** | Vertikale Dominanz |
-| **Endgeschwindigkeit** | **Höchste** | Mach 0.9+ möglich |
-| **Energieerhalt** | Sehr gut | Schnelle Erholung |
+### Referenzwerte (50% Fuel, 10.000 ft)
+
+| Parameter | Wert |
+|-----------|------|
+| **Gewicht** | 37.615 lbs |
+| **Corner Speed (Max Instant)** | ~360 KIAS |
+| **Max Instantaneous Turn Rate** | 24°/s @ 360 KIAS |
+| **Max Sustained Turn Rate** | 17°/s @ 495 KIAS |
+| **Minimum Turn Radius** | 1.644 ft |
+
+### Vollständige Performance-Tabelle
+
+| Bedingung | Gewicht | Max Instant Rate | Max Sustained Rate | Min Radius |
+|-----------|---------|------------------|-------------------|------------|
+| 100% Fuel, 10.000 ft | 42.160 lbs | 23°/s @ 385 KIAS | 15°/s @ 495 KIAS | 1.851 ft |
+| 50% Fuel, 10.000 ft | 37.615 lbs | 24°/s @ 360 KIAS | 17°/s @ 495 KIAS | 1.644 ft |
+| 50% Fuel, Sea Level | 37.615 lbs | 29°/s @ 337 KIAS | 20°/s @ 475 KIAS | 1.138 ft |
+| 50% Fuel, 21.000 ft | 37.615 lbs | 19°/s @ 383 KIAS | 13°/s @ 405 KIAS | 2.578 ft |
+
+::: tip PERFORMANCE-HINWEIS
+Die Corner Speed variiert stark mit Höhe und Treibstoff. Bei Sea Level liegt sie bei ~337 KIAS, auf 21.000 ft bei ~383 KIAS. Passe dein Energie-Management entsprechend an.
+:::
 
 ## Stärken
 
-::: tip PRIMÄRE VORTEILE
-- **Höchster Schub**: Zwei Triebwerke = beste Beschleunigung
-- **Höchste Endgeschwindigkeit**: Kann Gegner davonfliegen
-- **Vertikale Überlegenheit**: Steigt schneller als T-16 und T-18
-- **Energie-Erholung**: Kann im "Unloaded"-Zustand (0-1G) extrem schnell beschleunigen
-- **Energieerhalt vertikal**: Konserviert Energie in vertikalen Manövern besser als einstrahlige Konkurrenten
-:::
+- **Höchste Instantaneous Turn Rate** (24°/s) - Ideal für Snap-Shots
+- **Bestes Schub-Gewichts-Verhältnis** - Dominiert in der Vertikalen
+- **Kleinster Turn Radius** aller drei Flugzeuge (1.644 ft)
+- **Beste Beschleunigung** - Schnelle Energie-Erholung
+- **Höchste Endgeschwindigkeit**
 
 ## Schwächen
 
-::: warning KRITISCHE NACHTEILE
-- **Großer Turn Radius**: Aufgrund der Masse und Flügelgeometrie größerer Radius als T-18
-- **Sustained Turn Rate**: Geringfügig schlechter als T-16 im horizontalen Kurvenkampf
-- **Slow-Speed-Handling**: Unter 300 kts träge, unter 250 kts fast unsteuerbar
-- **Größe**: Größeres Ziel als T-16/T-18
-:::
+- **Geringere Sustained Turn Rate** als T-16 (17°/s vs 18°/s)
+- **Großes Profil** - Leichteres Ziel
+- **Energie-Verlust** - Die hohe Instant Rate kostet viel Energie
+- **Gewicht** - Schwerster Jäger im Spiel
 
-## Taktischer Archetyp: Energy Fighter
+## Archetyp: Energy Fighter
 
-Die T-15 gewinnt, indem sie die **vertikale Ebene (Z-Achse)** kontrolliert und sich **weigert**, in einen flachen, horizontalen Kurvenkampf einzutreten.
+Die T-15 ist ein klassischer **Energy Fighter**. Ihre Stärken liegen in:
+- Vertikalen Manövern
+- High-Speed Engagement
+- Boom & Zoom Taktiken
+- Snap-Shot Gelegenheiten
 
-::: danger FUNDAMENTALER FEHLER
-Der Versuch, die T-15 wie einen "Angles Fighter" (T-18) oder "Rate Fighter" (T-16) zu fliegen, führt **zwangsläufig zur Niederlage**. Ein flacher Kampf ist ein verlorener Kampf!
-:::
-
-## Die wichtigsten Regeln für die T-15
-
-1. **Energie ist Leben** - Werde niemals langsam
-2. **Vertikal kämpfen** - Die T-15 dominiert in der Vertikalen
-3. **Two-Circle erzwingen** - Gegen T-18 niemals One-Circle fliegen
-4. **Corner Speed halten** - 400-450 kts ist dein Sweet Spot
-5. **Unloading beherrschen** - Zwischen Manövern entlasten
-
-## Geschwindigkeits-Management
-
-```mermaid
-flowchart TD
-    SPEED{Aktuelle Speed?}
-    SPEED -->|"< 300 kts"| DANGER[GEFAHR: Zu langsam!]
-    SPEED -->|"300-400 kts"| OK[OK: Energie aufbauen]
-    SPEED -->|"400-450 kts"| OPTIMAL[OPTIMAL: Corner Speed]
-    SPEED -->|"> 500 kts"| HIGH[Zu schnell für enge Turns]
-
-    DANGER --> |Afterburner + Steigen| OK
-    OK --> |Leicht steigen| OPTIMAL
-    HIGH --> |Turn initiieren| OPTIMAL
-```
-
-### Das Stick-Problem
-
-::: warning HÄUFIGER VR-FEHLER
-Viele VR-Piloten ziehen den Stick bis zum Anschlag. Dies führt zu:
-- Massiver Anstieg des Anstellwinkels (AoA)
-- T-15 wirkt wie eine riesige **Luftbremse**
-- Geschwindigkeit fällt rapide unter 300 kts
-- Unterhalb Corner Speed wird die T-15 **träge**
-
-**Lösung:** Stick-Druck dosieren! Wenn Speed unter 380 kts fällt: **Stick lockern!** Opfere Winkel für Geschwindigkeit.
-:::
-
-## Notfall-Prozeduren
-
-::: danger WENN DU ZU LANGSAM WIRST (< 300 kts)
-1. **Vollgas (Afterburner)** sofort aktivieren
-2. **Unload** - Stick leicht nach vorne (0-0.5G)
-3. **Nase 20-30° unter Horizont** drücken
-4. **Rollen** um Schusslinien zu brechen
-5. Erst wieder kämpfen wenn **380+ kts** erreicht
-:::
-
-## Vergleichstabelle
+## Vergleichstabelle (50% Fuel, 10.000 ft)
 
 | Merkmal | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---------|----------------|---------------|--------------|
 | DCS Analog | F-15C Eagle | F-16C Viper | F/A-18C Hornet |
-| Hauptstärke | Schub, Top Speed, Vertikale | Beste Wenderate | Bester Radius, High AoA |
-| Bevorzugter Kampf | Vertikal, Boom & Zoom | Horizontal, 2-Circle | Langsam, 1-Circle |
-| E-M Kategorie | Energy Fighter | Rate Fighter | Radius/Angles Fighter |
+| Gewicht | 37.615 lbs | 25.009 lbs | 36.597 lbs |
+| Max Instant Rate | **24°/s** | 21°/s | 22°/s |
+| Max Sustained Rate | 17°/s | **18°/s** | 16°/s |
+| Min Turn Radius | **1.644 ft** | 2.102 ft | 1.899 ft |
+| E-M Kategorie | Energy Fighter | Rate Fighter | Angles Fighter |

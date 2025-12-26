@@ -9,7 +9,7 @@
 | **Typ** | Rate Fighter |
 | **Stärke** | Beste horizontale Turn Rate |
 | **Schwäche** | Vertikale Performance |
-| **Corner Speed** | ~400 kts |
+| **Corner Speed** | ~409 kts |
 | **Gefährlichkeit** | Hoch |
 
 ::: danger WARNUNG
@@ -45,8 +45,8 @@ flowchart TD
 ### Was die T-16 will
 
 - Horizontalen Two-Circle-Fight erzwingen
-- Dich in einen Sustained Turn ziehen
-- Ihre überlegene Rate nutzen
+- Dich in ihre **Kill Zone (350-500 kts)** ziehen
+- Ihre überlegene Sustained Rate (18°/s) nutzen
 
 ### Deine Antwort
 
@@ -54,19 +54,18 @@ flowchart TD
 flowchart TD
     MERGE[Am Merge] --> CHOICE{Flow-Entscheidung}
 
-    CHOICE -->|Two-Circle| BAD[SCHLECHT!]
-    CHOICE -->|One-Circle| OK[Akzeptabel]
+    CHOICE -->|Two-Circle| BAD[SCHLECHT! T-16 gewinnt]
+    CHOICE -->|One-Circle| SNAP[High-Speed Snap Option]
     CHOICE -->|Vertikal| BEST[BESTE OPTION!]
 
-    BAD --> LOSE[T-16 gewinnt Rate-Fight]
-    OK --> EQUAL[Radius-Fight = ~50/50]
+    BAD --> LOSE[Du verlierst gegen 18°/s]
+    SNAP --> |"Bleed to 360!"| CHANCE[24°/s Peak nutzen]
     BEST --> ADVANTAGE[T-15 dominiert vertikal]
 ```
 
 **Empfehlung am Merge:**
-1. Erkenne die T-16 früh
-2. Plane deinen Exit vertikal
-3. Nach dem Pass: Sofort steigen!
+1. **Option A (Standard):** Geh sofort vertikal. Sicherste Variante.
+2. **Option B (Aggressiv):** Fliege schnell an (450+), ziehe hart One-Circle und lass die Speed auf **360 kts fallen**. Dort hast du kurzzeitig 24°/s. Wenn der Schuss nicht sitzt: **Sofort Unload und weg!**
 
 ---
 

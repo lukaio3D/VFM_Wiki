@@ -1,6 +1,6 @@
-# Energy Management
+# Energie-Management
 
-Energie ist die wichtigste Ressource im Luftkampf. Für die T-15 Excalibur als Energy Fighter ist das Verständnis von Energie-Management überlebenswichtig.
+Energie ist die wichtigste Ressource im Luftkampf. Das Verständnis von Energie-Management unterscheidet erfahrene Piloten von Anfängern.
 
 ## Was ist Energie?
 
@@ -15,42 +15,62 @@ Du kannst Energie **umwandeln**:
 - Sturzflug → Höhe wird zu Speed
 
 Aber Energie geht **verloren** durch:
-- Turns (Widerstand)
+- Turns (induzierter Widerstand)
 - Luftwiderstand
-- Manöver
+- Manöver bei hohem G
 
 ## Corner Speed
 
-Die **Corner Speed** ist die Geschwindigkeit, bei der dein Flugzeug die **maximale Turn Rate** erreicht.
+Die **Corner Speed** ist die Geschwindigkeit, bei der dein Flugzeug die **maximale Instantaneous Turn Rate** erreicht.
 
-| Flugzeug | Corner Speed | Optimaler Bereich |
-|----------|--------------|-------------------|
-| T-15 Excalibur | ~425 kts | 400-450 kts |
-| T-16 Falchion | ~400 kts | 380-420 kts |
-| T-18 Cutlass | ~275 kts | 250-300 kts |
+An diesem Punkt treffen zwei Grenzen aufeinander:
+1. **Aerodynamische Grenze (Lift Limit)**: Darunter reicht der Auftrieb nicht für Max G
+2. **Strukturelle Grenze (Load Limit)**: Darüber wäre mehr G möglich, aber das Flugzeug würde beschädigt
 
 ### Warum Corner Speed wichtig ist
 
 ```mermaid
 flowchart TD
     subgraph "Turn Rate vs Speed"
-        SLOW["Zu langsam<br/>(< 300 kts)"] --> LOW1[Niedrige Turn Rate]
-        CORNER["Corner Speed<br/>(400-450 kts)"] --> MAX[MAXIMALE Turn Rate]
-        FAST["Zu schnell<br/>(> 500 kts)"] --> LOW2[Niedrige Turn Rate]
+        SLOW["Zu langsam"] --> LOW1[Niedrige Turn Rate]
+        CORNER["Corner Speed"] --> MAX[MAXIMALE Turn Rate]
+        FAST["Zu schnell"] --> LOW2[Niedrige Turn Rate]
     end
 
-    LOW1 --> |"Nicht drehen können"| BAD1[Gegner gewinnt Winkel]
+    LOW1 --> |"Nicht genug Auftrieb"| BAD1[Gegner gewinnt Winkel]
     MAX --> |"Optimale Kurve"| GOOD[Du gewinnst Winkel]
     LOW2 --> |"Zu weiter Radius"| BAD2[Gegner inside turn]
 ```
 
-::: tip T-15 TAKTIK
-Halte dich bei **400-450 kts** für optimale Turn-Performance. Nicht langsamer, nicht viel schneller.
+::: tip WICHTIG
+Die Corner Speed variiert je nach:
+- **Höhe** - Höher = schnellere Corner Speed
+- **Gewicht/Treibstoff** - Leichter = langsamere Corner Speed
+- **Flugzeugtyp** - Jedes Muster hat andere Werte
+
+Lerne die Corner Speed **deines** Flugzeugs auswendig!
 :::
+
+## Sustained vs Instantaneous Turn Rate
+
+| Typ | Beschreibung | Energie-Effekt |
+|-----|--------------|----------------|
+| **Instantaneous** | Maximale Rate für kurze Zeit | Verliert Energie |
+| **Sustained** | Rate die gehalten werden kann | Energie-neutral |
+
+**Instantaneous Turn Rate** nutzt du für:
+- Schnelle Snap-Shots
+- Initiale Positionierung am Merge
+- Kurzfristige Winkelvorteile
+
+**Sustained Turn Rate** nutzt du für:
+- Längere Kurvenkämpfe
+- Energie-Management
+- Kontrollierten Kampf
 
 ## Unloading (Entlasten)
 
-::: tip DAS GEHEIMNIS ERFAHRENER DCS-PILOTEN
+::: tip DAS GEHEIMNIS ERFAHRENER PILOTEN
 Unloading ist die Technik, die Anfänger von Experten unterscheidet!
 :::
 
@@ -75,10 +95,6 @@ Widerstand (Drag) wird primär durch **G-Kräfte** (Anstellwinkel) erzeugt. Um s
 4. **Leicht steigen** oder level fliegen
 5. Warten bis Speed steigt
 
-### Der Effekt
-
-Die T-15 beschleunigt im "Unloaded"-Zustand **extrem schnell** - fast wie eine Rakete!
-
 ### Der Kampf-Rhythmus
 
 ::: warning WER PERMANENT ZIEHT, VERLIERT
@@ -88,22 +104,22 @@ Kämpfe im Rhythmus: **Pull - Unload - Pull**
 2. **Unload**: Sofort entlasten um verlorene Energie zurückzugewinnen
 3. **Pull**: Dann erneut ziehen
 
-Wer permanent zieht ("Gluing the stick back"), verliert!
+Wer permanent zieht ("Gluing the stick back"), verliert alle Energie!
 :::
 
 ```mermaid
 flowchart LR
-    PULL["Harter Turn<br/>6-9G"] --> |"Energie verloren"| LOW["Niedrige Speed<br/>< 350 kts"]
+    PULL["Harter Turn<br/>6-9G"] --> |"Energie verloren"| LOW["Niedrige Speed"]
     LOW --> UNLOAD["Unload!<br/>0G, Afterburner"]
-    UNLOAD --> |"Speed aufbauen"| RECOVER["Energie erholt<br/>400+ kts"]
+    UNLOAD --> |"Speed aufbauen"| RECOVER["Energie erholt"]
     RECOVER --> ENGAGE[Wieder kämpfen]
 ```
 
 ## Das E-M Diagramm (vereinfacht)
 
-Das Energy-Maneuverability-Diagramm zeigt, wo dein Flugzeug Energie gewinnt oder verliert.
+Das Energy-Maneuverability-Diagramm zeigt, wo ein Flugzeug Energie gewinnt oder verliert.
 
-### T-15 Excalibur E-M Profil
+### Allgemeines E-M Profil
 
 | Zone | Beschreibung | Energie-Status |
 |------|--------------|----------------|
@@ -113,7 +129,7 @@ Das Energy-Maneuverability-Diagramm zeigt, wo dein Flugzeug Energie gewinnt oder
 | **Any Speed + Max G** | Turn | Energie-Verlust |
 
 ::: warning GEFÄHRLICHE ZONE
-Unter 300 kts mit hohem G-Load = rapider Energie-Verlust = Tod
+Unter Corner Speed mit hohem G-Load = rapider Energie-Verlust = Gefahr!
 :::
 
 ## Praktische Anwendung
@@ -122,13 +138,13 @@ Unter 300 kts mit hohem G-Load = rapider Energie-Verlust = Tod
 
 ```mermaid
 flowchart TD
-    START["Speed fällt<br/>< 350 kts"] --> Q{Gegner Position?}
+    START["Speed fällt unter Corner Speed"] --> Q{Gegner Position?}
 
-    Q -->|Hinter dir| DEF[Defensive: Unload + Steigen]
+    Q -->|Hinter dir| DEF[Defensive: Unload + Steigen/Fliehen]
     Q -->|Vor dir| OFF[Offensive: Kurzen Turn, dann Unload]
     Q -->|Weit weg| SEP[Separation: Unload + Beschleunigen]
 
-    DEF --> |"T-15 steigt schneller"| SAFE[Sicherheit]
+    DEF --> |"Schub nutzen"| SAFE[Sicherheit]
     OFF --> |"Ein Schuss, dann Energie"| SHOT[Schuss + Energie]
     SEP --> |"Reset"| RESTART[Neuer Angriff]
 ```
@@ -137,13 +153,25 @@ flowchart TD
 
 > **Energie die du heute sparst, rettet dein Leben morgen.**
 
-Jeder unnötige Turn, jede Sekunde bei Max-G kostet dich Energie. Die T-15 gewinnt durch Energie-Überlegenheit - verschwende sie nicht!
+Jeder unnötige Turn, jede Sekunde bei Max-G kostet dich Energie. Verschwende sie nicht!
+
+## Flugzeugtypen und Energie
+
+| Flugzeugtyp | Energie-Stil |
+|-------------|--------------|
+| **Energy Fighter** | Hält Energie, nutzt Vertikale, Boom & Zoom |
+| **Rate Fighter** | Konstante Geschwindigkeit, effiziente Kurven |
+| **Angles Fighter** | Opfert Energie für Position, muss schnell töten |
 
 ## Zusammenfassung
 
-| Konzept | T-15 Anwendung |
-|---------|----------------|
-| Corner Speed | 400-450 kts halten |
+| Konzept | Anwendung |
+|---------|-----------|
+| Corner Speed | Lerne sie für dein Flugzeug |
 | Unloading | Regelmäßig Energie aufbauen |
 | Energie-Budget | Nur ausgeben wenn nötig |
-| Vertikale Flucht | Wenn Energie niedrig → Steigen! |
+| Pull-Unload-Pull | Der Kampf-Rhythmus |
+
+::: info PHILOSOPHIE
+Energie ist wie Geld: Wer sparsam ist, hat mehr Optionen. Wer alles ausgibt, ist bankrott - und tot.
+:::

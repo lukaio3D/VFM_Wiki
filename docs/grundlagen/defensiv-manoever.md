@@ -51,65 +51,44 @@ flowchart TD
 
 Scissors treten auf, wenn ein Overshoot passiert und der Verteidiger versucht, den Angreifer durch Bremsen und Kurvenwechsel vor sich zu zwingen.
 
-::: danger KRITISCHE UNTERSCHEIDUNG FÜR T-15
-Es gibt **zwei Varianten** - und für die T-15 ist die Unterscheidung **überlebenswichtig**!
-:::
-
 ### Flat Scissors (Horizontale Schere)
 
 **Beschreibung:** Zwei Flugzeuge weben horizontal hin und her, wie Scherenblätter. Wer langsamer fliegen kann, gewinnt.
 
-::: danger T-15 DOKTRIN: VERMEIDEN!
-Dies ist ein reiner **Radius- und Langsamflug-Kampf**.
+**Ausführung:**
+1. Schub reduzieren (Idle)
+2. Speedbrakes ausfahren
+3. Schnelle Roll-Reversals
+4. Versuche, hinter den Gegner zu kommen
 
-| Gegner | Deine Gewinnchance |
-|--------|-------------------|
-| T-18 Cutlass | **0%** - Sie gewinnt immer |
-| T-16 Falchion | **~20%** - Sie gewinnt meist |
-
-Die T-15 ist zu schwer und hat bei niedrigen Geschwindigkeiten schlechtere Rollraten. **Flat Scissors gegen T-18 = Tod!**
+::: warning WARNUNG
+Flat Scissors sind ein **Slow-Speed Fight**. Flugzeuge mit guter Low-Speed Manövrierbarkeit (Angles Fighter) haben hier Vorteile. Flugzeuge, die auf Energie angewiesen sind, sollten Flat Scissors vermeiden.
 :::
 
 ### Rolling Scissors (Vertikale Schere)
 
 **Beschreibung:** Beide Flugzeuge fliegen korkenzieherartig umeinander, wobei sie fortlaufend Höhe und Geschwindigkeit tauschen. Es ist eine Serie von "Fassrollen" umeinander.
 
-::: tip T-15 DOKTRIN: BEVORZUGT
-Dieses Manöver integriert eine **vertikale Komponente** - dein Terrain!
-:::
-
 **Ausführung:**
 1. Wenn du am Gegner vorbeischießt, ziehe sofort **hoch in die Vertikale** (ca. 60-70°)
-2. Nutze den **Schub der T-15**, um höher zu steigen als der Gegner
-3. Rolle über dem Gegner zurück und ziehe die Nase nach unten (**Barrel Roll Attack**)
+2. Nutze den Schub, um höher zu steigen als der Gegner
+3. Rolle über dem Gegner zurück und ziehe die Nase nach unten
 
 **Warum es funktioniert:**
-- Die T-18 und T-16 können zwar eng drehen, aber die T-15 kann **besser steigen** und dabei Energie halten
-- Indem du den Kampf "groß" und vertikal machst, zwingst du den Gegner, gegen die Schwerkraft zu arbeiten
-- Wenn die T-18 versucht, ihre Nase vertikal auf dich zu richten, wird sie extrem schnell Energie verlieren und "aus dem Himmel fallen" (Stall)
-- Du kannst dann entspannt hinter sie fallen
+- Die Vertikale bremst beide Flugzeuge natürlich ab
+- Wer mehr Schub hat, kann höher steigen
+- Von oben hast du Positions- und Energievorteil
 
-```mermaid
-flowchart TD
-    SCISSORS[In Scissors geraten] --> TYPE{Welche Art?}
-
-    TYPE -->|Flat/Horizontal| FLAT[GEFAHR!]
-    TYPE -->|Rolling/Vertikal| ROLL[GUT für T-15]
-
-    FLAT --> ESCAPE[Sofort vertikal ausbrechen!]
-    ROLL --> CLIMB[Höher steigen als Gegner]
-    CLIMB --> BARREL[Barrel Roll Attack]
-    BARREL --> WIN[Von oben angreifen]
-
-    ESCAPE --> ROLL
-```
+::: tip TIPP
+Rolling Scissors integrieren eine **vertikale Komponente**. Flugzeuge mit gutem Schub-Gewichts-Verhältnis können hier ihre Stärken ausspielen.
+:::
 
 ### Zusammenfassung Scissors
 
-| Scissors-Typ | T-15 Doktrin | Begründung |
-|--------------|--------------|------------|
-| **Flat Scissors** | VERMEIDEN | Radius/Low-Speed-Kampf = Niederlage |
-| **Rolling Scissors** | BEVORZUGT | Vertikale Komponente = T-15 Vorteil |
+| Scissors-Typ | Entscheidend | Bevorzugt für |
+|--------------|--------------|---------------|
+| **Flat Scissors** | Low-Speed Handling | Angles Fighter |
+| **Rolling Scissors** | Thrust-to-Weight | Energy Fighter |
 
 ---
 
@@ -130,8 +109,8 @@ Ein niedriger Turn mit Sinken, um Speed und Distanz zu gewinnen.
 3. Beschleunige während des Turns
 4. Verlasse den Fight mit Speed
 
-::: tip T-15 VORTEIL
-Die T-15 kann nach einem Slice schnell wieder Höhe gewinnen!
+::: tip VORTEIL
+Nach einem Slice kannst du mit der gewonnenen Energie wieder in den Kampf einsteigen - oder fliehen.
 :::
 
 ---
@@ -158,24 +137,24 @@ flowchart TD
 ### Wichtig
 
 - **Nicht stumpf abwärts drehen** - kontrolliert!
-- **Speed über 300 kts halten**
+- **Speed halten** - Nicht unter Minimum Speed fallen
 - **Auf Gegner-Fehler warten**
 
 ---
 
 ## Overshoot erzwingen (Die "Notbremse")
 
-Wenn eine T-16 oder T-18 an deinem Heck klebt (6 Uhr Position):
+Wenn ein Gegner an deinem Heck klebt (6 Uhr Position):
 
 ### Die Technik
 
 1. **Drosseln**: Schub sofort auf **Leerlauf (Idle)**
-2. **Airbrakes**: Ausfahren (in VFM sehr effektiv)
-3. **Jink**: Unregelmäßige Roll- und Ziehbewegungen um das Zielen zu erschweren, aber **keine konstante Kurve** fliegen (da dies dem Gegner einen Vorhaltpunkt gibt)
-4. **Der Snap**: Sobald du siehst, dass der Gegner aufgrund deiner Bremsung schnell näher kommt und droht, an dir vorbeizufliegen:
+2. **Airbrakes**: Ausfahren
+3. **Jink**: Unregelmäßige Roll- und Ziehbewegungen um das Zielen zu erschweren, aber **keine konstante Kurve** fliegen
+4. **Der Snap**: Sobald du siehst, dass der Gegner näher kommt und droht vorbeizufliegen:
    - Ziehe **hart in die Vertikale** oder
    - Führe eine **High Yo-Yo Defense** aus
-5. **Reversal**: Wenn er vorbeigeflogen ist: **Nachbrenner rein**, Nase auf ihn drehen. Du bist nun der Angreifer!
+5. **Reversal**: Wenn er vorbeigeflogen ist: **Nachbrenner rein**, Nase auf ihn drehen!
 
 ```mermaid
 flowchart TD
@@ -218,11 +197,12 @@ Kleine, schnelle Richtungsänderungen um Schusslösung zu stören:
 | Manöver | Wann | Ziel |
 |---------|------|------|
 | Break Turn | Sofort bei Bedrohung | Winkel gewinnen |
-| Rolling Scissors | Nach Overshoot | Position umkehren |
+| Flat Scissors | Nach Overshoot (langsam) | Position umkehren |
+| Rolling Scissors | Nach Overshoot (vertikal) | Höhenvorteil gewinnen |
 | Slice Turn | Energie niedrig | Speed + Distanz |
 | Defensive Spirale | Auswegslos | Zeit gewinnen |
 | Jinking | Gegner schießt | Schuss stören |
 
-::: info T-15 PHILOSOPHIE
+::: info PHILOSOPHIE
 Die beste Defensive ist, nie in die Defensive zu geraten. Halte Energie, halte Situationsbewusstsein!
 :::

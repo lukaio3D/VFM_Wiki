@@ -1,6 +1,6 @@
-# Pursuit Curves
+# Pursuit Curves (Verfolgungskurven)
 
-Pursuit Curves (Verfolgungskurven) beschreiben, wie du deine Nase relativ zum Gegner ausrichtest. Die richtige Wahl beeinflusst Annäherungsrate, Energie und Schusslösung.
+Pursuit Curves beschreiben, wie du deine Nase relativ zum Gegner ausrichtest. Die richtige Wahl beeinflusst Annäherungsrate, Energie und Schusslösung.
 
 ## Die drei Pursuit-Typen
 
@@ -20,7 +20,7 @@ Du zielst **vor** den Gegner (in seine Flugrichtung).
 - Führt zu Overshoot wenn zu aggressiv
 
 ::: tip WANN NUTZEN
-- Schusslösung herstellen
+- Schusslösung herstellen (Gun)
 - Gegner ist langsam/dreht vorhersehbar
 - Du hast Energie-Überschuss
 :::
@@ -46,6 +46,7 @@ Du zielst **direkt auf** den Gegner.
 - Standardverfolgung
 - Gegner-Verhalten beobachten
 - Energie-neutral bleiben
+- Raketen-Aufschaltung
 :::
 
 ---
@@ -63,12 +64,13 @@ Du zielst **hinter** den Gegner.
 **Effekt:**
 - Langsamste Annäherung
 - Niedrigster Energie-Verlust
-- Baut Separation auf
+- Baut Separation auf oder hält Abstand
 
 ::: tip WANN NUTZEN
 - Energie sparen
 - Overshoot vermeiden
 - Gegner zur Reaktion zwingen
+- In der Control Zone bleiben
 :::
 
 ---
@@ -126,14 +128,30 @@ flowchart LR
 
 ## Pursuit vs Flugzeugtyp
 
-| Gegner | Empfohlene Pursuit | Begründung |
-|--------|-------------------|------------|
-| T-16 Falchion | Lag/Pure | Er dreht gut - Overshoot-Gefahr |
-| T-18 Cutlass | Lag! | Sie bremst extrem - hohes Overshoot-Risiko |
-| T-15 Excalibur | Abhängig von Energie | Energie-Management entscheidet |
+| Gegner-Typ | Empfohlene Pursuit | Begründung |
+|------------|-------------------|------------|
+| **Rate Fighter** | Lag/Pure | Er dreht gut - Overshoot-Gefahr |
+| **Angles Fighter** | Lag! | Er bremst extrem - hohes Overshoot-Risiko |
+| **Energy Fighter** | Abhängig von Energie | Kann schnell beschleunigen und entkommen |
 
-::: warning T-18 SPEZIAL
-Die T-18 Cutlass wird im Turn extrem langsam (250 kts). Wenn du mit 450 kts in Lead Pursuit anfliegst, wirst du **garantiert** overshooten. Nutze **Lag Pursuit** und halte Distanz!
+::: warning GEGEN ANGLES FIGHTER
+Angles Fighter werden im Turn extrem langsam und können hohe Anstellwinkel fliegen. Wenn du mit hoher Geschwindigkeit in Lead Pursuit anfliegst, wirst du **garantiert** overshooten. Nutze **Lag Pursuit** und halte Distanz!
+:::
+
+## Die Goldene Regel für Anfänger
+
+::: danger NICHT SOFORT LEAD ZIEHEN!
+Der Instinkt sagt: "Zieh vor ihn, um zu schießen!"
+
+Aber wenn du das zu früh machst:
+- Du schneidest die Kurve zu eng
+- Du wirst relativ zum Ziel zu schnell
+- Du schießt über das Ziel hinaus
+
+**Besser:**
+1. Beginne in **Lag Pursuit** (Position sichern)
+2. Wechsle zu **Pure Pursuit** (Rakete/Stabilisierung)
+3. Gehe erst im letzten Moment in **Lead Pursuit** (Gun)
 :::
 
 ## Zusammenfassung
@@ -144,4 +162,6 @@ Die T-18 Cutlass wird im Turn extrem langsam (250 kts). Wenn du mit 450 kts in L
 | Pure | Neutral | Mittel | Ausgeglichen |
 | Lag | Spart Energie | Langsam | Separation |
 
-**Die T-15 Philosophie:** Nutze Lag Pursuit um Energie zu sparen, wechsle zu Lead nur für die Schusslösung.
+::: info PHILOSOPHIE
+Nutze Lag Pursuit um Energie zu sparen und Position zu kontrollieren. Wechsle zu Lead nur für die finale Schusslösung.
+:::

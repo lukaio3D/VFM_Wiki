@@ -1,141 +1,67 @@
 # Golden Rules
 
-> Die universellen Prinzipien für Überlegenheit im Luftkampf.
+> Die 5 Eisernen Gesetze des Luftkampfs.
 
-Diese Regeln gelten für **jeden** Piloten und **jedes** Flugzeug. Sie sind das Fundament, auf dem alle spezifischen Taktiken aufbauen. Verinnerliche sie, bis sie Instinkt sind.
+Vergiss komplizierte Listen. Wenn du im Cockpit sitzt, zählen nur diese fünf Prinzipien. Missachte eines, und du verlierst.
 
----
+## 0. Die Philosophie: OODA-Loop
 
-## Die 10 Gebote des Luftkampfs
+Der Luftkampf findet im Kopf statt. Das physische Manövrieren ist nur das Resultat deiner mentalen Verarbeitung.
 
-### 1. Energy is Life
+**Observe (Beobachten) → Orient (Orientieren) → Decide (Entscheiden) → Act (Handeln)**
 
-> **Energie ist Leben.**
-
-Geschwindigkeit (kinetisch) und Höhe (potenziell) sind deine Währung im Kampf. Ohne Energie bist du ein statisches Ziel: Du kannst nicht manövrieren, nicht fliehen und nicht bestimmen, wann der Kampf endet.
-
-::: danger MERKE
-**Langsam = Tot.** Ein Flugzeug ohne Energie ist nur ein teurer Fallschirm.
-:::
+Wer diesen Zyklus schneller durchläuft als der Gegner, gewinnt. Wenn du noch überlegst, was du tun sollst, hat der Gegner dich bereits abgeschossen.
 
 ---
 
-### 2. No Nose Fight
+## 1. Lose Sight, Lose the Fight
 
-> **Kämpfe niemals das Spiel des Gegners.**
+> **Sichtkontakt ist wichtiger als alles andere.**
 
-Gehe niemals in einen **One-Circle-Fight** (Nase-auf-Nase), wenn dein Gegner den besseren Kurvenradius (Angles Fighter) hat. Er wird seine Nase schneller auf dich richten und feuern, bevor du eine Lösung hast.
+*   Du kannst nicht bekämpfen, was du nicht siehst.
+*   Die meisten Abschüsse passieren, weil der Pilot den Gegner nicht gesehen hat.
+*   **Regel:** Verlierst du den Gegner aus den Augen, brich den Angriff ab. Gehe defensiv, stelle Sicht wieder her. "No Visual, No Fight."
 
-::: tip TAKTIK
-Kenne den Archetyp deines Gegners. Wenn er einen engeren Radius hat: **Zwinge ihn in einen Two-Circle-Fight!**
-:::
+## 2. Speed is Life
 
----
+> **Energie ist deine Munition.**
 
-### 3. Speed is Life, Altitude is Life Insurance
+*   Höhe ist gespeicherte Geschwindigkeit. Geschwindigkeit ist Leben.
+*   Ein langsames Flugzeug ist ein Sarg ("Sitting Duck").
+*   **Pull - Unload - Pull:** Ziehe nie permanent am Stick. Entlaste (Unload) zwischen Manövern, um Energie zu tanken.
 
-> **Geschwindigkeit ist Leben, Höhe ist die Versicherung.**
+## 3. Know Your Corner Speed
 
-- **Speed** gibt dir *sofortige* Optionen (Turn, Flucht, Angriff).
-- **Höhe** ist *gespeicherte* Energie. Du kannst sie jederzeit durch einen Sturzflug in Geschwindigkeit umwandeln.
+> **Die wichtigste Zahl im Cockpit.**
 
-```mermaid
-flowchart LR
-    HÖHE["Höhe<br/>(Potenzielle Energie)"] <-->|Umwandlung| SPEED["Speed<br/>(Kinetische Energie)"]
-    SPEED --> OPTIONS[Taktische Optionen]
-```
+*   Jedes Flugzeug hat eine spezifische Geschwindigkeit für die beste Wenderate (Corner Velocity).
+*   **Zu schnell:** Dein Radius wird riesig.
+*   **Zu langsam:** Du drehst in Zeitlupe.
+*   Triff diese Geschwindigkeit exakt, wenn es darauf ankommt. Lerne sie auswendig für dein Muster.
 
----
+## 4. Geometry Dictates Tactics
 
-### 4. Lose Sight, Lose Fight
+> **Fliege das Flugzeug, nicht den Piloten.**
 
-> **Verlierst du den Gegner aus den Augen, verlierst du den Kampf.**
+*   **Nase-auf-Nase (Merge):** Entscheide sofort – Radius (One-Circle) oder Rate (Two-Circle)?
+*   **Niemals das Spiel des Gegners spielen:** Drehe nicht mit einem Kurvenkämpfer. Steige nicht mit einem Energie-Monster, wenn du schwach bist.
+*   Nutze die Vertikale, um horizontale Nachteile auszugleichen.
 
-Situational Awareness (SA) ist wichtiger als Aerodynamik. Meistens wirst du von dem Gegner abgeschossen, den du **nicht** gesehen hast.
+## 5. The Ground is the Hardest Enemy
 
-::: warning PFLICHT
-- Kopf permanent in Bewegung ("Check Six!")
-- Gegner niemals aus dem Lock/Blick verlieren
-- Wisse, wo er ist, **bevor** du manövrierst
-:::
+> **Vergiss niemals den Boden.**
 
----
-
-### 5. Fight in the Vertical
-
-> **Nutze die dritte Dimension.**
-
-Der Luftraum ist dreidimensional. Wer nur flach und horizontal kurvt, beraubt sich der Hälfte seiner Optionen. Die Vertikale erlaubt es dir, Kurvenradien zu verkleinern, Energie zu managen und Gegnern den Schusswinkel zu verwehren.
-
-| Ebene | Charakteristik |
-|-------|-------------|
-| Horizontal | Reiner Leistungsvergleich (Wer dreht besser?) |
-| **Vertikal** | **Taktischer Vorteil durch Gravitation & Energie** |
+*   Im Eifer des Gefechts (Target Fixation) vergessen Piloten oft die Höhe.
+*   Der Boden hat eine "Kill Probability" von 100%.
+*   Habe immer einen "Hard Deck" (Mindesthöhe) im Kopf, unter den du nicht kämpfst. Ein Kill ist wertlos, wenn du Sekunden später im Dreck liegst.
 
 ---
 
-### 6. Don't Turn with a Turner
-
-> **Drehe nicht mit einem Spezialisten.**
-
-- Versuche nicht, einen **Rate Fighter** über die Zeit auszukurven.
-- Versuche nicht, einen **Angles Fighter** im engen Radius zu schlagen.
-
-Wenn du das Spiel deines Gegners spielst, hast du bereits verloren. Zwinge ihm **dein** Spiel auf.
-
----
-
-### 7. Pull - Unload - Pull
-
-> **Der Rhythmus des Energie-Managements.**
-
-Wer permanent am Stick zieht, erzeugt induzierten Widerstand (Drag) und blutet Energie. Ein guter Pilot kennt den Rhythmus:
-1. **Pull**: Manöver setzen (Energie investieren).
-2. **Unload**: Stick neutral/entlasten (Energie zurückgewinnen).
-3. **Pull**: Nächstes Manöver.
-
----
-
-### 8. Overshoot is Opportunity
-
-> **Ein Overshoot ändert alles.**
-
-Wenn ein Flugzeug am anderen vorbeischießt, wechseln die Rollen von Jäger und Gejagtem oft in Sekundenbruchteilen.
-- **Offensiv**: Wenn der Gegner overshootet, nutze den Fehler sofort (Switch Back).
-- **Defensiv**: Wenn der Gegner hinter dir ist, erzwinge einen Overshoot, um die Situation zu neutralisieren.
-
----
-
-### 9. Corner Speed or Die
-
-> **Kenne deine Corner Speed.**
-
-Jedes Flugzeug hat eine spezifische Geschwindigkeit, bei der es die **maximale Turn Rate** erreicht (Corner Velocity).
-
-- **Zu langsam**: Du hast nicht genug Luftstrom für maximale Ruderwirkung.
-- **Zu schnell**: Die G-Kräfte oder der Radius werden zu groß.
-- **Corner Speed**: Das perfekte Optimum. Kenne diesen Wert für deine Maschine!
-
----
-
-### 10. Patience Kills
-
-> **Geduld tötet.**
-
-Der Sieg gehört dem Piloten, der wartet. Erzwinge keine schlechte Schusslösung, die dich viel Energie kostet. Warte auf den Fehler des Gegners, behalte deine Energie und schlage dann tödlich zu, wenn die Wahrscheinlichkeit auf deiner Seite ist.
-
-::: info MINDSET
-Hektik führt zu Fehlern. Geduld führt zur Dominanz.
-:::
-
----
-
-## Das Piloten-Mantra
+## Das Mantra
 
 ::: tip VOR JEDEM KAMPF
-> Ich kenne mein **Flugzeug**.
-> Ich kenne meinen **Gegner**.
-> Ich kämpfe auf **meinem Terrain**.
-> Ich kontrolliere meine **Energie**.
-> Der Gegner macht den Fehler – **nicht ich**.
+> Ich beobachte schneller.
+> Ich fliege meine Geschwindigkeit.
+> Ich zwinge dem Gegner mein Spiel auf.
+> Ich respektiere den Boden.
 :::

@@ -31,8 +31,8 @@ flowchart TD
 
 ::: tip VORTEILE
 - Verhindert Overshoot
-- Hält dich im "Control Zone"
-- Nutzt T-15's vertikale Stärke
+- Hält dich in der "Control Zone"
+- Nutzt die Vertikale um Energie zu managen
 :::
 
 ---
@@ -97,14 +97,19 @@ flowchart TD
     POWER --> |"Bremsen"| SAFE
 ```
 
-### Die "Lag & High" Kombination
+### Lag Displacement Roll
 
-Für die T-15 empfohlen:
+Ein Manöver gegen extremen Geschwindigkeitsüberschuss oder um eine Schussposition zu erzwingen, wenn der High Yo-Yo nicht ausreicht.
 
+**Ausführung:**
 1. Wechsle zu **Lag Pursuit** (hinter den Gegner zielen)
-2. Ziehe **leicht hoch** (10-20°)
-3. Nutze die **Vertikale** um Speed zu managen
-4. Bleibe **über** dem Gegner für nächsten Angriff
+2. Rolle **weg** von der Kurvenrichtung des Gegners und ziehe hoch
+3. Nutze die **Vertikale** um massiv Vektorgeschwindigkeit zu vernichten
+4. Falle hinter den Gegner zurück
+
+::: tip ANWENDUNG
+Ideal, um einen drohenden Overshoot in eine offensive Position umzuwandeln, ohne Energie sinnlos wegzuwerfen. Besonders effektiv für Flugzeuge mit gutem Schub-Gewichts-Verhältnis.
+:::
 
 ---
 
@@ -133,8 +138,8 @@ flowchart LR
 - Schuss aus ~1-2km optimal
 - **Achtung:** Gegner kann Flares werfen
 
-::: tip T-15 PHILOSOPHIE
-Geduld! Nimm dir Zeit für die Schusslösung. Ein sicherer Treffer ist besser als drei verpasste Bursts.
+::: tip GEDULD
+Nimm dir Zeit für die Schusslösung. Ein sicherer Treffer ist besser als drei verpasste Bursts. Hektisches Feuern verschwendet nur Munition.
 :::
 
 ## Zusammenfassung
@@ -144,3 +149,4 @@ Geduld! Nimm dir Zeit für die Schusslösung. Ein sicherer Treffer ist besser al
 | High Yo-Yo | Zu schnell | Speed verlieren, Winkel gewinnen |
 | Low Yo-Yo | Zu langsam | Speed gewinnen, näher kommen |
 | Lag Pursuit | Overshoot droht | Annäherung verlangsamen |
+| Lag Displacement Roll | Extremer Überschuss | Repositionierung von oben |

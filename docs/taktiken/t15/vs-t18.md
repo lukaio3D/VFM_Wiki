@@ -7,9 +7,9 @@
 | Eigenschaft | T-18 Cutlass |
 |-------------|--------------|
 | **Typ** | Angles/Radius Fighter |
-| **Stärke** | Kleinster Turn Radius, schnellste Nase |
-| **Schwäche** | Langsam, schlechter Schub, Energie-Bluten |
-| **Corner Speed** | ~250-275 kts |
+| **Stärke** | High-Alpha Fähigkeit, Nose Authority |
+| **Schwäche** | Schlechteste Sustained Rate, schlechter Schub |
+| **Corner Speed** | ~385 kts |
 | **Gefährlichkeit** | Extrem hoch in One-Circle! |
 
 ::: tip GUTE NACHRICHT
@@ -22,20 +22,20 @@ Die T-18 ist der Gegner, den du am **leichtesten** besiegen kannst - wenn du die
 
 ### Das Kern-Prinzip
 
-> **Two-Circle erzwingen. Speed halten. Niemals One-Circle!**
+> **Two-Circle erzwingen. Speed halten. Niemals "Slow One-Circle"!**
 
 ```mermaid
 flowchart TD
-    FIGHT[T-18 Begegnung] --> NEVER[NIEMALS One-Circle!]
+    FIGHT[T-18 Begegnung] --> NEVER[KEIN Slow One-Circle!]
     NEVER --> DO[Stattdessen:]
 
     DO --> TWO[Two-Circle erzwingen]
     DO --> SPEED[Speed 400-450 kts halten]
-    DO --> VERT[Vertikal bei Problemen]
+    DO --> SNAP[Snap Turn (Risiko!)]
 
     TWO --> WIN[Deine Rate > ihr Radius]
     SPEED --> FAST[Du: schnell, Sie: langsam]
-    VERT --> ESCAPE[Sie kann nicht steigen]
+    SNAP --> |"Nur 1. Turn!"| KILL[Sofort-Kill oder Flucht]
 ```
 
 ---
@@ -44,10 +44,9 @@ flowchart TD
 
 ### Was die T-18 will
 
-- One-Circle-Fight (Nase auf Nase)
-- Dich langsam machen (< 300 kts)
+- **Slow One-Circle** (Nase auf Nase bei < 300 kts)
+- Dass du langsam wirst
 - In ihren "Angles Bubble" ziehen
-- Schneller Snapshot
 
 ### Deine Antwort
 
@@ -55,17 +54,17 @@ flowchart TD
 flowchart TD
     MERGE[Am Merge] --> CHOICE{Flow-Entscheidung}
 
-    CHOICE -->|One-Circle| DEAD[TOD! Sie schießt dir ins Gesicht]
+    CHOICE -->|One-Circle| RISK[HOCHES RISIKO!]
     CHOICE -->|Two-Circle| WIN[Du gewinnst!]
 
-    DEAD --> EXPLANATION["Ihr Radius ist kleiner.<br/>Sie dreht schneller rum."]
+    RISK --> |"Nur bei >450 kts"| SNAP[24°/s Snap möglich]
+    RISK --> |"Wenn langsam"| DEAD[TOD! Sie dreht besser]
     WIN --> EXPLANATION2["Deine Rate bei 450 kts<br/>schlägt ihren Radius bei 250 kts"]
 ```
 
 **Am Merge:**
-1. Erkenne die T-18 früh
-2. Plane Two-Circle (drehe ZUM Gegner, nicht weg)
-3. Halte Speed über 400 kts!
+1. **Standard:** Drehe **zum Gegner** (Two-Circle). Das ist dein sicherer Sieg.
+2. **Risiko:** Ein High-Speed One-Circle Snap ist möglich, aber wenn du ihn verpasst, bist du in ihrer Welt (Radius). **Nicht empfohlen für Anfänger.**
 
 ---
 
@@ -73,15 +72,15 @@ flowchart TD
 
 ### Warum Two-Circle funktioniert
 
-Die Mathematik:
+Die Mathematik (50% Fuel, 10.000 ft):
 
-| Parameter | T-15 (bei 450 kts) | T-18 (bei 250 kts) |
-|-----------|-------------------|-------------------|
-| Turn Rate | Hoch | Mittel |
-| Turn Radius | Groß | Klein |
-| **Winkelgeschwindigkeit** | **Höher!** | Niedriger |
+| Parameter | T-15 | T-18 |
+|-----------|------|------|
+| Sustained Turn Rate | 17°/s @ 495 kts | 16°/s @ 470 kts |
+| Turn Radius | 1.644 ft | 1.899 ft |
+| **Vorteil** | **Bessere Rate UND Radius!** | Nur High-AoA |
 
-Im Two-Circle zählt **Rate**, nicht Radius. Du drehst schneller um den Kreis als sie.
+Im Two-Circle zählt **Sustained Rate** - und dort bist du überlegen (17°/s vs 16°/s). Zusätzlich hast du den kleineren Radius!
 
 ### Die Ausführung
 

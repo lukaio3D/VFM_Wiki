@@ -1,10 +1,10 @@
 # T-16 Falchion
 
-> Der "König der Rate" - Horizontal unschlagbar.
+> Der "Rate Fighter" - König des horizontalen Kurvenkampfs.
 
 ## Übersicht
 
-Die T-16 Falchion, analog zur **F-16C Viper**, ist ein leichtes, einstrahliges Kampfflugzeug, das für hohe G-Belastungen und minimale Energieverluste in der Kurve optimiert ist.
+Die T-16 Falchion ist ein leichter, einmotoriger Mehrzweckkampfjet. Ihre Hauptstärke liegt in der besten Sustained Turn Rate aller Flugzeuge. Sie ist als **Rate Fighter** klassifiziert und dominiert langanhaltende horizontale Kurvenkämpfe.
 
 ::: info REALES VORBILD
 | VFM | DCS/Real |
@@ -12,55 +12,61 @@ Die T-16 Falchion, analog zur **F-16C Viper**, ist ein leichtes, einstrahliges K
 | T-16 Falchion | F-16C Viper |
 :::
 
-## Leistungsdaten
+## Performance-Daten
 
-| Parameter | Wert | Bewertung |
-|-----------|------|-----------|
-| **Corner Speed** | ~380-420 kts | Etwas niedriger als T-15 |
-| **Sustained Turn Rate** | **Beste im Spiel** | Horizontale Dominanz |
-| **Instantaneous Turn Rate** | Gut | Schnelle Nase |
-| **Turn Radius** | Mittel | Ausgewogen |
-| **Schub/Gewicht (TWR)** | Gut | Solide, aber unter T-15 |
-| **Energieerhalt** | Sehr gut | Minimaler Verlust in Kurven |
+### Referenzwerte (50% Fuel, 10.000 ft)
+
+| Parameter | Wert |
+|-----------|------|
+| **Gewicht** | 25.009 lbs |
+| **Corner Speed (Max Instant)** | ~409 KIAS |
+| **Max Instantaneous Turn Rate** | 21°/s @ 409 KIAS |
+| **Max Sustained Turn Rate** | 18°/s @ 470 KIAS |
+| **Minimum Turn Radius** | 2.102 ft |
+
+### Vollständige Performance-Tabelle
+
+| Bedingung | Gewicht | Max Instant Rate | Max Sustained Rate | Min Radius |
+|-----------|---------|------------------|-------------------|------------|
+| 100% Fuel, 10.000 ft | 27.972 lbs | 20°/s @ 434 KIAS | 16°/s @ 470 KIAS | 2.387 ft |
+| 50% Fuel, 10.000 ft | 25.009 lbs | 21°/s @ 409 KIAS | 18°/s @ 470 KIAS | 2.102 ft |
+| 50% Fuel, Sea Level | 25.009 lbs | 25°/s @ 392 KIAS | 22°/s @ 447 KIAS | 1.524 ft |
+| 50% Fuel, 21.000 ft | 25.009 lbs | 17°/s @ 436 KIAS | 13°/s @ 405 KIAS | 3.287 ft |
+
+::: tip PERFORMANCE-HINWEIS
+Die T-16 hat ein breites optimales Geschwindigkeitsfenster (350-500 KIAS). Im Gegensatz zur T-15 musst du nicht wild zwischen Geschwindigkeiten wechseln - bleib konstant im mittleren Bereich.
+:::
 
 ## Stärken
 
-::: tip PRIMÄRER VORTEIL: SUSTAINED RATE
-In einem **Two-Circle-Kampf** (Nase-auf-Heck-Verfolgung) kann die T-16 eine **höhere Anzahl Grad pro Sekunde** drehen als die T-15, ohne dabei signifikant Geschwindigkeit zu verlieren.
-
-Sie ist der **"King of Sustained Turn Rate"**.
-:::
-
-**Weitere Vorteile:**
-- Beste Turn Rate im Hochgeschwindigkeits-Kurvenkampf
-- Geringer aerodynamischer Widerstand
-- Gute Nose Authority bei mittleren Geschwindigkeiten
-- Ausgewogene Performance ohne extreme Schwächen
+- **Beste Sustained Turn Rate** (18°/s) - Unschlagbar im langen Kurvenkampf
+- **Leichtestes Gewicht** - Nur 25.009 lbs
+- **Breites Geschwindigkeitsfenster** - Tolerant gegenüber Fehlern
+- **Geringer aerodynamischer Widerstand** - Effizientes Kurven
+- **Ausgewogene Performance** - Keine extremen Schwächen
 
 ## Schwächen
 
-::: warning NACHTEILE
-- **Vertikale Schwäche**: Kann T-15 nicht in die Vertikale folgen (ein Triebwerk vs. zwei)
-- **Energie-Bluten vertikal**: Verliert Energie wenn sie gegen Schwerkraft kämpft
-- **One-Circle**: Verliert gegen T-18 im Radius-Fight
-:::
+- **Größter Turn Radius** (2.102 ft) - Verliert im engen One-Circle
+- **Vertikale Unterlegenheit** - Nur ein Triebwerk, kann T-15 nicht folgen
+- **Mittlere Instant Rate** (21°/s) - Unter T-15 und knapp unter T-18
+- **Energie-Bluten vertikal** - Verliert stark wenn gegen Schwerkraft gekämpft wird
 
-## Taktischer Archetyp: Rate Fighter
+## Archetyp: Rate Fighter
 
-Die T-16 möchte den Gegner in einen **Hochgeschwindigkeits-Kurvenkampf** locken, in dem sie ihre überlegene Aerodynamik ausspielen kann, um den Gegner **"auszukurven" (Out-Rate)**.
+Die T-16 ist ein **Rate Fighter**. Ihre Stärken liegen in:
+- Horizontalen Two-Circle Kämpfen
+- Konstantem Kurvenkampf bei mittlerer Geschwindigkeit
+- "Out-Rating" des Gegners über Zeit
+- Geduldigen, methodischen Kämpfen
 
-```mermaid
-flowchart LR
-    T16[T-16 Strategie] --> WANT[Will horizontalen Two-Circle]
-    WANT --> RESULT[Out-Rating des Gegners]
-    RESULT --> WIN[Kriecht langsam ans Heck]
-```
-
-## Vergleichstabelle
+## Vergleichstabelle (50% Fuel, 10.000 ft)
 
 | Merkmal | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---------|----------------|---------------|--------------|
 | DCS Analog | F-15C Eagle | F-16C Viper | F/A-18C Hornet |
-| Hauptstärke | Schub, Vertikale | **Beste Wenderate** | Bester Radius |
-| Bevorzugter Kampf | Vertikal | **Horizontal, 2-Circle** | Langsam, 1-Circle |
-| E-M Kategorie | Energy Fighter | Rate Fighter | Radius/Angles Fighter |
+| Gewicht | 37.615 lbs | **25.009 lbs** | 36.597 lbs |
+| Max Instant Rate | 24°/s | 21°/s | 22°/s |
+| Max Sustained Rate | 17°/s | **18°/s** | 16°/s |
+| Min Turn Radius | 1.644 ft | 2.102 ft | 1.899 ft |
+| E-M Kategorie | Energy Fighter | Rate Fighter | Angles Fighter |

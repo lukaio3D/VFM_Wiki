@@ -47,6 +47,7 @@ export default withMermaid(
           text: 'T-15 Taktiken',
           collapsed: false,
           items: [
+            { text: 'Vertikale Dominanz', link: '/taktiken/t15/vertikal' },
             { text: 'vs T-16 Falchion', link: '/taktiken/t15/vs-t16' },
             { text: 'vs T-18 Cutlass', link: '/taktiken/t15/vs-t18' },
             { text: 'vs T-15 (Spiegel)', link: '/taktiken/t15/vs-t15' }

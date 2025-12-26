@@ -6,57 +6,55 @@ Die wichtigste Entscheidung im BFM passiert am **Merge** (Vorbeiflug). Die Wahl 
 
 ### Two-Circle Flow (Nase-auf-Heck)
 
-Beide Flugzeuge drehen **aufeinander zu**, in Richtung des gegnerischen Hecks.
+Beide Flugzeuge drehen **aufeinander zu**, in Richtung des gegnerischen Hecks. Die Flugzeuge beschreiben zwei separate Kreise.
 
 ```mermaid
 flowchart LR
     subgraph "Two-Circle Flow"
-        A1["✈️ Flugzeug A"] -->|dreht rechts| M1((Merge))
-        B1["✈️ Flugzeug B"] -->|dreht links| M1
+        A1["Flugzeug A"] -->|dreht rechts| M1((Merge))
+        B1["Flugzeug B"] -->|dreht links| M1
     end
 ```
 
-**Wer gewinnt?** Das Flugzeug mit der besseren **Turn Rate**.
+**Wer gewinnt?** Das Flugzeug mit der besseren **Sustained Turn Rate** (Grad pro Sekunde). Es ist ein Wettrennen um den eigenen Kreis - wer schneller "um den Kreis kommt", gewinnt Winkel.
 
-| Flugzeug | Two-Circle Performance |
-|----------|------------------------|
-| T-16 Falchion | Beste Turn Rate - dominiert |
-| T-15 Excalibur | Gute Rate - kann mithalten |
-| T-18 Cutlass | Schlechte Rate - verliert |
-
-::: tip T-15 DOKTRIN
-Two-Circle ist **zwingend erforderlich** gegen die T-18 Cutlass. Erzwinge diesen Flow um ihre Radius-Stärke zu negieren!
-:::
-
-::: warning WARNUNG
-Vermeide Two-Circle gegen die T-16 Falchion - sie hat die bessere Rate!
-:::
+**Vorteile für Rate Fighter:**
+- Geschwindigkeit bleibt hoch
+- Nutzt Sustained Turn Rate aus
+- Energie-effizient
 
 ---
 
 ### One-Circle Flow (Nase-auf-Nase)
 
-Beide Flugzeuge drehen **voneinander weg**, treffen sich wieder von vorne.
+Beide Flugzeuge drehen **voneinander weg**, treffen sich wieder von vorne. Die Flugzeuge teilen sich einen gemeinsamen Kreis.
 
 ```mermaid
 flowchart LR
     subgraph "One-Circle Flow"
-        A2["✈️ Flugzeug A"] -->|dreht links| M2((Merge))
-        B2["✈️ Flugzeug B"] -->|dreht rechts| M2
+        A2["Flugzeug A"] -->|dreht links| M2((Merge))
+        B2["Flugzeug B"] -->|dreht rechts| M2
     end
 ```
 
-**Wer gewinnt?** Das Flugzeug mit dem kleinsten **Turn Radius**.
+**Wer gewinnt?** Hier entscheidet der **Turn Radius** und die **Instantaneous Turn Rate**. Wer den engeren Kreis fliegt, kommt "inside" des Gegners.
 
-| Flugzeug | One-Circle Performance |
-|----------|------------------------|
-| T-18 Cutlass | Kleinster Radius - dominiert |
-| T-16 Falchion | Mittlerer Radius - ausgeglichen |
-| T-15 Excalibur | Großer Radius - verliert |
+**Vorteile für Angles/Radius Fighter:**
+- Nutzt kleine Radien aus
+- Erlaubt hohe AoA-Manöver
+- Ideal für Snapshots
 
-::: danger T-15 WARNUNG
-One-Circle gegen die T-18 ist **Selbstmord**! Sie dreht die Nase schneller und schießt dir ins Gesicht, bevor du rum bist.
-:::
+---
+
+## Flugzeugtypen und Flow-Präferenz
+
+Verschiedene Flugzeugtypen haben unterschiedliche Präferenzen:
+
+| Flugzeugtyp | Bevorzugter Flow | Begründung |
+|-------------|------------------|------------|
+| **Energy Fighter** | Vertikal / Two-Circle | Nutzt Schub-Vorteil, vermeidet Slow-Speed |
+| **Rate Fighter** | Two-Circle | Dominiert bei hoher Geschwindigkeit |
+| **Angles/Radius Fighter** | One-Circle | Nutzt kleine Radien, High-AoA |
 
 ---
 
@@ -64,19 +62,19 @@ One-Circle gegen die T-18 ist **Selbstmord**! Sie dreht die Nase schneller und s
 
 ```mermaid
 flowchart TD
-    MERGE[Am Merge angekommen] --> WHO{Wer ist der Gegner?}
+    MERGE[Am Merge angekommen] --> ASSESS{Gegner-Typ einschätzen}
 
-    WHO -->|T-16 Falchion| T16[Rate-Fighter]
-    WHO -->|T-18 Cutlass| T18[Radius-Fighter]
-    WHO -->|T-15 Excalibur| T15[Energy-Fighter]
+    ASSESS -->|Energy Fighter| EF[Hoher Schub, schnell]
+    ASSESS -->|Rate Fighter| RF[Gute Sustained Rate]
+    ASSESS -->|Angles Fighter| AF[Guter Radius, High AoA]
 
-    T16 --> ONE1[One-Circle oder Vertikal]
-    T18 --> TWO1[Two-Circle erzwingen!]
-    T15 --> ENERGY[Energie-Vorteil nutzen]
+    EF --> AVOID_VERT[Nicht in die Vertikale folgen!]
+    RF --> AVOID_RATE[Two-Circle vermeiden!]
+    AF --> AVOID_SLOW[One-Circle vermeiden!]
 
-    ONE1 --> |"Dein Radius ≈ sein Radius"| VERT1[Besser: Vertikal!]
-    TWO1 --> |"Deine Rate > sein Radius bei Speed"| WIN1[Du gewinnst!]
-    ENERGY --> |"Wer mehr Energie hat"| WIN2[Energie-Vorteil gewinnt]
+    AVOID_VERT --> FORCE[Zwinge Gegner in DEINEN bevorzugten Flow]
+    AVOID_RATE --> FORCE
+    AVOID_SLOW --> FORCE
 ```
 
 ## Die Vertikale Alternative
@@ -85,16 +83,22 @@ Wenn weder One-Circle noch Two-Circle vorteilhaft ist, gibt es eine dritte Optio
 
 **Geh vertikal!**
 
-Die T-15 Excalibur dominiert in der Vertikalen. Statt horizontal zu kämpfen, ziehe hoch und nutze dein besseres Schub/Gewicht-Verhältnis.
+Flugzeuge mit hohem Schub-Gewichts-Verhältnis können den horizontalen Kampf vermeiden und in der Vertikalen dominieren. Die Vertikale ist ein "dritter Flow", der die Regeln des horizontalen Kampfes außer Kraft setzt.
 
 ::: info MERKE
-Flow-Wahl ist nicht binär. Die beste Option für die T-15 ist oft, den horizontalen Kampf komplett zu vermeiden und vertikal zu dominieren.
+Flow-Wahl ist nicht binär. Die beste Option hängt von deinem Flugzeugtyp, dem Gegnertyp und der aktuellen Energie-Situation ab. Ein erfahrener Pilot passt seinen Flow dynamisch an.
 :::
 
 ## Zusammenfassung
 
-| Situation | Flow-Wahl | Begründung |
-|-----------|-----------|------------|
-| vs T-16 | One-Circle / Vertikal | Two-Circle = Rate-Fight = Niederlage |
-| vs T-18 | Two-Circle | One-Circle = Radius-Fight = Tod |
-| vs T-15 | Energie-Vorteil | Wer mehr Energie hat, kontrolliert den Fight |
+| Flow | Entscheidender Faktor | Vorteilhaft für |
+|------|----------------------|-----------------|
+| **Two-Circle** | Sustained Turn Rate | Rate Fighter |
+| **One-Circle** | Turn Radius / Instant Rate | Angles Fighter |
+| **Vertikal** | Thrust-to-Weight Ratio | Energy Fighter |
+
+::: tip GOLDENE REGEL
+**Spiele niemals das Spiel des Gegners!**
+
+Wenn du einen Rate Fighter fliegst, zwinge den Gegner in Two-Circle. Wenn du einen Angles Fighter fliegst, zwinge ihn in One-Circle. Wenn du einen Energy Fighter fliegst, nutze die Vertikale.
+:::

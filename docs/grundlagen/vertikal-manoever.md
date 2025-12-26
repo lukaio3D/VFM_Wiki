@@ -1,19 +1,21 @@
-# Vertikaler Kampf
+# Vertikale Manöver
 
-Die Vertikale ist das Heimatgebiet der T-15 Excalibur. Hier gewinnst du Kämpfe, die horizontal verloren wären.
+Die Vertikale ist ein mächtiges Werkzeug im BFM. Hier lernst du, wann und wie du sie effektiv nutzt.
 
-## Warum Vertikal?
+## Warum Vertikal kämpfen?
 
-Die T-15 hat:
-- **Bestes Schub/Gewicht-Verhältnis**
-- **Schnellste Energie-Erholung**
-- **Vertikale Überlegenheit** über alle anderen
+Die Vertikale bietet mehrere Vorteile gegenüber dem horizontalen Kampf:
+
+- **Energie-Umwandlung**: Tausche Geschwindigkeit gegen Höhe und umgekehrt
+- **Radius-Verkleinerung**: Am Apex (Scheitelpunkt) ist der Radius minimal
+- **Schub-Vorteile**: Flugzeuge mit hohem TWR dominieren gegen die Schwerkraft
+- **Separation**: Verlasse einen ungünstigen Fight durch Steigen
 
 ```mermaid
 flowchart TD
-    VERT[Vertikaler Kampf] --> ADV1[T-16 kann nicht folgen]
-    VERT --> ADV2[T-18 wird noch langsamer]
-    VERT --> ADV3[Du behältst Kontrolle]
+    VERT[Vertikaler Kampf] --> ADV1[Energie-Management]
+    VERT --> ADV2[Radius-Kontrolle]
+    VERT --> ADV3[Schub-Vorteile nutzen]
 ```
 
 ---
@@ -21,12 +23,12 @@ flowchart TD
 ## Der kritische Fehler: Pure Vertical
 
 ::: danger FEHLER: Stumpfes Hochziehen
-Einfach 90° hochziehen ist **tödlich**!
+Einfach 90° hochziehen ist **gefährlich**!
 
 **Was passiert:**
 - Bei 0 Knoten hast du **keine Kontrolle**
 - Du bist ein **stationäres Ziel**
-- Gegner (besonders T-16) schießt dich ab
+- Gegner kann dich leicht abschießen
 :::
 
 ### Das Problem visualisiert
@@ -96,7 +98,7 @@ flowchart TD
 
 Nutze überschüssige Energie für schnellen Höhengewinn.
 
-1. Bei hoher Speed (450+ kts) hochziehen
+1. Bei hoher Speed (Corner Speed+) hochziehen
 2. Steile Steigung (60-70°)
 3. Vor Speed-Verlust abflachen
 4. Höhenvorteil gewonnen
@@ -127,18 +129,21 @@ Wenn du in der Defensive bist, nutze die Vertikale:
 flowchart TD
     DEF[Gegner hinter dir] --> CHECK{Speed?}
 
-    CHECK -->|"Hoch (400+)"| CLIMB[Steil steigen!]
+    CHECK -->|"Hoch (Corner Speed+)"| CLIMB[Steil steigen!]
     CHECK -->|"Niedrig"| FIRST[Erst Speed aufbauen]
 
-    CLIMB --> EFFECT[T-15 steigt schneller]
-    EFFECT --> SEP[Separation gewinnen]
-    SEP --> REVERSE[Umdrehen mit Höhenvorteil]
+    CLIMB --> EFFECT[Separation gewinnen]
+    EFFECT --> REVERSE[Umdrehen mit Höhenvorteil]
 ```
 
 **Warum es funktioniert:**
-- T-15 hat bestes Schub/Gewicht
-- T-16 verliert in der Vertikalen
-- T-18 kann gar nicht steigen
+- Flugzeuge mit hohem TWR steigen schneller
+- Einmotorige Flugzeuge haben Schwierigkeiten zu folgen
+- Du gewinnst Zeit und Position
+
+::: warning VORAUSSETZUNG
+Du brauchst **genug Energie** (Speed) um vertikal zu flüchten. Versuche nicht, mit 250 kts zu steigen - du wirst nur langsamer und verletzlicher.
+:::
 
 ---
 
@@ -148,10 +153,10 @@ flowchart TD
 |-----------|---------------|
 | Apex der Spirale | 150-180 kts |
 | Vertikaler Turn | 200 kts |
-| Generell | Nie unter 150 kts |
+| Generell im Kampf | Nie unter 150 kts |
 
 ::: warning UNTER 150 KNOTEN
-Unter 150 kts verliert die T-15 die Kontrollfähigkeit. Du kannst nicht mehr effektiv manövrieren!
+Unter 150 kts verlieren die meisten Kampfflugzeuge die Kontrollfähigkeit. Du kannst nicht mehr effektiv manövrieren - du bist ein Ziel!
 :::
 
 ---
@@ -163,9 +168,9 @@ Unter 150 kts verliert die T-15 die Kontrollfähigkeit. Du kannst nicht mehr eff
 - Taktische Spirale statt stumpf hochziehen
 - Speed am Apex behalten (150+ kts)
 - Gegner im Auge behalten
-- Vertikale gegen T-16 und T-18 nutzen
+- Vertikale nutzen wenn du Schub-Vorteil hast
 
-### DON'TS (Vermeiden!)
+### DON'Ts (Vermeiden!)
 
 - 90° Pure Vertical
 - 0 kts am Apex
@@ -174,10 +179,10 @@ Unter 150 kts verliert die T-15 die Kontrollfähigkeit. Du kannst nicht mehr eff
 
 ```mermaid
 flowchart LR
-    GOOD[Taktische Spirale] --> WIN[Sieg]
-    BAD[Stumpfes Hochziehen] --> LOSE[Niederlage]
+    GOOD[Taktische Spirale] --> WIN[Kontrolle behalten]
+    BAD[Stumpfes Hochziehen] --> LOSE[Kontrolle verlieren]
 ```
 
 ::: info MERKE
-Die Vertikale ist dein Freund - aber nur mit der richtigen Technik. Spirale > Pure Vertical!
+Die Vertikale ist dein Freund - aber nur mit der richtigen Technik. **Spirale > Pure Vertical!**
 :::
