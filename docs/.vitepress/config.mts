@@ -6,6 +6,7 @@ export default withMermaid(
     title: "VFM Flight Academy",
     description: "Taktische Doktrin für Virtual Fighter Maneuvers",
     lang: 'de-DE',
+    base: '/VFM_Wiki/',
 
     head: [
       ['meta', { name: 'theme-color', content: '#1a1a2e' }]
@@ -72,7 +73,7 @@ export default withMermaid(
       ],
 
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/lukasschaab/VFM_Wiki' }
+        { icon: 'github', link: 'https://github.com/lukaio3D/VFM_Wiki' }
       ],
 
       outline: {
