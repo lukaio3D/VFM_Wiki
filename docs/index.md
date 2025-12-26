@@ -2,93 +2,90 @@
 
 > Taktische Doktrin für Virtual Fighter Maneuvers
 
-Werde zum Ass in **Virtual Fighter Maneuvers** (VFM). Diese Wiki dokumentiert die taktische Doktrin mit Fokus auf die **T-15 Excalibur** (F-15C Eagle).
+Willkommen in der **Flight Academy**. Dieses Wiki dient als umfassendes Handbuch für Luftkampf-Taktiken in **Virtual Fighter Maneuvers** (VFM).
 
-::: info ÜBER VFM
-Virtual Fighter Maneuvers von Boundless Dynamics simuliert komplexe aerodynamische Faktoren wie transsonischen Widerstand, Anstellwinkel (AoA), Schub-Gewichts-Verhältnisse und spezifische Energiezustände. Prinzipien aus DCS und Falcon BMS gelten auch hier!
+Es ist in drei Hauptbereiche unterteilt:
+1. **Grundlagen**: Universelle Konzepte und Theorie für jeden Piloten.
+2. **Flugzeug-Daten**: Leistungsdaten und Charakteristiken der drei Muster.
+3. **Taktiken**: Spezifische Kampfanleitungen für jedes Flugzeug gegen jeden Gegner.
+
+::: info KONTEXT
+VFM von Boundless Dynamics simuliert komplexe Aerodynamik: Transsonischer Widerstand, Anstellwinkel (AoA) und spezifische Energiezustände sind modelliert. Wir wenden hier echte BFM-Prinzipien (Basic Fighter Maneuvers) an.
 :::
 
 ## Schnellstart
 
-::: tip NEU HIER?
-1. Lerne die [Golden Rules](/golden-rules) - die 10 Gebote des Luftkampfs
-2. Verstehe die [Kampf-Geometrie](/academy/geometry) - One-Circle vs Two-Circle
-3. Kenne deinen Gegner: [T-16](/aircraft/t16-falchion) und [T-18](/aircraft/t18-cutlass)
-:::
+Für neue Piloten ist dies der empfohlene Pfad:
 
-## Die Kernhypothese
+1. **Grundlagen**: Lerne die [Golden Rules](/grundlagen/golden-rules) – die 10 universellen Gebote des Luftkampfs.
+2. **Theorie**: Verstehe die [Kampf-Geometrie](/grundlagen/geometrie) (One-Circle vs. Two-Circle).
+3. **Dein Flugzeug**: Wähle dein Muster und studiere die Leistungsdaten.
+4. **Taktiken**: Lerne die spezifischen Taktiken gegen jeden Gegnertyp.
 
-::: danger DER FUNDAMENTALE FEHLER
-Misserfolg gegen T-16 und T-18 resultiert **nicht** aus mangelnder Aggressivität, sondern aus einem **fundamentalen Missverständnis** der DACT-Prinzipien.
+---
 
-Die T-15 ist ein Flugzeug der **Energiedominanz**. Der Versuch, sie wie einen "Angles Fighter" (T-18) oder "Rate Fighter" (T-16) zu fliegen, führt **zwangsläufig zur Niederlage**.
-:::
+## Die Flugzeug-Typen (Archetypen)
 
-## Die wichtigsten Konzepte
+Im Luftkampf gibt es drei fundamentale Design-Philosophien. Jedes Flugzeug in VFM verkörpert eines dieser Extreme.
 
-| Konzept | Beschreibung |
-|---------|--------------|
-| **Corner Speed** | Die Geschwindigkeit mit maximaler Turn Rate (~400-450 kts für T-15) |
-| **One-Circle Flow** | Beide drehen voneinander weg - **Radius** entscheidet |
-| **Two-Circle Flow** | Beide drehen aufeinander zu - **Rate** entscheidet |
-| **Unloading** | 0G fliegen um Energie zurückzugewinnen |
-| **Energy Fighting** | Nutze Höhe und Geschwindigkeit als taktische Ressource |
-
-## Die drei Flugzeuge
+| Archetyp | VFM Muster | Stärke | Schwäche |
+|---|---|---|---|
+| **Energy Fighter** | **[T-15 Excalibur](/flugzeuge/t15-excalibur)** | Schub, Vertikale, Speed | Wenderadius |
+| **Rate Fighter** | **[T-16 Falchion](/flugzeuge/t16-falchion)** | Beste Wenderate (Sustained) | Vertikale Ausdauer |
+| **Angles Fighter** | **[T-18 Cutlass](/flugzeuge/t18-cutlass)** | Bester Radius (Instantaneous) | Energie-Erhalt |
 
 ```mermaid
 flowchart TD
-    subgraph "VFM Flugzeuge"
-        T15[T-15 Excalibur\nF-15C Eagle] --> E[Energy Fighter]
-        T16[T-16 Falchion\nF-16C Viper] --> R[Rate Fighter]
-        T18[T-18 Cutlass\nF/A-18C Hornet] --> A[Angles Fighter]
+    subgraph "Schere-Stein-Papier des Luftkampfs"
+        T15["Energy Fighter<br/>T-15"] --> |"Dominiert vertikal"| T16["Rate Fighter<br/>T-16"]
+        T16 --> |"Dominiert horizontal (Rate)"| T18["Angles Fighter<br/>T-18"]
+        T18 --> |"Dominiert im Slow-Fight (Radius)"| T15
     end
-
-    E --> |"Vertikal dominieren"| WIN[Sieg]
-    R --> |"Horizontale Rate"| WIN
-    A --> |"Nase schnell drehen"| WIN
 ```
 
-| Merkmal | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
-|---------|----------------|---------------|--------------|
-| DCS Analog | F-15C Eagle | F-16C Viper | F/A-18C Hornet |
-| Hauptstärke | Schub, Top Speed, Vertikale | Beste Wenderate | Bester Radius, High AoA |
-| Bevorzugter Kampf | Vertikal, Boom & Zoom | Horizontal, 2-Circle | Langsam, 1-Circle |
-| Gefahr für T-15 | - | Out-Rating | Nose-Authority |
+---
 
-## Quick Links
+## Modul-Übersicht
 
-### Grundlagen
-- [Golden Rules](/golden-rules) - Die 10 Gebote des Luftkampfs
+### Grundlagen (Theorie)
+Die theoretische Basis für alle Piloten - flugzeugneutral.
 
-### Aircraft Intel
-- [T-15 Excalibur](/aircraft/t15-excalibur) - Das "Energie-Monster" (F-15C)
-- [T-16 Falchion](/aircraft/t16-falchion) - Der "König der Rate" (F-16C)
-- [T-18 Cutlass](/aircraft/t18-cutlass) - Der "Radius-Kämpfer" (F/A-18C)
+- **[Golden Rules](/grundlagen/golden-rules)**: Die 10 Gebote des Luftkampfs
+- **[Kampf-Geometrie](/grundlagen/geometrie)**: One-Circle vs Two-Circle
+- **[Energie-Management](/grundlagen/energie-management)**: Corner Speed & Unloading
+- **[Verfolgungskurven](/grundlagen/verfolgungskurven)**: Lead, Lag und Pure Pursuit
+- **[Offensiv-Manöver](/grundlagen/offensiv-manoever)**: High/Low Yo-Yo, Barrel Roll Attack
+- **[Defensiv-Manöver](/grundlagen/defensiv-manoever)**: Scissors, Break Turn, Overshoot
+- **[Vertikal-Manöver](/grundlagen/vertikal-manoever)**: Taktische Spirale
 
-### BFM Academy
-- [Kampf-Geometrie](/academy/geometry) - One-Circle vs Two-Circle
-- [Energy Management](/academy/energy-management) - Corner Speed & Unloading
-- [Pursuit Curves](/academy/pursuit-curves) - Lead, Lag, Pure Pursuit
+### Flugzeug-Daten
+Leistungsdaten, Stärken und Schwächen - ohne Taktiken.
 
-### Manöver
-- [Offensive](/maneuvers/offensive) - High/Low Yo-Yo
-- [Defensive](/maneuvers/defensive) - Scissors, Overshoot erzwingen
-- [Vertikal](/maneuvers/vertical) - Die taktische Spirale
+- **[T-15 Excalibur](/flugzeuge/t15-excalibur)**: Energy Fighter
+- **[T-16 Falchion](/flugzeuge/t16-falchion)**: Rate Fighter
+- **[T-18 Cutlass](/flugzeuge/t18-cutlass)**: Angles Fighter
 
-### Playbook
-- [T-15 vs T-16](/playbook/t15-vs-t16) - Anti-Rate Taktik (Boom & Zoom)
-- [T-15 vs T-18](/playbook/t15-vs-t18) - Anti-Radius Taktik (Two-Circle)
-- [T-15 vs T-15](/playbook/t15-vs-t15) - Der Spiegelkampf
+### Taktiken
 
-## Die goldenen Regeln der T-15
+#### T-15 Excalibur Pilot
+- **[vs T-16 Falchion](/taktiken/t15/vs-t16)**: Energy vs Rate
+- **[vs T-18 Cutlass](/taktiken/t15/vs-t18)**: Energy vs Radius
+- **[vs T-15 (Spiegel)](/taktiken/t15/vs-t15)**: Energy vs Energy
 
-1. **Identifiziere den Gegner sofort** - T-16? Vertikal gehen. T-18? Schnell bleiben, Two-Circle.
-2. **Nutze die Vertikale** - Zwei Triebwerke = vertikale Dominanz
-3. **Beherrsche den High Yo-Yo** - Energie in Position umwandeln ohne Overshoot
-4. **Vermeide "stumpfes Hochfliegen"** - Fliege Spiralen ("The Egg")
-5. **Lerne das Unloading** - Pull - Unload - Pull
+#### T-16 Falchion Pilot
+- **[vs T-15 Excalibur](/taktiken/t16/vs-t15)**: Rate vs Energy
+- **[vs T-18 Cutlass](/taktiken/t16/vs-t18)**: Rate vs Radius
+- **[vs T-16 (Spiegel)](/taktiken/t16/vs-t16)**: Rate vs Rate
 
-::: info DER SCHLÜSSEL ZUM SIEG
-Der Schlüssel zum Sieg liegt nicht im **engeren Ziehen**, sondern im **klügeren Fliegen**. Lass T-16 und T-18 ihre Energie in engen Kurven verschwenden, während du von oben herabstößt, zuschlagst und wieder in die Sicherheit der Höhe verschwindest.
-:::
+#### T-18 Cutlass Pilot
+- **[vs T-15 Excalibur](/taktiken/t18/vs-t15)**: Radius vs Energy
+- **[vs T-16 Falchion](/taktiken/t18/vs-t16)**: Radius vs Rate
+- **[vs T-18 (Spiegel)](/taktiken/t18/vs-t18)**: Radius vs Radius
+
+---
+
+## Philosophie
+
+Der Schlüssel zum Sieg liegt nicht im engeren Ziehen, sondern im **Verständnis der Physik**. Ein guter Pilot kennt nicht nur sein eigenes Flugzeug, sondern auch das seines Gegners genau. Er zwingt dem Gegner den Kampf auf, den dieser nicht gewinnen kann.
+
+**[Starte mit den Golden Rules](/grundlagen/golden-rules)**

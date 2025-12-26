@@ -56,49 +56,6 @@ flowchart LR
     RESULT --> WIN[Kriecht langsam ans Heck]
 ```
 
-## Gefahr für T-15 Piloten
-
-::: danger OUT-RATING
-Wenn eine T-15 versucht, **horizontal mit einer T-16 zu kreisen**, wird die T-16 dank ihres geringeren Widerstands und hohen TWRs enger drehen.
-
-**Ergebnis:** Die T-16 kriecht langsam aber sicher auf das Heck der T-15.
-:::
-
-## T-15 Doktrin gegen T-16
-
-### Was die T-16 will
-- Horizontalen Two-Circle-Fight erzwingen
-- Dich in einen Sustained Turn ziehen
-- Ihre überlegene Rate nutzen um ans Heck zu kommen
-
-### Deine Antwort (als T-15)
-
-```mermaid
-flowchart TD
-    FIGHT[T-16 Begegnung] --> Q{Flow-Typ?}
-    Q -->|Two-Circle horizontal| BAD[SCHLECHT: T-16 gewinnt Rate-Fight!]
-    Q -->|One-Circle| OK[Akzeptabel - ähnlicher Radius]
-    Q -->|Vertikal| GOOD[GUT: T-15 Vorteil]
-
-    BAD --> FIX[Sofort vertikal gehen!]
-    FIX --> GOOD
-```
-
-### Die Anti-T-16 Strategie: Boom and Zoom
-
-1. **Merge**: Gehe mit hoher Geschwindigkeit (Mach 0.9+) in den Merge
-2. **Erster Zug**: Wenn die T-16 horizontal dreht, ziehe sofort **vertikal** (Oblique Loop)
-3. **Die Falle**: Die T-16 wird versuchen, die Nase hochzuziehen. Da sie gleichzeitig eng kurvt, **blutet sie massive Energie**
-4. **Der Schlag**: Du steigst mit zwei Triebwerken höher. Wenn die T-16 langsam wird/stallt:
-   - Kippe über den Flügel (Hammerhead/Stall Turn)
-   - Stürze auf sie herab
-   - Feuere und ziehe sofort wieder hoch (Zoom Climb)
-5. **Disziplin**: Lass dich **nicht** auf einen Kurvenkampf ein. Hacke auf sie ein ("Slash Attacks")
-
-::: tip MERKE
-Die T-16 ist horizontal überlegen. Aber du bist **vertikal** überlegen. Kämpfe auf deinem Terrain!
-:::
-
 ## Vergleichstabelle
 
 | Merkmal | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
@@ -106,4 +63,4 @@ Die T-16 ist horizontal überlegen. Aber du bist **vertikal** überlegen. Kämpf
 | DCS Analog | F-15C Eagle | F-16C Viper | F/A-18C Hornet |
 | Hauptstärke | Schub, Vertikale | **Beste Wenderate** | Bester Radius |
 | Bevorzugter Kampf | Vertikal | **Horizontal, 2-Circle** | Langsam, 1-Circle |
-| Gefahr für T-15 | - | **Out-Rating** | Nose Authority |
+| E-M Kategorie | Energy Fighter | Rate Fighter | Radius/Angles Fighter |

@@ -16,10 +16,10 @@ Das wichtigste offensive Manöver. Nutze es, wenn du zu schnell bist und Oversho
 
 ```mermaid
 flowchart TD
-    START[Hinter Gegner\nZu schnell] --> PULL[1. Hochziehen\n30-45° Steigflug]
-    PULL --> ROLL[2. Rollen\nÜber den Gegner]
-    ROLL --> NOSE[3. Nase runter\nZurück auf Gegner]
-    NOSE --> RESULT[Ergebnis:\nWeniger Speed\nMehr Winkel]
+    START["Hinter Gegner<br/>Zu schnell"] --> PULL["1. Hochziehen<br/>30-45° Steigflug"]
+    PULL --> ROLL["2. Rollen<br/>Über den Gegner"]
+    ROLL --> NOSE["3. Nase runter<br/>Zurück auf Gegner"]
+    NOSE --> RESULT["Ergebnis:<br/>Weniger Speed<br/>Mehr Winkel"]
 ```
 
 **Schritt für Schritt:**
@@ -51,10 +51,10 @@ Das Gegenteil des High Yo-Yo. Nutze es, wenn du zu langsam bist oder der Gegner 
 
 ```mermaid
 flowchart TD
-    START[Hinter Gegner\nZu langsam/weit] --> PUSH[1. Runterdrücken\nNase unter Horizont]
-    PUSH --> ACCEL[2. Beschleunigen\nGravitation nutzen]
-    ACCEL --> PULL[3. Hochziehen\nUnter Gegner durch]
-    PULL --> RESULT[Ergebnis:\nMehr Speed\nMehr Annäherung]
+    START["Hinter Gegner<br/>Zu langsam/weit"] --> PUSH["1. Runterdrücken<br/>Nase unter Horizont"]
+    PUSH --> ACCEL["2. Beschleunigen<br/>Gravitation nutzen"]
+    ACCEL --> PULL["3. Hochziehen<br/>Unter Gegner durch"]
+    PULL --> RESULT["Ergebnis:<br/>Mehr Speed<br/>Mehr Annäherung"]
 ```
 
 **Schritt für Schritt:**

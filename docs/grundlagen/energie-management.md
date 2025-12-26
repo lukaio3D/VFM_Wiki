@@ -34,9 +34,9 @@ Die **Corner Speed** ist die Geschwindigkeit, bei der dein Flugzeug die **maxima
 ```mermaid
 flowchart TD
     subgraph "Turn Rate vs Speed"
-        SLOW["Zu langsam\n(< 300 kts)"] --> LOW1[Niedrige Turn Rate]
-        CORNER["Corner Speed\n(400-450 kts)"] --> MAX[MAXIMALE Turn Rate]
-        FAST["Zu schnell\n(> 500 kts)"] --> LOW2[Niedrige Turn Rate]
+        SLOW["Zu langsam<br/>(< 300 kts)"] --> LOW1[Niedrige Turn Rate]
+        CORNER["Corner Speed<br/>(400-450 kts)"] --> MAX[MAXIMALE Turn Rate]
+        FAST["Zu schnell<br/>(> 500 kts)"] --> LOW2[Niedrige Turn Rate]
     end
 
     LOW1 --> |"Nicht drehen können"| BAD1[Gegner gewinnt Winkel]
@@ -93,9 +93,9 @@ Wer permanent zieht ("Gluing the stick back"), verliert!
 
 ```mermaid
 flowchart LR
-    PULL[Harter Turn\n6-9G] --> |"Energie verloren"| LOW[Niedrige Speed\n< 350 kts]
-    LOW --> UNLOAD[Unload!\n0G, Afterburner]
-    UNLOAD --> |"Speed aufbauen"| RECOVER[Energie erholt\n400+ kts]
+    PULL["Harter Turn<br/>6-9G"] --> |"Energie verloren"| LOW["Niedrige Speed<br/>< 350 kts"]
+    LOW --> UNLOAD["Unload!<br/>0G, Afterburner"]
+    UNLOAD --> |"Speed aufbauen"| RECOVER["Energie erholt<br/>400+ kts"]
     RECOVER --> ENGAGE[Wieder kämpfen]
 ```
 
@@ -122,7 +122,7 @@ Unter 300 kts mit hohem G-Load = rapider Energie-Verlust = Tod
 
 ```mermaid
 flowchart TD
-    START[Speed fällt\n< 350 kts] --> Q{Gegner Position?}
+    START["Speed fällt<br/>< 350 kts"] --> Q{Gegner Position?}
 
     Q -->|Hinter dir| DEF[Defensive: Unload + Steigen]
     Q -->|Vor dir| OFF[Offensive: Kurzen Turn, dann Unload]

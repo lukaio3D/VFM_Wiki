@@ -58,8 +58,8 @@ flowchart TD
     CHOICE -->|One-Circle| DEAD[TOD! Sie schießt dir ins Gesicht]
     CHOICE -->|Two-Circle| WIN[Du gewinnst!]
 
-    DEAD --> EXPLANATION[Ihr Radius ist kleiner.\nSie dreht schneller rum.]
-    WIN --> EXPLANATION2[Deine Rate bei 450 kts\nschlägt ihren Radius bei 250 kts]
+    DEAD --> EXPLANATION["Ihr Radius ist kleiner.<br/>Sie dreht schneller rum."]
+    WIN --> EXPLANATION2["Deine Rate bei 450 kts<br/>schlägt ihren Radius bei 250 kts"]
 ```
 
 **Am Merge:**

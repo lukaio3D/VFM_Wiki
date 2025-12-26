@@ -51,7 +51,7 @@ Die T-15 gewinnt, indem sie die **vertikale Ebene (Z-Achse)** kontrolliert und s
 Der Versuch, die T-15 wie einen "Angles Fighter" (T-18) oder "Rate Fighter" (T-16) zu fliegen, führt **zwangsläufig zur Niederlage**. Ein flacher Kampf ist ein verlorener Kampf!
 :::
 
-## Die goldenen Regeln
+## Die wichtigsten Regeln für die T-15
 
 1. **Energie ist Leben** - Werde niemals langsam
 2. **Vertikal kämpfen** - Die T-15 dominiert in der Vertikalen
@@ -85,14 +85,6 @@ Viele VR-Piloten ziehen den Stick bis zum Anschlag. Dies führt zu:
 
 **Lösung:** Stick-Druck dosieren! Wenn Speed unter 380 kts fällt: **Stick lockern!** Opfere Winkel für Geschwindigkeit.
 :::
-
-## Gegen andere Flugzeuge
-
-| Gegner | Strategie | Gefahr | Link |
-|--------|-----------|--------|------|
-| T-16 Falchion | Vertikal, Boom & Zoom | Out-Rating | [Details](/playbook/t15-vs-t16) |
-| T-18 Cutlass | Two-Circle, Speed halten | Nose Authority | [Details](/playbook/t15-vs-t18) |
-| T-15 Excalibur | Energie-Vorteil aufbauen | Spiegelkampf | [Details](/playbook/t15-vs-t15) |
 
 ## Notfall-Prozeduren
 
