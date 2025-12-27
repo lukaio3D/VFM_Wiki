@@ -2,66 +2,67 @@
 
 > Die 5 Eisernen Gesetze des Luftkampfs.
 
-Vergiss komplizierte Listen. Wenn du im Cockpit sitzt, zählen nur diese fünf Prinzipien. Missachte eines, und du verlierst.
-
-## 0. Die Philosophie: OODA-Loop
-
-Der Luftkampf findet im Kopf statt. Das physische Manövrieren ist nur das Resultat deiner mentalen Verarbeitung.
-
-**Observe (Beobachten) → Orient (Orientieren) → Decide (Entscheiden) → Act (Handeln)**
-
-Wer diesen Zyklus schneller durchläuft als der Gegner, gewinnt. Wenn du noch überlegst, was du tun sollst, hat der Gegner dich bereits abgeschossen.
-
----
+Im Eifer des Gefechts hast du keine Zeit für komplexe Theorien. Diese fünf Regeln sind deine Lebensversicherung. Missachte eine, und du bringst dich selbst in Gefahr.
 
 ## 1. Lose Sight, Lose the Fight
 
 > **Sichtkontakt ist wichtiger als alles andere.**
 
-*   Du kannst nicht bekämpfen, was du nicht siehst.
-*   Die meisten Abschüsse passieren, weil der Pilot den Gegner nicht gesehen hat.
-*   **Regel:** Verlierst du den Gegner aus den Augen, brich den Angriff ab. Gehe defensiv, stelle Sicht wieder her. "No Visual, No Fight."
+Das ist die unangefochtene Nummer 1 in jeder Luftwaffen-Ausbildung weltweit.
 
-## 2. Speed is Life
+* **Das Problem:** Was du nicht siehst, kannst du nicht bekämpfen – aber es kann dich töten.
+* **Die Sim-Realität:** In Simulationen ist es oft schwerer als in echt, den kleinen Pixel-Punkt zu sehen.
+* **Die Regel:** Wenn du den Gegner aus den Augen verlierst (No Joy), brich den Angriff sofort ab! Gehe defensiv, mache Raum gut, hole dir die Übersicht zurück. Ein blinder Angriff ist Selbstmord.
 
-> **Energie ist deine Munition.**
+## 2. Energy is Life
 
-*   Höhe ist gespeicherte Geschwindigkeit. Geschwindigkeit ist Leben.
-*   Ein langsames Flugzeug ist ein Sarg ("Sitting Duck").
-*   **Pull - Unload - Pull:** Ziehe nie permanent am Stick. Entlaste (Unload) zwischen Manövern, um Energie zu tanken.
+> **Energie ist deine Munition – verschwende sie nicht.**
 
-## 3. Know Your Corner Speed
+Viele Anfänger denken nur an Geschwindigkeit ("Speed is Life"). Profis denken an **Energie** (Speed + Höhe).
 
-> **Die wichtigste Zahl im Cockpit.**
+* **Kein sinnloses Ziehen:** Jeder harte Turn blutet Energie aus. Ziehe den Stick nur so hart wie nötig, nicht so hart wie möglich.
+* **Unloading:** Nutze jede Sekunde, in der du nicht schießen musst, um den Stick zu entlasten (0.5 G) und Energie zu tanken.
+* **Corner Speed:** Kenne die Geschwindigkeit, bei der dein Flugzeug am besten dreht. Bist du schneller, wird der Radius zu groß. Bist du langsamer, bist du ein leichtes Ziel.
 
-*   Jedes Flugzeug hat eine spezifische Geschwindigkeit für die beste Wenderate (Corner Speed).
-*   **Zu schnell:** Dein Radius wird riesig.
-*   **Zu langsam:** Du drehst in Zeitlupe.
-*   Triff diese Geschwindigkeit exakt, wenn es darauf ankommt. Lerne sie auswendig für dein Muster.
+## 3. Don't Play the Bandit's Game
 
-## 4. Geometry Dictates Tactics
+> **Zwinge dem Gegner deinen Flow auf.**
 
-> **Fliege das Flugzeug, nicht den Piloten.**
+Hier entscheidet sich der Kampf oft schon am Merge.
 
-*   **Nase-auf-Nase (Merge):** Entscheide sofort – Radius (One-Circle) oder Rate (Two-Circle)?
-*   **Niemals das Spiel des Gegners spielen:** Drehe nicht mit einem Kurvenkämpfer. Steige nicht mit einem Energie-Monster, wenn du schwach bist.
-*   Nutze die Vertikale, um horizontale Nachteile auszugleichen.
+* **Kenne dein Flugzeug:** Sitzt du in einem **Rate-Fighter** (z.B. F-16)? Dann geh in den **Two-Circle** Flow.
+* **Kenne den Gegner:** Kämpfst du gegen einen **Radius-Fighter** (z.B. F-18, Mirage)? Lass dich niemals auf einen langsamen Kurvenkampf (One-Circle) ein.
+* **Disziplin:** Wenn der Gegner versucht, dich in seine Stärke zu ziehen, verweigere es! Nutze die Vertikale oder Separation, um den Kampf neu zu sortieren.
 
-## 5. The Ground is the Hardest Enemy
+## 4. Position Before Kill
 
-> **Vergiss niemals den Boden.**
+> **Erst die Kontrolle, dann der Abzug.**
 
-*   Im Eifer des Gefechts (Target Fixation) vergessen Piloten oft die Höhe.
-*   Der Boden hat eine "Kill Probability" von 100%.
-*   Habe immer einen "Hard Deck" (Mindesthöhe) im Kopf, unter den du nicht kämpfst. Ein Kill ist wertlos, wenn du Sekunden später im Dreck liegst.
+Der häufigste Anfängerfehler in Simulationen: Gier. Man zieht die Nase zu früh auf den Gegner, um zu schießen, und verursacht dadurch einen **Overshoot**.
+
+* **Kontrolle behalten:** Es bringt nichts, kurz zu schießen, wenn du danach am Gegner vorbeifliegst und er dich abschießt.
+* **Lag Pursuit nutzen:** Ziele *hinter* den Gegner, um Abstand zu halten und Energie zu sparen.
+* **Geduld:** Gehe erst in Lead Pursuit (Vorhalten), wenn der Kill garantiert ist und du genug Energie hast, um danach nicht hilflos zu sein.
+
+## 5. The Ground Won't Miss
+
+> **Der Boden hat eine Trefferquote von 100%.**
+
+Im Tunnelblick des Kampfes ("Target Fixation") wird die Höhe oft vergessen.
+
+* **Hard Deck:** Setze dir vor dem Start eine mentale Mindesthöhe (z.B. 2000 Fuß). Unterhalb dieser Höhe wird nicht mehr gekämpft, sondern nur noch überlebt/gestiegen.
+* **Vektoren:** Wenn du Nase nach unten hast und schnell bist, brauchst du tausende Fuß, um dich abzufangen.
+* **Regel:** Ein Abschuss ist wertlos, wenn du drei Sekunden später im Dreck liegst.
 
 ---
 
-## Das Mantra
+### Das Mantra für den Kopf
 
-::: tip VOR JEDEM KAMPF
-> Ich beobachte schneller.
-> Ich fliege meine Geschwindigkeit.
-> Ich zwinge dem Gegner mein Spiel auf.
-> Ich respektiere den Boden.
+::: tip MERKE DIR
+
+1. **Augen** auf den Gegner.
+2. **Energie** managen (nicht sinnlos ziehen).
+3. **Eigenes Spiel** spielen (Flow Wahl).
+4. **Position** sichern (nicht overshooten).
+5. **Boden** respektieren.
 :::
