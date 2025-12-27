@@ -132,6 +132,15 @@ Das Energy-Maneuverability-Diagramm zeigt, wo ein Flugzeug Energie gewinnt oder 
 Unter Corner Speed mit hohem G-Load = rapider Energie-Verlust = Gefahr!
 :::
 
+## Visuelle Cues: Energie-Zustand erkennen
+
+Woher weißt du, wie viel Energie der Gegner hat? Achte auf diese Zeichen:
+
+*   **Nachbrenner:** Brennt er? Wenn nicht, baut er wahrscheinlich Energie ab oder fliegt "Mil Power" (langsamer).
+*   **Vapor Trails (Kondensstreifen):** Streifen an den Flügelspitzen bedeuten **hohe G-Last**. Wer viel zieht, verliert viel Energie ("He is bleeding speed").
+*   **Wenderadius:** Wird sein Kreis enger, aber seine Nase bewegt sich langsamer? Er wird langsam.
+*   **Nase:** Hängt seine Nase hoch, aber er steigt kaum? Er ist "slow and heavy".
+
 ## Praktische Anwendung
 
 ### Szenario: Du verlierst Energie im Kampf

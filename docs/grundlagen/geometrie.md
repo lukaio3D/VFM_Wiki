@@ -2,6 +2,20 @@
 
 Die wichtigste Entscheidung im BFM passiert am **Merge** (Vorbeiflug). Die Wahl des "Flows" entscheidet oft über Sieg oder Niederlage.
 
+## Wichtige Winkel
+
+Um die Geometrie zu verstehen, sind zwei Begriffe essenziell:
+
+### Aspect Angle (AA)
+Der Winkel zwischen dem Heck des Gegners und deiner Position.
+* **0-45°:** Offensiv (du bist hinter ihm).
+* **180°:** Neutral (er kommt auf dich zu, z.B. am Merge).
+
+### Antenna Train Angle (ATA)
+Der Winkel von deiner Nase zum Gegner (wohin du schauen musst).
+* **0°:** Er ist direkt in deinem HUD (Schusslösung!).
+* **High ATA:** Er ist weit seitlich ("off boresight").
+
 ## Die zwei Flows
 
 ### Two-Circle Flow (Nase-auf-Heck)
