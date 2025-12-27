@@ -78,7 +78,8 @@ export default withMermaid(
                 { text: '1. Daten & Performance', link: '/flugzeuge/t15/daten' },
                 { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t15/taktik' },
                 { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t15/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t15/manoever' }
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t15/manoever' },
+                { text: '5. Team-Taktiken', link: '/flugzeuge/t15/team' }
               ]
             },
             {
@@ -88,7 +89,8 @@ export default withMermaid(
                 { text: '1. Daten & Performance', link: '/flugzeuge/t16/daten' },
                 { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t16/taktik' },
                 { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t16/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t16/manoever' }
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t16/manoever' },
+                { text: '5. Team-Taktiken', link: '/flugzeuge/t16/team' }
               ]
             },
             {
@@ -98,7 +100,8 @@ export default withMermaid(
                 { text: '1. Daten & Performance', link: '/flugzeuge/t18/daten' },
                 { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t18/taktik' },
                 { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t18/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t18/manoever' }
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t18/manoever' },
+                { text: '5. Team-Taktiken', link: '/flugzeuge/t18/team' }
               ]
             }
           ]

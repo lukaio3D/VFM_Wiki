@@ -64,7 +64,3 @@ Hier sind die direkten Vergleichsdaten und Diagramme der drei Typen.
 ![Vergleich Diagramm 3](/images/img6.jpg)
 
 ![Vergleich Diagramm 4](/images/img7.jpg)
-
-::: warning BILD-CHECK
-Bitte prüfe, ob diese Diagramme korrekt zugeordnet sind. Falls nicht, tausche die Dateinamen `img4.jpg` bis `img7.jpg` entsprechend aus.
-:::
