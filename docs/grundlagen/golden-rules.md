@@ -34,7 +34,7 @@ Wer diesen Zyklus schneller durchläuft als der Gegner, gewinnt. Wenn du noch ü
 
 > **Die wichtigste Zahl im Cockpit.**
 
-*   Jedes Flugzeug hat eine spezifische Geschwindigkeit für die beste Wenderate (Corner Velocity).
+*   Jedes Flugzeug hat eine spezifische Geschwindigkeit für die beste Wenderate (Corner Speed).
 *   **Zu schnell:** Dein Radius wird riesig.
 *   **Zu langsam:** Du drehst in Zeitlupe.
 *   Triff diese Geschwindigkeit exakt, wenn es darauf ankommt. Lerne sie auswendig für dein Muster.

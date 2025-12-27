@@ -26,49 +26,81 @@ export default withMermaid(
           collapsed: false,
           items: [
             { text: 'Golden Rules', link: '/grundlagen/golden-rules' },
+            { text: 'Begriffe & Definitionen', link: '/grundlagen/begriffe' },
             { text: 'Kampf-Geometrie', link: '/grundlagen/geometrie' },
+            { text: 'Der Merge', link: '/grundlagen/der-merge' },
             { text: 'Energie-Management', link: '/grundlagen/energie-management' },
             { text: 'Verfolgungskurven', link: '/grundlagen/verfolgungskurven' },
-            { text: 'Offensiv-Manöver', link: '/grundlagen/offensiv-manoever' },
-            { text: 'Defensiv-Manöver', link: '/grundlagen/defensiv-manoever' },
-            { text: 'Vertikal-Manöver', link: '/grundlagen/vertikal-manoever' }
+            {
+              text: 'Offensiv-Manöver',
+              collapsed: true,
+              items: [
+                { text: 'Einführung', link: '/grundlagen/offensiv-manoever' },
+                { text: 'High Yo-Yo', link: '/grundlagen/offensiv/high-yo-yo' },
+                { text: 'Low Yo-Yo', link: '/grundlagen/offensiv/low-yo-yo' },
+                { text: 'Lag Displacement Roll', link: '/grundlagen/offensiv/lag-displacement' },
+                { text: 'Schusslösung', link: '/grundlagen/offensiv/schussloesung' }
+              ]
+            },
+            {
+              text: 'Defensiv-Manöver',
+              collapsed: true,
+              items: [
+                { text: 'Einführung', link: '/grundlagen/defensiv-manoever' },
+                { text: 'Break Turn', link: '/grundlagen/defensiv/break-turn' },
+                { text: 'Scissors', link: '/grundlagen/defensiv/scissors' },
+                { text: 'Slice Turn', link: '/grundlagen/defensiv/slice-turn' },
+                { text: 'Defensive Spirale', link: '/grundlagen/defensiv/spirale' },
+                { text: 'Jinking & Overshoots', link: '/grundlagen/defensiv/jinking' }
+              ]
+            },
+            {
+              text: 'Vertikal-Manöver',
+              collapsed: true,
+              items: [
+                { text: 'Einführung', link: '/grundlagen/vertikal-manoever' },
+                { text: 'Taktische Spirale', link: '/grundlagen/vertikal/taktische-spirale' },
+                { text: 'Zoom Climb', link: '/grundlagen/vertikal/zoom-climb' },
+                { text: 'Speed Regeln', link: '/grundlagen/vertikal/speed-regeln' }
+              ]
+            }
           ]
         },
         {
-          text: 'Flugzeug-Daten',
+          text: 'Virtual Fighter Maneuvers',
           collapsed: false,
           items: [
-            { text: 'T-15 Excalibur', link: '/flugzeuge/t15-excalibur' },
-            { text: 'T-16 Falchion', link: '/flugzeuge/t16-falchion' },
-            { text: 'T-18 Cutlass', link: '/flugzeuge/t18-cutlass' }
-          ]
-        },
-        {
-          text: 'T-15 Taktiken',
-          collapsed: false,
-          items: [
-            { text: 'Vertikale Dominanz', link: '/taktiken/t15/vertikal' },
-            { text: 'vs T-16 Falchion', link: '/taktiken/t15/vs-t16' },
-            { text: 'vs T-18 Cutlass', link: '/taktiken/t15/vs-t18' },
-            { text: 'vs T-15 (Spiegel)', link: '/taktiken/t15/vs-t15' }
-          ]
-        },
-        {
-          text: 'T-16 Taktiken',
-          collapsed: false,
-          items: [
-            { text: 'vs T-15 Excalibur', link: '/taktiken/t16/vs-t15' },
-            { text: 'vs T-18 Cutlass', link: '/taktiken/t16/vs-t18' },
-            { text: 'vs T-16 (Spiegel)', link: '/taktiken/t16/vs-t16' }
-          ]
-        },
-        {
-          text: 'T-18 Taktiken',
-          collapsed: false,
-          items: [
-            { text: 'vs T-15 Excalibur', link: '/taktiken/t18/vs-t15' },
-            { text: 'vs T-16 Falchion', link: '/taktiken/t18/vs-t16' },
-            { text: 'vs T-18 (Spiegel)', link: '/taktiken/t18/vs-t18' }
+            { text: 'Übersicht & Vergleich', link: '/flugzeuge/vergleich' },
+            {
+              text: 'Handbuch: T-15 Excalibur',
+              collapsed: true,
+              items: [
+                { text: '1. Daten & Performance', link: '/flugzeuge/t15/daten' },
+                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t15/taktik' },
+                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t15/matchups' },
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t15/manoever' }
+              ]
+            },
+            {
+              text: 'Handbuch: T-16 Falchion',
+              collapsed: true,
+              items: [
+                { text: '1. Daten & Performance', link: '/flugzeuge/t16/daten' },
+                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t16/taktik' },
+                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t16/matchups' },
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t16/manoever' }
+              ]
+            },
+            {
+              text: 'Handbuch: T-18 Cutlass',
+              collapsed: true,
+              items: [
+                { text: '1. Daten & Performance', link: '/flugzeuge/t18/daten' },
+                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t18/taktik' },
+                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t18/matchups' },
+                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t18/manoever' }
+              ]
+            }
           ]
         }
       ],
