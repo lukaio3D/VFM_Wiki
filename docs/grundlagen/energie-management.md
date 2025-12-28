@@ -115,6 +115,36 @@ flowchart LR
     RECOVER --> ENGAGE[Wieder kämpfen]
 ```
 
+## Spezifische Überschussleistung (Ps)
+
+Die **E-M Theorie** (Energy-Maneuverability) beschreibt die Kampffähigkeit eines Flugzeugs mathematisch. Das Kernkonzept ist die **spezifische Überschussleistung** (Ps).
+
+### Die Ps-Formel
+
+```
+Ps = (Schub - Widerstand) × Geschwindigkeit / Gewicht
+```
+
+Ps misst, wie schnell ein Flugzeug Energie gewinnen oder verlieren kann.
+
+| Ps-Wert | Bedeutung | Flugzustand |
+|---------|-----------|-------------|
+| **Ps > 0** | Energieüberschuss | Beschleunigt oder steigt |
+| **Ps = 0** | Energie-Neutral | Stationärer Flug (Sustained Turn) |
+| **Ps < 0** | Energiedefizit | Wird langsamer oder sinkt |
+
+### Praktische Anwendung
+
+- **Ps > 0:** Du gewinnst Energie. Nutze es für Angriffe oder Positionierung.
+- **Ps = 0:** Du hältst deine Energie. Ideal für Sustained Turn Rate Kämpfe.
+- **Ps < 0:** Du verlierst Energie. Kurz akzeptabel für Positionsgewinn, aber gefährlich wenn dauerhaft.
+
+::: tip SPEED IS LIFE
+Ein langsames Flugzeug ist ein totes Flugzeug - es sei denn, du zwingst den Gegner, ebenfalls langsam zu fliegen (wie die T-18).
+:::
+
+---
+
 ## Das E-M Diagramm (vereinfacht)
 
 Das Energy-Maneuverability-Diagramm zeigt, wo ein Flugzeug Energie gewinnt oder verliert.
@@ -123,13 +153,13 @@ Das Energy-Maneuverability-Diagramm zeigt, wo ein Flugzeug Energie gewinnt oder 
 
 | Zone | Beschreibung | Energie-Status |
 |------|--------------|----------------|
-| **High Speed + Low G** | Cruise | Energie-Gewinn |
-| **Corner Speed + Medium G** | Optimal | Energie-Neutral |
-| **Low Speed + High G** | Gefahr | Energie-Verlust |
-| **Any Speed + Max G** | Turn | Energie-Verlust |
+| **High Speed + Low G** | Cruise | Energie-Gewinn (Ps > 0) |
+| **Corner Speed + Medium G** | Optimal | Energie-Neutral (Ps ≈ 0) |
+| **Low Speed + High G** | Gefahr | Energie-Verlust (Ps < 0) |
+| **Any Speed + Max G** | Turn | Energie-Verlust (Ps < 0) |
 
 ::: warning GEFÄHRLICHE ZONE
-Unter Corner Speed mit hohem G-Load = rapider Energie-Verlust = Gefahr!
+Unter Corner Speed mit hohem G-Load = rapider Energie-Verlust (stark negativer Ps) = Gefahr!
 :::
 
 ## Visuelle Cues: Energie-Zustand erkennen

@@ -15,18 +15,29 @@ export default withMermaid(
     themeConfig: {
       nav: [
         { text: 'Start', link: '/' },
+        { text: 'Einstieg', link: '/einstieg/hardware' },
         { text: 'Grundlagen', link: '/grundlagen/golden-rules' },
-        { text: 'Flugzeuge', link: '/flugzeuge/t15-excalibur' },
-        { text: 'Taktiken', link: '/taktiken/t15/vs-t16' }
+        { text: 'Avionik', link: '/avionik/radar' },
+        { text: 'Flugzeuge', link: '/flugzeuge/vergleich' }
       ],
 
       sidebar: [
+        {
+          text: 'Einstieg',
+          collapsed: false,
+          items: [
+            { text: 'Hardware & System', link: '/einstieg/hardware' },
+            { text: 'Cockpit-Bedienung', link: '/einstieg/cockpit' },
+            { text: 'Spielmodi', link: '/einstieg/spielmodi' }
+          ]
+        },
         {
           text: 'Grundlagen',
           collapsed: false,
           items: [
             { text: 'Golden Rules', link: '/grundlagen/golden-rules' },
             { text: 'Begriffe & Definitionen', link: '/grundlagen/begriffe' },
+            { text: 'Physik-Simulation', link: '/grundlagen/physik' },
             { text: 'Kampf-Geometrie', link: '/grundlagen/geometrie' },
             { text: 'Der Merge', link: '/grundlagen/der-merge' },
             { text: 'Energie-Management', link: '/grundlagen/energie-management' },
@@ -64,6 +75,15 @@ export default withMermaid(
                 { text: 'Speed Regeln', link: '/grundlagen/vertikal/speed-regeln' }
               ]
             }
+          ]
+        },
+        {
+          text: 'Avionik & Waffen',
+          collapsed: false,
+          items: [
+            { text: 'Radar & HUD', link: '/avionik/radar' },
+            { text: 'Waffensysteme', link: '/avionik/waffen' },
+            { text: 'Flares (Gegenmaßnahmen)', link: '/avionik/gegenmassnahmen' }
           ]
         },
         {

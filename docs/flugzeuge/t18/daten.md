@@ -40,6 +40,41 @@ Die Tabellen lügen! Dein Vorteil liegt **unter 300 KIAS** - wo andere stallen, 
 - **Snapshot-König** - Im engen Nahkampf bist du tödlich.
 - **Gute Instant Rate (22°/s)** - Dein erster Turn ist respektabel.
 
+### Warum High-Alpha funktioniert: LERX & Vortex-Lift
+
+Die T-18 kann bei extremen Anstellwinkeln steuern, weil sie über **LERX** (Leading Edge Root Extensions) verfügt.
+
+**Was sind LERX?**
+Die markanten Verlängerungen an der Flügelwurzel, die von der Nase zu den Tragflächen führen.
+
+**Wie funktioniert es?**
+
+```
+                  Wirbel
+                    ↓
+    ╭───────────╮  ⟳⟳⟳⟳
+    │           │════════╗  ← Tragfläche
+    │   LERX    │════════╝
+    ╰───────────╯  ⟳⟳⟳⟳
+                    ↑
+              Stabilisierte Strömung
+```
+
+1. Bei hohem AoA erzeugen die LERX starke **Wirbel**
+2. Diese Wirbel strömen über die Tragflächen
+3. Die Wirbel halten die Strömung an den Flügeln **angeheftet**
+4. → Du behältst Auftrieb und Kontrolle, wo andere stallen
+
+**Vortex-Lift:**
+Der zusätzliche Auftrieb, der durch diese Wirbel erzeugt wird. Er ermöglicht:
+- Steuerung bei AoA über 35°
+- "Nose Pointing" weit über den Flugvektor hinaus
+- Kontrollierte Low-Speed-Manöver
+
+::: warning TRADE-OFF
+Vortex-Lift erzeugt massiven **induzierten Widerstand**. Jede Sekunde im High-Alpha kostet dich enorme Energie. Nutze es nur für den Kill!
+:::
+
 ### Wo du aufpassen musst
 
 - **Schlechteste Sustained Rate (16°/s)** - Lange Kreiskämpfe verlierst du. Immer.

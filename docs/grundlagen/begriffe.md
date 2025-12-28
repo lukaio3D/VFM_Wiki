@@ -199,3 +199,76 @@ Stabiler Beschuss, bei dem der Pipper auf dem Ziel gehalten wird.
 
 ### Snapshot
 Schneller, kurzer Feuerstoß bei sich schnell ändernden Winkeln.
+
+---
+
+## Physik & Aerodynamik
+
+### Mach
+Geschwindigkeit relativ zur Schallgeschwindigkeit. Mach 1.0 = Schallgeschwindigkeit (~660 kts auf Meereshöhe).
+
+### Transsonisch
+Der Geschwindigkeitsbereich zwischen Mach 0.9 und 1.2, in dem sowohl Unter- als auch Überschall-Effekte auftreten.
+
+### Überschall
+Geschwindigkeiten über Mach 1.0. Im Überschall verhält sich Luft anders als im Unterschall.
+
+### Drag Rise
+Der exponentielle Anstieg des Luftwiderstands im transsonischen Bereich. Macht Beschleunigung durch die Schallmauer energieintensiv.
+
+### AoA (Angle of Attack)
+Anstellwinkel - der Winkel zwischen Flügelsehnenlinie und anströmender Luft.
+
+### Kritischer Alpha
+Der Anstellwinkel, bei dem der maximale Auftrieb erreicht wird. Darüber droht Strömungsabriss.
+
+### Stall
+Strömungsabriss - die Luft kann der Flügelkontur nicht mehr folgen, Auftrieb bricht zusammen.
+
+### Buffet
+Das Rütteln/Vibrieren des Flugzeugs kurz vor dem Stall, verursacht durch turbulente Strömung.
+
+### Ps (Specific Excess Power)
+Spezifische Überschussleistung - misst, wie schnell ein Flugzeug Energie gewinnen oder verlieren kann.
+
+### LERX
+Leading Edge Root Extensions - Flügelverlängerungen an der Wurzel, die Vortex-Lift erzeugen.
+
+### Vortex-Lift
+Zusätzlicher Auftrieb durch kontrollierte Wirbel, ermöglicht High-Alpha-Flug.
+
+---
+
+## Radar & Avionik
+
+### Gunpiper
+Die berechnete Auftreffstelle für die Bordkanone im HUD. Zeigt, wohin man zielen muss.
+
+### Lock-On
+Aufschalten des Radars auf ein Ziel. Aktiviert Gunpiper und Raketenton.
+
+### G-Limiter
+System, das die G-Belastung begrenzt. Kann für maximale Turns deaktiviert werden.
+
+---
+
+## Waffen
+
+### Fox-2
+Funkspruch für abgefeuerte IR-Rakete (wärmesuchend, z.B. AIM-9 Sidewinder).
+
+### Growl
+Der charakteristische Ton des IR-Suchkopfs. Lauterer Ton = bessere Erfassung.
+
+### Tracking Shot
+Stabiler Beschuss, bei dem der Pipper auf dem Ziel gehalten wird.
+
+### Snapshot
+Schneller, kurzer Feuerstoß bei sich schnell ändernden Winkeln.
+
+---
+
+## Gegenmaßnahmen
+
+### Flare
+Heißer Täuschkörper zur Ablenkung von IR-Suchköpfen. Einzige Gegenmaßnahme in VFM.
