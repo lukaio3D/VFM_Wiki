@@ -160,6 +160,42 @@ Als T-15 in dieser Kombi: Warte auf den richtigen Moment. Ein verfehlter Boom & 
 
 ---
 
+## Team-Taktik: "The Hammer"
+
+Eine spezielle T-15 Team-Taktik für vertikale Dominanz:
+
+### Ablauf
+
+1. **Setup:** Beide T-15 (oder T-15 + Partner) in gestaffelter Höhe
+2. **Hammer-Position:** Der höhere Pilot ist "The Hammer"
+3. **Amboss-Position:** Der tiefere Pilot ist "The Anvil" (Amboss)
+4. **Engage:** Amboss engaget und bindet den Gegner
+5. **Schlag:** Hammer stürzt von oben herab (Boom & Zoom)
+6. **Repeat:** Hammer zieht hoch, Amboss hält Gegner beschäftigt
+
+```mermaid
+flowchart TD
+    A[Setup: Hammer oben, Anvil unten] --> B[Anvil engaget Gegner]
+    B --> C[Gegner fokussiert Anvil]
+    C --> D[Hammer: Boom & Zoom von oben]
+    D --> E{Treffer?}
+    E -->|Ja| F[Kill]
+    E -->|Nein| G[Hammer zieht hoch]
+    G --> H[Anvil kämpft weiter]
+    H --> C
+```
+
+**Vorteile:**
+- Konstanter Druck von oben
+- Gegner kann nie Energie aufbauen
+- Hammer hat immer Energievorteil
+
+::: tip THE HAMMER
+Diese Taktik nutzt die vertikale Stärke der T-15 perfekt. Der "Hammer" hat immer die Initiative.
+:::
+
+---
+
 ## 2v1 Situationen
 
 ### Du bist in Überzahl (2v1)

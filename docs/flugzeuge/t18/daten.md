@@ -1,55 +1,90 @@
 # 1. Technische Daten & Performance (T-18)
 
-> Der "Angles Fighter" - Meister des Nahkampfs bei niedrigen Geschwindigkeiten.
+## Auf einen Blick
 
-## Übersicht
+> **Archetyp:** Angles Fighter - Meister des Nahkampfs bei niedrigen Geschwindigkeiten
+> **Reales Vorbild:** F/A-18C Hornet
 
-Die T-18 Cutlass ist ein trägergestützter Mehrzweckkampfjet. Ihre Hauptstärke liegt in der exzellenten High-Alpha Fähigkeit und Nose Authority bei sehr niedrigen Geschwindigkeiten. Sie ist als **Angles Fighter** (auch Radius Fighter genannt) klassifiziert.
+Die T-18 Cutlass ist ein trägergestützter Mehrzweckkampfjet. Deine Waffe ist nicht Speed - es ist die Fähigkeit, deine Nase auf jeden zu richten, egal wie langsam du bist.
 
-::: info REALES VORBILD
-| VFM | DCS/Real |
-|-----|----------|
-| T-18 Cutlass | F/A-18C Hornet |
+---
+
+## Kernwerte zum Merken
+
+| Was | Wert | Merksatz |
+|-----|------|----------|
+| **Optimale Speed** | 200-350 KIAS | "Langsam ist dein Freund" |
+| **Corner Speed** | ~385 KIAS | "Für den ersten Merge" |
+| **Danger Zone** | > 400 KIAS | "Hier bist du nur Durchschnitt" |
+
+### Dein Habitat
+
+| Höhe | Deine Performance | Empfehlung |
+|------|-------------------|------------|
+| **Sea Level** | Stark: 27°/s Instant | Nahkampf-Arena |
+| **10.000 ft** | Gut: 22°/s Instant | Noch okay |
+| **20.000+ ft** | Schwach: 17°/s Instant | **VERMEIDEN!** |
+
+::: tip DEIN WAHRER VORTEIL
+Die Tabellen lügen! Dein Vorteil liegt **unter 300 KIAS** - wo andere stallen, fliegst du noch kontrolliert. High-Alpha ist deine Superkraft.
 :::
 
-## Performance-Daten
-
-### Referenzwerte (50% Fuel, 10.000 ft)
-
-| Parameter | Wert |
-|-----------|------|
-| **Gewicht** | 36.597 lbs |
-| **Corner Speed (Max Instant)** | ~385 KIAS |
-| **Max Instantaneous Turn Rate** | 22°/s @ 385 KIAS |
-| **Max Sustained Turn Rate** | 16°/s @ 470 KIAS |
-| **Minimum Turn Radius** | 1.899 ft |
-
-### Vollständige Performance-Tabelle
-
-| Bedingung | Gewicht | Max Instant Rate | Max Sustained Rate | Min Radius |
-|-----------|---------|------------------|-------------------|------------|
-| 100% Fuel, 10.000 ft | 41.226 lbs | 21°/s @ 409 KIAS | 15°/s @ 470 KIAS | 2.123 ft |
-| 50% Fuel, 10.000 ft | 36.597 lbs | 22°/s @ 385 KIAS | 16°/s @ 470 KIAS | 1.899 ft |
-| 50% Fuel, Sea Level | 36.597 lbs | 27°/s @ 365 KIAS | 20°/s @ 447 KIAS | 1.313 ft |
-| 50% Fuel, 21.000 ft | 36.597 lbs | 17°/s @ 426 KIAS | 12°/s @ 405 KIAS | 3.086 ft |
-
-![T-18 Performance Diagramm](/images/img3.jpg)
-
-::: warning WICHTIG: HIGH-ALPHA VORTEIL
-Die Tabellenwerte zeigen die **physikalische** Performance bei Corner Speed. Der wahre Vorteil der T-18 liegt im **Low-Speed Bereich unter 300 KIAS**, wo sie dank ihrer High-Alpha Fähigkeit noch kontrolliert manövrieren kann, während andere Flugzeuge bereits Stall-Probleme haben.
-:::
+---
 
 ## Stärken & Schwächen
 
-### Stärken
-- **Beste High-Alpha Fähigkeit** - Kann unter 150 KIAS noch kontrolliert fliegen.
-- **Nose Authority** - Kann die Nase jederzeit auf das Ziel richten.
-- **Snapshot-Fähigkeit** - Gefährlich im engen Nahkampf.
-- **Gute Instant Rate** (22°/s).
+### Was du gut kannst
 
-### Schwächen
-- **Schlechteste Sustained Turn Rate** (16°/s) - Verliert in langen Kämpfen.
-- **Hoher Drag** - "Dreckige" Flügelkonfiguration erzeugt viel Widerstand.
-- **Schwache Beschleunigung** - Schwierigkeiten, Energie aufzubauen.
-- **Vertikale Unterlegenheit** - Kann nicht steigen, verliert gegen T-15.
-- **Massiver Energie-Verlust** - Hard Turns kosten extrem viel Energie.
+- **High-Alpha Meister** - Du fliegst kontrolliert bei 150 KIAS, wo andere abstürzen.
+- **Nose Authority** - Deine Nase geht dahin, wo du willst. Immer.
+- **Snapshot-König** - Im engen Nahkampf bist du tödlich.
+- **Gute Instant Rate (22°/s)** - Dein erster Turn ist respektabel.
+
+### Wo du aufpassen musst
+
+- **Schlechteste Sustained Rate (16°/s)** - Lange Kreiskämpfe verlierst du. Immer.
+- **Energie-Vampir** - Jeder Turn kostet dich massiv. Du baust Energie nicht wieder auf.
+- **Kann nicht steigen** - Vertikal gegen T-15? Vergiss es.
+- **Hoher Drag** - Deine "dreckigen" Flügel bremsen dich.
+
+::: warning KRITISCHE WARNUNG
+Du hast **30 Sekunden** für den Kill. Danach bist du bei 200 KIAS und kannst weder kämpfen noch fliehen. **Erster Schuss muss sitzen!**
+:::
+
+---
+
+## Performance-Details (Referenz)
+
+### Standard-Bedingungen (50% Fuel, 10.000 ft)
+
+- **Gewicht:** 36.597 lbs
+- **Max Instant Rate:** 22°/s @ 385 KIAS
+- **Max Sustained Rate:** 16°/s @ 470 KIAS
+- **Min Radius:** 1.899 ft
+
+### Performance nach Höhe
+
+**Sea Level (50% Fuel):**
+- Instant: 27°/s @ 365 KIAS
+- Sustained: 20°/s @ 447 KIAS
+- Radius: 1.313 ft
+
+**10.000 ft (50% Fuel):**
+- Instant: 22°/s @ 385 KIAS
+- Sustained: 16°/s @ 470 KIAS
+- Radius: 1.899 ft
+
+**21.000 ft (50% Fuel):**
+- Instant: 17°/s @ 426 KIAS
+- Sustained: 12°/s @ 405 KIAS
+- Radius: 3.086 ft
+
+::: tip FUEL-EFFEKT
+Bei 100% Fuel: Corner Speed steigt auf ~409 KIAS, Instant Rate sinkt auf 21°/s. Weniger Sprit hilft.
+:::
+
+---
+
+## Performance-Diagramm
+
+![T-18 Performance Diagramm](/images/img3.jpg)
