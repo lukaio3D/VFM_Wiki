@@ -30,9 +30,9 @@ Im Luftkampf gibt es drei fundamentale Design-Philosophien. Jedes Flugzeug in VF
 
 | Archetyp | VFM Muster | Stärke | Schwäche |
 |---|---|---|---|
-| **Energy Fighter** | **[T-15 Excalibur](/flugzeuge/t15-excalibur)** | Schub, Vertikale, Speed | Wenderadius |
-| **Rate Fighter** | **[T-16 Falchion](/flugzeuge/t16-falchion)** | Beste Wenderate (Sustained) | Vertikale Ausdauer |
-| **Angles Fighter** | **[T-18 Cutlass](/flugzeuge/t18-cutlass)** | Bester Radius (Instantaneous) | Energie-Erhalt |
+| **Energy Fighter** | **[T-15 Excalibur](/flugzeuge/t15/daten)** | Schub, Vertikale, Speed | Wenderadius |
+| **Rate Fighter** | **[T-16 Falchion](/flugzeuge/t16/daten)** | Beste Wenderate (Sustained) | Vertikale Ausdauer |
+| **Angles Fighter** | **[T-18 Cutlass](/flugzeuge/t18/daten)** | Bester Radius (Instantaneous) | Energie-Erhalt |
 
 ```mermaid
 flowchart TD
@@ -61,26 +61,26 @@ Die theoretische Basis für alle Piloten - flugzeugneutral.
 ### Flugzeug-Daten
 Leistungsdaten, Stärken und Schwächen - ohne Taktiken.
 
-- **[T-15 Excalibur](/flugzeuge/t15-excalibur)**: Energy Fighter
-- **[T-16 Falchion](/flugzeuge/t16-falchion)**: Rate Fighter
-- **[T-18 Cutlass](/flugzeuge/t18-cutlass)**: Angles Fighter
+- **[T-15 Excalibur](/flugzeuge/t15/daten)**: Energy Fighter
+- **[T-16 Falchion](/flugzeuge/t16/daten)**: Rate Fighter
+- **[T-18 Cutlass](/flugzeuge/t18/daten)**: Angles Fighter
 
 ### Taktiken
 
 #### T-15 Excalibur Pilot
-- **[vs T-16 Falchion](/taktiken/t15/vs-t16)**: Energy vs Rate
-- **[vs T-18 Cutlass](/taktiken/t15/vs-t18)**: Energy vs Radius
-- **[vs T-15 (Spiegel)](/taktiken/t15/vs-t15)**: Energy vs Energy
+- **[vs T-16 Falchion](/flugzeuge/t15/matchups#vs-t-16-falchion-rate-fighter)**: Energy vs Rate
+- **[vs T-18 Cutlass](/flugzeuge/t15/matchups#vs-t-18-cutlass-angles-fighter)**: Energy vs Radius
+- **[vs T-15 (Spiegel)](/flugzeuge/t15/matchups#vs-t-15-excalibur-mirror-match)**: Energy vs Energy
 
 #### T-16 Falchion Pilot
-- **[vs T-15 Excalibur](/taktiken/t16/vs-t15)**: Rate vs Energy
-- **[vs T-18 Cutlass](/taktiken/t16/vs-t18)**: Rate vs Radius
-- **[vs T-16 (Spiegel)](/taktiken/t16/vs-t16)**: Rate vs Rate
+- **[vs T-15 Excalibur](/flugzeuge/t16/matchups#vs-t-15-excalibur-energy-fighter)**: Rate vs Energy
+- **[vs T-18 Cutlass](/flugzeuge/t16/matchups#vs-t-18-cutlass-angles-fighter)**: Rate vs Radius
+- **[vs T-16 (Spiegel)](/flugzeuge/t16/matchups#vs-t-16-falchion-mirror-match)**: Rate vs Rate
 
 #### T-18 Cutlass Pilot
-- **[vs T-15 Excalibur](/taktiken/t18/vs-t15)**: Radius vs Energy
-- **[vs T-16 Falchion](/taktiken/t18/vs-t16)**: Radius vs Rate
-- **[vs T-18 (Spiegel)](/taktiken/t18/vs-t18)**: Radius vs Radius
+- **[vs T-15 Excalibur](/flugzeuge/t18/matchups#vs-t-15-excalibur-energy-fighter)**: Radius vs Energy
+- **[vs T-16 Falchion](/flugzeuge/t18/matchups#vs-t-16-falchion-rate-fighter)**: Radius vs Rate
+- **[vs T-18 (Spiegel)](/flugzeuge/t18/matchups#vs-t-18-cutlass-mirror-match)**: Radius vs Radius
 
 ---
 
