@@ -241,14 +241,33 @@ Zusätzlicher Auftrieb durch kontrollierte Wirbel, ermöglicht High-Alpha-Flug.
 
 ## Radar & Avionik
 
-### Gunpiper
-Die berechnete Auftreffstelle für die Bordkanone im HUD. Zeigt, wohin man zielen muss.
+### SCAN
+Radar-Suchmodus zur breiten Luftraumüberwachung.
+
+### BST (Boresight)
+Nahkampf-Modus: Radar schaut stur geradeaus und lockt automatisch das erste Ziel vor der Nase.
+
+### VERT (Vertical)
+Radar-Modus der einen vertikalen Streifen abscannt. Gut für Ziele über/unter dir.
 
 ### Lock-On
 Aufschalten des Radars auf ein Ziel. Aktiviert Gunpiper und Raketenton.
 
+### RWR (Radar Warning Receiver)
+Passives System das feindliche Radarstrahlung erkennt. Zeigt dir, wenn jemand dich anstrahlt oder gelockt hat.
+
+---
+
+## HUD (Head-Up Display)
+
+### Velocity Vector
+Der Flight Path Marker (Kreis mit Flügeln). Zeigt wohin das Flugzeug tatsächlich fliegt, nicht wohin die Nase zeigt.
+
+### Gunpiper / Gun Funnel
+Die Vorhaltelinien für die Bordkanone. Flügelspitzen des Gegners im Trichter halten = Treffer.
+
 ### G-Limiter
-System, das die G-Belastung begrenzt. Kann für maximale Turns deaktiviert werden.
+System das die G-Belastung begrenzt. Kann für maximale Turns deaktiviert werden.
 
 ---
 

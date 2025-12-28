@@ -81,9 +81,11 @@ export default withMermaid(
           text: 'Avionik & Waffen',
           collapsed: false,
           items: [
-            { text: 'Radar & HUD', link: '/avionik/radar' },
+            { text: 'Radar-System', link: '/avionik/radar' },
+            { text: 'Head-Up Display (HUD)', link: '/avionik/hud' },
+            { text: 'Radar Warning Receiver', link: '/avionik/rwr' },
             { text: 'Waffensysteme', link: '/avionik/waffen' },
-            { text: 'Flares (Gegenmaßnahmen)', link: '/avionik/gegenmassnahmen' }
+            { text: 'Flares', link: '/avionik/gegenmassnahmen' }
           ]
         },
         {

@@ -73,7 +73,9 @@ Die theoretische Basis für alle Piloten - flugzeugneutral.
 ### Avionik & Waffen
 Einfache, effektive Systeme für den Nahkampf.
 
-- **[Radar & HUD](/avionik/radar)**: Lock-On, Gunpiper, G-Limiter
+- **[Radar-System](/avionik/radar)**: SCAN, Boresight, Vertical Modi
+- **[Head-Up Display](/avionik/hud)**: Speed, G-Force, Gunpiper, Velocity Vector
+- **[Radar Warning Receiver](/avionik/rwr)**: Erkennen wenn du gelockt wirst
 - **[Waffensysteme](/avionik/waffen)**: Bordkanone & Fox-2 (AIM-9)
 - **[Flares](/avionik/gegenmassnahmen)**: Gegenmaßnahmen gegen IR-Raketen
 
