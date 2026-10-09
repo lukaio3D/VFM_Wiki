@@ -1,109 +1,86 @@
-# Cockpit-Bedienung
+# Steuerung & Einstellungen
 
-> VR-Interaktion und Steuerungssysteme in Virtual Fighter Maneuvers.
+> Stick, Schubhebel, die wichtigsten Tastenbelegungen und wie du in VR den Gegner im Blick behältst.
 
-VFM nutzt das bewährte "Virtual Hands"-System aus VTOL VR. Du steuerst das Flugzeug durch physische Interaktion mit dem virtuellen Cockpit.
+Alle drei Jets haben dasselbe Cockpit mit **Side-Stick** (Steuerknüppel seitlich rechts) und identischer Avionik. Was du hier einmal einrichtest, gilt für T-15, T-16 und T-18. VFM ist bewusst schlank: Es gibt **kein Fahrwerk, keine Landung, keinen Start, keine Klappen- oder Hook-Bedienung**. Du startest in der Luft und kämpfst.
 
----
+## VR-Controller: virtueller Stick und Schubhebel
 
-## Virtual Hands
+Standardmäßig fliegst du mit den VR-Controllern: Die rechte Hand greift den virtuellen Stick, die linke den virtuellen Schubhebel.
 
-Die VR-Controller werden als virtuelle Hände im Cockpit dargestellt. Du greifst und bedienst alle Steuerelemente wie in einem echten Flugzeug.
+In den Einstellungen kannst du anpassen:
 
-### Steuerknüppel (Stick)
+- **Position** von Stick und Schubhebel – so, dass deine Hände bequem und entspannt liegen, z.B. auf den Oberschenkeln oder Armlehnen.
+- **Modus "translation vs tilt"** – ob der Stick auf das **Verschieben** der Hand oder auf das **Kippen** des Controllers reagiert.
 
-Der Steuerknüppel kontrolliert Nick- und Rollbewegungen:
-
-| Bewegung | Effekt |
-|----------|--------|
-| **Vor/Zurück** | Nicken (Nose Up/Down) |
-| **Links/Rechts** | Rollen |
-| **Trigger** | Bordkanone feuern |
-| **Daumenknopf** | Waffenwahl / Cursor |
-
-### Schubhebel (Throttle)
-
-Der Schubhebel steuert die Triebwerksleistung:
-
-| Position | Schub |
-|----------|-------|
-| **Ganz zurück** | Idle (Leerlauf) |
-| **Mitte** | ~50% Schub |
-| **Ganz vor** | Militärschub (100%) |
-| **Über die Raste** | Nachbrenner (wenn verfügbar) |
-
-::: tip TIPP
-Für präzise Energiekontrolle: Kleine Schubanpassungen machen den Unterschied zwischen Sieg und Niederlage.
+::: info IM SPIEL PRÜFEN
+- Wie genau unterscheiden sich "translation" und "tilt" im Flug? Teste beide je 10 Minuten in Free Flight mit derselben Übung (z.B. sauberer 360°-Turn auf konstanter Höhe und Speed).
+- Gibt es Einstellungen für Empfindlichkeit, Deadzone oder Kurven des VR-Sticks?
+- Gibt der Controller haptisches Feedback (z.B. bei Buffeting oder hohem G)?
 :::
 
----
+**Tipp:** Stütze Unterarm oder Handgelenk ab. Präzises Zielen mit der Kanone geht aus einer abgestützten Hand deutlich besser als aus einem frei schwebenden Arm – egal welcher Modus.
 
-## Schalterbedienung
+## Hardware: HOTAS, Pedale, Gamepad
 
-Kritische Systeme werden durch physische Schalter im Cockpit bedient:
+VFM unterstützt HOTAS, Pedale und Gamepad nativ. Aktiviere dafür in den Einstellungen **"enable hardware controllers"**. Die Menüs bedienst du weiterhin mit den VR-Controllern – leg sie also griffbereit ab.
 
-### Wichtige Schalter
+Tipps zum HOTAS (Erfahrungswerte, keine Spielvorgabe):
 
-| Schalter | Funktion |
-|----------|----------|
-| **Master Arm** | Aktiviert Waffensysteme |
-| **Fahrwerk** | Ein-/Ausfahren der Landebeine |
-| **Bremsklappen** | Speed Brake für schnelles Abbremsen |
-| **Radar Mode** | Umschalten zwischen Radar-Modi |
-| **Countermeasures** | Flare/Chaff-Auswurf |
+- **Stick rechts seitlich** passt zum Side-Stick im Cockpit und verwirrt das Gehirn weniger als ein Center-Stick.
+- **Kleine Deadzone, höchstens leichte Kurve.** Starke Kurven machen das Ziehen bis ans Limit unpräzise – und im Dogfight ziehst du oft bis ans Limit.
+- **Schubhebel mit spürbarer Idle-Position.** Du brauchst Idle blind und sofort (Raketenabwehr, Overshoot vermeiden).
+- **Pedale** sind optional. Ob und wie stark das Seitenruder im Kampf hilft (z.B. für kleine Korrekturen beim Zielen), testest du am besten selbst.
 
-### Interaktion
+## Die Belegungen, die du wirklich brauchst
 
-1. Hand zum Schalter bewegen
-2. Grip-Taste halten
-3. Schalter in gewünschte Position bewegen
-4. Grip lösen
+Leg diese Funktionen auf Tasten, die du **ohne Hinschauen und ohne den Stick loszulassen** erreichst. Die genauen Funktionsnamen im Menü und die Standardbelegung sind hier nicht dokumentiert.
 
-::: warning WORKLOAD
-In Stresssituationen kann die Schalterbedienung zur Herausforderung werden. Übe die Positionen, bis du sie blind findest.
+| Funktion | Warum wichtig |
+|---|---|
+| **Kanone feuern** | Schussfenster sind oft unter einer Sekunde lang. |
+| **Rakete feuern / Waffe wählen** | Wechsel zwischen Kanone und IR-Rakete ("Heater", Fox 2). |
+| **Flares** | Muss blind und sofort gehen, auch mitten im Break Turn. |
+| **AoA-Override ("Cobra-Button")** | Hebt den AoA-Limiter auf (siehe unten). Halten, nicht suchen. |
+| **Radar an/aus, Lock, Cursor/TDC** | Seit v1.4.1 auf Tasten belegbar. Lock liefert die Feuerleitlösung für den Gun-Funnel. |
+| **Push-to-Talk** | Eingebauter Voice-Chat. Im Teamkampf Pflicht. |
+| **View Recenter** | Sitzposition nach Verrutschen sofort zurücksetzen. |
+
+::: info IM SPIEL PRÜFEN
+- Standardbelegung aller oben genannten Funktionen auf VR-Controllern, HOTAS und Gamepad.
+- Gibt es einen Nachbrenner mit Raste am Schubhebel, und wie wird er angezeigt?
+- Gibt es eine Speedbrake (Luftbremse), und ist sie belegbar?
+- Welche Radar-Funktionen genau seit v1.4.1 belegbar sind (z.B. Moduswechsel, Lock, TDC-Bewegung).
 :::
 
----
+### AoA-Limiter und Override
 
-## Haptisches Feedback
+Der Jet begrenzt normalerweise den **AoA** (Angle of Attack, Anstellwinkel – siehe [Begriffe](/grundlagen/begriffe)). Mit dem Override-Button ("Cobra-Button") hebst du diese Grenze auf: Du bekommst **sofort Nase**, also Nose Authority über das normale Limit hinaus.
 
-Die VR-Controller vibrieren, um aerodynamische Zustände zu vermitteln:
+- **Kosten:** extrem viel Energie. Nach einem Override bist du langsam und musst erst wieder Speed aufbauen.
+- **G-Limit bleibt aktiv.** Der Override hebt nur das AoA-Limit auf, nicht die 9-G-Grenze.
+- **Kein Strukturschaden durch G** – du kannst den Jet nicht zerbrechen.
 
-### Buffet (Rütteln)
+Einsatz: gezielt für einen Schuss oder als letzte Abwehr, wenn die Nase jetzt sofort herum muss. Nicht als Standard-Turn. Mehr dazu: [Energie-Management](/grundlagen/energie-management).
 
-Wenn du dich dem kritischen Anstellwinkel näherst, beginnen die Controller zu vibrieren:
+## Rundumblick und Padlock in VR
 
-| Intensität | Bedeutung |
-|------------|-----------|
-| **Leicht** | Hoher AoA, Vorsicht geboten |
-| **Mittel** | Kurz vor Strömungsabriss |
-| **Stark** | Stall! Nase senken! |
+VFM hat **kein Helmvisier (HMD)** und keine Padlock-Taste, die deinen Blick automatisch auf den Gegner hält. Dein Kopf ist das Padlock. **Padlocked** heißt im Funk: "Ich kann den Blick nicht vom Gegner nehmen."
 
-::: tip INTUITION
-Erfahrene Piloten "fühlen" ihr Flugzeug durch das Buffet. Du musst nicht auf Instrumente schauen, um den Energiezustand zu kennen.
+Technik (Tipps):
+
+- **Kopf und Oberkörper drehen.** Um nach hinten über die Schulter zu sehen, drehst du den Oberkörper mit und beugst dich leicht zur Seite. Nur den Kopf zu drehen reicht nicht bis zur 6-Uhr-Position.
+- **Im Turn durch das Kabinendach schauen.** In einer Kurve liegt der Gegner meist "oben" in deinem Sichtfeld – dort, wohin dein Lift Vector (Auftriebsrichtung, Richtung Kabinendach) zeigt. Kopf in den Nacken, den Gegner durch die Haube verfolgen und den Lift Vector auf ihn rollen.
+- **Tally nicht abgeben.** Wenn du nach unten auf ein Display schaust, verlierst du ihn. Blick auf Instrumente nur kurz und nur, wenn der Gegner gerade nicht entscheidend manövriert.
+- **Vor dem Merge den Gegner groß ansehen.** Wenn er dich passiert, folgt dein Kopf ihm über die Schulter, nicht die Nase des Jets.
+- **Verlierst du ihn:** RWR prüfen (falls er sein Radar an hat), dann in die Richtung schauen, in die er zuletzt gedreht hat. Siehe [RWR & MWS](/avionik/rwr).
+
+::: tip MERKE
+- Gleiches Cockpit in allen drei Jets – einmal einrichten, überall nutzen.
+- Hardware-Controller erst nach "enable hardware controllers"; Menüs bleiben auf den VR-Controllern.
+- Flares, AoA-Override, Waffenwahl, Radar-Lock, Push-to-Talk und Recenter blind erreichbar belegen.
+- Override = sofort Nase, kostet extrem Energie; das G-Limit bleibt.
+- Dein Kopf ist das Padlock: Oberkörper mitdrehen, durch das Kabinendach schauen, Tally halten.
 :::
 
-### G-Load
-
-Bei hoher G-Belastung verstärkt sich das Feedback. Dies hilft einzuschätzen, wie hart du das Flugzeug belastest.
-
----
-
-## HOTAS-Unterstützung
-
-Für kompetitive Spieler unterstützt VFM physische Flightsticks über SteamVR/OpenXR.
-
-### Vorteile
-
-- Physischer Widerstand für präzisere Eingaben
-- Zentrierung des Sticks für neutralen Flug
-- Bessere Feinsteuerung beim Zielen mit der Kanone
-
-### Einschränkungen
-
-- Cockpit-Schalter müssen weiterhin per VR-Controller oder gemappte Tasten bedient werden
-- Keine offizielle Mapping-Konfiguration (Community-Profile verfügbar)
-
-::: info EMPFEHLUNG
-HOTAS ist optional. Das Virtual Hands System ist vollständig spielbar und wird von vielen Top-Spielern bevorzugt.
-:::
+Weiter: [Spielmodi](/einstieg/spielmodi)

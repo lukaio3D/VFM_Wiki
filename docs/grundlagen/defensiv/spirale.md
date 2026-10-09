@@ -1,210 +1,83 @@
 # Defensive Spirale
 
-> Wenn alles andere versagt - kontrolliert abwärts, Zeit gewinnen, Fehler des Gegners nutzen.
+> Last-Ditch: Nase fast senkrecht nach unten, geladen, langsam. Entweder er überschießt, oder er muss zuerst abfangen.
 
-Die Defensive Spirale ist das Manöver der letzten Zuflucht. Du hast Energie verloren, der Gegner sitzt dir im Nacken, und du brauchst Zeit. Die Spirale gibt dir diese Zeit - aber sie hat einen Preis.
+Die defensive Spirale ist das Manöver für den Moment, in dem fast nichts mehr geht: Du bist **langsam**, der Angreifer **klebt hinter dir**, ein Break bringt nichts mehr, weil du nicht mehr genug Speed für Rate hast. Aber du hast **viel Höhe**. Die Spirale nutzt diese Höhe, um den Kampf in eine Richtung zu verlagern, in der seine höhere Speed sein Problem wird statt deins.
 
----
+Sie ist kein sanfter Sinkflug mit 3–4 G und 45° Querlage, in dem man "Zeit gewinnt". So eine Kurve ist für einen Angreifer ein bequemer Tracking-Schuss.
 
-## Das Konzept
+## Das Prinzip
 
-```mermaid
-flowchart TD
-    STUCK[Gegner bleibt hartnäckig dran] --> ASSESS{Deine Optionen?}
-    ASSESS -->|"Noch Energie"| BREAK[Break Turn / Manöver]
-    ASSESS -->|"Wenig Energie"| SPIRAL[Defensive Spirale]
-    ASSESS -->|"Sehr wenig Energie"| LAST[Letzte Chance - Spiral]
+- Du rollst so, dass dein Lift Vector weit unter dem Horizont liegt, und ziehst die Nase **steil nach unten, nahezu senkrecht**. Dann spiralst du unter Last um eine fast senkrechte Achse nach unten.
+- Du hältst dich **so langsam wie möglich**: Gas auf Idle, Speedbrake falls vorhanden. Langsam heißt kleiner Radius (r wächst mit V², siehe [Kurvenphysik](/grundlagen/kurvenphysik)).
+- Der Angreifer kommt mit mehr Speed. Im steilen Sturzflug beschleunigen beide. Um in deiner engen Spirale zu bleiben, muss er genauso langsam werden wie du. Schafft er das nicht, wird sein Radius größer als deiner: Er **überschießt** (zuerst über deine Flugbahn, siehe [Overshoot](/grundlagen/offensiv/overshoot)).
+- Bleibt er trotzdem dran, wird es ein Abfangduell: Wer schneller ist, braucht mehr Höhe, um aus dem Sturz abzufangen. **Er muss zuerst abfangen** oder riskiert den Boden.
 
-    SPIRAL --> EFFECT1[Speed halten]
-    SPIRAL --> EFFECT2[Höhe verlieren - akzeptabel]
-    SPIRAL --> EFFECT3[Zeit gewinnen]
-    SPIRAL --> EFFECT4[Schusslösung erschweren]
+### Wie viel Höhe kostet das Abfangen?
 
-    EFFECT3 --> TEAM[Wingman / Hilfe?]
-    EFFECT3 --> MISTAKE[Gegner macht Fehler]
-    EFFECT4 --> SURVIVE[Überleben]
+Grobe Abschätzung für das Abfangen aus dem senkrechten Sturz in den Horizontalflug: Der Höhenverlust ist etwa der Radius r ≈ V²/(g·(n−1)). Mit 9 G:
 
-    MISTAKE --> EXPLOIT[Chance nutzen!]
-```
+| Speed im Sturz | V | r ≈ V²/(32,2 · 8) |
+|---|---|---|
+| 300 kt | ~506 ft/s | ~1.000 ft |
+| 400 kt | ~675 ft/s | ~1.770 ft |
 
-### Warum funktioniert die Spirale?
+Grobe Rechnung: Ohne Speedzunahme beim Abfangen und ohne Reaktionszeit. In echt brauchst du mehr. Aber das Verhältnis zeigt den Kern: **Wer 100 kt schneller ist, braucht deutlich mehr Höhe.** Dazu kommt: Der Angreifer sitzt hinter dir und muss dich gleichzeitig beobachten.
 
-1. **Du bewegst dich konstant** - Keine stabile Schusslösung für den Gegner
-2. **Du verlierst KONTROLLIERT Höhe** - Nicht chaotisch, nicht vorhersagbar
-3. **Du hältst Speed** - Durch das Sinken behältst du Manövrierenergie
-4. **Der Gegner muss folgen** - Und dabei macht er vielleicht Fehler
+## Wann
 
----
+- Du bist **langsam** und hast keine Speed mehr für einen wirksamen Break.
+- Der Angreifer ist **nah hinter dir**, mit mehr Speed als du.
+- Du hast **viel Höhe**. Mehrere tausend Fuß über dem Hard Deck sind das Minimum, und die Abfanghöhe von oben musst du einplanen.
+- Alternativen ([Break](/grundlagen/defensiv/break-turn), [Slice](/grundlagen/defensiv/slice-turn), [Guns Defense](/grundlagen/defensiv/guns-defense)) helfen nicht mehr.
 
-## Wann Defensive Spirale?
+## Wann nicht
 
-### Die richtige Situation
-
-| Zeichen | Was es bedeutet |
-|---------|-----------------|
-| Deine Speed unter 250 kts | Zu langsam für effektive Manöver |
-| Gegner bleibt hinter dir | Break Turns haben nicht funktioniert |
-| Du hast Höhe zum Opfern | Mindestens 5000+ ft über Hard Deck |
-| Hilfe ist möglich | Wingman in der Nähe oder auf dem Weg |
-
-### NICHT Spirale wenn...
-
-| Situation | Warum nicht? |
-|-----------|--------------|
-| Du bist schon tief | Kein Raum für Spirale |
-| Mehrere Gegner | Spirale macht dich zu einem einfachen Ziel für Nr. 2 |
-| Gegner hat Missiles | Spirale hilft nicht gegen Fox-2 |
-| Du hast noch Energie | Nutze sie für offensive Optionen! |
-
----
+- **Wenig Höhe.** Dann bringt die Spirale dich in den Boden, nicht ihn.
+- **Er ist weit hinter dir oder hoch über dir.** Dann kann er die Spirale von außen beobachten und dich am Boden erwarten.
+- **Gegen eine Rakete.** Die Spirale ist keine Raketenabwehr. Dafür: [Break + Flares + Idle](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung).
+- **Mehrere Gegner.** Der zweite wartet einfach, bis du unten abfängst.
 
 ## Ausführung
 
-### Der richtige Spiral-Winkel
+1. **Abfanghöhe festlegen, bevor du anfängst.** Unter dieser Höhe fängst du ab, egal was er tut. Trainings-Empfehlung: Hard Deck 2.000 ft über Grund plus Abfangreserve.
+2. **Gas auf Idle**, Speedbrake falls vorhanden.
+3. **Rollen und ziehen**, bis die Nase steil nach unten zeigt. Die Spirale läuft eng um eine fast senkrechte Achse.
+4. **Geladen bleiben.** Last halten, damit der Radius klein bleibt. Kein Rhythmus, der ihm eine ruhige Lösung gibt. Ist er in Kanonenlösung: Ebene wechseln wie bei der [Guns Defense](/grundlagen/defensiv/guns-defense).
+5. **Ihn beobachten.**
+   - **Er überschießt:** Sofort umkehren, Lift Vector auf ihn, abfangen in seine Richtung. Er ist jetzt schnell, tief und vor dir.
+   - **Er fängt ab und geht hoch:** Er parkt Speed in Höhe. Du fängst ebenfalls ab und hast den Kampf neutralisiert, aber mit Energienachteil. Jetzt ist [Separation](/grundlagen/defensiv/separation) oft die richtige Wahl.
+   - **Er bleibt drin:** Spätestens an deiner Abfanghöhe abfangen. Er ist schneller und muss früher abfangen als du, sonst geht er in den Boden.
 
-```mermaid
-flowchart LR
-    FLAT["Flache Spirale<br/>30-45° Bank"] --> SLOW["Langsamer Abstieg<br/>Mehr Zeit, weniger Speed-Erhalt"]
-    STEEP["Steile Spirale<br/>60-75° Bank"] --> FAST["Schneller Abstieg<br/>Mehr Speed, schneller am Boden"]
-
-    style FLAT fill:#4488aa
-    style STEEP fill:#aa4444
-```
-
-**Empfehlung:** 45-60° Bank - Balance zwischen Speed-Erhalt und Zeit
-
-### Schritt für Schritt
-
-1. **Einleitung**
-   - Rolle auf 45-60° Bank
-   - Ziehe leicht (3-4 G)
-   - Lass die Nase leicht unter Horizont fallen
-
-2. **Die Spirale halten**
-   - **Konstanter Bank-Winkel** - Nicht wild wechseln
-   - **Konstante G-Last** - Smooth, nicht ruckartig
-   - **Speed beobachten** - Nicht unter 180 kts fallen!
-   - **Gegner beobachten** - Wo ist er? Was macht er?
-
-3. **Auf Fehler warten**
-   - Überschießt er?
-   - Verliert er Sicht?
-   - Wird er ungeduldig und macht aggressive Moves?
-
-4. **Exit**
-   - Wenn der Gegner Fehler macht → Sofort ausnutzen
-   - Wenn Hilfe kommt → Separation suchen
-   - Wenn Hard Deck naht → Entscheidung: Flatten oder Separation
-
----
-
-## Die Gefahr: Der Boden
-
-::: danger BODEN-AWARENESS
-Die Spirale führt dich unweigerlich nach unten. Du MUSST deinen Höhenmesser beobachten.
-
-**Faustregel:** Bei 2000 ft über Hard Deck → Exit-Plan aktivieren
-
-Der Boden hat eine Kill Probability von 100%.
+::: danger BODEN
+Der Boden schießt nicht vorbei. Abfangen heißt: genug Höhe für den Bogen aus dem Sturz. Auf Mountains und anderen Maps mit Gelände zählt die Höhe über Grund, nicht über Meer.
 :::
 
-### Höhen-Management
+## Typische Fehler
 
-| Höhe über Hard Deck | Status |
-|---------------------|--------|
-| > 8000 ft | Komfortabel - Spirale fortsetzen |
-| 5000-8000 ft | Okay - Exit-Plan vorbereiten |
-| 3000-5000 ft | Kritisch - Bald handeln |
-| < 3000 ft | SOFORT Exit - Spirale beenden! |
+- **Zu flach.** Eine 45°-Spirale mit 3–4 G ist keine defensive Spirale, sondern eine vorhersehbare Kurve nach unten.
+- **Zu schnell.** Mit Leistung oder ohne Last baust du Speed auf, dein Radius wächst, und sein Vorteil verschwindet.
+- **Ohne Abfanghöhe.** Wer erst unten überlegt, wann er abfängt, hat schon verloren.
+- **Zu früh.** Wer noch Speed für einen Break hat, verschenkt mit der Spirale Höhe ohne Not.
+- **Er bleibt oben und du merkst es nicht.** Dann spiralst du allein nach unten, und er wartet. Sicht halten.
 
----
+## VFM-Hinweise
 
-## Was macht der Gegner?
+- **T-18 Cutlass:** Der Entwickler positioniert sie als High-AoA-/Low-Speed-Jet. Wenn sich das im Spiel bestätigt, ist sie in einer langsamen, engen Spirale am stärksten. Unterhalb ~170 KIAS gibt es keine Daten, das ist eine Hypothese.
+- **T-16 Falchion:** Unter ~380 KIAS ist sie laut Daten der schwächste Jet. Eine langsame Spirale ist ihr ungünstigstes Terrain. Wenn eine T-16 hier landet, ist meist vorher etwas schiefgelaufen.
+- **T-15 Excalibur:** Mit dem kleinsten Radius im Diagrammbereich kann sie eng spiralen, ist aber schwer und beschleunigt im Sturz entsprechend.
 
-### Gegner-Reaktionen und deine Antwort
-
-**Gegner folgt der Spirale:**
-- Gut! Er verliert auch Energie und Höhe
-- Warte auf seinen Fehler
-- Er könnte Overshoot machen
-
-**Gegner zieht hoch (Extension):**
-- Er baut Energie auf für neuen Angriff
-- Nutze die Pause für Separation
-- Bereite dich auf seinen nächsten Pass vor
-
-**Gegner schießt (Gun/Missile):**
-- Spirale erschwert die Schusslösung
-- Jinking innerhalb der Spirale (kleine Variationen)
-- Flares bei IR-Raketen
-
-**Gegner ist frustriert (aggressive Moves):**
-- PERFEKT - Das ist deine Chance
-- Overshoot provozieren
-- Scissors-Möglichkeit?
-
----
-
-## Kombination mit anderen Manövern
-
-### Spirale → Scissors
-
-Wenn der Gegner zu aggressiv wird:
-1. Spirale halten, Gegner kommt näher
-2. Plötzlicher Hard Reversal
-3. Er schießt vorbei → Scissors beginnt
-
-### Spirale → Slice Exit
-
-Wenn du genug hast:
-1. Aus der Spirale flach werden
-2. Wings level, Nase runter
-3. Volle Power, Separation aufbauen
-
-### Spirale → Vertical Exit
-
-Wenn du Speed gesammelt hast:
-1. Aus Spirale Speed aufbauen
-2. Plötzlich vertikal hochziehen
-3. Überraschungsmoment nutzen
-
----
-
-## Die Psychologie der Spirale
-
-Die Spirale ist auch ein psychologisches Werkzeug:
-
-1. **Du zeigst Kontrolle** - Du panikst nicht
-2. **Du zwingst Geduld auf** - Der Gegner muss warten
-3. **Du provozierst Fehler** - Ungeduld führt zu Overshoot
-4. **Du kaufst Zeit** - Für Hilfe, für bessere Ideen
-
-::: tip RUHE BEWAHREN
-In der Spirale gewinnst du nicht durch Aktion, sondern durch kontrolliertes WARTEN. Der Gegner muss den Fehler machen - deine Aufgabe ist, ihm die Gelegenheit dazu zu geben.
+::: info IM SPIEL PRÜFEN
+- Ob VFM eine Speedbrake hat und wie sie belegt ist. Bisher gibt es keine Quelle dafür.
+- Wie langsam du mit Idle in steiler Spirale bleiben kannst, ohne die Nose Authority zu verlieren.
+- Wie die Höhe über Grund angezeigt wird (siehe [HUD](/avionik/hud)).
 :::
 
----
-
-## Zusammenfassung
-
-| Aspekt | Details |
-|--------|---------|
-| **Zweck** | Zeit gewinnen, Gegner-Fehler provozieren |
-| **Bank-Winkel** | 45-60° |
-| **G-Last** | Moderat (3-4 G) |
-| **Speed-Ziel** | 200-250 kts halten |
-| **Höhenverlust** | ~2000-4000 ft pro volle Spirale |
-| **Exit-Trigger** | Gegner-Fehler, Hilfe, Höhe kritisch |
-
-### Die Spirale-Regel
-
-::: warning MERKE
-Die Spirale ist KEINE Lösung - sie ist eine VERZÖGERUNG.
-
-Du brauchst einen Exit-Plan:
-- Wingman
-- Gegner-Fehler
-- Separation-Chance
-
-Ohne Exit-Plan führt die Spirale nur zum Boden.
+::: tip MERKE
+- Last-Ditch: langsam, Angreifer nah, viel Höhe, sonst nichts mehr übrig.
+- Steil nose-low, nahezu senkrecht, geladen, Idle, so langsam wie möglich.
+- Ziel: Er überschießt oder muss zuerst abfangen. Der Schnellere braucht mehr Höhe.
+- Abfanghöhe vorher festlegen. Der Boden gewinnt immer.
 :::
+
+Weiter: [Separation](/grundlagen/defensiv/separation)

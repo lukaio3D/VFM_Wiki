@@ -1,165 +1,108 @@
-# Waffensysteme
+# Waffen
 
-> Bordkanone und wärmesuchende Raketen in VFM.
+> Kanone und IR-Rakete: was du hast, was die Lobby-Einstellungen ändern und wann du welche Waffe nutzt.
 
-VFM simuliert klassischen Nahkampf mit zwei Waffensystemen: der Bordkanone für präzise Schüsse und wärmesuchenden Raketen (Fox-2) für schnelle Kills. Die Bewaffnung ist bewusst limitiert und einfach gehalten.
+Alle drei Jets haben dieselbe Bewaffnung:
 
----
+| Waffe | Beschreibung |
+|---|---|
+| **Bordkanone** ("Guns") | Zielhilfe über den EEGS-artigen Gun-Funnel im HUD |
+| **IR-Rakete** ("Heater", Funkruf **Fox 2**) | Wärmesuchend, ein einziger Raketentyp |
 
-## Bordkanone (Guns)
+Es gibt **keine Radar-Raketen**. Den genauen Namen der Rakete im Spiel kennen wir nicht – sie heißt hier einfach "Heater" bzw. IR-Rakete.
 
-Die Standardwaffe für Nahkampf-Engagements.
+## Match-Einstellungen
 
-### Eigenschaften
+Was du dabeihast, legt die Lobby fest (siehe [Spielmodi](/einstieg/spielmodi)):
 
-| Aspekt | Beschreibung |
-|--------|--------------|
-| **Reichweite** | Effektiv bis ~1 km |
-| **Munition** | Begrenzt, aber ausreichend |
-| **Zielhilfe** | Gunpiper im HUD |
-| **Stärke** | Nicht durch Flares abwehrbar |
+| Einstellung | Wirkung |
+|---|---|
+| **Raketen an/aus** | Aus = Guns-only |
+| **Anzahl Raketen** | Einstellbar |
+| **Infinite Ammo** | Unbegrenzte Munition |
+| **Head-on Guns** | Frontalschüsse beim Merge erlaubt oder verboten |
+| **Ranked 1v1** | Laut Community Guns-only |
 
-### Gunpiper-Nutzung
+Munition und Treibstoff haben **Gewicht** (Store-Beschreibung). Ein leichter Jet dreht besser – das Gewicht der Raketen und Munition macht aber nur einen Teil aus; wie stark sich ein Abschuss auf die Leistung auswirkt, ist nicht dokumentiert.
 
-Der Gunpiper zeigt die berechnete Auftreffstelle:
+## Leere Stores: Selbstzerstörung
 
-1. **Ziel aufschalten** - Lock für Radar-Unterstützung
-2. **Manövrieren** - Pipper auf das Ziel bringen
-3. **Feuern** - Kurze, kontrollierte Salven
+Hast du keine Munition und keine Raketen mehr, startet ein **Selbstzerstörungs-Countdown**. Es gibt kein Nachladen und keine Reload-Zonen.
 
-::: tip AMMO-MANAGEMENT
-Feuere in kurzen Bursts (1-2 Sekunden). Lange Salven verschwenden Munition und überhitzen die Waffe.
+**Was das heißt:** Lange Dauerfeuer-Salven ohne echte Lösung kosten dich im Zweifel die Runde. Schieß, wenn der Funnel passt, nicht "auf gut Glück".
+
+::: info IM SPIEL PRÜFEN
+- Wie viele Schuss hat die Kanone, und wie lange reicht das in Sekunden Dauerfeuer?
+- Wie lang ist der Selbstzerstörungs-Countdown?
+- Wie viele Raketen sind voreingestellt?
 :::
 
-### Tracking Shot vs Snapshot
+## Bordkanone
 
-| Typ | Beschreibung | Wann nutzen |
-|-----|--------------|-------------|
-| **Tracking Shot** | Pipper stabil auf Ziel halten | Stabile Verfolgung, gute Position |
-| **Snapshot** | Kurzer Burst bei Kreuzung | Schnelle Gelegenheit, Angles Fight |
+Die Kanone kann nicht durch Flares abgewehrt werden – gegen sie hilft nur Manövrieren (siehe [Guns Defense](/grundlagen/defensiv/guns-defense)).
 
----
+- **Zielen:** mit dem Gun-Funnel. Mit Radar-Lock ist die Lösung genauer, ohne Lock rechnet der Funnel mit einer durchschnittlichen Spannweite (siehe [HUD](/avionik/hud)).
+- **Schusstypen:** **Tracking Shot** = in seiner Ebene, kleiner Winkel, Funnel bleibt auf ihm. **Snapshot** = großer Winkel, er läuft durch den Funnel, du feuerst kurz vorher.
+- **Feuerstöße:** kurze, gezielte Bursts, solange die Lösung passt. Hört die Lösung auf, hörst du auf zu schießen.
 
-## Fox-2: Wärmesuchende Raketen
-
-Infrarot-gelenkte Raketen, analog zur AIM-9 Sidewinder.
-
-### Bewaffnung
-
-| Flugzeug | Anzahl |
-|----------|--------|
-| **T-15** | 4 × AIM-9 |
-| **T-16** | 4 × AIM-9 |
-| **T-18** | 4 × AIM-9 |
-
-::: warning LIMITIERT
-Nur 4 Raketen pro Sortie. Jeder Schuss zählt!
+::: info IM SPIEL PRÜFEN
+- Effektive Reichweite der Kanone (z.B. mit einem Freund in einer Infinite-Ammo-Lobby testen: ab welcher Entfernung zeigen Treffer Wirkung?).
+- Wie viele Treffer braucht ein Abschuss?
 :::
 
-### Funktionsweise
+## IR-Rakete (Heater / Fox 2)
 
-Der Suchkopf erkennt Wärmequellen (Triebwerksabgase) und folgt ihnen autonom nach Abschuss.
+Die Rakete sucht die Wärme des gegnerischen Jets. Sie braucht **kein Radar** – der Gegner sieht auf seinem RWR also nichts, wenn du ohne Radar schießt; er wird nur vom MWS gewarnt (siehe [RWR & MWS](/avionik/rwr)).
 
-```
-    Suchkopf → 🔥 Triebwerk
-         ╲    ↗
-          ╲  ↗
-           ╲↗
-    Rakete folgt der Wärme
-```
+- **Suchkopf-Ton:** Es gibt einen Ton, wenn der Suchkopf ein Ziel hat. Wie er sich genau anhört und verändert, prüfst du am besten in Free Flight/gegen Bots.
+- **Aspect:** Laut Community trifft die Rakete auch frontal (All-Aspect). Offiziell bestätigt ist das nicht.
+- **Abwehr:** Der Gegner kann sie mit Flares und Manöver schlagen (siehe [Gegenmaßnahmen](/avionik/gegenmassnahmen)).
 
-### Suchkopf-Ton ("Growl")
-
-Der Suchkopf gibt charakteristische Töne von sich:
-
-| Ton | Bedeutung | Aktion |
-|-----|-----------|--------|
-| **Leises Rauschen** | Keine Erfassung | Weiter manövrieren |
-| **Lautes Brummen** | Ziel erfasst | Schussbereit |
-| **Hoher, klarer Ton** | Starke Erfassung | Optimaler Schussmoment |
-
-::: tip WARTE AUF DEN TON
-Schieße erst bei starkem Growl. Schwache Erfassung = wahrscheinlicher Fehlschuss.
+::: info IM SPIEL PRÜFEN
+- Wie klingt der Suchkopf-Ton ohne Ziel und mit Ziel?
+- Funktioniert ein Schuss von vorne (All-Aspect) zuverlässig?
+- Mindest- und Maximalreichweite, maximaler Winkel neben der Nase (Off-Boresight).
+- Hilft ein Radar-Lock der Rakete (z.B. durch Ausrichten des Suchkopfs)?
+- Reagiert der Suchkopf auf den Schubzustand des Ziels (Idle vs. Vollgas/Nachbrenner)?
 :::
 
-### Schussparameter
+## WEZ: Wann trifft die Waffe?
 
-| Aspekt | Optimal | Akzeptabel | Schlecht |
-|--------|---------|------------|----------|
-| **Winkel** | Heck (0°) | Beam (90°) | Frontal |
-| **Distanz** | 500m - 1.5km | 300m - 2km | >2km |
-| **Ziel-Status** | Nachbrenner an | Mil Power | Idle |
+Die **WEZ** (Weapons Engagement Zone) ist der Bereich, aus dem eine Waffe treffen kann. Sie hängt ab von:
 
-### Schwächen
+- **Mindest- und Maximalreichweite** – zu nah kann die Rakete nicht mehr lenken, zu weit erreicht sie dich nicht.
+- **Off-Boresight** – wie weit neben deiner Nase das Ziel sein darf.
+- **Aspect** – von hinten ist ein IR-Ziel generell einfacher als von vorne.
+- **Energie und Manöver des Ziels** – ein hart drehendes Ziel verkleinert die WEZ.
 
-Fox-2 Raketen sind **leicht durch Flares abzuwehren**:
+Bei der IR-Rakete sind diese Grenzen für VFM nicht veröffentlicht. Lern sie im Spiel kennen und merke dir Bilder ("so groß sah er aus, als die Rakete getroffen hat").
 
-- Begrenzte Reichweite
-- Keine All-Aspect-Fähigkeit bei frühen Modellen
-- Flares ziehen den Suchkopf ab
-- Einfache IR-Suchköpfe
+## Kanone oder Rakete?
 
-::: warning ERWARTE FLARES
-Dein Gegner wird Flares werfen. Schieße nur bei guter Position und kurzer Distanz!
-:::
-
----
-
-## Resupply
-
-In Lobbies stehen **Reload-Zonen** zur Verfügung:
-
-| Was | Beschreibung |
-|-----|--------------|
-| **Position** | Markierte Bereiche in der Lobby |
-| **Effekt** | Raketen und Munition auffüllen |
-| **Nutzung** | Hineinfliegen und warten |
-
----
-
-## Taktische Empfehlungen
-
-### Wann Guns?
-
-- Stabile Verfolgungsposition (Control Zone)
-- Gegner ist langsam und vorhersehbar
-- Raketen aufgebraucht
-- Gegner hat gerade Flares geworfen
-
-### Wann Fox-2?
-
-- Gute Heck-Position
-- Kurze Distanz (< 1.5 km)
-- Gegner hat Nachbrenner an
-- Schnelle Gelegenheit ohne Zeit für Guns-Lösung
-
-### Kombination
+Grundlogik (ausführlich in [Schusslösung](/grundlagen/offensiv/schussloesung)):
 
 ```mermaid
 flowchart TD
-    A[Ziel in Sicht] --> B{Position?}
-    B -->|Heck, nah| C[Fox-2 + Guns Follow-up]
-    B -->|Stabil, Control Zone| D[Guns bevorzugt]
-    B -->|Beam oder weit| E[Erst Positionieren]
-    C --> F[Erwarte Flares]
-    F --> G[Guns für den Kill]
+    A[Gegner vor dir] --> B{Raketen verfügbar und Ton?}
+    B -->|Ja, in WEZ| C[Fox 2]
+    C --> D[Gegner muss defensiv: Flares, Break]
+    D --> E[Er verliert Energie und Winkel]
+    E --> F[Guns-Lösung aufbauen]
+    B -->|Nein| G{Funnel-Lösung?}
+    G -->|Ja| H[Guns]
+    G -->|Nein| I[Position verbessern: Verfolgungskurve, Yo-Yo]
 ```
 
-::: tip ZUSAMMENSPIEL
-Erfahrene Piloten nutzen Fox-2 um den Gegner zu Flares zu zwingen, dann Guns für den eigentlichen Kill.
+- **Fox 2 erzwingt Reaktion.** Auch eine Rakete, die vorbeigeht, zwingt den Gegner meist zu Flares und einem harten Break – das kostet ihn Energie. Danach kommst du leichter zur Kanonenlösung.
+- **Dicht hinter ihm in seiner Ebene:** Guns. Die Kanone lässt sich nicht mit Flares abwehren.
+- **One-Circle-Kampf:** Kann die Mindestreichweite der Rakete unterlaufen. Dann bleibt nur die Kanone.
+
+::: tip MERKE
+- Zwei Waffen: Kanone (Funnel) und eine IR-Rakete ("Heater", Fox 2). Keine Radar-Raketen.
+- Raketen, Anzahl, Infinite Ammo und Head-on Guns legt die Lobby fest; Ranked 1v1 gilt als Guns-only.
+- Leere Stores = Selbstzerstörungs-Countdown. Kein Nachladen – nur mit Lösung schießen.
+- Die IR-Rakete braucht kein Radar: Der Gegner bekommt nur eine MWS-Warnung.
+- Fox 2 zwingt ihn in die Defensive, die Kanone holt den Abschuss.
 :::
 
----
-
-## Zusammenfassung
-
-| Waffe | Stärke | Schwäche |
-|-------|--------|----------|
-| **Guns** | Nicht abwehrbar, unlimitiert* | Erfordert präzises Zielen |
-| **Fox-2** | Schneller Kill, "Fire and Forget" | Leicht durch Flares besiegt |
-
-*Munition ist begrenzt, aber großzügig bemessen.
-
-::: info PHILOSOPHIE
-VFM fokussiert auf Flugkönnen, nicht Waffensysteme. Die Waffen sind einfach, aber effektiv - der bessere Pilot gewinnt.
-:::
+Weiter: [Gegenmaßnahmen](/avionik/gegenmassnahmen)

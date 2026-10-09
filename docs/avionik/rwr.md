@@ -1,205 +1,79 @@
-# Radar Warning Receiver (RWR)
+# RWR & MWS
 
-> Wissen, wenn der Gegner dich auf dem Korn hat.
+> Was dein Radarwarner zeigt, was er nicht zeigen kann, und warum dich die IR-Rakete ohne RWR-Warnung trifft.
 
-Der RWR ist ein **passives** Verteidigungssystem. Er sendet nichts aus, sondern "hört" auf feindliche Radarwellen. Wenn dich jemand anstrahlt, siehst du es hier.
+VFM hat zwei Warnsysteme:
 
----
+| System | Erkennt | Erkennt nicht |
+|---|---|---|
+| **RWR** (Radar Warning Receiver, Radarwarner) | Gegnerische **Radare**, die dich anstrahlen | Raketen, Gegner mit ausgeschaltetem Radar |
+| **MWS** (Missile Warning System, Raketenwarner) | **Anfliegende Raketen** | – (Details siehe unten) |
 
-## Das Display
+## RWR: Radar-Emitter, keine Raketen
 
-```
-        ┌───────────────────┐
-        │                   │
-        │     ╭───────╮     │
-        │    ╱    │    ╲    │  ← Äußerer Ring
-        │   │     │     │   │
-        │   │ ────┼──── │   │  ← Mitte = Du
-        │   │     │     │   │
-        │    ╲    │    ╱    │
-        │     ╰───────╯     │  ← Innerer Ring
-        │                   │
-        └───────────────────┘
-```
+Der RWR ist passiv. Er sendet nichts, sondern empfängt die Radarstrahlung anderer Jets. Wenn dich ein Gegner mit dem Radar erfasst, siehst du das auf dem RWR. Im Funk heißt das **Spike** ("Spike, rechts hinten"). Ist der RWR still: **Naked**.
 
-| Element | Bedeutung |
-|---------|-----------|
-| **Mitte** | Dein Flugzeug |
-| **Ringe** | Entfernung/Bedrohungsstufe |
-| **Symbole** | Feindliche Radare |
+Daraus folgt der wichtigste Punkt dieser Seite:
 
----
+::: warning RADAR-LOCK ≠ RAKETENSTART
+In VFM gibt es nur **IR-Raketen** ("Heater", Fox 2). Eine IR-Rakete sucht die Wärme deines Jets und braucht **kein Radar**. Ein Gegner mit ausgeschaltetem Radar kann dich also **ohne jede RWR-Anzeige** abschießen.
 
-## Display lesen
-
-### Leeres Display
-
-```
-        ╭───────╮
-       ╱    │    ╲
-      │     │     │
-      │ ────┼──── │
-      │     │     │
-       ╲    │    ╱
-        ╰───────╯
-```
-
-**Bedeutung:** Niemand strahlt dich an. Du bist "unsichtbar" oder keine aktiven Radare in Reichweite.
-
-::: tip SICHER
-Leeres RWR = Aktuell keine Radar-Bedrohung. Aber Augen offen halten!
+- Ein Lock auf dem RWR bedeutet: Er hat dich mit dem Radar erfasst – meist für eine Feuerleitlösung der Kanone.
+- Ein stiller RWR bedeutet **nicht**, dass du sicher bist.
 :::
 
----
+### Was dir ein Spike sagt
 
-### Symbol erscheint
+- **Richtung:** Wo ungefähr ist ein Gegner, der sein Radar an hat? Nützlich, um den Kopf in die richtige Richtung zu drehen und Tally zu bekommen.
+- **Absicht:** Ein Lock zeigt, dass er dich gerade als Ziel gewählt hat. Rechne mit einem Schussversuch, sobald seine Geometrie passt.
+- **Im Team:** Mehrere Spikes = mehrere Gegner interessieren sich für dich. Das gehört sofort in den Funk (siehe [Team-Taktik](/flugzeuge/team)).
 
-Wenn ein feindliches Radar dich erfasst, erscheint ein Symbol:
-
-| Position | Bedeutung |
-|----------|-----------|
-| **Äußerer Ring** | Weit weg, oder nur Suchmodus |
-| **Mittlerer Bereich** | Näher, erhöhte Aufmerksamkeit |
-| **Innerer Ring / Mitte** | Sehr nah oder LOCK |
-
-### Richtung
-
-Die Position des Symbols zeigt die **Richtung** der Bedrohung:
-
-```
-              12 Uhr (Vorne)
-                   ↑
-        10 ╲       │       ╱ 2
-            ╲      │      ╱
-              ╲    │    ╱
-    9 ─────────── ┼ ─────────── 3
-              ╱    │    ╲
-            ╱      │      ╲
-        8  ╱       │       ╲ 4
-                   ↓
-              6 Uhr (Hinten)
-```
-
----
-
-## Bedrohungsstufen
-
-### Stufe 1: Suchmodus (Search)
-
-| Merkmal | Beschreibung |
-|---------|--------------|
-| **Symbol** | Am äußeren Rand |
-| **Bedeutung** | Jemand scannt die Gegend |
-| **Gefahr** | Gering |
-| **Aktion** | Awareness, keine Panik |
-
----
-
-### Stufe 2: Aufgeschaltet (Lock)
-
-| Merkmal | Beschreibung |
-|---------|--------------|
-| **Symbol** | Wandert zur Mitte |
-| **Bedeutung** | Jemand hat dich gelockt! |
-| **Gefahr** | Hoch - Rakete könnte kommen |
-| **Aktion** | Defensive vorbereiten |
-
-::: warning LOCK
-Wenn ein Symbol zur Mitte wandert: Der Gegner hat dich im Visier. Erwarte eine Fox-2!
+::: info IM SPIEL PRÜFEN
+- Wie sieht das RWR-Display aus, und wo sitzt es im Cockpit?
+- Zeigt der RWR die Richtung als Symbol auf einem Kreis? Zeigt er eine grobe Entfernung oder Stärke?
+- Unterscheidet er zwischen Radar-Suche und Lock (Symbol, Ton)?
+- Gibt es einen Warnton, und ist er unterschiedlich für Suche und Lock?
 :::
 
----
+## MWS: Die Warnung vor der Rakete
 
-### Stufe 3: Rakete unterwegs
+Das MWS warnt vor **anfliegenden Raketen** – unabhängig davon, ob der Schütze sein Radar an hatte. Gegen die IR-Rakete ist es deine eigentliche Warnung.
 
-| Merkmal | Beschreibung |
-|---------|--------------|
-| **Symbol** | Blinkt rot in der Mitte |
-| **Bedeutung** | Rakete wurde abgefeuert! |
-| **Gefahr** | Kritisch |
-| **Aktion** | Sofort: Throttle - Turn - Flares! |
+Wenn das MWS anschlägt: sofort Raketenabwehr. Gas auf Idle, Break Turn, Flares (Details: [Gegenmaßnahmen](/avionik/gegenmassnahmen) und [Break Turn](/grundlagen/defensiv/break-turn)).
 
-::: danger MISSILE!
-Rotes Blinken = SOFORT reagieren! Schub auf Idle, Hard Turn, Flares raus!
+::: info IM SPIEL PRÜFEN
+- Warnt das MWS akustisch, optisch oder beides? Zeigt es die Richtung der Rakete?
+- Ab welcher Entfernung schlägt es an: schon beim Start oder erst kurz vor dem Einschlag?
+- Wie viel Reaktionszeit bleibt dir typischerweise? (Mit einem Freund in der Lobby testen: einer schießt aus verschiedenen Entfernungen, der andere stoppt die Zeit.)
 :::
 
----
-
-## Reaktionen
-
-### Bei Search (Äußerer Ring)
-
-```mermaid
-flowchart TD
-    A[Symbol am Rand] --> B[Richtung merken]
-    B --> C[Weiter kämpfen]
-    C --> D[RWR im Auge behalten]
-```
-
-Keine sofortige Gefahr, aber jemand ist da draußen.
-
----
-
-### Bei Lock (Mitte)
-
-```mermaid
-flowchart TD
-    A[Symbol wandert zur Mitte] --> B[LOCK!]
-    B --> C{Kannst du den Gegner sehen?}
-    C -->|Ja| D[Manöver gegen seinen Schuss]
-    C -->|Nein| E[Defensive: Break Turn vorbereiten]
-    D --> F[Weiter engagen]
-    E --> G[Flares bereit]
-```
-
-Du bist das Ziel. Der Gegner wird wahrscheinlich gleich schießen.
-
----
-
-### Bei Rakete (Blinkt)
-
-```mermaid
-flowchart TD
-    A[BLINKT ROT!] --> B[Schub auf IDLE]
-    B --> C[Hard Turn JETZT]
-    C --> D[Flares raus!]
-    D --> E[Weitere Flares während Turn]
-```
-
-Keine Zeit zum Nachdenken. Sofort reagieren!
-
----
-
-## RWR in VFM
-
-### Was der RWR dir sagt
-
-| Information | Nutzen |
-|-------------|--------|
-| **Richtung** | Wo ist die Bedrohung? |
-| **Entfernung (grob)** | Wie nah ist sie? |
-| **Lock-Status** | Bin ich das Ziel? |
-
-### Was der RWR NICHT hat (in VFM)
-
-- Keine Unterscheidung von Radar-Typen (alle Gegner haben ähnliche Radare)
-- Keine Radar-Raketen-Warnung im klassischen Sinn (nur IR-Raketen im Spiel)
-
-::: info VEREINFACHT
-Da VFM nur IR-Raketen (Fox-2) hat, zeigt der RWR primär: "Jemand hat mich gelockt" = "Gleich kommt eine Sidewinder!"
+::: tip NICHT AUF DAS MWS WARTEN
+Wenn du einen Gegner in einer Position siehst, aus der er eine IR-Rakete abfeuern kann (hinter dir, Nase auf dich, in Reichweite), reagiere schon vor der Warnung. Siehe [Gegenmaßnahmen](/avionik/gegenmassnahmen): vorbeugende Flares.
 :::
 
----
+## Selbst still bleiben
 
-## Zusammenfassung
+Dein eigenes Radar ist für den Gegner genauso sichtbar. Schalte es aus, und sein RWR bleibt still (siehe [Radar](/avionik/radar)).
 
-| RWR-Status | Bedeutung | Aktion |
-|------------|-----------|--------|
-| **Leer** | Niemand sieht dich | Weiter kämpfen |
-| **Symbol außen** | Jemand sucht | Awareness |
-| **Symbol Mitte** | Du bist gelockt | Defensive bereit |
-| **Blinkt rot** | Rakete kommt! | Throttle-Turn-Flares! |
+| Situation | Tipp |
+|---|---|
+| **Gegner hat dich noch nicht gesehen** | Radar aus. Du gibst ihm keine Information über deine Richtung. |
+| **Teamkampf: Gegner ist mit deinem Partner beschäftigt** | Radar aus, mit den Augen anfliegen, erst kurz vor dem Schuss locken. |
+| **1v1 im Kurvenkampf, er weiß ohnehin, wo du bist** | Radar an kostet hier wenig; der Lock bringt dir den genaueren Gun-Funnel. |
 
-::: tip GEWOHNHEIT
-Checke den RWR regelmäßig - besonders wenn du einen Gegner nicht siehst. "Lose sight, lose fight" - aber der RWR hilft dir, Bedrohungen zu erkennen.
+## RWR-Spike nutzen, um Tally zu bekommen
+
+1. **Spike erscheint:** Richtung merken.
+2. **Kopf hin:** Schau in die angezeigte Richtung, Oberkörper mitdrehen (siehe [Steuerung & Einstellungen](/einstieg/cockpit)).
+3. **Tally:** Wenn du ihn siehst, behalte ihn. Das RWR-Display brauchst du dann nicht mehr.
+4. **No Joy:** Siehst du ihn nicht, Lift Vector so stellen, dass du nicht in seine Richtung "blind" fliegst, und weiter suchen. Im Team "No Joy" melden.
+
+::: tip MERKE
+- RWR zeigt Radare, keine Raketen. Ein stiller RWR heißt nicht "sicher".
+- Die IR-Rakete braucht kein Radar – das MWS ist deine Warnung vor ihr.
+- Ein Spike verrät Richtung und Absicht des Gegners: nutze ihn für Tally.
+- Radar aus = du bist auf seinem RWR unsichtbar.
+- Siehst du einen Gegner in Schussposition, warte nicht auf das MWS.
 :::
+
+Weiter: [Waffen](/avionik/waffen)

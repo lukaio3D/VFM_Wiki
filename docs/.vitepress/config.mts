@@ -18,7 +18,8 @@ export default withMermaid(
         { text: 'Einstieg', link: '/einstieg/hardware' },
         { text: 'Grundlagen', link: '/grundlagen/golden-rules' },
         { text: 'Avionik', link: '/avionik/radar' },
-        { text: 'Flugzeuge', link: '/flugzeuge/vergleich' }
+        { text: 'Flugzeuge', link: '/flugzeuge/vergleich' },
+        { text: 'Training', link: '/grundlagen/uebungen' }
       ],
 
       sidebar: [
@@ -26,106 +27,105 @@ export default withMermaid(
           text: 'Einstieg',
           collapsed: false,
           items: [
-            { text: 'Hardware & System', link: '/einstieg/hardware' },
-            { text: 'Cockpit-Bedienung', link: '/einstieg/cockpit' },
-            { text: 'Spielmodi', link: '/einstieg/spielmodi' }
+            { text: 'Hardware & Plattformen', link: '/einstieg/hardware' },
+            { text: 'Steuerung & Einstellungen', link: '/einstieg/cockpit' },
+            { text: 'Spielmodi & Ranked', link: '/einstieg/spielmodi' }
           ]
         },
         {
-          text: 'Grundlagen',
+          text: 'Stufe 0 · Regeln & Begriffe',
           collapsed: false,
           items: [
             { text: 'Golden Rules', link: '/grundlagen/golden-rules' },
-            { text: 'Begriffe & Definitionen', link: '/grundlagen/begriffe' },
-            { text: 'Physik-Simulation', link: '/grundlagen/physik' },
-            { text: 'Kampf-Geometrie', link: '/grundlagen/geometrie' },
-            { text: 'Der Merge', link: '/grundlagen/der-merge' },
-            { text: 'Energie-Management', link: '/grundlagen/energie-management' },
-            { text: 'Verfolgungskurven', link: '/grundlagen/verfolgungskurven' },
-            {
-              text: 'Offensiv-Manöver',
-              collapsed: true,
-              items: [
-                { text: 'Einführung', link: '/grundlagen/offensiv-manoever' },
-                { text: 'High Yo-Yo', link: '/grundlagen/offensiv/high-yo-yo' },
-                { text: 'Low Yo-Yo', link: '/grundlagen/offensiv/low-yo-yo' },
-                { text: 'Lag Displacement Roll', link: '/grundlagen/offensiv/lag-displacement' },
-                { text: 'Schusslösung', link: '/grundlagen/offensiv/schussloesung' }
-              ]
-            },
-            {
-              text: 'Defensiv-Manöver',
-              collapsed: true,
-              items: [
-                { text: 'Einführung', link: '/grundlagen/defensiv-manoever' },
-                { text: 'Break Turn', link: '/grundlagen/defensiv/break-turn' },
-                { text: 'Scissors', link: '/grundlagen/defensiv/scissors' },
-                { text: 'Slice Turn', link: '/grundlagen/defensiv/slice-turn' },
-                { text: 'Defensive Spirale', link: '/grundlagen/defensiv/spirale' },
-                { text: 'Jinking & Overshoots', link: '/grundlagen/defensiv/jinking' }
-              ]
-            },
-            {
-              text: 'Vertikal-Manöver',
-              collapsed: true,
-              items: [
-                { text: 'Einführung', link: '/grundlagen/vertikal-manoever' },
-                { text: 'Taktische Spirale', link: '/grundlagen/vertikal/taktische-spirale' },
-                { text: 'Zoom Climb', link: '/grundlagen/vertikal/zoom-climb' },
-                { text: 'Speed Regeln', link: '/grundlagen/vertikal/speed-regeln' }
-              ]
-            }
+            { text: 'Begriffe & Brevity', link: '/grundlagen/begriffe' }
+          ]
+        },
+        {
+          text: 'Stufe 1 · Flugphysik',
+          collapsed: false,
+          items: [
+            { text: 'Kurvenphysik & Lift Vector', link: '/grundlagen/kurvenphysik' },
+            { text: 'Energie & E-M-Diagramm', link: '/grundlagen/energie-management' },
+            { text: 'Das VFM-Flugmodell', link: '/grundlagen/physik' }
+          ]
+        },
+        {
+          text: 'Stufe 2 · Geometrie',
+          collapsed: false,
+          items: [
+            { text: 'Relative Geometrie', link: '/grundlagen/geometrie' },
+            { text: 'Verfolgungskurven', link: '/grundlagen/verfolgungskurven' }
+          ]
+        },
+        {
+          text: 'Stufe 3 · Offensiv',
+          collapsed: true,
+          items: [
+            { text: 'Ziele & Entscheidungen', link: '/grundlagen/offensiv-manoever' },
+            { text: 'High & Low Yo-Yo', link: '/grundlagen/offensiv/yo-yos' },
+            { text: 'Lag Roll & Barrel Roll Attack', link: '/grundlagen/offensiv/lag-roll' },
+            { text: 'Overshoot', link: '/grundlagen/offensiv/overshoot' },
+            { text: 'Schusslösung', link: '/grundlagen/offensiv/schussloesung' }
+          ]
+        },
+        {
+          text: 'Stufe 4 · Defensiv',
+          collapsed: true,
+          items: [
+            { text: 'Prioritäten', link: '/grundlagen/defensiv-manoever' },
+            { text: 'Break Turn', link: '/grundlagen/defensiv/break-turn' },
+            { text: 'Guns Defense (Jink)', link: '/grundlagen/defensiv/guns-defense' },
+            { text: 'Slice (Nose-low Turn)', link: '/grundlagen/defensiv/slice-turn' },
+            { text: 'Defensive Spirale', link: '/grundlagen/defensiv/spirale' },
+            { text: 'Separation & Bugout', link: '/grundlagen/defensiv/separation' }
+          ]
+        },
+        {
+          text: 'Stufe 5 · Neutral',
+          collapsed: true,
+          items: [
+            { text: 'Der Merge', link: '/grundlagen/neutral/der-merge' },
+            { text: 'One-Circle vs. Two-Circle', link: '/grundlagen/neutral/one-two-circle' },
+            { text: 'Scissors', link: '/grundlagen/neutral/scissors' },
+            { text: 'Vertikaler Kampf', link: '/grundlagen/neutral/vertikal-kampf' }
+          ]
+        },
+        {
+          text: 'Stufe 6 · Training',
+          collapsed: false,
+          items: [
+            { text: 'Trainingsplan & Übungen', link: '/grundlagen/uebungen' }
           ]
         },
         {
           text: 'Avionik & Waffen',
-          collapsed: false,
+          collapsed: true,
           items: [
-            { text: 'Radar-System', link: '/avionik/radar' },
+            { text: 'Radar', link: '/avionik/radar' },
             { text: 'Head-Up Display (HUD)', link: '/avionik/hud' },
-            { text: 'Radar Warning Receiver', link: '/avionik/rwr' },
-            { text: 'Waffensysteme', link: '/avionik/waffen' },
+            { text: 'RWR & Raketenwarner', link: '/avionik/rwr' },
+            { text: 'Waffen', link: '/avionik/waffen' },
             { text: 'Flares', link: '/avionik/gegenmassnahmen' }
           ]
         },
         {
-          text: 'Virtual Fighter Maneuvers',
+          text: 'Flugzeuge',
           collapsed: false,
           items: [
-            { text: 'Übersicht & Vergleich', link: '/flugzeuge/vergleich' },
+            { text: 'Performance-Daten & Vergleich', link: '/flugzeuge/vergleich' },
+            { text: 'T-15 Excalibur', link: '/flugzeuge/t15' },
+            { text: 'T-16 Falchion', link: '/flugzeuge/t16' },
+            { text: 'T-18 Cutlass', link: '/flugzeuge/t18' },
             {
-              text: 'Handbuch: T-15 Excalibur',
-              collapsed: true,
+              text: 'Matchups',
+              collapsed: false,
               items: [
-                { text: '1. Daten & Performance', link: '/flugzeuge/t15/daten' },
-                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t15/taktik' },
-                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t15/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t15/manoever' },
-                { text: '5. Team-Taktiken', link: '/flugzeuge/t15/team' }
+                { text: 'T-15 vs. T-16', link: '/flugzeuge/matchups/t15-vs-t16' },
+                { text: 'T-15 vs. T-18', link: '/flugzeuge/matchups/t15-vs-t18' },
+                { text: 'T-16 vs. T-18', link: '/flugzeuge/matchups/t16-vs-t18' }
               ]
             },
-            {
-              text: 'Handbuch: T-16 Falchion',
-              collapsed: true,
-              items: [
-                { text: '1. Daten & Performance', link: '/flugzeuge/t16/daten' },
-                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t16/taktik' },
-                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t16/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t16/manoever' },
-                { text: '5. Team-Taktiken', link: '/flugzeuge/t16/team' }
-              ]
-            },
-            {
-              text: 'Handbuch: T-18 Cutlass',
-              collapsed: true,
-              items: [
-                { text: '1. Daten & Performance', link: '/flugzeuge/t18/daten' },
-                { text: '2. Taktik & Einsatzprofil', link: '/flugzeuge/t18/taktik' },
-                { text: '3. Bedrohungs-Analyse', link: '/flugzeuge/t18/matchups' },
-                { text: '4. Empfohlene Manöver', link: '/flugzeuge/t18/manoever' },
-                { text: '5. Team-Taktiken', link: '/flugzeuge/t18/team' }
-              ]
-            }
+            { text: 'Team-Taktik', link: '/flugzeuge/team' }
           ]
         }
       ],

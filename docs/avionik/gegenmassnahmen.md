@@ -1,186 +1,91 @@
 # Gegenmaßnahmen
 
-> Flares gegen wärmesuchende Raketen.
+> Flares, Idle und der richtige Turn: So schlägst du die IR-Rakete.
 
-In VFM sind **Flares** die einzige Gegenmaßnahme gegen feindliche Raketen. Da nur wärmesuchende (IR) Raketen existieren, sind Flares hocheffektiv - wenn richtig eingesetzt.
+In VFM gibt es **Flares** (Täuschkörper, die heißer brennen als dein Triebwerk). **Chaff** (Radar-Täuschkörper) gibt es nach allem, was bekannt ist, nicht – und braucht es auch nicht, weil es keine Radar-Raketen gibt. Deine Gegenmaßnahmen gegen die IR-Rakete sind also:
 
----
+1. **Weniger Wärme** – Gas raus
+2. **Flares** – falsche Ziele anbieten
+3. **Manöver** – die Rakete zum Kurven zwingen, bis sie es nicht mehr schafft
 
-## Flares
+## Wann du reagieren musst
 
-Heiße Täuschkörper, die IR-Suchköpfe ablenken.
+| Auslöser | Bedeutung |
+|---|---|
+| **MWS-Warnung** | Eine Rakete fliegt auf dich zu. Sofort reagieren. |
+| **Gegner in Fox-2-Position** | Er ist hinter dir oder hat die Nase auf dich, in Reichweite. Rechne mit einem Schuss, auch ohne Warnung. |
+| **Raketenstart gesehen** | Rauchspur oder Abschuss beim Gegner. Sofort reagieren. |
 
-### Funktionsweise
+Der RWR hilft dir hier **nicht**: Die IR-Rakete braucht kein Radar (siehe [RWR & MWS](/avionik/rwr)).
 
-Flares brennen heißer als dein Triebwerk und ziehen den Raketen-Suchkopf an.
+## Die Technik
 
-```
-    Rakete → 🔥 ← Flare (heißer!)
-              ↘
-               ↘
-                ✈️ Du (kälter)
-```
-
-| Eigenschaft | Beschreibung |
-|-------------|--------------|
-| **Typ** | Magnesium-Täuschkörper |
-| **Wirkung** | Erzeugt Wärmequelle, die heller ist als Triebwerk |
-| **Vorrat** | Begrenzt (je nach Flugzeug) |
-
----
-
-## Richtiger Einsatz
-
-### Die drei Schritte
+Die Community empfiehlt folgenden Ablauf. Er deckt sich mit realer IR-Raketenabwehr:
 
 ```mermaid
 flowchart LR
-    A[Rakete erkannt!] --> B[1. Schub auf Idle]
-    B --> C[2. Hard Turn]
-    C --> D[3. Flares ausstoßen]
+    A[MWS / Schuss gesehen] --> B[Gas auf Idle]
+    B --> C[Dispenser zur Rakete rollen]
+    C --> D[Flares in kurzen Gruppen]
+    D --> E[Break Turn, Lift Vector auf die Rakete]
+    E --> F[Rakete vorbei: Speed zurückholen]
 ```
 
-### 1. Schub reduzieren
+### 1. Gas auf Idle
 
-::: danger KRITISCH
-Dies ist der wichtigste Schritt! Flares funktionieren NUR wenn dein Triebwerk kälter ist als die Flares.
-:::
+Vollgas oder Nachbrenner machen dein Triebwerk heiß – heißer als nötig. Mit Idle senkst du deine Signatur, die Flares wirken relativ attraktiver. Nicht mit Nachbrenner verteidigen.
 
-| Schub | Triebwerks-Signatur | Flare-Effektivität |
-|-------|---------------------|-------------------|
-| **Nachbrenner** | Extrem heiß | Flares nutzlos! |
-| **Mil Power** | Heiß | Flares kaum wirksam |
-| **Idle** | Kühl | Flares effektiv |
+### 2. Dispenser zur Rakete rollen
 
-### 2. Hard Turn
+Roll so, dass die Flare-Auswerfer zur Rakete zeigen. Dann landen die Flares zwischen dir und dem Suchkopf. Wo die Dispenser am Jet sitzen, prüfst du im Spiel.
 
-Drehe weg von der Rakete, um:
-- Entfernung zur Flare-Wolke zu schaffen
-- Die Rakete zu zwingen, ihre Flugbahn zu ändern
-- Mehr Zeit zu gewinnen
+### 3. Flares in kurzen Gruppen
 
-### 3. Flares ausstoßen
+Wirf **Gruppen von Flares in kurzen Abständen** statt eines Dauerstroms. Ein Dauerstrom leert deinen Vorrat, ohne besser zu wirken.
 
-| Situation | Anzahl | Timing |
-|-----------|--------|--------|
-| **Früh erkannt** | 2-3 Flares | Verteilt während Turn |
-| **Spät erkannt** | 4-5 Flares | Schnelle Salve |
-| **Sehr nah** | Alles | Last-Ditch |
+### 4. Break Turn
 
----
+Ein **Break Turn** ist eine sofortige maximale Defensivkurve: Lift Vector auf die Bedrohung, ziehen (nahe Corner Speed = maximale Drehrate). Gegen die Rakete hat das zwei Effekte:
+
+- Die Rakete muss stark nachkurven und verliert dabei Energie.
+- Du entfernst dich schnell von den Flares, die Rakete muss sich entscheiden – idealerweise für die Flares.
+
+Ein gut getimter Break kann eine Rakete auch **ohne Flares** kinematisch schlagen, wenn sie die Kurve nicht mehr schafft. Mehr dazu: [Break Turn](/grundlagen/defensiv/break-turn).
+
+### 5. Danach
+
+Ist die Rakete vorbei, bist du langsam und meist defensiv. Rechne damit, dass der Gegner jetzt mit der Kanone nachsetzt (siehe [Guns Defense](/grundlagen/defensiv/guns-defense)). Speed zurückholen, aber nicht blind unloaden, solange er in Schussposition ist.
 
 ## Timing
 
-### Zu früh
+- **Zu spät:** Die Rakete ist zu nah, um noch abgelenkt zu werden oder dem Break zu folgen.
+- **Zu früh, ohne Bedrohung:** Flares verbrannt, die du später brauchst.
+- **Vorbeugende Flares:** Ist der Gegner klar in einer Fox-2-Position (hinter dir, Nase auf dir, in Reichweite), kann eine kurze Gruppe Flares **vor** einem möglichen Schuss sinnvoll sein. Sie stört seinen Suchkopf oder lenkt eine Rakete ab, die gerade startet. Kombiniere das mit einem Manöver, das ihm die Lösung nimmt.
 
-- Flares sind weg bevor Rakete da ist
-- Suchkopf re-acquired dich
-
-### Zu spät
-
-- Rakete ist zu nah für Reaktion
-- Keine Zeit für Manöver
-
-### Optimal
-
-- Flares wenn Rakete in 1-2 km Entfernung
-- Manöver beginnen bei Erkennung
-- Schub SOFORT auf Idle
-
-::: tip FAUSTREGEL
-Schub runter → Turn einleiten → Flares während des Turns
+::: warning IDLE KOSTET ENERGIE
+Idle und harter Break kosten viel Speed. Das ist der Preis fürs Überleben. Plane danach bewusst, wie du Energie zurückholst – siehe [Energie-Management](/grundlagen/energie-management).
 :::
 
----
+## Training
 
-## Häufige Fehler
+- **Lobby mit Raketen und Infinite Ammo:** Ein Freund schießt aus verschiedenen Positionen (hinten, seitlich, vorne), du übst den Ablauf. Danach im Debrief ansehen, wann und wie die Rakete abgelenkt wurde.
+- **Ohne Flares:** Teste, ob ein reiner Break Turn eine Rakete aus kurzer und mittlerer Entfernung schlagen kann.
+- Mehr Setups: [Übungen](/grundlagen/uebungen).
 
-### Fehler 1: Schub nicht reduziert
-
-```
-❌ Flares + Nachbrenner = Verschwendung
-```
-
-Dein Triebwerk überstrahlt die Flares. Die Rakete ignoriert sie.
-
-### Fehler 2: Nur Flares, kein Manöver
-
-```
-❌ Flares ohne Turn = Rakete findet dich wieder
-```
-
-Du musst dich von der Flare-Wolke entfernen.
-
-### Fehler 3: Zu wenige Flares
-
-```
-❌ 1 Flare = Hoffnung, nicht Taktik
-```
-
-Moderne Suchköpfe brauchen mehrere Täuschkörper.
-
----
-
-## Vorrat-Management
-
-| Flugzeug | Flares |
-|----------|--------|
-| **T-15** | 60 |
-| **T-16** | 40 |
-| **T-18** | 50 |
-
-::: warning SPAREN
-Du hast genug Flares für mehrere Engagements, aber nicht für Verschwendung. Nutze sie nur bei echten Bedrohungen!
+::: info IM SPIEL PRÜFEN
+- Wie viele Flares hat jeder Jet, und ist die Anzahl in der Lobby einstellbar?
+- Wo sitzen die Flare-Dispenser am Jet (oben, unten, hinten)?
+- Wirft ein Tastendruck eine Flare oder eine Gruppe? Gibt es einstellbare Programme?
+- Wie stark wirkt Idle im Vergleich zu Vollgas auf die Flare-Wirkung?
+- Gibt es eine Speedbrake, die den Break unterstützt?
 :::
 
----
-
-## Defensive Situation erkennen
-
-### Woher weißt du, dass eine Rakete kommt?
-
-| Hinweis | Beschreibung |
-|---------|--------------|
-| **Visuell** | Raketenrauch, Blitz beim Launch |
-| **Gegner-Verhalten** | Plötzliches Abdrehen nach stabilem Tracking |
-| **Instinkt** | Wenn jemand hinter dir ist UND Ton hatte |
-
-### Reaktionskette
-
-```mermaid
-flowchart TD
-    A[Gegner hinter mir] --> B{Stabiler Track?}
-    B -->|Ja| C[Rakete wahrscheinlich]
-    C --> D[Schub Idle]
-    D --> E[Break Turn]
-    E --> F[Flares!]
-    B -->|Nein| G[Weiter manövrieren]
-```
-
----
-
-## Zusammenfassung
-
-| Schritt | Aktion | Warum |
-|---------|--------|-------|
-| **1** | Schub auf Idle | Triebwerk muss kälter sein als Flares |
-| **2** | Hard Turn | Weg von Rakete und Flare-Wolke |
-| **3** | Flares × 3-5 | Mehrere Täuschkörper für Sicherheit |
-
-::: tip MERKSATZ
-**"Throttle - Turn - Flares"** - In dieser Reihenfolge, jedes Mal.
+::: tip MERKE
+- Nur Flares, kein Chaff – gegen IR-Raketen helfen Idle, Flares und Manöver.
+- Ablauf: Idle → Dispenser zur Rakete rollen → Flares in kurzen Gruppen → Break Turn.
+- Kein Nachbrenner während der Raketenabwehr.
+- Der RWR warnt nicht vor IR-Raketen; reagiere auf MWS, Schuss oder Fox-2-Position.
+- Nach der Abwehr kommt meist die Kanone: Guns Defense bereithalten.
 :::
 
----
-
-## Was VFM NICHT hat
-
-Im Gegensatz zu komplexeren Simulationen verzichtet VFM auf:
-
-- **Chaff** (Radar-Täuschkörper) - nicht nötig, keine Radar-Raketen
-- **Elektronische Gegenmaßnahmen** - kein ECM/ECCM
-- **Notching** - kein Doppler-Radar zu täuschen
-
-::: info FOKUS
-VFM konzentriert sich auf Flugkönnen. Die Abwehr ist simpel: Flares richtig nutzen, besser fliegen als der Gegner.
-:::
+Weiter: [Break Turn](/grundlagen/defensiv/break-turn)

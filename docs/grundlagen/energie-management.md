@@ -1,216 +1,206 @@
 # Energie-Management
 
-Energie ist die wichtigste Ressource im Luftkampf. Das Verständnis von Energie-Management unterscheidet erfahrene Piloten von Anfängern.
+> Energie ist Speed plus Höhe. Wer sie bewusst ausgibt und wieder auffüllt, hat am Ende des Kampfes noch Optionen.
 
-## Was ist Energie?
+Jede Kurve kostet Energie, jeder Unload und jeder Sinkflug bringt welche. Diese Seite zeigt dir, wie du das misst (Ps), wie du das Leistungsdiagramm in VFM liest und welche Speeds für deinen Jet gelten. Grundlagen zu G, Rate und Radius: [Kurvenphysik](/grundlagen/kurvenphysik). Begriffe: [Glossar](/grundlagen/begriffe).
 
-Energie = **Höhe** + **Geschwindigkeit**
+## Energie = Speed + Höhe
+
+Deine Gesamtenergie besteht aus Bewegungsenergie (Speed) und Lageenergie (Höhe). Praktisch rechnet man sie in **Energiehöhe** um – die Höhe, die du hättest, wenn du alle Speed verlustfrei in Höhe tauschen würdest:
 
 ```
-Totale Energie = Potenzielle Energie (Höhe) + Kinetische Energie (Speed)
+Energiehöhe = Höhe + V² / (2 · g)        (V = wahre Speed)
 ```
 
-Du kannst Energie **umwandeln**:
-- Steigen → Speed wird zu Höhe
-- Sturzflug → Höhe wird zu Speed
+Beispiele (ohne Widerstand gerechnet):
 
-Aber Energie geht **verloren** durch:
-- Turns (induzierter Widerstand)
-- Luftwiderstand
-- Manöver bei hohem G
+| Wahre Speed | Speed-Anteil der Energiehöhe |
+|---|---|
+| 300 kt | ~4.000 ft |
+| 400 kt | ~7.100 ft |
+| 500 kt | ~11.100 ft |
 
-## Corner Speed
+Der Schritt von 400 auf 500 kt ist also rund **4.000 ft Höhe wert**. Umgekehrt bringen dir 3.000 ft Sinkflug aus ~400 kt nur etwa **+77 kt** – aus Schwerkraft allein, ohne Schub und Widerstand. Mehr gibt es nur mit Schub.
 
-Die **Corner Speed** ist die Geschwindigkeit, bei der dein Flugzeug die **maximale Instantaneous Turn Rate** erreicht.
+Zwei Dinge folgen daraus:
 
-An diesem Punkt treffen zwei Grenzen aufeinander:
-1. **Aerodynamische Grenze (Lift Limit)**: Darunter reicht der Auftrieb nicht für Max G
-2. **Strukturelle Grenze (Load Limit)**: Darüber wäre mehr G möglich, aber das Flugzeug würde beschädigt
+- **Steigen vernichtet keine Energie, es wandelt sie um.** Speed, die du in Höhe parkst, holst du dir später zurück.
+- **Verloren** geht Energie nur durch Widerstand – vor allem durch **G** (induzierter Widerstand) und bei hoher Speed durch den [transsonischen Widerstand](/grundlagen/physik#transsonischer-widerstand). Gewonnen wird sie nur durch **Schub**.
 
-### Warum Corner Speed wichtig ist
+## Ps: wie schnell du Energie gewinnst oder verlierst
+
+Die **spezifische Überschussleistung Ps** (Specific Excess Power) sagt, wie schnell sich deine Energiehöhe ändert:
+
+```
+Ps = V · (T − D) / W        (T = Schub, D = Widerstand, W = Gewicht)
+```
+
+| Ps | Bedeutung | Was du siehst |
+|---|---|---|
+| **Ps > 0** | Energiegewinn | Du beschleunigst oder steigst bei gleicher Speed |
+| **Ps = 0** | Energie wird gehalten | Sustained Turn: Kurve ohne Speed- oder Höhenverlust |
+| **Ps < 0** | Energieverlust | Du wirst langsamer oder sinkst |
+
+- Bei **Corner Speed und 9 G** ist Ps **stark negativ** – maximale Rate, maximaler Preis.
+- Bei **0 bis 0,5 G und voller Leistung** ist Ps am größten – das ist der Unload.
+- Jede Kurve, die du dauerhaft halten kannst, liegt auf oder unter der **Ps = 0-Linie**.
+
+::: tip IM REPLAY ANSCHAUEN
+Der 3D-Replay-/Debrief-Raum zeigt seit v1.2.0 einen **Specific-Energy-Graph**. Schau nach jedem Kampf, wo deine Energie eingebrochen ist und ob sich der Preis gelohnt hat (Schuss, Winkel, Überleben).
+:::
+
+## Das Leistungsdiagramm in VFM lesen
+
+Im Spiel findest du die "Aircraft Performance Analysis" mit Turn Rate über KIAS. Das ist ein vereinfachtes **E-M-Diagramm** (Energy-Maneuverability). Höhe und Fuel lassen sich einstellen.
+
+![Aircraft Performance Analysis: Turn Rate über KIAS für T-15, T-16, T-18 auf 10.000 ft, 50 % Fuel](/images/img5.jpg)
+
+*10.000 ft, 50 % Fuel, Stand Dez 2025 (vor Patch v1.1). Orange = T-15, Blau = T-16, Pink = T-18.*
+
+So liest du es:
+
+| Element | Bedeutung |
+|---|---|
+| **Gestrichelt, steigend (links)** | **Lift-Limit**: so viel Rate gibt der Flügel bei dieser Speed her. Langsam = wenig. |
+| **Gestrichelt, fallend ("9G LIMIT")** | **G-Limit**: ab hier sind 9 G erreicht, mehr Speed bedeutet weniger Rate. |
+| **Spitze der gestrichelten Linie** | **Corner Speed**: höchste Instant Rate. |
+| **Durchgezogene Linie** | **Sustained Turn Rate (Ps = 0)**: die Rate, die du ohne Speedverlust halten kannst. |
+| **Gipfel der durchgezogenen Linie** | **Best Sustained Speed**: hier ist die Dauerkurve am schnellsten. |
+| **Senkrechte Linien** | markieren je Jet Corner Speed und Best Sustained Speed. |
+
+Und die Flächen dazwischen:
+
+- **Über der gestrichelten Linie:** unerreichbar.
+- **Zwischen gestrichelt und durchgezogen:** möglich, aber **Ps < 0** – du verlierst Energie. Je weiter oben, desto schneller.
+- **Unter der durchgezogenen Linie:** **Ps > 0** – du kannst so kurven und dabei noch beschleunigen oder steigen.
+
+### Was das Diagramm über die drei Jets sagt
+
+- **Unter ~370–380 KIAS:** Sustained T-15 ≈ T-18 > T-16.
+- **~400–500 KIAS:** Die T-16 hat die beste Sustained Rate (1–2 °/s Vorsprung).
+- **Über ~500 KIAS:** Die T-15 ist klar am besten. Auf 10.000 ft kann sie 9 G bis etwa 700 KIAS halten (ihre durchgezogene Linie liegt dort auf der 9G-Linie). Die T-16 fällt ab und erreicht Sustained 0 bei ~770 KIAS; die T-18 fällt ab ~480 KIAS steil und erreicht 0 bei ~700 KIAS.
+- **Instant Rate:** Die T-15 liegt bei jeder Speed unter Corner vorne und hat die niedrigste Corner Speed.
+
+Alle Zahlen und Diagramme für andere Höhen und Fuel-Stände: [Flugzeugvergleich](/flugzeuge/vergleich).
+
+## Corner Speed vs. Best Sustained Speed
+
+Zwei verschiedene Speeds, zwei verschiedene Zwecke:
+
+- **Corner Speed:** maximale Instant Rate, kleinster Radius bei 9 G – aber Ps stark negativ. Für **kurze** Momente: erster Turn am Merge, Break Turn, Schussgelegenheit.
+- **Best Sustained Speed:** höchste Rate, die du **halten** kannst (Ps = 0). Für **lange** Kurvenkämpfe, vor allem Two-Circle.
+
+Werte aus der Ingame-Analyse (Stand Dez 2025, vor v1.1 – im Spiel gegenprüfen):
+
+| Bedingung | | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
+|---|---|---|---|---|
+| Meereshöhe, 50 % | Corner | 337 KIAS / 29 °/s | 392 / 25 °/s | 365 / 27 °/s |
+| | Best Sustained | 475 KIAS / 20 °/s | 447 / 22 °/s | 447 / 20 °/s |
+| 10.000 ft, 50 % | Corner | 360 / 24 °/s | 409 / 21 °/s | 385 / 22 °/s |
+| | Best Sustained | 495 / 17 °/s | 470 / 18 °/s | 470 / 16 °/s |
+| 10.000 ft, 100 % | Corner | 385 / 23 °/s | 434 / 20 °/s | 409 / 21 °/s |
+| | Best Sustained | 495 / 15 °/s | 470 / 16 °/s | 470 / 15 °/s |
+| ~21.500 ft, 50 % | Corner | 383 / 19 °/s | 436 / 17 °/s | 426 / 17 °/s |
+| | Best Sustained | 405 / 13 °/s | 405 / 13 °/s | 405 / 12 °/s |
+
+Was du daraus mitnimmst:
+
+- Best Sustained liegt bei allen Jets **über** der Corner Speed – auf mittlerer Höhe um 450–500 KIAS.
+- Mit mehr Höhe und mehr Fuel steigt die Corner Speed; Best Sustained sinkt in großer Höhe auf ~405 KIAS.
+- Wer ständig um Corner Speed herum kurvt, verliert Energie. Wer mit Best Sustained Speed kurvt, kann das lange tun – dreht aber langsamer als ein Gegner, der gerade Energie für Rate ausgibt.
+
+## Speedbänder je Jet
+
+Statt allgemeiner "nie unter X Knoten"-Regeln: Die Daten zeigen, in welchem Band jeder Jet stark ist. Die Werte gelten für ~10.000 ft; tiefer etwas niedriger, höher etwas höher.
+
+| Jet | Stark | Kampf-Fenster (Corner bis Best Sustained) | Meiden |
+|---|---|---|---|
+| **T-15 Excalibur** | Instant Rate unter Corner, Sustained über ~500 KIAS | ~360–495 KIAS | Das Sustained-Duell bei 400–500 KIAS gegen die T-16 |
+| **T-16 Falchion** | Sustained Rate bei ~420–500 KIAS, am stärksten tief | ~409–470 KIAS | Alles unter ~380 KIAS – dort ist sie der schwächste Jet |
+| **T-18 Cutlass** | Langsam: Sustained gleichauf mit T-15 unter ~380 KIAS, Platz 2 bei Instant und Radius | ~385–470 KIAS | Alles über ~480 KIAS – dort bricht ihre Sustained Rate ein |
+
+### Unterhalb der Daten
+
+Die Ingame-Diagramme beginnen erst bei ~170–200 KIAS. Was darunter passiert – wie gut der Jet noch rollt, ob er wegkippt, was der AoA-Override bringt – ist **nicht durch Daten belegt**. Genau dort vermutet der Entwickler den Vorteil der T-18 (High-AoA, Low-Speed-One-Circle).
+
+::: info IM SPIEL PRÜFEN
+- Ab welcher Speed reagiert dein Jet nur noch träge? Im Free Flight langsam werden und notieren, bei welcher KIAS du die Nase nicht mehr halten kannst.
+- Wie lange brauchst du mit Unload und voller Leistung von dieser Speed zurück auf Corner Speed?
+- Was bringt der AoA-Override in diesem Bereich und wie viel Speed kostet er?
+- Übungen dazu: [Trainingsplan](/grundlagen/uebungen)
+:::
+
+### Wenn du zu langsam geworden bist
+
+1. **Lift Vector nicht weiter gegen die Schwerkraft ziehen.** Mehr Ziehen macht dich nur langsamer.
+2. **Unloaden:** Nase an oder unter den Horizont, ≈ 0–0,5 G.
+3. **Volle Leistung** (Nachbrenner).
+4. **Erst wieder manövrieren**, wenn du in deinem Band bist – es sei denn, du musst gerade einen Schuss verteidigen.
+
+::: warning NICHT ZIEHEN
+Der Instinkt sagt "Nase hoch, zieh!". Ohne Speed bringt Ziehen keine Rate, nur noch weniger Speed. Du brauchst erst Energie.
+:::
+
+## Unload richtig gemacht
+
+**Unload** heißt: Lift (und damit G) fast auf null nehmen, damit der induzierte Widerstand verschwindet und der Schub vollständig in Beschleunigung geht.
+
+1. **Rollen, wenn nötig:** Lift Vector so legen, dass die Flugbahn dorthin zeigt, wo du beschleunigen willst – meist leicht unter den Horizont.
+2. **Entlasten:** Stick nach vorne bis **≈ 0 bis 0,5 G**. Nicht negativ drücken.
+3. **Volle Leistung.**
+4. **Nase am oder leicht unter dem Horizont** – dann hilft die Schwerkraft mit.
+
+Was du wissen musst:
+
+- **Bei 0 G ist deine Bahn ballistisch** – sie krümmt sich nach unten. Auf Höhe achten, Hard Deck 2.000 ft.
+- **Nicht mit dem Gegner in Waffenreichweite hinter dir.** Ein unloadeter Jet fliegt gerade und berechenbar – ein perfektes Ziel. Unload ist für Momente, in denen er dich nicht treffen kann: nach einem Overshoot von ihm, auf großer Distanz, beim Extend außer Reichweite.
+- **Unload ist kein Dauerzustand.** Der Rhythmus im Kampf: ziehen, solange es etwas bringt (Winkel, Schuss, Verteidigung) – unloaden, sobald es nichts mehr bringt.
+
+::: info IM SPIEL PRÜFEN
+- Der HUD-Beschleunigungskreis (v1.2.7): Wie genau zeigt er Beschleunigung bzw. Verzögerung an? Damit könntest du einen Unload direkt ablesen.
+- Rollen die Jets unloaded schneller als unter G?
+:::
+
+## Energie-Entscheidungen
+
+Energie ist kein Selbstzweck. Sie ist Geld – du gibst sie aus, um Position oder einen Schuss zu kaufen. Die Frage ist immer: **Was bekomme ich für diese Energie?**
 
 ```mermaid
 flowchart TD
-    subgraph "Turn Rate vs Speed"
-        SLOW["Zu langsam"] --> LOW1[Niedrige Turn Rate]
-        CORNER["Corner Speed"] --> MAX[MAXIMALE Turn Rate]
-        FAST["Zu schnell"] --> LOW2[Niedrige Turn Rate]
-    end
-
-    LOW1 --> |"Nicht genug Auftrieb"| BAD1[Gegner gewinnt Winkel]
-    MAX --> |"Optimale Kurve"| GOOD[Du gewinnst Winkel]
-    LOW2 --> |"Zu weiter Radius"| BAD2[Gegner inside turn]
+    A[Ich könnte jetzt hart ziehen] --> B{Bekomme ich dafür etwas Konkretes?}
+    B -->|Schuss in kurzer Zeit| C[Ausgeben: ziehen, schießen]
+    B -->|Verteidigung gegen Schuss oder Rakete| D[Immer ausgeben: Break]
+    B -->|Entscheidenden Winkel am Merge| E[Ausgeben: Lead Turn mit max Rate]
+    B -->|Nichts Greifbares| F[Sparen: weniger G, unloaden, Höhe parken]
+    C --> G[Danach sofort Energie zurückholen]
+    D --> G
+    E --> G
 ```
 
-::: tip WICHTIG
-Die Corner Speed variiert je nach:
-- **Höhe** - Höher = schnellere Corner Speed
-- **Gewicht/Treibstoff** - Leichter = langsamere Corner Speed
-- **Flugzeugtyp** - Jedes Muster hat andere Werte
+Faustregeln ohne Zahlenmagie:
 
-Lerne die Corner Speed **deines** Flugzeugs auswendig!
+- **Gib Energie nur für Winkel aus, die du auch nutzen kannst.** Eine Nase, die auf den Gegner zeigt, aber nichts trifft, ist bezahlt und wertlos.
+- **Defensiv gilt das Gegenteil:** Gegen einen Schuss gibt es kein Sparen. Wer stirbt, braucht keine Energie mehr.
+- **Parke Speed in Höhe**, wenn du sie gerade nicht brauchst (z. B. [High Yo-Yo](/grundlagen/offensiv/yo-yos)). Sie wartet dort auf dich.
+- **Vergleiche dich mit dem Gegner:** Bist du schneller und höher als er, hast du die Wahl, ob und wie gekämpft wird. Bist du langsamer und tiefer, entscheidet er.
+- **Kenne dein Band:** Eine T-16, die unter 380 KIAS gerät, hat nicht nur Energie verloren, sondern ihren Vorteil. Eine T-18 über 480 KIAS verschenkt Energie an den Widerstand.
+
+### Den Energiezustand des Gegners einschätzen
+
+- **Seine Nasenbewegung:** Dreht seine Nase schnell, gibt er Energie aus. Wird sie über mehrere Sekunden langsamer, ist er langsam geworden.
+- **Seine Höhe:** Steigt er bei gleicher Nasenbewegung nicht mehr, ist er langsam.
+- **Sein Kreis:** Ein enger Kreis mit langsamer Nase heißt: wenig Speed.
+
+::: info IM SPIEL PRÜFEN
+- Sind Nachbrenner-Flamme und Kondensstreifen an den Flügeln beim Gegner sichtbar, und auf welche Distanz?
 :::
 
-## Sustained vs Instantaneous Turn Rate
-
-| Typ | Beschreibung | Energie-Effekt |
-|-----|--------------|----------------|
-| **Instantaneous** | Maximale Rate für kurze Zeit | Verliert Energie |
-| **Sustained** | Rate die gehalten werden kann | Energie-neutral |
-
-**Instantaneous Turn Rate** nutzt du für:
-- Schnelle Snap-Shots
-- Initiale Positionierung am Merge
-- Kurzfristige Winkelvorteile
-
-**Sustained Turn Rate** nutzt du für:
-- Längere Kurvenkämpfe
-- Energie-Management
-- Kontrollierten Kampf
-
-## Unloading (Entlasten)
-
-::: tip DAS GEHEIMNIS ERFAHRENER PILOTEN
-Unloading ist die Technik, die Anfänger von Experten unterscheidet!
+::: tip MERKE
+- **Energie = Speed + Höhe.** Steigen wandelt um, nur Widerstand (vor allem G) vernichtet.
+- **Ps = 0 ist die Sustained-Linie.** Darüber verlierst du Energie, darunter gewinnst du.
+- **Corner Speed** (T-15 ~360, T-16 ~409, T-18 ~385 KIAS) für kurze Momente; **Best Sustained** (~470–495 KIAS) für lange Kurven.
+- **Unload = ≈ 0–0,5 G**, Nase am oder leicht unter dem Horizont, volle Leistung – nicht vor seiner Kanone.
+- **Gib Energie nur aus, wenn du dafür etwas bekommst.** Im Replay am Specific-Energy-Graph prüfen.
 :::
 
-**Unloading** bedeutet: Den Stick neutral oder leicht nach vorne stellen (0-0.5G) um Energie zurückzugewinnen.
-
-### Das Konzept
-
-Widerstand (Drag) wird primär durch **G-Kräfte** (Anstellwinkel) erzeugt. Um schnell zu beschleunigen, musst du den Widerstand minimieren.
-
-### Wann Unloaden?
-
-- Nach einem harten Turn
-- Wenn Energie niedrig ist
-- Beim Repositionieren
-- **Zwischen jedem Manöver!**
-
-### Wie Unloaden?
-
-1. Stick **leicht nach vorne** drücken (0-0.5G erreichen)
-2. Die Flügel müssen "entlastet" sein
-3. **Afterburner** aktivieren
-4. **Leicht steigen** oder level fliegen
-5. Warten bis Speed steigt
-
-### Der Kampf-Rhythmus
-
-::: warning WER PERMANENT ZIEHT, VERLIERT
-Kämpfe im Rhythmus: **Pull - Unload - Pull**
-
-1. **Pull**: Ziehen für die Schussposition
-2. **Unload**: Sofort entlasten um verlorene Energie zurückzugewinnen
-3. **Pull**: Dann erneut ziehen
-
-Wer permanent zieht ("Gluing the stick back"), verliert alle Energie!
-:::
-
-```mermaid
-flowchart LR
-    PULL["Harter Turn<br/>6-9G"] --> |"Energie verloren"| LOW["Niedrige Speed"]
-    LOW --> UNLOAD["Unload!<br/>0G, Afterburner"]
-    UNLOAD --> |"Speed aufbauen"| RECOVER["Energie erholt"]
-    RECOVER --> ENGAGE[Wieder kämpfen]
-```
-
-## Spezifische Überschussleistung (Ps)
-
-Die **E-M Theorie** (Energy-Maneuverability) beschreibt die Kampffähigkeit eines Flugzeugs mathematisch. Das Kernkonzept ist die **spezifische Überschussleistung** (Ps).
-
-### Die Ps-Formel
-
-```
-Ps = (Schub - Widerstand) × Geschwindigkeit / Gewicht
-```
-
-Ps misst, wie schnell ein Flugzeug Energie gewinnen oder verlieren kann.
-
-| Ps-Wert | Bedeutung | Flugzustand |
-|---------|-----------|-------------|
-| **Ps > 0** | Energieüberschuss | Beschleunigt oder steigt |
-| **Ps = 0** | Energie-Neutral | Stationärer Flug (Sustained Turn) |
-| **Ps < 0** | Energiedefizit | Wird langsamer oder sinkt |
-
-### Praktische Anwendung
-
-- **Ps > 0:** Du gewinnst Energie. Nutze es für Angriffe oder Positionierung.
-- **Ps = 0:** Du hältst deine Energie. Ideal für Sustained Turn Rate Kämpfe.
-- **Ps < 0:** Du verlierst Energie. Kurz akzeptabel für Positionsgewinn, aber gefährlich wenn dauerhaft.
-
-::: tip SPEED IS LIFE
-Ein langsames Flugzeug ist ein totes Flugzeug - es sei denn, du zwingst den Gegner, ebenfalls langsam zu fliegen (wie die T-18).
-:::
-
----
-
-## Das E-M Diagramm (vereinfacht)
-
-Das Energy-Maneuverability-Diagramm zeigt, wo ein Flugzeug Energie gewinnt oder verliert.
-
-### Allgemeines E-M Profil
-
-| Zone | Beschreibung | Energie-Status |
-|------|--------------|----------------|
-| **High Speed + Low G** | Cruise | Energie-Gewinn (Ps > 0) |
-| **Corner Speed + Medium G** | Optimal | Energie-Neutral (Ps ≈ 0) |
-| **Low Speed + High G** | Gefahr | Energie-Verlust (Ps < 0) |
-| **Any Speed + Max G** | Turn | Energie-Verlust (Ps < 0) |
-
-::: warning GEFÄHRLICHE ZONE
-Unter Corner Speed mit hohem G-Load = rapider Energie-Verlust (stark negativer Ps) = Gefahr!
-:::
-
-## Visuelle Cues: Energie-Zustand erkennen
-
-Woher weißt du, wie viel Energie der Gegner hat? Achte auf diese Zeichen:
-
-*   **Nachbrenner:** Brennt er? Wenn nicht, baut er wahrscheinlich Energie ab oder fliegt "Mil Power" (langsamer).
-*   **Vapor Trails (Kondensstreifen):** Streifen an den Flügelspitzen bedeuten **hohe G-Last**. Wer viel zieht, verliert viel Energie ("He is bleeding speed").
-*   **Wenderadius:** Wird sein Kreis enger, aber seine Nase bewegt sich langsamer? Er wird langsam.
-*   **Nase:** Hängt seine Nase hoch, aber er steigt kaum? Er ist "slow and heavy".
-
-## Praktische Anwendung
-
-### Szenario: Du verlierst Energie im Kampf
-
-```mermaid
-flowchart TD
-    START["Speed fällt unter Corner Speed"] --> Q{Gegner Position?}
-
-    Q -->|Hinter dir| DEF[Defensive: Unload + Steigen/Fliehen]
-    Q -->|Vor dir| OFF[Offensive: Kurzen Turn, dann Unload]
-    Q -->|Weit weg| SEP[Separation: Unload + Beschleunigen]
-
-    DEF --> |"Schub nutzen"| SAFE[Sicherheit]
-    OFF --> |"Ein Schuss, dann Energie"| SHOT[Schuss + Energie]
-    SEP --> |"Reset"| RESTART[Neuer Angriff]
-```
-
-### Die goldene Regel
-
-> **Energie die du heute sparst, rettet dein Leben morgen.**
-
-Jeder unnötige Turn, jede Sekunde bei Max-G kostet dich Energie. Verschwende sie nicht!
-
-## Flugzeugtypen und Energie
-
-| Flugzeugtyp | Energie-Stil |
-|-------------|--------------|
-| **Energy Fighter** | Hält Energie, nutzt Vertikale, Boom & Zoom |
-| **Rate Fighter** | Konstante Geschwindigkeit, effiziente Kurven |
-| **Angles Fighter** | Opfert Energie für Position, muss schnell töten |
-
-## Zusammenfassung
-
-| Konzept | Anwendung |
-|---------|-----------|
-| Corner Speed | Lerne sie für dein Flugzeug |
-| Unloading | Regelmäßig Energie aufbauen |
-| Energie-Budget | Nur ausgeben wenn nötig |
-| Pull-Unload-Pull | Der Kampf-Rhythmus |
-
-::: info PHILOSOPHIE
-Energie ist wie Geld: Wer sparsam ist, hat mehr Optionen. Wer alles ausgibt, ist bankrott - und tot.
-:::
+Weiter: [Das VFM-Flugmodell](/grundlagen/physik)

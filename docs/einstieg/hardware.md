@@ -1,76 +1,94 @@
-# Hardware & Systemanforderungen
+# Hardware & Plattformen
 
-> Technische Voraussetzungen für Virtual Fighter Maneuvers.
+> Was du brauchst, um VFM zu fliegen, und wie du dein Setup so einstellst, dass du den Gegner früher siehst.
 
-VFM ist für VR-Plattformen entwickelt und unterstützt sowohl PCVR als auch Meta Quest Standalone. Hier findest du die Systemanforderungen für beide Plattformen.
+VFM ist ein VR-Spiel von Boundless Dynamics (dem Studio hinter VTOL VR). Release war am 19.12.2025, aktuell ist Version v1.4.2. Diese Seite trennt klar zwischen **gesicherten Fakten** (Steam-Store, Patchnotes) und **Tipps** aus der Praxis.
 
----
+## Plattformen
 
-## PCVR (Steam)
+| Plattform | Status |
+|---|---|
+| **PCVR** (Steam, OpenXR/SteamVR) | Ja |
+| **Meta Quest 2 / 3 / 3S / Pro** | Ja, nativ (standalone, ohne PC) |
+| **Crossplay** PC ↔ Quest | Ja |
+| **Cross-Buy** | **Nein** – Steam- und Quest-Version musst du getrennt kaufen |
+| **Flatscreen** (ohne Headset) | Laut einem Steam-Community-Guide möglich, nachdem das Spiel einmal in VR eingerichtet wurde |
 
-VFM nutzt die Unity-Engine mit physikalisch korrekter Aerodynamik-Simulation. Die GPU-Last ist moderat, aber die CPU muss die Physikberechnungen in Echtzeit durchführen.
-
-### Minimum
-
-| Komponente | Anforderung |
-|------------|-------------|
-| **Betriebssystem** | Windows 10 (64-bit) |
-| **Prozessor** | Intel i5-3570 oder vergleichbar |
-| **Arbeitsspeicher** | 16 GB RAM |
-| **Grafikkarte** | NVIDIA GTX 970 oder vergleichbar |
-| **Speicherplatz** | 500 MB |
-| **VR-Headset** | SteamVR / OpenXR kompatibel |
-
-### Empfohlen
-
-| Komponente | Anforderung |
-|------------|-------------|
-| **Betriebssystem** | Windows 10/11 |
-| **Prozessor** | Intel Core i7-9700K / AMD Ryzen 7 3700X |
-| **Arbeitsspeicher** | 32 GB RAM |
-| **Grafikkarte** | NVIDIA RTX 3070 / AMD RX 6800 XT |
-| **Speicherplatz** | 1 GB SSD |
-| **VR-Headset** | Valve Index, Meta Quest 3 (Link), HP Reverb G2 |
-
-::: tip PERFORMANCE
-Für flüssige 90 Hz in intensiven Multiplayer-Kämpfen wird die empfohlene Konfiguration angeraten.
+::: warning FLATSCREEN IST KEIN OFFIZIELLER MODUS
+Die Menüs werden mit den VR-Controllern bedient. Ohne Headset kommst du also zumindest für die Ersteinrichtung nicht aus. Der Flatscreen-Weg stammt aus einem Community-Guide, nicht aus dem Store-Text.
 :::
 
----
+## PCVR: Mindestanforderungen (Steam)
 
-## Meta Quest Standalone
+| Komponente | Minimum |
+|---|---|
+| Betriebssystem | Windows 10, 64-bit |
+| Prozessor | Intel i5-3570 |
+| Arbeitsspeicher | 16 GB RAM |
+| Grafikkarte | NVIDIA GTX 970 |
+| DirectX | Version 11 |
+| Speicherplatz | 500 MB |
 
-VFM läuft nativ auf Meta Quest 2 und Quest 3 ohne PC-Verbindung.
+Der Store nennt **keine empfohlenen Specs**. Alles darüber hinaus ist Erfahrungswert: Mehr GPU-Leistung bringt dir vor allem eine höhere Renderauflösung – und die ist für das Spotten entscheidend (siehe unten).
 
-| Gerät | Unterstützung |
-|-------|---------------|
-| **Meta Quest 2** | Vollständig unterstützt |
-| **Meta Quest 3** | Vollständig unterstützt |
-| **Meta Quest Pro** | Vollständig unterstützt |
+## Quest standalone oder PCVR?
 
-### Grafik-Optimierungen
+Beide Versionen spielen gegeneinander (Crossplay). Wie stark sich Grafik, Sichtweite und Darstellung kleiner Ziele unterscheiden, ist nicht offiziell dokumentiert.
 
-Die Standalone-Version ist für die mobile Hardware optimiert:
-
-- Reduzierte Schattenqualität
-- Vereinfachte Partikeleffekte (Rauch, Explosionen)
-- Optimierte Texturauflösungen
-- Stabile 72/90 Hz für Motion-Sickness-Prävention
-
-::: warning HINWEIS
-Die Physik-Simulation ist identisch zur PC-Version. Nur die Grafik wurde optimiert.
+::: info IM SPIEL PRÜFEN
+- Unterscheidet sich die Sichtweite bzw. Darstellung weit entfernter Jets zwischen Quest und PCVR?
+- Ist das Flugmodell auf beiden Plattformen identisch? (Naheliegend wegen Crossplay, aber nicht offiziell bestätigt.)
+- Welche Bildrate/Renderauflösung läuft auf Quest nativ, und lässt sie sich einstellen?
 :::
 
----
+**Faustregel für die Wahl (Tipp):** Hast du einen brauchbaren Gaming-PC, lohnt sich ein Test per Link-Kabel oder Air Link mit erhöhter Renderauflösung. Ohne PC ist die native Quest-Version die unkomplizierte Lösung – du spielst im selben Spielerpool.
 
-## Cross-Play
+## Eingabegeräte
 
-VFM unterstützt plattformübergreifendes Spielen zwischen PCVR und Quest.
+VFM unterstützt nativ:
 
-- **Netcode:** Server-autoritative Architektur für faire Matches
-- **Physik:** Deterministische Berechnung für identisches Verhalten
-- **Matchmaking:** Gemeinsamer Spielerpool für alle Plattformen
+- **VR-Controller** mit virtuellem Stick und Schubhebel im Cockpit (Standard)
+- **HOTAS** (Stick + Schubhebel)
+- **Pedale**
+- **Gamepad**
 
-::: info LATENZ
-Für kompetitives Spielen wird eine stabile Internetverbindung mit weniger als 50 ms Ping empfohlen.
+Hardware-Eingabegeräte musst du in den Einstellungen mit **"enable hardware controllers"** aktivieren. Die Menüs bedienst du trotzdem weiter mit den VR-Controllern. Details zur Belegung: [Steuerung & Einstellungen](/einstieg/cockpit).
+
+## Praxis-Tipps für dein VR-Setup
+
+Diese Punkte sind **Tipps**, keine Spielfakten. Sie helfen dir, länger konzentriert zu fliegen und den Gegner früher zu sehen.
+
+### Sitzend fliegen
+
+- Spiel im Sitzen. Ein fester Stuhl ohne Rollen gibt dir eine stabile Referenz, ein Drehstuhl erleichtert den Blick nach hinten (Kabel beachten).
+- Kalibriere die Sitzposition so, dass du dich im Cockpit **vorbeugen und den Oberkörper drehen** kannst. Den Gegner hinter dir siehst du nur mit Kopf **und** Schulter.
+- Lege dir **View Recenter** auf eine Taste, die du blind findest.
+
+### Komfort
+
+- Neu in VR-Flug? Kurze Sessions, Pause bei den ersten Anzeichen von Übelkeit – nicht "durchziehen".
+- Ein Ventilator, der dir ins Gesicht bläst, hilft vielen Spielern gegen Übelkeit und Hitze.
+- Greyout und Blackout sind im Spiel simuliert. Das ist gewollt und kein Grafikfehler.
+
+### Schärfe = früherer Tally
+
+**Tally** heißt: Du hast den Gegner in Sicht (siehe [Begriffe](/grundlagen/begriffe)). Im Nahkampf gewinnt oft, wer den anderen zuerst sieht und nicht mehr verliert.
+
+- **Linsen sauber, IPD richtig, Headset richtig sitzend.** Der scharfe Bereich ist bei vielen Headsets klein – die Augen gehören in die Mitte der Linsen.
+- **Renderauflösung so hoch wie möglich bei stabiler Bildrate.** Ein entfernter Jet ist nur wenige Pixel groß; bei niedriger Auflösung flimmert oder verschwindet er.
+- **Stabile Bildrate vor Schönheit.** Ruckler in schnellen Kopfbewegungen kosten dich den Gegner. Schatten und Effekte zuerst reduzieren.
+- **Bei Quest per Link/Air Link:** Bitrate und Netzwerk sind dann Teil deiner Sicht. Bei Air Link ein Router in Raumnähe, PC per Kabel am Router.
+
+### Verbindung
+
+Zur Netzwerkarchitektur (Server, Hit-Registrierung) gibt es keine offiziellen Angaben. Praktisch gilt wie bei jedem Online-Spiel: PC per LAN-Kabel, Quest mit gutem WLAN nahe am Router.
+
+::: tip MERKE
+- PCVR (OpenXR/SteamVR) und Quest 2/3/3S/Pro nativ, Crossplay ja, Cross-Buy nein.
+- Offiziell gibt es nur Mindestanforderungen (GTX 970, 16 GB RAM) – keine empfohlenen Specs.
+- HOTAS, Pedale und Gamepad gehen nativ, aber erst nach "enable hardware controllers".
+- Sitzend fliegen, Platz zum Umdrehen lassen, Recenter auf eine Taste.
+- Schärfe und stabile Bildrate sind kein Luxus: Sie entscheiden, wer zuerst Tally hat.
 :::
+
+Weiter: [Steuerung & Einstellungen](/einstieg/cockpit)

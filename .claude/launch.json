@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vfm-wiki",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "docs:dev", "--", "--port", "5180"],
+      "port": 5180,
+      "url": "http://localhost:5180"
+    }
+  ]
+}
