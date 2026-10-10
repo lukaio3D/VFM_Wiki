@@ -50,8 +50,43 @@ Es gibt keine feste Sekundenregel. Das Timing hängt vom **seitlichen Abstand** 
 | **Zu spät** | Er beginnt zuerst und gewinnt die Winkel. |
 | **Richtig** | Du kommst mit der Nase vor ihm herum und bist nach dem Pass vorn im Kreis. |
 
-::: tip VFM: Wer gewinnt den ersten Turn?
-Den ersten Turn entscheidet die **Instant Rate**. Laut Daten hat die T-15 die beste Instant Rate und die niedrigste Corner Speed. Bei gleich gutem Timing gewinnt die T-15 den Lead Turn gegen beide anderen Jets. Als T-16 oder T-18 gegen eine T-15 solltest du deshalb nicht darauf setzen, ihn zu überdrehen. Verweigere ihm stattdessen den Turning Room (nächster Abschnitt) oder wähle einen Flow, der ihm nicht liegt ([One-/Two-Circle](/grundlagen/neutral/one-two-circle)).
+## Der erste Turn aus 450 KIAS (gemessen)
+
+Ranked startet mit ~450 KIAS. Damit liegen alle drei Jets **über** ihrer Corner Speed. Wie viel Winkel bringt der erste Turn wirklich? Gemessen im Spiel (10.000 ft, voller Tank, Werte aus dem HUD, gezählt ab dem Moment, in dem die Drehrate 10 °/s überschreitet). Bei T-15 und T-16 stoppt der AoA-Limiter selbst am Optimum, „Knüppel voll“ ist dort die beste Kurve. Bei der T-18 lässt er bis 35° zu – ihr voller Zug ist **überzogen**. Ihre Zeile mit α ~26° ist aus den Messdaten abgeschätzt (Untergrenze), eine eigene Messung steht aus.
+
+| | nach 4 s | nach 8 s | Speed nach 8 s |
+|---|---|---|---|
+| **T-15** voller Zug | **77°** | **146°** | ~286 KIAS |
+| **T-16** voller Zug | 70° | 141° | ~365 KIAS |
+| T-18 voller Zug (überzogen, α bis 35°) | 70° | 127° | ~281 KIAS |
+| **T-18 mit α ~26°** (abgeschätzt) | ~73° | **≥ ~138°** | > 281 KIAS |
+| T-15 Sustained (~7 G, 15,4 °/s) | 62° | 123° | ~450 KIAS |
+| **T-16 Sustained** (~7,9 G, 17,6 °/s) | 70° | **141°** | **~450 KIAS** |
+| T-18 Sustained (~7 G, 15,6 °/s) | 62° | 125° | ~450 KIAS |
+
+Was daraus folgt:
+
+- **Der „Instant-Vorteil“ aus den Diagrammen ist aus 450 KIAS klein.** Bis die G anliegen, vergehen 2–3 s, und T-16 und T-18 erreichen gar keine 9 G (8,4 bzw. 8,7 G). Die T-15 gewinnt den ersten Turn nur um **5–7°** gegen die T-16 – und ist danach bei ~290 KIAS, die T-16 bei 450.
+- **T-16: Voll ziehen bringt nichts.** Nach 8 s hat sie im Sustained-Turn genauso viel Winkel wie im vollen Zug, aber 85 kt mehr. Ihr erster Turn ist eine saubere Sustained-Kurve bei ~450–470 KIAS.
+- **T-18: mit Gefühl fliegen, nicht durchziehen.** Über α ~26° zieht sie weniger G und verliert viel Energie. Voll durchgezogen verliert sie den ersten Turn gegen die T-16 (127° gegen 141°), **mit α ~26° ist sie etwa gleichauf** (≥ ~138°) und bleibt schneller. Die vollen 35° sind ihr Werkzeug für den Moment: Die Nase zeigt dann ~10° weiter in die Kurve als die Flugbahn – für einen Snapshot.
+- **T-15 gegen T-18:** Gegen eine sauber geflogene T-18 gewinnt die T-15 den ersten Turn nur um ~8° nach 8 s, gegen eine überzogene um ~19°.
+
+Einschränkung: je ein Messflug pro Jet, alle drei mit leichtem Sinkflug (~600–900 ft); die T-18 mit α ~26° ist geschätzt. Kommst du nahe deiner Corner Speed in den Merge, gilt eher die Instant-Rate aus den Diagrammen.
+
+## Merge-Strategien für Ranked (Start ~450 KIAS)
+
+| Du fliegst | gegen T-15 | gegen T-16 | gegen T-18 |
+|---|---|---|---|
+| **T-15** | Spiegelkampf: Wer unnötig voll zieht, verliert die Energie. Vertikal geht. | **Nicht** um den ersten Turn kämpfen. One-Circle langsam (300–380 KIAS) erzwingen – dort ziehst du bei gleicher Speed ~20 % engere Kreise. Geht sie nose-low: **mitgehen, nicht hochziehen**. Alternative: Blow-Through und Angriff von oben. | Two-Circle: voll ziehen, den ersten Turn gewinnst du knapp (~8° nach 8 s, mehr, wenn sie überzieht). Danach **kein Lag-Kreisen bei ~450** – dort ist sie gleich schnell im Drehen. Entweder schnell (> 500 KIAS, vertikal, High Yo-Yo) oder langsam, wo du mehr G ziehst. Ihre Nase im Blick behalten. |
+| **T-16** | Sustained-Turn bei 450, Two-Circle. Sie gewinnt höchstens 5–7° und ist dann langsam. Kein One-Circle. Zieht sie hoch: **nose-low weiterkreisen** (vertikaler Two-Circle), nie hinterher. | Spiegelkampf: erster Turn sustained, kein Head-on-Lotto. Wer zuerst aus der Ebene geht (Slice) und im Band bleibt, gewinnt. Spät zählt der Sprit. | Erster Turn sustained, etwa gleichauf (zieht sie voll durch, gewinnst du ihn). Danach Two-Circle, Lag außerhalb ihrer [Bubble](/grundlagen/begriffe#bubble), nie langsam werden. Vorsicht vor ihrem Snapshot mit hohem α. |
+| **T-18** | Schwerste Paarung: Sie zieht bei gleicher Speed mehr G und gewinnt den ersten Turn knapp. Erster Turn mit α ~26°, nicht durchziehen. Turning Room verweigern, One-Circle sehr langsam, Nase für Snapshots, Override aufheben. | Erster Turn mit α ~26° – dann seid ihr etwa gleichauf; durchgezogen verlierst du ihn. Sofort **nose-low** (Schwerkraft), One-Circle von unten, langsam machen. Snapshot mit vollem α. | Spiegelkampf: Wer α diszipliniert fliegt (~26° zum Kurven, 35° nur für den Schuss), behält die Energie. |
+
+::: details Warum die T-15 im Rate-Kampf gegen die T-18 bei 450 KIAS nicht dranbleibt
+Bei ~450 KIAS drehen T-15 und T-18 dauerhaft gleich schnell (im Flug 15,4 gegen 15,6 °/s, im Diagramm ist die T-18 zwischen ~400 und ~470 KIAS sogar minimal vorn). In Lag Pursuit fliegst du den größeren Kreis außen – bei gleicher Rate fällst du zurück. Dazu bekommt sie mit α bis 35° die Nase weiter herum. Klar vorn bist du erst **über ~500 KIAS** (dort bricht sie ein) oder **bei gleicher niedriger Speed** (≈355 KIAS: 6,8 gegen 5,7 G).
+:::
+
+::: details Warum die T-15 den vertikalen Kreis gegen eine abtauchende T-16 verliert
+Zieht die T-15 hoch und die T-16 nose-low herum, entsteht ein vertikaler Two-Circle. Die T-15 verliert im harten Zug Energie etwa 2,3-mal so schnell wie die T-16 (gemessen ~990 gegen ~430 ft/s). Die T-16 tauscht dagegen Höhe gegen Speed und bleibt in ihrem Band bei ~450 KIAS, wo sie dauerhaft 2 °/s schneller dreht. Nach einem Kreis ist sie unten, schnell und hat die bessere Rate – du bist oben und langsam. Gegenmittel: Geht sie nose-low, nicht weiter hochziehen, sondern selbst die Nase runter und auf ihrer Höhe bleiben, und den Kampf langsam und eng halten.
 :::
 
 ## Dem Gegner den Turning Room verweigern
@@ -117,7 +152,7 @@ Ausführlich: [Separation](/grundlagen/defensiv/separation).
 ::: info IM SPIEL PRÜFEN
 - Was **Merge Safety** genau bewirkt (z. B. ob Schüsse oder Kollisionen beim ersten Pass unterdrückt werden und wie lange).
 - Was **Head-on Guns verboten** technisch heißt: Ist der Schuss gesperrt oder zählt der Treffer nur nicht?
-- Mit welcher Speed und Höhe die Startdistanz „nah“ beginnt und ob der seitliche Versatz fest ist.
+- Mit welcher Speed und Höhe die Startdistanz „nah“ beginnt und ob der seitliche Versatz fest ist. Für Ranked: Starthöhe, Startabstand, seitlicher Versatz und Fuel-Stand (bekannt: ~450 KIAS).
 :::
 
 ::: warning Ranked
@@ -127,7 +162,7 @@ Eine Runde dauert 8 Minuten. Läuft die Zeit im 1v1 ab, gewinnt der **Verfolger*
 ::: tip MERKE
 - Komm mit Corner- bis Best-Sustained-Speed in den Merge (Richtwerte bei 10.000 ft: T-15 ~380–450, T-16 ~430–470, T-18 ~380–420 KIAS), nicht mit Mach 0.8+.
 - Starte den Lead Turn, wenn die Sichtlinienrate deutlich steigt, grob bei einem Wenderadius seitlichem Versatz.
-- Verweigere dem Gegner Turning Room, vor allem gegen eine T-15, die den ersten Turn per Instant Rate gewinnt.
+- Aus 450 KIAS ist der erste Turn fast ausgeglichen: Die T-16 dreht ihn sustained, die T-18 mit α ~26° (nicht durchziehen), die T-15 gewinnt ihn knapp.
 - Lies nach dem Pass Drehrichtung, Ebene und Planform des Gegners und entscheide dann bewusst.
 - Ein Blow-Through ist keine Niederlage, wenn der Turn dich defensiv machen würde.
 :::

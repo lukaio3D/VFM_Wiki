@@ -14,7 +14,7 @@ Es gibt kein Stein-Schere-Papier. Welcher Jet vorne liegt, hängt vom **Geschwin
 
 | Jet | Charakter | Spielplan | Profil |
 |---|---|---|---|
-| **T-15 Excalibur** | Allrounder mit Kraft: schwerster Jet, stärkster Schub, beste Instant Rate, kleinster Radius, beste Sustained Rate über ~520 KIAS | Merge gewinnen, schnell oder langsam kämpfen – nur nicht im 400–500-KIAS-Kreis gegen die T-16 | [T-15 Profil](/flugzeuge/t15) |
+| **T-15 Excalibur** | Allrounder mit Kraft: schwerster Jet, stärkster Schub, beste Instant Rate, kleinster Radius, beste Sustained Rate über ~520 KIAS | Ersten Turn knapp gewinnen, schnell oder langsam kämpfen – nur nicht im 400–500-KIAS-Kreis gegen die T-16 | [T-15 Profil](/flugzeuge/t15) |
 | **T-16 Falchion** | Rate-Spezialist: leichtester Jet, beste Sustained Rate – aber nur bei ~420–500 KIAS und tief | Speed halten, Two-Circle, tief, nie langsam werden | [T-16 Profil](/flugzeuge/t16) |
 | **T-18 Cutlass** | Low-Speed-Brawler: Platz 2 bei Instant Rate und Radius, schlechteste Energiehaltung bei hoher Speed | Kampf langsam machen, One-Circle, tief, nie schnell kämpfen | [T-18 Profil](/flugzeuge/t18) |
 
@@ -187,7 +187,7 @@ Mehr zur Flow-Wahl (One-Circle vs Two-Circle): [One-Circle & Two-Circle](/grundl
 
 Ein Vollkreis dauert bei ~18–22 °/s Sustained etwa 16–20 s. Mit **1,5–2 °/s** Vorsprung gewinnst du also rund **30–40° pro Vollkreis**; bei nur 1 °/s (z. B. 10.000 ft, voller Tank: 16 vs 15 °/s) etwa 20°. Von einer neutralen Two-Circle-Situation bis zur Schussposition vergehen damit mehrere Kreise – und nur, wenn du die ganze Zeit im richtigen Speedband bleibst.
 
-Umgekehrt: Die **ersten ~180°** eines Two-Circle gewinnt die bessere **Instant Rate**. Dort hat die T-15 3 °/s Vorsprung auf die T-16 (24 vs 21 °/s bei 10.000 ft). Mit IR-Raketen kann das den ersten Fox-2-Schuss bedeuten, bevor der Sustained-Vorteil überhaupt greift.
+Umgekehrt: Den **ersten Turn** eines Two-Circle gewinnt die bessere **Instant Rate** – aber nur, wenn man nahe Corner Speed in den Merge kommt. Die Diagrammwerte (24 / 21 / 22 °/s für T-15 / T-16 / T-18, 10.000 ft, 50 %) gelten nur mit 9 G an der Corner Speed. Aus 450 KIAS (Ranked-Start) dauert der G-Aufbau 2–3 s, und T-16 und T-18 erreichen 9 G gar nicht (8,4 / 8,7 G). Gemessen (10.000 ft, voller Tank) liegt die T-15 nach 8 s vollem Zug nur ~5° vor der T-16 (146 vs 141°) – egal, ob die T-16 voll zieht oder nur sustained dreht – und ist danach bei ~290 statt ~450 KIAS. Die T-18 ist mit der T-16 etwa gleichauf, wenn sie α bei ~26° hält (geschätzt ≥138 vs 141°; die T-15 liegt dann nur ~8° vorn). Zieht sie voll auf 35° durch, verliert sie den ersten Turn (gemessen 127°) und ~170 KIAS – ihr Limiter stoppt anders als bei T-15 und T-16 nicht am Optimum. Mit IR-Raketen kann der Vorsprung der T-15 den ersten Fox-2-Schuss bedeuten, sicher ist er aus 450 KIAS nicht. Details: [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen).
 
 ## Höhe
 

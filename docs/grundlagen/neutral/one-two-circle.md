@@ -79,7 +79,7 @@ Beide Skizzen zeigen die Draufsicht nach einem **Links-an-Links-Pass**: Jeder ha
 
 ### Two-Circle ist ein Rate-Kampf
 
-- **Die ersten ~180° gewinnt die Instant Rate**: Wer am Merge schneller die Nase herumbekommt (und den besseren [Lead Turn](/grundlagen/neutral/der-merge) geflogen ist), liegt nach dem ersten halben Kreis vorn.
+- **Die ersten ~180° gewinnt die Instant Rate** – wenn beide nahe Corner Speed in den Merge kommen: Wer dann schneller die Nase herumbekommt (und den besseren [Lead Turn](/grundlagen/neutral/der-merge) geflogen ist), liegt nach dem ersten halben Kreis vorn. Aus deutlich höherer Speed gilt das nicht: In VFM dauert der G-Aufbau aus 450 KIAS (Ranked-Start) 2–3 s, T-16 und T-18 erreichen nicht einmal 9 G. Gemessen liegt die T-15 nach 8 s nur ~5° vor der T-16; eine T-18 mit α ~26° ist etwa gleichauf mit der T-16, voll auf 35° durchgezogen verliert sie den ersten Turn. Details: [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen).
 - Danach zählt die **Sustained Rate**: Wer seine Turn Rate halten kann, ohne Speed zu verlieren, holt Grad für Grad auf.
 - Der große Abstand gibt dem schneller drehenden Jet den **ersten Fox-2-Schuss** (IR-Rakete), bevor es eng genug für die Kanone wird.
 - Rate-Spezialisten wollen Two-Circle.
@@ -100,7 +100,7 @@ Beide Skizzen zeigen die Draufsicht nach einem **Links-an-Links-Pass**: Jeder ha
 | Drehsinn | gleich | entgegengesetzt |
 | Kreise | zwei | einer (praktisch) |
 | Begegnung | nose-to-tail | Nase an Nase nach ~180° |
-| Gewinnt | höhere Rate (erst Instant, dann Sustained) | kleinerer Radius |
+| Gewinnt | höhere Rate (nahe Corner Speed erst Instant, dann Sustained) | kleinerer Radius |
 | Speed | bleibt eher im Band um Best-Sustained | fällt stark |
 | Abstand | groß, Raum für Fox 2 | klein, oft nur Guns |
 
@@ -132,13 +132,13 @@ Es ist kein Stein-Schere-Papier, sondern eine Frage des **Speedbands**.
 | Du | Gegner | Dein Flow | Ziel-Speed | Was du verweigerst | Details |
 |---|---|---|---|---|---|
 | T-15 | T-15 | kein Flow-Vorteil: Energie und Pilot entscheiden. Two-Circle mit vertikaler Komponente, wenn du mehr Energie hast. | ~400–495 KIAS | den Lead Turn | [T-15](/flugzeuge/t15) |
-| T-15 | T-16 | **One-Circle langsam** (unter ~380 KIAS) **oder schnell/vertikal** (über ~500 KIAS). Den ersten Turn gewinnst du per Instant Rate. | < 380 oder > 500 | flaches Two-Circle bei 420–500 KIAS in Bodennähe | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
-| T-15 | T-18 | **Two-Circle schnell und vertikal**, Energie ausspielen | > 450 KIAS | einen langsamen One-Circle unter ~250 KIAS | [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18) |
-| T-16 | T-15 | **Two-Circle tief** im Band 420–500. Den ersten Turn nicht erzwingen (er hat die bessere Instant Rate). Lieber nose-low drehen, Speed halten, dann über Sustained Rate aufholen. | ~420–500 KIAS | Vertikale und langsamen One-Circle | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
+| T-15 | T-16 | **One-Circle langsam** (unter ~380 KIAS) **oder schnell/vertikal** (über ~500 KIAS). Den ersten Turn gewinnst du, aus 450 KIAS aber nur knapp (~5°). | < 380 oder > 500 | flaches Two-Circle bei 420–500 KIAS in Bodennähe | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
+| T-15 | T-18 | **Two-Circle schnell und vertikal**, Energie ausspielen. Bei ~450 KIAS seid ihr sustained gleich, klar vorn bist du erst über ~500. | > 500 KIAS | einen langsamen One-Circle unter ~250 KIAS | [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18) |
+| T-16 | T-15 | **Two-Circle tief** im Band 420–500. Den ersten Turn nicht erzwingen: Aus 450 KIAS verlierst du ihn nur knapp (~5°), voll ziehen bringt dir keinen Winkel, kostet aber ~85 KIAS. Lieber nose-low drehen, Speed halten, dann über Sustained Rate aufholen. | ~420–500 KIAS | Vertikale und langsamen One-Circle | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
 | T-16 | T-16 | **Two-Circle tief**, beide wollen ihn. Energie und Lift-Vector-Disziplin entscheiden. | ~420–500 KIAS | jeden Speedverlust unter ~420 | [T-16](/flugzeuge/t16) |
-| T-16 | T-18 | **Two-Circle tief** | ~420–500 KIAS, ideal um 470 | One-Circle unter ~380 KIAS | [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
+| T-16 | T-18 | **Two-Circle tief**. Den ersten Turn aus 450 KIAS fliegst du sustained ohne Speedverlust – etwa gleichauf, danach gewinnst du über Sustained. | ~420–500 KIAS, ideal um 470 | One-Circle unter ~380 KIAS | [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
 | T-18 | T-15 | **One-Circle langsam und tief**. Laut Daten ist die T-15 auch dort im dargestellten Bereich gut. Dein vermuteter Vorteil liegt noch tiefer (sehr langsam, hoher AoA, Override): Hypothese, testen. | < 350 KIAS | Two-Circle und Vertikale | [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18) |
-| T-18 | T-16 | **One-Circle** | < 380 KIAS | Two-Circle über ~420 KIAS | [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
+| T-18 | T-16 | **One-Circle**. Den ersten Turn aus 450 KIAS mit α ~26° fliegen (dann etwa gleichauf, voll durchgezogen verloren), danach den Kampf langsam machen und die Nase (α bis 35°) nur für Snapshots nutzen. | < 380 KIAS | Two-Circle über ~420 KIAS | [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
 | T-18 | T-18 | kein Flow-Vorteil. One-Circle liegt nahe, dann gewinnt, wer besser langsam fliegt und seine Energie einteilt. | < 380 KIAS | Kampf über ~480 KIAS (beide verlieren dort Energie) | [T-18](/flugzeuge/t18) |
 
 ::: warning Daten sind kein Ersatz für Testen
@@ -151,7 +151,7 @@ Die Werte stammen aus der Ingame-Analyse (Stand Okt 2026). Die Speedbänder sind
 
 ::: tip MERKE
 - Gleicher Drehsinn = Two-Circle = Rate-Kampf. Entgegengesetzter Drehsinn = One-Circle = Radius-Kampf.
-- Die ersten ~180° eines Two-Circle gewinnt die Instant Rate, danach die Sustained Rate.
+- Die ersten ~180° eines Two-Circle gewinnt die Instant Rate (nur nahe Corner Speed, nicht aus 450 KIAS), danach die Sustained Rate.
 - One-Circle macht den Kampf langsam und eng, oft unter der Mindestreichweite der Rakete.
 - Keiner kann den Flow allein erzwingen. Kontrolliere Speed, Pass-Geometrie und Ebene.
 - In VFM entscheidet das Speedband: T-16 schnell im Band, T-18 langsam, T-15 meidet das Band der T-16 und den Bereich sehr langsamer Speed der T-18.
