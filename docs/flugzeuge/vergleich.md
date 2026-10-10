@@ -255,6 +255,43 @@ In denselben Flügen wurde je eine Kurve bei ~450 KIAS mit gehaltener Speed gefl
 Die Ingame-Diagramme stimmen also im Flug auf ±2–3 %. Und: Bei ~450 KIAS und vollem Tank dreht die T-16 dauerhaft gut 2 °/s schneller als die beiden anderen.
 :::
 
+### Schub und Widerstand getrennt
+
+Ein zweiter Messflug je Jet: Ausrollen im Leerlauf ohne Speedbrake von ~550 auf ~350 KIAS (10.000 ft, voller Tank). Der Speedverlust zeigt den Widerstand bei 1 G, zusammen mit der Beschleunigung ergibt sich der Schub. Annahme: Der Leerlaufschub ist vernachlässigbar (Fuel Flow ~600 PPH gegenüber ~59.000 PPH mit Nachbrenner bei der T-16).
+
+| 10.000 ft, voller Tank, 1 G | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| Speedverlust im Leerlauf bei ~450 KIAS | ~5 kt/s | ~5 kt/s | **~9 kt/s** |
+| Widerstand / Gewicht (350–550 KIAS) | 0,18–0,35 | 0,18–0,35 | **0,33–0,60** |
+| Schub / Gewicht mit Nachbrenner | **~1,65** | ~1,26 | ~1,35 |
+
+- **Die T-18 hat mehr Schub als die T-16, aber fast doppelt so viel Widerstand.** Deshalb beschleunigen beide gleich, und deshalb bricht die T-18 bei hoher Speed ein. Nimmst du bei der T-18 das Gas raus, wird sie fast doppelt so schnell langsam wie die anderen – praktisch als Speedbrake, aber auch eine Falle, wenn du Energie halten willst.
+- **Die Thrust-to-Weight-Balken der Info-Karten stimmen damit** (T-15 > T-18 > T-16). Sie zeigen den Schub, nicht die Beschleunigung.
+
+### Voller Zug: was ohne Override wirklich geht
+
+Dritter Messflug: bei ~450 KIAS Knüppel voll ziehen und halten (10.000 ft, voller Tank). Das HUD zeigt G, Drehrate und Anstellwinkel α.
+
+| 10.000 ft, voller Tank | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| Zeit bis zur Höchst-G | ~2 s | ~3 s | ~3 s |
+| Höchst-G (bei KIAS) | **9,1 G** (419) | 8,4 G (428) | 8,7 G (427) |
+| α am Anschlag | ~24–25° | ~23° | **bis 35°** |
+| erreichte G unterhalb davon, in % des Diagramm-Lift-Limits | ~90 % | ~92 % | ~85 % |
+| Energieverlust im Zug (Ø ab Höchst-G) | stark | **am geringsten** | **extrem** |
+
+Was das für dich heißt:
+
+- **Die Instant-Werte der Diagramme erreichst du ohne Override nicht ganz.** Unterhalb der Corner Speed kommen im Flug nur ~85–92 % der G aus dem Diagramm. Die Diagramme rechnen offenbar mit mehr Auftrieb, als der AoA-Limiter freigibt.
+- **Nur die T-15 kam auf 9 G.** T-16 und T-18 blieben darunter, obwohl sie oberhalb ihrer Corner Speed (100 % Fuel: 421 bzw. 409 KIAS) zu ziehen begannen. Grund: Bis die G anliegen, vergehen 2–3 s, und so lange verliert der Jet schon Speed. **Für 9 G musst du deutlich über Corner Speed anfangen zu ziehen.**
+- **T-18: Voll ziehen lohnt sich unter ~420 KIAS nicht.** Ihr Limiter lässt α bis 35° zu, die meisten G hat sie aber bei ~26°. Darüber zieht sie weniger G und verliert gleichzeitig enorm Energie (im Test ~40 kt/s bei gehaltener Höhe gerechnet). Volle Nase nur, wenn du genau diesen Winkel für einen Schuss brauchst.
+- **Die T-16 verliert im Zug am wenigsten Energie.** Ihr Limiter stoppt bei ~23°, sie zieht weniger G, bleibt dafür schneller.
+
+::: info OFFEN
+- Wie viel mehr bringt der AoA-Override in denselben Situationen?
+- Ab welcher Speed sinkt die G im vollen Zug unter das, was man mit ~26° α (T-18) bekommt – lässt sich das am HUD-α direkt fliegen?
+:::
+
 ## Info-Karten: Balken und Widersprüche
 
 Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MAX** (Corner Speed) und **SUS** (Best Sustained Speed) sowie vier grobe Balken.
@@ -279,7 +316,7 @@ Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MA
 ::: warning WIDERSPRÜCHE ZUR TABELLE
 - **Turn Radius:** Der Balken zeigt die T-18 vorn, die Tabelle in **allen neun** Bedingungen die T-15 (z. B. 1.644 vs 1.899 ft). **Für den dargestellten Bereich gilt die Tabelle.** Möglich ist, dass der Balken etwas anderes bewertet (etwa den Radius bei sehr niedriger Speed oder mit hohem AoA, also unterhalb des Diagramms). Das ist eine Vermutung, keine Tatsache.
 - **Max Speed:** Laut Balken ist die T-18 schneller als die T-16. Im Diagramm erreicht die T-16 aber klar die höhere Horizontal-Höchstgeschwindigkeit (Sustained 0 bei ~835 vs ~720 KIAS auf 10.000 ft, Meereshöhe ~858 vs ~737 KIAS). Für den dargestellten Bereich gilt das Diagramm.
-- **Thrust to Weight:** Der Balken sagt T-15 > T-18 > T-16. Gemessen ist die T-15 klar vorn, T-16 und T-18 sind aber praktisch gleichauf (die T-18 nur unter ~370 KIAS minimal besser). Siehe [Beschleunigung (gemessen)](#beschleunigung-gemessen).
+- **Thrust to Weight:** Der Balken sagt T-15 > T-18 > T-16. Das stimmt für den Schub (gemessen ~1,65 / ~1,35 / ~1,26). In der **Beschleunigung** sind T-16 und T-18 trotzdem gleichauf, weil die T-18 viel mehr Widerstand hat. Siehe [Schub und Widerstand getrennt](#schub-und-widerstand-getrennt).
 :::
 
 ## Nicht in den Daten

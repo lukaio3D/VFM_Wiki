@@ -35,8 +35,10 @@ Wann der Override sinnvoll sein kann:
 
 Wann nicht: Wenn der Gegner Energie hat und nicht getroffen wird. Dann bist du langsam, er nicht – und er kommt zurück.
 
+**Gemessen (voller Zug ohne Override, 10.000 ft):** Der Limiter stoppt die T-15 bei α ~24–25°, die T-16 bei ~23°. Die T-18 geht bis 35°, hat ihre meisten G aber schon bei ~26° – darüber zieht sie weniger G und verliert sehr viel Energie. Unterhalb der Corner Speed erreichen alle drei nur ~85–92 % der G, die das Diagramm verspricht. Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht).
+
 ::: info IM SPIEL PRÜFEN
-- Wie hoch ist das AoA-Limit je Jet, und wie weit geht es mit Override?
+- Wie weit geht der AoA mit Override, und wie viel G bringt das zusätzlich?
 - Wie viel Speed kostet ein Override-Manöver bei 250, 350 und 450 KIAS?
 - Kann der Jet mit Override wegkippen oder trudeln? Wie fängst du ihn ab?
 - Ab wann setzt Buffeting ein – nahe AoA-Limit oder bei hoher G?

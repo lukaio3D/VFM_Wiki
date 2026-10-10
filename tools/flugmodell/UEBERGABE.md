@@ -56,7 +56,12 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 - Die Kurven bestätigen das Modell unabhängig auf ±2–3 % in G.
 - Nebenbefunde: Schallgeschwindigkeit im Spiel auf ~10.000 ft ≈ 630 kt (ISA 638), in allen drei Videos gleich. Die HUD-Drehrate liegt bei allen Jets ~2 % über g·√(n²−1)/V mit der Modell-Atmosphäre.
 - HUD: oben links G und Drehrate °/s, darunter Speed (KIAS), Mach und α; rechts Höhe; „BRAKE“ unten rechts bei ausgefahrener Speedbrake. Fuel Flow im Cockpit (Nachbrenner T-15 ~115.000–140.000 PPH, T-16 ~58.700 PPH).
-- Nicht gemessen: Verlust bei vollem 9-G-Zug (geflogen wurden bewusst Sustained-Kurven), Leerlauf-Ausrollen ohne Speedbrake, andere Höhen.
+**Ausrollen und voller Zug (zweite Messreihe, `daten/zug_t1x_2026-10-10.csv`, ausgewertet mit `zug_ausrollen.py`):** 10.000 ft, voller Tank.
+- Ausrollen im Leerlauf ohne Speedbrake (keine BRAKE-Anzeige geprüft), 550 → 350 KIAS: D/W bei 1 G T-15 und T-16 0,18–0,35, T-18 0,33–0,60. Mit Leerlaufschub ≈ 0 folgt Schub/Gewicht mit Nachbrenner ≈ 1,65 / 1,26 / 1,35 (passt zur Reihenfolge der T/W-Balken).
+- **Das Modell teilt T und D falsch auf** (D bei der T-15 ~2,6-fach zu hoch, bei T-16/T-18 nahe Mach 0,9+ zu hoch, bei kleiner Mach zu niedrig). Nur der Überschuss T − D stimmt. → Neu fitten: T(M) und D(M, CL) getrennt aus Diagrammen (Ps = 0), Beschleunigung (T − D), Ausrollen (D) und Zug (D bei hohem CL).
+- Voller Zug ab ~450 KIAS: Höchst-G 9,1 / 8,4 / 8,7 nach ~2–3 s; α am Anschlag ~24–25° / ~23° / bis 35°. Unterhalb davon nur ~90 % / ~92 % / ~85 % des Diagramm-Lift-Limits → im Spiel ohne Override ein eigenes, niedrigeres Lift-Limit ansetzen. T-18: Lift-Maximum bei α ~26°, darüber weniger G.
+- Energieverlust im Zug viel höher als das Modell (Ps −992 / −427 / −1540 ft/s gegen Modell −693 / −135 / −353). Der Widerstand bei hohem α fehlt im Modell.
+
 
 **Datenstand vs. Wiki:** T-15 und T-18 zeigen exakt dieselben Werte wie die Wiki-Screenshots von Dez 2025. Die T-16 ist durch −20 % Treibstoffgewicht leichter (50 %: 24.417 statt 25.009 lbs) und etwas besser (Meereshöhe 50 %: 26 °/s @ 378 statt 25 @ 392, Min Radius 1.428 statt 1.524 ft). Die Wiki-Angabe „vor v1.1“ stimmt vermutlich nicht.
 
