@@ -18,6 +18,9 @@ Gemessen an dir: Winkel zwischen deiner Nase und der Sichtlinie zum Gegner. 0° 
 ### Bewegungsebene (Plane of Motion)
 Die Ebene, in der ein Jet kurvt – aufgespannt von Flugrichtung und Lift Vector. Was außerhalb seiner Ebene liegt, kann er erst nach einer Rolle erreichen. → [Relative Geometrie](/grundlagen/geometrie#bewegungsebene-plane-of-motion)
 
+### Bubble
+Der Raum rund um den Gegner, in dem er dich mit Nase und Waffen nicht erreicht – vor allem außerhalb seines Kurvenkreises und hinter seiner 3/9-Linie. Wer in Lag Pursuit außerhalb seines Kreises bleibt, ist „außerhalb der Bubble“: Er kann nicht nachdrehen, ohne dir Winkel zu schenken. Typischer Fehler: zu nah oder zu schnell herein, in seinen Kreis hinein – dann ist man in der Bubble und er bekommt die Nase herum. → [Verfolgungskurven](/grundlagen/verfolgungskurven), [Overshoot](/grundlagen/offensiv/overshoot)
+
 ### Closure (Vc)
 Die Geschwindigkeit, mit der die Entfernung zum Gegner abnimmt. Zu viel Closure nahe am Gegner führt zum Overshoot.
 

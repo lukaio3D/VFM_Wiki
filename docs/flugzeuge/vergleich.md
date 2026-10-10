@@ -284,7 +284,8 @@ Was das für dich heißt:
 
 - **Die Instant-Werte der Diagramme erreichst du ohne Override nicht ganz.** Unterhalb der Corner Speed kommen im Flug nur ~85–92 % der G aus dem Diagramm. Die Diagramme rechnen offenbar mit mehr Auftrieb, als der AoA-Limiter freigibt.
 - **Nur die T-15 kam auf 9 G.** T-16 und T-18 blieben darunter, obwohl sie oberhalb ihrer Corner Speed (100 % Fuel: 421 bzw. 409 KIAS) zu ziehen begannen. Grund: Bis die G anliegen, vergehen 2–3 s, und so lange verliert der Jet schon Speed. **Für 9 G musst du deutlich über Corner Speed anfangen zu ziehen.**
-- **T-18: Voll ziehen lohnt sich unter ~420 KIAS nicht.** Ihr Limiter lässt α bis 35° zu, die meisten G hat sie aber bei ~26°. Darüber zieht sie weniger G und verliert gleichzeitig enorm Energie (im Test ~40 kt/s bei gehaltener Höhe gerechnet). Volle Nase nur, wenn du genau diesen Winkel für einen Schuss brauchst.
+- **T-18: Nasenautorität statt Kurvenrate.** Ihr Limiter lässt α bis 35° zu, die meisten G hat sie aber bei ~26°. Darüber zieht sie weniger G und verliert enorm Energie (im Test ~40 kt/s bei gehaltener Höhe gerechnet) – dafür zeigt ihre Nase ~10° weiter in die Kurve als bei den anderen. Zum Kurven ~26° halten, die vollen 35° für den Snapshot.
+- **Bei gleicher Speed zieht die T-15 die meisten G** (z. B. ~355 KIAS: T-15 6,8 G, T-16 5,8 G, T-18 5,7 G; ~285 KIAS: T-15 4,8 G, T-18 3,6 G). Den engsten Kreis bei gleicher Speed fliegt also die T-15. Dass die T-18 in der Praxis „enger“ wirkt, liegt an ihrer Nase (höheres α) und daran, dass sie schneller langsam wird.
 - **Die T-16 verliert im Zug am wenigsten Energie.** Ihr Limiter stoppt bei ~23°, sie zieht weniger G, bleibt dafür schneller.
 
 ::: info OFFEN

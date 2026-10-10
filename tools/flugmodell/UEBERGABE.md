@@ -1,5 +1,7 @@
 # Übergabe: Flugmodell, Replays, 3D-Lehre
 
+> Der Auftrag für den 3D-Simulator steht in [`../simulator/KONZEPT.md`](../simulator/KONZEPT.md).
+
 Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf dem Windows-PC, auf dem VFM installiert ist.
 
 ## Ziel
@@ -17,6 +19,7 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 | `daten/tabellen_2026-10.csv` | Tabellenwerte aus den Screenshots (Gewicht, Instant, Sustained, Min Radius) |
 | `digitalisieren.py` | liest die Kurven aus den Screenshots → `daten/kurven_2026-10.csv`, Kontrollbilder in `daten/kontrolle/` |
 | `modell.py` | fittet das Flugmodell, Kreuzvalidierung, → `daten/modell_parameter.json`, `daten/kontrolle/modell_fit.png` |
+| `zug_ausrollen.py` | wertet Ausrollen im Leerlauf (→ Widerstand) und vollen Zug (→ Flug-Lift-Limit, Energieverlust) aus |
 | `messflug.py` | wertet aus Videos abgelesene Messflüge aus (Beschleunigung → Schub-Maßstab, Kurve → Validierung) |
 
 ## Was bisher feststeht
