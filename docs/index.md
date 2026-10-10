@@ -2,50 +2,45 @@
 
 > Echtes Basic Fighter Maneuvering, angewendet auf Virtual Fighter Maneuvers.
 
-Willkommen in der **Flight Academy**. Dieses Wiki soll dich im Dogfight messbar besser machen. Es verbindet die Grundlagen, die echte Kampfpiloten lernen (BFM, Basic Fighter Maneuvers), mit dem, was wir über die drei Jets in **Virtual Fighter Maneuvers** (VFM) wirklich wissen.
+Dieses Wiki verbindet die Grundlagen, die echte Kampfpiloten lernen (BFM), mit dem, was wir über die drei Jets in **Virtual Fighter Maneuvers** (VFM) wirklich wissen.
 
 ::: info ÜBER DAS SPIEL
-VFM ist ein VR-Dogfight-Simulator von **Boundless Dynamics** (dem Studio hinter VTOL VR), erschienen am 19.12.2025 für PCVR und Meta Quest, mit Crossplay. Es gibt drei Jets, Bordkanone, IR-Raketen und Flares, Bots, Custom-Lobbys von 1v1 bis 4v4 und Ranked mit Elo und Seasons. Dieses Wiki bezieht sich auf **Version v1.4.2** (Juli 2026).
+VR-Dogfight-Simulator von **Boundless Dynamics** (VTOL VR), erschienen am 19.12.2025 für PCVR und Meta Quest, mit Crossplay. Drei Jets, Kanone, IR-Raketen, Flares, Bots, Lobbys von 1v1 bis 4v4, Ranked mit Elo und Seasons. Stand des Wikis: **v1.4.2**.
 :::
 
-## So nutzt du dieses Wiki
+## Der Lernpfad
 
-Die Grundlagen sind als **Lernpfad** aufgebaut. Jede Stufe setzt die vorherige voraus. Überspring nichts. Die meisten Fehler im Dogfight sind Fehler aus Stufe 1 und 2.
+Jede Stufe baut auf der vorherigen auf. Die meisten Fehler im Dogfight sind Fehler aus Stufe 1 und 2.
 
 | Stufe | Thema | Du kannst danach … |
 |---|---|---|
-| **0** | [Golden Rules](/grundlagen/golden-rules) · [Begriffe](/grundlagen/begriffe) | … die Sprache des Luftkampfs sprechen und kennst die Regeln, die dich am Leben halten. |
-| **1** | [Kurvenphysik](/grundlagen/kurvenphysik) · [Energie](/grundlagen/energie-management) · [VFM-Flugmodell](/grundlagen/physik) | … erklären, warum dein Jet bei welcher Speed wie dreht, und dein E-M-Diagramm lesen. |
-| **2** | [Relative Geometrie](/grundlagen/geometrie) · [Verfolgungskurven](/grundlagen/verfolgungskurven) | … die Lage zum Gegner einschätzen und Lead, Pure und Lag gezielt einsetzen. |
-| **3** | [Offensiv](/grundlagen/offensiv-manoever) | … hinter dem Gegner bleiben, ohne zu overshooten, und den Schuss bekommen. |
-| **4** | [Defensiv](/grundlagen/defensiv-manoever) | … Schüsse schlagen, neutralisieren und rechtzeitig aussteigen. |
-| **5** | [Neutral & Merge](/grundlagen/neutral/der-merge) | … den Merge gewinnen und den Kampf in den Flow zwingen, der deinem Jet liegt. |
-| **6** | [Trainingsplan](/grundlagen/uebungen) | … gezielt üben und deine Replays auswerten. |
+| **0** | [Golden Rules](/grundlagen/golden-rules) · [Begriffe](/grundlagen/begriffe) | … die Sprache des Luftkampfs sprechen und überleben. |
+| **1** | [Kurvenphysik](/grundlagen/kurvenphysik) · [Energie](/grundlagen/energie-management) · [VFM-Flugmodell](/grundlagen/physik) | … erklären, warum dein Jet bei welcher Speed wie dreht. |
+| **2** | [Geometrie](/grundlagen/geometrie) · [Verfolgungskurven](/grundlagen/verfolgungskurven) | … die Lage einschätzen und Lead, Pure und Lag gezielt fliegen. |
+| **3** | [Offensiv](/grundlagen/offensiv-manoever) | … hinten bleiben, ohne zu overshooten, und schießen. |
+| **4** | [Defensiv](/grundlagen/defensiv-manoever) | … Schüsse schlagen und neutralisieren. |
+| **5** | [Neutral & Merge](/grundlagen/neutral/der-merge) | … den Merge gewinnen und den Kampf in dein Band zwingen. |
+| **6** | [Trainingsplan](/grundlagen/uebungen) | … gezielt üben und Replays auswerten. |
 
-Danach: Lerne **[dein Flugzeug](/flugzeuge/vergleich)** und die **Matchups** gegen die anderen beiden Jets.
-
----
+Danach: [dein Flugzeug](/flugzeuge/vergleich) und die Matchups.
 
 ## Die drei Jets in einem Satz
 
-| Jet | Charakter | Wann er gewinnt | Wann er verliert |
+| Jet | Charakter | Gewinnt | Verliert |
 |---|---|---|---|
-| **[T-15 Excalibur](/flugzeuge/t15)** | Allrounder mit dem meisten Schub | Schnell, vertikal, im ersten Turn (beste Instant Rate) | Im langen Kurvenkampf bei 400–500 KIAS gegen die T-16 |
-| **[T-16 Falchion](/flugzeuge/t16)** | Leichter Rate-Spezialist | Two-Circle bei ~420–500 KIAS, tief | Wenn sie langsam wird (unter ~380 KIAS) oder vertikal gegen die T-15 |
-| **[T-18 Cutlass](/flugzeuge/t18)** | Low-Speed-Brawler (High-AoA-Design) | Langsamer One-Circle-Kampf, tief | Sobald der Kampf schnell wird (ab ~480 KIAS verliert sie massiv Energie) |
+| **[T-15 Excalibur](/flugzeuge/t15)** | Höchster Schub, meiste G bei gleicher Speed | Schnell (über ~500 KIAS), vertikal, im langsamen One-Circle; den ersten Turn aus 450 KIAS nur knapp | Mit unnötigen Vollzügen; im flachen Kreis bei 400–500 KIAS gegen die T-16 |
+| **[T-16 Falchion](/flugzeuge/t16)** | Leichter Rate-Spezialist | Two-Circle bei ~420–500 KIAS, tief | Wenn sie langsam wird (unter ~380 KIAS) oder einer hochziehenden T-15 folgt |
+| **[T-18 Cutlass](/flugzeuge/t18)** | Low-Speed-Brawler mit Nasenautorität (α bis 35° für den Snapshot) | Langsamer One-Circle von unten, tief | Sobald es schnell wird: ab ~480–510 KIAS bricht sie ein |
 
-Das ist **kein Stein-Schere-Papier**. Welcher Jet gewinnt, hängt vor allem davon ab, **in welchem Geschwindigkeitsband** gekämpft wird. Wer den Kampf in sein Band zwingt, gewinnt. Details: [Performance-Daten](/flugzeuge/vergleich) und die Matchups [T-15 vs. T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs. T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs. T-18](/flugzeuge/matchups/t16-vs-t18).
+Kein Stein-Schere-Papier: Wer den Kampf in **sein Speedband** zwingt, gewinnt. Matchups: [T-15 vs. T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs. T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs. T-18](/flugzeuge/matchups/t16-vs-t18).
 
-::: warning DATENSTAND
-**Stand Okt 2026.** Die Leistungsdaten stammen aus Ingame-Screenshots vom Oktober 2026. T-15 und T-18 zeigen Zahl für Zahl dieselben Werte wie im Dezember 2025; nur die T-16 ist durch das um 20 % reduzierte Treibstoffgewicht etwas leichter und minimal besser. Beschleunigung und Steigleistung stehen nicht in den Diagrammen und werden gerade gemessen. Details auf der [Datenseite](/flugzeuge/vergleich).
+**Datenstand:** Die Zahlen stammen aus den Ingame-Diagrammen (Okt 2026) und aus Messflügen zu Beschleunigung, Ausrollen und vollem Zug; Details und offene Punkte stehen im [Flugzeugvergleich](/flugzeuge/vergleich).
+
+::: tip MERKE
+- Lernpfad ab Stufe 0, nichts überspringen.
+- Das Speedband entscheidet den Kampf, nicht der Jet allein.
+- Jede Zahl ist gekennzeichnet: *Diagramm*, *gemessen*, *geschätzt* oder *Hypothese*. Offenes steht unter „Im Spiel prüfen“.
+- Üben schlägt Lesen: Der Energie-Graph im Replay ist dein bester Lehrer.
 :::
 
----
-
-## Grundsätze dieses Wikis
-
-- **Ehrlich statt ausgedacht:** Was wir nicht sicher wissen, steht in einer Box **„Im Spiel prüfen“**. Prüf es und trag es nach.
-- **Physik statt Folklore:** Jede Empfehlung lässt sich aus Kurvenphysik, Energie und Geometrie herleiten. Wenn du das *Warum* verstehst, brauchst du keine Faustregeln.
-- **Üben statt nur lesen:** Jede Stufe hat Übungen im [Trainingsplan](/grundlagen/uebungen). Die Replay-Analyse mit dem Energie-Graphen ist dein bester Lehrer.
-
-**[Starte mit den Golden Rules →](/grundlagen/golden-rules)**
+Weiter: [Golden Rules](/grundlagen/golden-rules)

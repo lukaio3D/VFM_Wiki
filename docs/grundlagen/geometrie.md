@@ -2,7 +2,7 @@
 
 > Wo stehst du relativ zum Gegner, wohin zeigst du, und wie verändert sich das? Die Sprache, in der jede BFM-Lage beschrieben wird.
 
-Im Dogfight zählt nicht, wo du über der Karte bist, sondern wo du **relativ zum Gegner** bist. Mit einer Handvoll Begriffen lässt sich jede Lage beschreiben: offensiv, neutral oder defensiv – und was als Nächstes passiert. Alle Begriffe auch im [Glossar](/grundlagen/begriffe).
+Im Dogfight zählt nicht, wo du über der Karte bist, sondern wo du **relativ zum Gegner** bist. Mit wenigen Begriffen beschreibst du jede Lage als offensiv, neutral oder defensiv. Kurzdefinitionen: [Glossar](/grundlagen/begriffe).
 
 ## Die drei Winkel: AA, ATA, HCA
 
@@ -29,29 +29,13 @@ Im Dogfight zählt nicht, wo du über der Karte bist, sondern wo du **relativ zu
 <text x="260" y="330" font-size="12" fill="var(--vp-c-text-2)" text-anchor="middle">Beispiel: AA ≈ 34°, ATA ≈ 26°, HCA = 60°</text>
 </svg>
 
-### Aspect Angle (AA)
+| Winkel | Gemessen | Sagt | 0° | 90° | 180° |
+|---|---|---|---|---|---|
+| **Aspect Angle (AA)** | am Gegner, zwischen seinem Heck und der Sichtlinie zu dir | wo du relativ zu ihm stehst | genau hinter ihm | auf seiner 3/9-Linie | genau vor ihm |
+| **Antenna Train Angle (ATA)** | an dir, zwischen deiner Nase und der Sichtlinie zu ihm | wohin du zeigst | er ist vor deiner Nase | er ist neben dir | er ist hinter dir |
+| **Heading Crossing Angle (HCA)** | zwischen euren Flugrichtungen | wie ihr euch kreuzt | parallel, gleiche Richtung | rechtwinklig | gegeneinander |
 
-Gemessen **am Gegner**: der Winkel zwischen seinem Heck (seiner Six) und der Sichtlinie zu dir. AA sagt, **wo du relativ zu ihm stehst**.
-
-- **0°:** Du bist genau hinter ihm.
-- **90°:** Du bist auf seiner 3/9-Linie, seitlich neben ihm.
-- **180°:** Du bist genau vor ihm.
-
-Unter 90° bist du hinter seiner 3/9-Linie, über 90° davor.
-
-### Antenna Train Angle (ATA)
-
-Gemessen **an dir**: der Winkel zwischen deiner Nase und der Sichtlinie zum Gegner. ATA sagt, **wohin du zeigst** – wie weit er von deiner Nase weg ist.
-
-- **0°:** Er ist genau vor deiner Nase (im HUD).
-- **90°:** Er ist seitlich neben dir (Blick zur Seite).
-- **180°:** Er ist genau hinter dir.
-
-### Heading Crossing Angle (HCA)
-
-Der Winkel **zwischen euren Flugrichtungen**, unabhängig davon, wo ihr steht. 0° = parallel in dieselbe Richtung, 90° = ihr kreuzt euch rechtwinklig, 180° = ihr fliegt gegeneinander. Hohe HCA in Schussnähe bedeutet: nur ein [Snapshot](/grundlagen/begriffe#snapshot) ist möglich, kein Tracking Shot.
-
-### AA und ATA zusammen
+Hohe HCA in Schussnähe heißt: nur ein [Snapshot](/grundlagen/begriffe#snapshot) ist möglich, kein Tracking Shot.
 
 | Lage | AA | ATA | HCA | Bewertung |
 |---|---|---|---|---|
@@ -60,95 +44,75 @@ Der Winkel **zwischen euren Flugrichtungen**, unabhängig davon, wo ihr steht. 0
 | Nebeneinander, gleiche Richtung | 90° | 90° | 0° | Neutral |
 | Er an deiner Six | 180° | 180° | 0° | Defensiv |
 
-Faustregel: **Kleine AA und kleine ATA = offensiv. Große AA und große ATA = defensiv.** Alles dazwischen ist neutral oder im Wandel.
+Faustregel: **Kleine AA und kleine ATA = offensiv. Große AA und große ATA = defensiv.**
 
 ## Range
 
-Range ist die Entfernung zum Gegner. Sie entscheidet, welche Waffe passt und wie viel Zeit du hast.
-
-- **Mit Radar-Lock** liefert das Radar eine Feuerleitlösung für den Gun-Funnel. Siehe [Radar](/avionik/radar).
-- **Ohne Lock** rechnet der Gun-Funnel mit einer durchschnittlichen Spannweite (seit v1.2.8). Füllen die Flügel des Gegners den Funnel aus, passt die Entfernung ungefähr. Siehe [HUD](/avionik/hud).
-- **Visuell:** Wie groß ist er, wie schnell wird er größer?
-
-::: info IM SPIEL PRÜFEN
-- Zeigt das HUD bei Lock die Range und die Closure als Zahl? In welcher Einheit?
-:::
+Range ist die Entfernung zum Gegner. Sie entscheidet, welche Waffe passt und wie viel Zeit du hast. Mit Radar-Lock liefert das Radar die Entfernung für den Gun Funnel ([Radar](/avionik/radar)). Ohne Lock rechnet der Funnel mit einer durchschnittlichen Spannweite: Füllen die Flügel des Gegners den Funnel aus, passt die Entfernung ungefähr ([HUD](/avionik/hud)).
 
 ## Die 3/9-Linie
 
-Die gedachte Linie durch die Flügel des Gegners, von seiner 3-Uhr- zu seiner 9-Uhr-Position. Sie teilt den Raum in **vor ihm** und **hinter ihm**.
+Die gedachte Linie durch die Flügel des Gegners, von seiner 3- zu seiner 9-Uhr-Position. Sie teilt den Raum in **vor ihm** und **hinter ihm**.
 
 - **Hinter seiner 3/9:** Du bist im Vorteil. Er muss den Kopf drehen, um dich zu sehen, und seine Nase hat einen weiten Weg zu dir.
-- **Vor seiner 3/9:** Er kann dich mit der Nase erreichen. Wer als Angreifer vor die 3/9-Linie rutscht, hat einen [3/9-Line-Overshoot](/grundlagen/offensiv/overshoot) – Rollentausch.
+- **Vor seiner 3/9:** Er erreicht dich mit der Nase. Rutschst du als Angreifer davor, ist das ein [3/9-Line-Overshoot](/grundlagen/offensiv/overshoot) – Rollentausch.
 
 ## Closure
 
-**Closure** (Vc) ist die Geschwindigkeit, mit der die Range kleiner wird. Positive Closure: ihr kommt euch näher. Negative: ihr entfernt euch.
-
-- **Zu viel Closure** nahe am Gegner führt zum [Overshoot](/grundlagen/offensiv/overshoot).
-- **Zu wenig Closure** heißt: Er zieht davon oder dreht dir aus der Reichweite.
-- Closure steuerst du über die [Verfolgungskurve](/grundlagen/verfolgungskurven) (Lead erhöht, Lag senkt), über Out-of-Plane-Manöver wie den [High Yo-Yo](/grundlagen/offensiv/yo-yos) und über den Schub.
+**Closure** (Vc) ist die Geschwindigkeit, mit der die Range kleiner wird. Zu viel Closure nahe am Gegner führt zum [Overshoot](/grundlagen/offensiv/overshoot), zu wenig lässt ihn davonziehen. Du steuerst sie über die [Verfolgungskurve](/grundlagen/verfolgungskurven) (Lead erhöht, Lag senkt), über Out-of-Plane-Manöver wie den [High Yo-Yo](/grundlagen/offensiv/yo-yos) und über den Schub.
 
 ## LOS-Rate (Sichtlinienrate)
 
-Die **Line of Sight (LOS)** ist die Sichtlinie von dir zum Gegner. Die **LOS-Rate** ist, wie schnell sich diese Linie dreht – also wie schnell der Gegner über dein Kabinendach "wandert".
+Die **LOS-Rate** ist, wie schnell sich die Sichtlinie zum Gegner dreht – wie schnell er über dein Kabinendach „wandert“.
 
-- **Gegner wandert Richtung deiner Nase:** Du gewinnst Winkel.
-- **Gegner wandert nach hinten über dein Kabinendach:** Du verlierst Winkel – er dreht schneller oder sitzt besser.
-- **Gegner steht still auf dem Kabinendach:** Die Geometrie ändert sich gerade nicht (im Anflug: Kollisionskurs).
+- **Er wandert Richtung deiner Nase:** Du gewinnst Winkel.
+- **Er wandert nach hinten:** Du verlierst Winkel.
+- **Er steht still:** Die Geometrie ändert sich nicht (im Anflug: Kollisionskurs).
 
-Vor dem Merge ist die LOS-Rate dein Signal für den **Lead Turn**: Solange der Gegner kaum wandert, bist du weit weg. Steigt die LOS-Rate deutlich – grob, wenn sein seitlicher Versatz etwa einem eigenen Wenderadius entspricht – ist der Moment für den Turn. Details: [Der Merge](/grundlagen/neutral/der-merge).
+Vor dem Merge ist die LOS-Rate dein Signal für den **Lead Turn**: Steigt sie deutlich – grob, wenn sein seitlicher Versatz etwa einem Wenderadius entspricht –, ist der Moment da. Details: [Der Merge](/grundlagen/neutral/der-merge).
 
 ## Bewegungsebene (Plane of Motion)
 
-Jeder Jet kurvt in einer Ebene: aufgespannt von seiner Flugrichtung und seinem Lift Vector. Das ist seine **Bewegungsebene** (Plane of Motion, POM).
+Jeder Jet kurvt in einer Ebene aus Flugrichtung und Lift Vector, seiner **Bewegungsebene**. **In seiner Ebene** erreicht er dich durch Ziehen. **Außerhalb** muss er erst rollen, dann ziehen – das kostet ihn Zeit.
 
-- **In seiner Ebene** kann er dich mit Ziehen erreichen.
-- **Außerhalb seiner Ebene** muss er erst rollen, dann ziehen. Das kostet ihm Zeit.
-
-Deshalb verlassen gute Angreifer die Ebene des Gegners, um Closure und Winkel zu steuern ([Yo-Yos](/grundlagen/offensiv/yo-yos), [Lag Roll](/grundlagen/offensiv/lag-roll)), und gute Verteidiger, um aus der Lösung des Angreifers zu kommen ([Guns Defense](/grundlagen/defensiv/guns-defense)). Die Physik dazu: [Kurvenphysik](/grundlagen/kurvenphysik#out-of-plane-manovrieren).
+Deshalb verlassen gute Angreifer die Ebene des Gegners, um Closure und Winkel zu steuern ([Yo-Yos](/grundlagen/offensiv/yo-yos), [Lag Roll](/grundlagen/offensiv/lag-roll)), und gute Verteidiger, um aus der Lösung des Angreifers zu kommen ([Guns Defense](/grundlagen/defensiv/guns-defense)). Physik: [Kurvenphysik](/grundlagen/kurvenphysik#out-of-plane-manovrieren).
 
 ## Kurvenkreise und Turning Room
 
-Jeder Jet beschreibt beim Kurven einen **Kurvenkreis** (Turn Circle). Seine Größe hängt von Speed und G ab (r ~ V²).
+Jeder kurvende Jet beschreibt einen **Kurvenkreis** (r ~ V²).
 
-- **Bist du in seinem Kreis**, kannst du deine Nase auf ihn bringen und hinter ihm bleiben – er kann dich nicht einfach "wegdrehen".
-- **Bist du außerhalb seines Kreises**, kann er dir durch Weiterdrehen die Nase verweigern. Du musst erst in seinen Kreis hinein – über [Lag Pursuit](/grundlagen/verfolgungskurven#turn-circle-entry).
+- **In seinem Kreis** bringst du die Nase auf ihn und bleibst hinter ihm.
+- **Außerhalb seines Kreises** kann er dir durch Weiterdrehen die Nase verweigern. Hinein kommst du über [Lag Pursuit](/grundlagen/verfolgungskurven#turn-circle-entry).
 
-**Turning Room** ist der Platz (seitlich oder vertikal), den du brauchst, um deine Nase auf den Gegner zu drehen. Am Merge bedeutet seitlicher Versatz Turning Room für beide.
-
-- **Gib ihm keinen:** Zeig mit der Nase auf ihn und nimm den seitlichen Versatz weg, bevor ihr euch passiert.
-- **Hol dir welchen:** Der [Lead Turn](/grundlagen/neutral/der-merge) nutzt seinen Versatz, um schon vor dem Merge Winkel zu gewinnen. Zu früh angesetzt, verschenkst du den eigenen Turning Room oder kreuzt seine Bahn (Flight-Path-Overshoot).
-
-Was nach dem Merge passiert – ob ihr in einem gemeinsamen Kreis (One-Circle) oder in zwei Kreisen (Two-Circle) landet und wer welchen Flow will – steht auf der Seite [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle).
+**Turning Room** ist der Platz, den du brauchst, um die Nase auf den Gegner zu drehen. Am Merge: **Gib ihm keinen** (Nase auf ihn, seitlichen Versatz wegnehmen) und **nutz seinen** mit dem [Lead Turn](/grundlagen/neutral/der-merge). Ob danach ein gemeinsamer Kreis (One-Circle) oder zwei Kreise (Two-Circle) entstehen: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle).
 
 ## Control Zone
 
-Die **Control Zone** ist eine geometrische Position hinter dem Gegner, aus der du trotz seiner Manöver hinter ihm bleiben kannst: Egal ob er bricht, umkehrt oder ausweicht – du hast genug Abstand und Winkel, um zu reagieren, ohne vor seine 3/9-Linie zu geraten.
+Die **Control Zone** ist eine Position hinter dem Gegner, aus der du trotz seiner Manöver hinter ihm bleibst: Egal ob er bricht oder umkehrt, du hast genug Abstand und Winkel, ohne vor seine 3/9-Linie zu geraten.
 
-- **Richtwert:** etwa **30–60° AA** und **einige tausend Fuß** Range, abhängig von Jets und Speed. Im Spiel testen.
+- **Richtwert:** etwa 30–60° AA und einige tausend Fuß Range, je nach Jets und Speed.
 - **Zu nah** oder zu viel Closure: Er bricht, du schießt vorbei.
-- **Zu weit:** Er kann drehen und neutralisieren, bevor du nachkommst.
+- **Zu weit:** Er dreht und neutralisiert, bevor du nachkommst.
 
-Die Control Zone ist **keine Waffenreichweite**. Sie ist der Ort, von dem aus du in Ruhe eine Schussgelegenheit aufbaust.
+Die Control Zone ist **keine Waffenreichweite**, sondern der Ort, von dem aus du in Ruhe einen Schuss aufbaust.
 
 ## WEZ: Gun vs. Fox 2
 
-Die **WEZ** (Weapons Engagement Zone) ist der Raum, in dem eine Waffe treffen kann. Sie wird begrenzt durch **Mindest- und Maximalreichweite**, **Off-Boresight** (wie weit der Gegner von deiner Nase weg sein darf) und **Aspect** (aus welchem Winkel zu ihm).
+Die **WEZ** (Weapons Engagement Zone) ist der Raum, in dem eine Waffe treffen kann: begrenzt durch Mindest- und Maximalreichweite, Off-Boresight (wie weit er von deiner Nase weg sein darf) und Aspect.
 
 | | Bordkanone | IR-Rakete (Fox 2) |
 |---|---|---|
-| Reichweite | Kurz | Deutlich größer als die Gun, mit Mindestreichweite |
-| Nase | Muss vor ihn zeigen (Lead) | Suchkopf muss ihn sehen, etwas Off-Boresight möglich |
-| Aspect | Jeder Winkel, Tracking am einfachsten bei kleiner AA | Von hinten am zuverlässigsten; Community berichtet Treffer auch frontal |
+| Reichweite | kurz | deutlich größer, mit Mindestreichweite |
+| Nase | muss vor ihn zeigen (Lead) | Suchkopf muss ihn sehen, etwas Off-Boresight möglich |
+| Aspect | jeder Winkel, Tracking am einfachsten bei kleiner AA | von hinten am zuverlässigsten; Community berichtet auch frontale Treffer |
 | Gegenmittel | Jinken, aus der Ebene | Flares, Break, Idle |
 
-Die Logik im Kampf: **Die Fox 2 zwingt ihn zu Flares und Defensive – damit gibt er Energie oder Position ab, und dann kommt die Gun.** Ein One-Circle-Kampf kann so eng werden, dass du unter der Mindestreichweite der Rakete bist; im Two-Circle bekommt der schneller drehende Jet den ersten Fox-2-Schuss. Details: [Schusslösung](/grundlagen/offensiv/schussloesung) und [Waffen](/avionik/waffen).
+Die Logik: **Die Fox 2 zwingt ihn zu Flares und Defensive – damit gibt er Energie oder Position ab, und dann kommt die Gun.** Im engen One-Circle bist du oft unter der Mindestreichweite der Rakete; im Two-Circle bekommt der schneller drehende Jet den ersten Fox-2-Schuss. Im Ranked 1v1 und in vielen Lobbys sind Raketen aus (Guns-only) – dann ist die Gun-WEZ alles. Details: [Schusslösung](/grundlagen/offensiv/schussloesung), [Waffen](/avionik/waffen).
 
 ::: info IM SPIEL PRÜFEN
-- Gun-Reichweite, in der der Funnel sinnvoll Treffer bringt.
-- Mindest- und Maximalreichweite der IR-Rakete, maximaler Off-Boresight-Winkel, Frontal-Treffer (All-Aspect).
-- In vielen Lobbys und im Ranked 1v1 sind Raketen aus (Guns-only) – dann ist die Gun-WEZ alles.
+- Gun-Reichweite und Streuung: Bis zu welcher Entfernung bringt der Funnel sinnvoll Treffer?
+- IR-Rakete: Mindest- und Maximalreichweite, maximaler Off-Boresight-Winkel, frontale Treffer.
+- Zeigt das HUD bei Lock Range und Closure als Zahl?
 :::
 
 ::: tip MERKE

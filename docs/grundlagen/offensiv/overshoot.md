@@ -1,18 +1,15 @@
 # Overshoot
 
-> Der Moment, in dem der Angreifer seinen Vorteil verliert: was ihn auslöst, wie du ihn als Angreifer vermeidest, wie du ihn als Verteidiger erzwingst.
+> Der Moment, in dem der Angreifer seinen Vorteil verliert: was ihn auslöst, wie du ihn als Angreifer vermeidest und als Verteidiger erzwingst.
 
-Ein Overshoot heißt: Der Angreifer kann die Kurve des Gegners nicht mehr mitgehen und fliegt über dessen Flugbahn oder sogar an ihm vorbei. Es gibt zwei Arten, und der Unterschied ist entscheidend.
+Ein Overshoot heißt: Der Angreifer kann die Kurve des Gegners nicht mehr mitgehen und fliegt über dessen Flugbahn oder an ihm vorbei. Es gibt zwei Arten, und der Unterschied ist entscheidend.
 
 ## Die zwei Arten
 
-### Flight-Path-Overshoot
+- **Flight-Path-Overshoot:** Du kreuzt **seine Flugbahn hinter ihm**. Du verlierst Winkel und stehst außen, bist aber **noch hinter seiner 3/9-Linie** und damit offensiv, wenn du richtig reagierst.
+- **3/9-Line-Overshoot:** Du schießt **über seine 3/9-Linie hinaus** und bist **vor ihm**. Rollentausch – genau das will jeder Verteidiger.
 
-Du kreuzt **seine Flugbahn hinter ihm**. Du verlierst Winkelvorteil und stehst danach auf der Außenseite seiner Kurve, bist aber **noch hinter seiner 3/9-Linie**. Unangenehm, aber du bist noch offensiv, wenn du richtig reagierst.
-
-### 3/9-Line-Overshoot
-
-Du schießt **über seine 3/9-Linie hinaus** und bist **vor ihm**. Ab jetzt kann er dich angreifen. Das ist der Rollentausch, den jeder Verteidiger will.
+„Lateral Overshoot“ ist kein Standardbegriff; gemeint ist meist einer der beiden.
 
 <svg viewBox="0 0 520 300" width="100%" style="max-width:520px" role="img" aria-label="Draufsicht: Gegner fliegt nach oben. Bahn 1 kreuzt seine Flugbahn hinter ihm und bleibt hinter seiner 3/9-Linie (Flight-Path-Overshoot). Bahn 2 kreuzt seine Flugbahn und überquert danach die 3/9-Linie, endet vor ihm (3/9-Line-Overshoot).">
 <defs>
@@ -37,83 +34,68 @@ Du schießt **über seine 3/9-Linie hinaus** und bist **vor ihm**. Ab jetzt kann
 
 *Bahn 1 kreuzt seine Flugbahn, bleibt aber hinter seiner 3/9-Linie. Bahn 2 läuft über die 3/9-Linie hinaus nach vorn: Rollentausch.*
 
-::: info BEGRIFF
-"Lateral Overshoot" ist kein Standardbegriff. Gemeint ist meist einer der beiden oben. Wir verwenden nur Flight-Path- und 3/9-Line-Overshoot.
-:::
-
 ## Warum es passiert
 
-Ein Overshoot ist immer das Ergebnis von **zu viel Closure bei zu großem Winkel**. Konkret:
+Ein Overshoot ist immer **zu viel Closure bei zu großem Winkel**:
 
-- **Zu schnell im Vergleich zu ihm.** Bei gleichem G wächst der Kurvenradius mit dem Quadrat der Geschwindigkeit (r = V²/(g·√(n²−1)), siehe [Kurvenphysik](/grundlagen/kurvenphysik)). 20 % mehr Speed als er heißt bei gleicher Last rund 44 % mehr Radius. Du kannst seine Kurve schlicht nicht mitfliegen.
-- **Zu früh in Lead am Eintritt.** Wer an seinem Kreis vorbei auf seine Nase zieht, statt in Lag einzutreten, schneidet mit hoher AA und hoher Closure hinein.
-- **Schuss-Fixierung.** Du willst den Gun-Schuss unbedingt haben, trackst zu lange, ziehst Lead, kommst immer näher und merkst zu spät, dass du nicht mehr hinter ihm bleiben kannst.
-- **Er bricht im richtigen Moment ein.** Ein harter Break, wenn du dich auf Lead festgelegt hast, lässt seine AA schlagartig wachsen.
-- **Er wird langsamer, während du schnell bleibst.** Gas raus, harte Kurve, im Extremfall Kurve mit AoA-Override: seine Speed fällt, deine Closure steigt.
+- **Zu schnell im Vergleich zu ihm.** Bei gleicher Last wächst der Radius mit V² ([Kurvenphysik](/grundlagen/kurvenphysik)): 20 % mehr Speed heißt rund 44 % mehr Radius.
+- **Zu früh in Lead am Eintritt** statt in Lag.
+- **Schuss-Fixierung:** zu lange tracken, Lead ziehen, immer näher kommen.
+- **Er bricht im richtigen Moment ein** oder **wird langsamer**, während du schnell bleibst.
 
-### Warnzeichen
-
-- Er wird **schnell größer** im Visier.
-- Die **Sichtlinienrate steigt**: Du musst immer härter ziehen, um ihn vor der Nase zu halten.
-- Du bist **am G-Limit** (9 G) oder am AoA-Limit und er läuft trotzdem nach vorn aus.
-- Er kommt Richtung deiner Flächenspitze statt vor deiner Nase zu bleiben.
+**Warnzeichen:** Er wird schnell größer, die Sichtlinienrate steigt, du bist am G- oder AoA-Limit und er läuft trotzdem nach vorn aus, er wandert Richtung Flächenspitze.
 
 ## Als Angreifer: Overshoot vermeiden
 
-In dieser Reihenfolge, je früher, desto billiger:
+Je früher, desto billiger:
 
-1. **Closure früh steuern.** Gas zurück, wenn du schneller wirst als nötig. Lieber in Lag ankommen.
-2. **Lag statt Lead**, bis du in seinem Kreis bist. Siehe [Verfolgungskurven](/grundlagen/verfolgungskurven).
-3. **Aus der Ebene gehen:** [Quarter Plane oder High Yo-Yo](/grundlagen/offensiv/yo-yos), wenn die Closure zu hoch wird.
-4. **[Lag Roll](/grundlagen/offensiv/lag-roll)**, wenn die Nase schon tief in Lead steht und es knapp wird.
-5. **[Barrel Roll Attack](/grundlagen/offensiv/lag-roll)**, wenn du mit hoher AA am Eintritt ankommst.
-6. **Schuss aufgeben.** Wenn du nur noch schießen kannst, indem du überschießt: nicht schießen, Position halten.
+1. **Closure früh steuern:** Gas zurück, lieber in Lag ankommen.
+2. **Lag statt Lead**, bis du in seinem Kreis bist ([Verfolgungskurven](/grundlagen/verfolgungskurven)).
+3. **[Quarter Plane oder High Yo-Yo](/grundlagen/offensiv/yo-yos)**, wenn die Closure zu hoch wird.
+4. **[Lag Roll](/grundlagen/offensiv/lag-roll)**, wenn die Nase tief in Lead steht und es knapp wird; **[Barrel Roll Attack](/grundlagen/offensiv/lag-roll)** bei hoher AA am Eintritt.
+5. **Schuss aufgeben**, wenn du nur noch schießen kannst, indem du überschießt.
 
 ::: warning WENN ES NICHT MEHR ZU VERHINDERN IST
-Wenn du überschießen wirst, dann **über seine Flugbahn und aus seiner Ebene nach oben**, nicht neben ihm in seiner Ebene. Ein Flight-Path-Overshoot mit Höhe ist reparierbar. Ein 3/9-Line-Overshoot auf gleicher Höhe direkt neben ihm ist es meist nicht.
+Dann **über seine Flugbahn und nach oben aus seiner Ebene**, nicht in seiner Ebene neben ihm. Ein Flight-Path-Overshoot mit Höhe ist reparierbar, ein 3/9-Line-Overshoot auf gleicher Höhe meist nicht.
 :::
 
 ## Als Verteidiger: Overshoot erzwingen
 
-Der Overshoot des Angreifers ist dein Weg zurück ins Spiel. Du erzwingst ihn, indem du ihm den Winkel nimmst, den er zum Mitdrehen bräuchte:
+Nimm ihm den Winkel, den er zum Mitdrehen bräuchte:
 
-- **Break Turn im richtigen Moment:** wenn er sich auf Lead festgelegt hat und schnell ist. Zu früh, und er geht einfach in Lag. Siehe [Break Turn](/grundlagen/defensiv/break-turn).
-- **Seinen Eintritt in deinen Kurvenkreis verweigern:** Halte ihn mit harter Kurve bei hoher AA, sodass er nicht in Lag hinter dich kommt.
+- **[Break Turn](/grundlagen/defensiv/break-turn) im richtigen Moment:** wenn er sich auf Lead festgelegt hat und schnell ist. Zu früh, und er geht einfach in Lag.
+- **Eintritt in deinen Kreis verweigern:** mit harter Kurve seine AA hoch halten.
 - **Ebene wechseln, wenn er schießen will:** [Guns Defense](/grundlagen/defensiv/guns-defense).
-- **Last-Ditch:** [Defensive Spirale](/grundlagen/defensiv/spirale) in der Vertikalen, wenn du langsam bist und er mit Überschuss hinter dir hängt.
+- **Last-Ditch:** [Defensive Spirale](/grundlagen/defensiv/spirale), wenn du langsam bist und er mit Überschuss hinter dir hängt.
 
 ::: danger NICHT VERLANGSAMEN, WÄHREND ER TRACKT
-Gas raus und Speed abbauen, um ihn vorbeizulassen, funktioniert nur, wenn er **nicht** in einer Tracking-Lösung hinter dir sitzt. Sitzt er in deiner Ebene mit Funnel auf dir, machst du dich durchs Bremsen nur zum leichteren Ziel: Seine AA wird kleiner, er braucht weniger Lead. Erst Ebene wechseln, dann über Speed nachdenken.
+Gas raus, um ihn vorbeizulassen, funktioniert nur, wenn er **nicht** in Tracking-Lösung hinter dir sitzt. Sonst machst du dich zum leichteren Ziel. Erst Ebene wechseln, dann über Speed nachdenken.
 :::
 
 ## Nach dem Overshoot
 
-### Wenn du der Angreifer warst
+**Als Angreifer:**
+- **Flight-Path-Overshoot:** Mit dem Speed-Überschuss nach oben (Lift Vector über ihn), Sicht halten, von oben wieder hinter ihn. Nicht flach weiterziehen.
+- **3/9-Line-Overshoot:** Du bist vor ihm, aber meist schneller. Nutze das: [vertikal](/grundlagen/neutral/vertikal-kampf) aus seiner Reichweite oder [separieren](/grundlagen/defensiv/separation) und neu ansetzen. Keine flache [Schere](/grundlagen/neutral/scissors) gegen einen langsameren Gegner, der langsam besser dreht.
 
-- **Flight-Path-Overshoot:** Du bist außen und noch hinter ihm. Geh mit dem Speed-Überschuss nach oben (High Yo-Yo, Lift Vector über ihn), halte die Sicht, komm von oben wieder hinter ihn. Nicht flach weiterziehen.
-- **3/9-Line-Overshoot:** Du bist jetzt vor ihm, hast aber meist mehr Speed als er (sonst hättest du nicht überschossen). Nutze genau diesen Vorteil:
-  - **Vertikal:** Speed in Höhe tauschen, aus seiner Reichweite nach oben, von dort neu angreifen. Siehe [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf).
-  - **Separieren:** Mit Speed-Vorteil aus seiner Waffenreichweite heraus und neu ansetzen. Siehe [Separation](/grundlagen/defensiv/separation).
-  - **Nicht** in eine flache Schere gegen einen langsameren Gegner gehen, der langsam besser dreht als du. Siehe [Scissors](/grundlagen/neutral/scissors).
-
-### Wenn du der Verteidiger warst
-
-- **Umkehren (Reversal):** Sobald er über deine Flugbahn schießt, Lift Vector auf ihn rollen und in seine Richtung drehen. Jetzt bist du hinter ihm.
-- Achte darauf, wohin er geht: Zieht er nach oben, will er seine Speed in Höhe parken. Folge nicht blind in die Vertikale, wenn du deutlich langsamer bist.
-- Läuft es auf eine Schere hinaus: Wer langsamer fliegen und trotzdem die Nase bewegen kann, gewinnt die flache Schere. Siehe [Scissors](/grundlagen/neutral/scissors).
+**Als Verteidiger:**
+- **Reversal:** Sobald er über deine Flugbahn schießt, Lift Vector auf ihn und in seine Richtung drehen.
+- Zieht er nach oben, parkt er Speed in Höhe. Folge nicht blind, wenn du deutlich langsamer bist.
 
 ## VFM-Hinweise
 
-- **AoA-Override ("Cobra-Button"):** Der Override gibt dir sofort Nose Authority über das AoA-Limit hinaus und kostet extrem viel Energie. Als Verteidiger kann das einen Overshoot erzwingen oder einen Snapshot ermöglichen, wenn der Angreifer schnell und nah ist. Danach bist du aber sehr langsam. Gegen einen zweiten Gegner oder einen Angreifer, der einfach nach oben ausweicht, ist das ein Kill für ihn.
-- **Jet-Unterschiede:** Die T-15 hat laut Daten (Stand Okt 2026) die beste Instant Rate und den kleinsten Radius. Als Verteidiger kann sie einen schnelleren Angreifer besonders leicht zum Overshoot bringen. Die T-16 mit dem größten Radius muss als Angreifer besonders früh Closure abbauen.
+- **AoA-Override („Cobra-Button“):** Bringt die Nase schlagartig herum und kann einen Overshoot erzwingen oder einen Snapshot ermöglichen. Er kostet aber extrem Energie; gegen einen zweiten Gegner oder einen Angreifer, der nach oben ausweicht, bist du danach Beute. Siehe [Physik](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override).
+- **[T-15](/flugzeuge/t15):** Kleinster Radius und meiste G bei gleicher Speed – als Verteidiger bringt sie einen schnelleren Angreifer leicht zum Overshoot.
+- **[T-16](/flugzeuge/t16):** Größter Radius; als Angreifer muss sie besonders früh Closure abbauen.
+- **[T-18](/flugzeuge/t18):** Wird durch ihren hohen Widerstand schnell langsam und damit schnell eng. Das hilft als Verteidiger, ist als Angreifer aber eine Falle, wenn du Energie halten willst.
 
 ::: info IM SPIEL PRÜFEN
-- Wie viel Speed ein kurzer AoA-Override-Einsatz in deinem Jet kostet. Teste es im Free Flight und lies den Specific-Energy-Graph im Replay.
-- Ob es eine Speedbrake gibt und wie sie belegt ist (bisher keine Quelle).
+- Wie viel Speed ein kurzer Override-Einsatz kostet (Specific-Energy-Graph im Replay).
+- Wie stark die Speedbrake bremst.
 :::
 
 ::: tip MERKE
-- Flight-Path-Overshoot: du kreuzt seine Bahn, bist noch hinter ihm. 3/9-Line-Overshoot: du bist vor ihm, Rollentausch.
+- Flight-Path-Overshoot: Du kreuzt seine Bahn, bist noch hinter ihm. 3/9-Line-Overshoot: Du bist vor ihm, Rollentausch.
 - Ursache ist immer zu viel Closure bei zu großem Winkel. Früh mit Gas, Lag und Yo-Yo gegensteuern.
 - Wenn schon überschießen, dann über seine Flugbahn und nach oben.
 - Als Verteidiger: Overshoot mit Break und Ebenenwechsel erzwingen, nicht durch Bremsen in seine Tracking-Lösung hinein.

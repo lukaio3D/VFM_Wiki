@@ -2,11 +2,11 @@
 
 > Die harte Kurve mit Nase unter dem Horizont: überbankt, nahe max G, die Schwerkraft dreht mit und hält deine Speed.
 
-Der Slice (Nose-low Turn) ist eine **harte** Kurve, bei der du den Lift Vector unter den Horizont legst. Du tauschst Höhe gegen Turn Rate und Speed. Er ist kein gemütlicher Messerflug mit wenig G, und er bringt dir auch keine Energie: Deine Gesamtenergie sinkt, du wandelst nur Höhe in Speed um, statt die Speed in der Kurve zu verlieren.
+Beim Slice (Nose-low Turn) legst du den Lift Vector unter den Horizont und tauschst Höhe gegen Turn Rate und Speed. Er ist eine **harte** Kurve, kein gemütlicher Sinkflug mit wenig G. Und er bringt keine Energie: Die Gesamtenergie sinkt, du verlierst nur Höhe statt Speed.
 
 ## Das Prinzip
 
-In einer Horizontalkurve muss ein Teil deines Auftriebs das Gewicht tragen. Nur der Rest dreht dich. Legst du den Lift Vector **unter** den Horizont, zieht die Schwerkraft in dieselbe Richtung wie dein Auftrieb: Sie hilft beim Drehen, statt dagegen zu arbeiten.
+In einer Horizontalkurve muss ein Teil des Auftriebs das Gewicht tragen, nur der Rest dreht dich. Liegt der Lift Vector **unter** dem Horizont, zieht die Schwerkraft in dieselbe Richtung und hilft beim Drehen.
 
 <svg viewBox="0 0 520 220" width="100%" style="max-width:520px" role="img" aria-label="Blick von hinten auf zwei Flugzeuge. Links Horizontalkurve mit etwa 75 Grad Querlage, Lift Vector knapp über dem Horizont. Rechts Slice mit etwa 120 Grad Querlage, Lift Vector unter dem Horizont, gleiche Richtung wie ein Teil der Schwerkraft.">
 <defs>
@@ -37,59 +37,47 @@ In einer Horizontalkurve muss ein Teil deines Auftriebs das Gewicht tragen. Nur 
 
 *Blick von hinten. Der dicke Strich sind die Tragflächen, der Pfeil zeigt aus dem Kabinendach (Lift Vector). Rechts liegt der Lift Vector unter dem Horizont.*
 
-### Wie viel bringt das?
+**Rate:** Mit dem Lift Vector um δ unter dem Horizont wächst die Querbeschleunigung von g·√(n²−1) auf g·√(n² + 2n·sin δ + 1). Bei δ = 30° bringt das bei 9 G ~7 % mehr, bei 5 G ~14 %. Ein Teil davon lässt nur die Nase sinken – kein Wundermittel, aber spürbar, und umso mehr, je weniger G du ziehen kannst.
 
-**Turn Rate:** Die Turn Rate ist die Beschleunigung quer zur Flugbahn geteilt durch V. In der Horizontalkurve ist diese Beschleunigung bei gleicher Last n genau g·√(n²−1). Im Slice, mit dem Lift Vector um den Winkel δ unter dem Horizont und zunächst waagerechter Flugbahn, addieren sich n·g entlang des Lift Vectors und 1 g Schwerkraft nach unten zu g·√(n² + 2n·sin δ + 1). Beispiel mit δ = 30°:
-
-| Last | Horizontalkurve | Slice (δ = 30°) | Gewinn |
-|---|---|---|---|
-| 9 G | √80 ≈ 8,9 g | √91 ≈ 9,5 g | ~7 % |
-| 5 G | √24 ≈ 4,9 g | √31 ≈ 5,6 g | ~14 % |
-
-Ein Teil dieser Drehung lässt die Nase sinken, statt nur die Richtung zu ändern. Kein Wundermittel, aber ein spürbarer Vorteil, und er wächst, je weniger G du ziehen kannst.
-
-**Speed:** Höhe wird zu Speed. Rechnung ohne Schub und Widerstand, mit wahrer Fluggeschwindigkeit: 400 kt ≈ 675 ft/s. 3.000 ft Höhenverlust bringen 2·g·h = 2 · 32,2 · 3.000 ≈ 193.200 ft²/s². V² = 455.800 + 193.200 = 649.000, also V ≈ 806 ft/s ≈ 477 kt. **3.000 ft Höhe ergeben aus der Schwerkraft allein nur rund +77 kt.** Mit Schub ist es mehr, mit hoher G-Last (Widerstand) weniger. Höhe ist also ein begrenzter Vorrat, kein Tresor ohne Boden.
+**Speed:** Rechnung ohne Schub und Widerstand: Aus 400 kt wahrer Fahrt bringen 3.000 ft Höhenverlust nur rund **+77 kt**. Mit Schub ist es mehr, unter hoher G-Last weniger. Höhe ist ein begrenzter Vorrat.
 
 ## Wann
 
-- Du musst **hart drehen** (Break, Defensivkurve), willst dabei aber **nicht unter Corner Speed fallen** und hast **Höhe** unter dir.
-- Der Angreifer ist **höher** als du: Mit dem Slice nutzt du die Schwerkraft für Rate, während er von oben nachkommen muss.
+- Du musst **hart drehen** (Break, Defensivkurve), willst **nicht unter Corner Speed fallen** und hast **Höhe**.
+- Der Angreifer ist **höher**: Du nutzt die Schwerkraft, er muss von oben nachkommen.
 - Du willst nach einem Break **Speed zurückholen**, ohne die Kurve aufzugeben.
-- Offensiv: Als nose-low Umkehr, wenn du schnell die Richtung wechseln und dabei Speed halten willst (verwandt mit dem [Low Yo-Yo](/grundlagen/offensiv/yo-yos)).
+- Offensiv als nose-low Umkehr (verwandt mit dem [Low Yo-Yo](/grundlagen/offensiv/yo-yos)).
 
 ## Wann nicht
 
-- **Wenig Höhe.** Unter dem Trainings-Hard-Deck (Empfehlung: 2.000 ft über Grund, siehe [Energie-Management](/grundlagen/energie-management)) ist kein Platz.
+- **Wenig Höhe** – am [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) ist kein Platz.
 - **Der Gegner ist tief unter dir und schneller.** Dann fliegst du ihm in die Arme.
-- **Du bist schon deutlich über Corner Speed.** Dann bist du G-limitiert, und mehr Speed macht deinen Radius größer (r wächst mit V²). Ein Slice, der dich noch schneller macht, verschlechtert die Kurve. Hier eher Lift Vector auf oder über den Horizont.
+- **Du bist deutlich über Corner Speed.** Dann bist du G-limitiert, mehr Speed vergrößert nur den Radius. Lift Vector eher auf oder über den Horizont.
 
 ## Ausführung
 
-1. **Überbanken.** Roll über 90° Querlage hinaus, bis der Lift Vector unter dem Horizont liegt. Wie weit, hängt davon ab, wie viel Höhe du opfern willst: leicht unter dem Horizont für einen flachen Slice, deutlich darunter für mehr Rate und Speed.
-2. **Hart ziehen**, nahe max G bzw. nahe am AoA-Limit. Ein Slice mit 2–4 G ist keine Defensivkurve, sondern ein Sinkflug, in dem der Angreifer dich in Ruhe abholt.
-3. **Speed beobachten.** Ziel ist, nahe Corner Speed zu bleiben. Wirst du deutlich schneller: Lift Vector höher legen. Wirst du langsamer: tiefer legen.
-4. **Sicht auf den Angreifer halten** und reagieren: Kommt er in Lösung, [jinken](/grundlagen/defensiv/guns-defense). Fällt er zurück, Energie halten.
-5. **Rechtzeitig beenden**, mit einer klaren Höhenreserve. Danach: Defensivkurve, Reversal oder [Separation](/grundlagen/defensiv/separation).
+1. **Überbanken**, bis der Lift Vector unter dem Horizont liegt: leicht darunter für einen flachen Slice, deutlich darunter für mehr Rate und Speed.
+2. **Hart ziehen**, nahe max G bzw. AoA-Limit. Ein Slice mit 2–4 G ist ein Sinkflug, in dem er dich in Ruhe abholt.
+3. **Speed steuern:** nahe Corner Speed bleiben. Zu schnell: Lift Vector höher. Zu langsam: tiefer.
+4. **Sicht halten:** Kommt er in Lösung, [jinken](/grundlagen/defensiv/guns-defense). Fällt er zurück, Energie halten.
+5. **Rechtzeitig beenden**, mit Höhenreserve. Danach Defensivkurve, Reversal oder [Separation](/grundlagen/defensiv/separation).
 
 ## Typische Fehler
 
-- **Zu flach und zu sanft.** Messerflug mit wenig G und Nase knapp unter dem Horizont ist keine Defensive. Der Slice ist eine harte Kurve.
-- **Glauben, der Slice bringe Energie.** Die Gesamtenergie sinkt immer. Du parkst nur nichts mehr in der Höhe.
-- **Zu lange.** Erst ist der Slice dein Freund, dann bist du tief, schnell, G-limitiert und hast keine Höhe mehr für den nächsten Zug.
-- **Vorhersehbar bleiben.** Ein langer, gleichmäßiger Slice ist leicht vorauszuberechnen. Ein Angreifer mit Höhe kann ihn abschneiden.
-- **Gelände.** Auf Mountains und anderen Maps mit Höhenunterschieden ist "Höhe über Grund" nicht "Höhe über Meer".
+- **Zu flach und zu sanft.** Der Slice ist eine harte Kurve.
+- **Glauben, der Slice bringe Energie.** Die Gesamtenergie sinkt immer.
+- **Zu lange.** Am Ende bist du tief, schnell, G-limitiert und ohne Höhe für den nächsten Zug.
+- **Vorhersehbar.** Einen langen, gleichmäßigen Slice schneidet ein Angreifer mit Höhe ab.
+- **Gelände.** Auf Mountains zählt die Höhe über Grund, nicht über Meer.
 
-## VFM: die Jets im Slice
+## Die Jets
 
-Daten Stand Okt 2026, siehe [Flugzeugvergleich](/flugzeuge/vergleich):
-
-- **T-16 Falchion:** Höchste Corner Speed (~409–421 KIAS) und stärkste sustained Kurve bei ~420–500 KIAS. Für sie ist der Slice das natürliche Werkzeug, um in diesem Band zu bleiben, statt in der Kurve unter ~400 KIAS zu fallen.
-- **T-18 Cutlass:** Ab ~480 KIAS steigt ihr Widerstand stark, die sustained Rate bricht ein. Lange, tiefe Slices, die sie weit über diesen Bereich beschleunigen, verschenken ihren Vorteil.
-- **T-15 Excalibur:** Niedrigste Corner Speed (~360–385 KIAS). Sie braucht den Slice weniger, um Speed zu halten, kann aber mit ihrem Schub nach einem Slice Höhe am schnellsten zurückholen.
+- **[T-16](/flugzeuge/t16):** Höchste Corner Speed, stärkste sustained Kurve bei ~420–500 KIAS. Für sie ist der Slice das natürliche Werkzeug, um im Band zu bleiben.
+- **[T-18](/flugzeuge/t18):** Bricht ab ~510 KIAS (≈ Mach 0,9) ein. Lange, tiefe Slices, die sie dorthin beschleunigen, verschenken ihren Vorteil.
+- **[T-15](/flugzeuge/t15):** Niedrigste Corner Speed, braucht den Slice weniger. Mit ihrem Schubüberschuss holt sie die Höhe danach am schnellsten zurück.
 
 ::: info IM SPIEL PRÜFEN
-- Wie die Höhe im HUD angezeigt wird und ob es eine Radarhöhe (Höhe über Grund) gibt. Siehe [HUD](/avionik/hud).
-- Fliege im Free Flight denselben 180°-Turn einmal horizontal und einmal als Slice mit gleicher Last. Vergleiche im Replay Zeit, Speed und Höhenverlust.
+- Denselben 180°-Turn einmal horizontal und einmal als Slice mit gleicher Last fliegen und im Replay Zeit, Speed und Höhenverlust vergleichen.
 :::
 
 ::: tip MERKE

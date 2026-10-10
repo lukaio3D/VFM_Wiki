@@ -2,20 +2,20 @@
 
 > Er ist hinter dir. Erst überleben, dann neutralisieren, dann entweder umdrehen oder raus.
 
-Defensiv heißt: Der Gegner steht hinter deiner 3/9-Linie und bestimmt das Tempo. Du gewinnst diesen Kampf nicht in einem Zug. Du arbeitest eine Prioritätenliste ab, und jede Stufe hat nur ein Ziel: die nächste Stufe zu erreichen.
+Defensiv heißt: Der Gegner steht hinter deiner 3/9-Linie und bestimmt das Tempo. Du gewinnst das nicht in einem Zug, sondern arbeitest eine Prioritätenliste ab. Jede Stufe hat nur ein Ziel: die nächste zu erreichen.
 
 ## Die Prioritäten
 
-1. **Bedrohung sehen.** Was du nicht siehst, kannst du nicht verteidigen. Kopf drehen, RWR und MWS (Raketenwarnung) beachten. Siehe [RWR & MWS](/avionik/rwr).
-2. **Den Schuss schlagen.** Rakete in der Luft: [Break + Flares + Idle](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung). Er ist mit der Kanone in Lösung: [Guns Defense](/grundlagen/defensiv/guns-defense). Alles andere wartet.
-3. **Sicht halten.** Ab dem Moment, in dem du ihn verlierst, reagierst du nur noch auf Vermutungen. "Padlocked" (Blick nicht vom Gegner nehmen) ist in der Defensive normal.
-4. **Seinen Eintritt in deinen Kurvenkreis und in die Control Zone verweigern.** Mit dem [Break Turn](/grundlagen/defensiv/break-turn) und der folgenden Defensivkurve hältst du ihn bei hoher AA (Aspect Angle), sodass er nicht ruhig hinter dir Platz nehmen kann.
-5. **Overshoot erzwingen.** Ein Angreifer mit zu viel Closure schießt über deine Flugbahn oder an dir vorbei. Siehe [Overshoot](/grundlagen/offensiv/overshoot).
-6. **Neutralisieren.** Ziel ist ein Zustand, in dem keiner von beiden einen Vorteil hat: er nicht mehr hinter dir, du noch nicht hinter ihm.
-7. **Umkehren oder separieren.** Aus neutral entweder selbst angreifen (Reversal, Schere, Vertikale) oder den Kampf kontrolliert verlassen: [Separation](/grundlagen/defensiv/separation).
+1. **Bedrohung sehen.** Kopf drehen, RWR und MWS beachten ([RWR & MWS](/avionik/rwr)).
+2. **Den Schuss schlagen.** Rakete: [Break + Flares + Idle](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung). Kanone in Lösung: [Guns Defense](/grundlagen/defensiv/guns-defense). Alles andere wartet.
+3. **Sicht halten.** Ohne Sicht reagierst du nur noch auf Vermutungen.
+4. **Eintritt in deinen Kurvenkreis verweigern.** Mit [Break Turn](/grundlagen/defensiv/break-turn) und Defensivkurve hältst du seine AA hoch.
+5. **Overshoot erzwingen.** Siehe [Overshoot](/grundlagen/offensiv/overshoot).
+6. **Neutralisieren:** keiner hat mehr einen Vorteil.
+7. **Umkehren oder separieren.** Reversal, Schere, Vertikale – oder kontrolliert raus: [Separation](/grundlagen/defensiv/separation).
 
 ::: warning DIE REIHENFOLGE ZÄHLT
-Wer gegen eine anfliegende Rakete an seine eigene Energie denkt, ist tot. Wer nach dem überlebten Schuss weiter Max-G zieht, obwohl keine Bedrohung mehr da ist, verliert die Energie für die nächste Stufe. Immer die oberste offene Priorität zuerst.
+Wer gegen eine anfliegende Rakete an seine Energie denkt, ist tot. Wer nach dem überlebten Schuss weiter Max-G zieht, verliert die Energie für die nächste Stufe. Immer die oberste offene Priorität zuerst.
 :::
 
 ## Entscheidungslogik
@@ -47,23 +47,23 @@ flowchart TD
 | Situation | Werkzeug | Kurz |
 |---|---|---|
 | Er kommt rein, droht in Schussposition | [Break Turn](/grundlagen/defensiv/break-turn) | Lift Vector auf ihn, max Instant Rate nahe Corner Speed, dann Defensivkurve |
-| Rakete in der Luft | [Break Turn, Raketenabwehr](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung) | Break + Flares + Idle, Details unter [Gegenmaßnahmen](/avionik/gegenmassnahmen) |
+| Rakete in der Luft | [Raketenabwehr](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung) | Break + Flares + Idle, Details: [Gegenmaßnahmen](/avionik/gegenmassnahmen) |
 | Er ist in Kanonen-Lösung | [Guns Defense](/grundlagen/defensiv/guns-defense) | Unload, rollen, max G aus seiner Ebene, wiederholen |
-| Du brauchst Rate und willst Speed halten, Höhe ist da | [Slice Turn](/grundlagen/defensiv/slice-turn) | Überbankt, Nase unter Horizont, nahe max G |
-| Langsam, er klebt hinter dir, viel Höhe | [Defensive Spirale](/grundlagen/defensiv/spirale) | Steil nose-low, geladen, langsam, Last-Ditch |
-| Kein Sieg möglich, oder Überzahl | [Separation](/grundlagen/defensiv/separation) | Unload, volle Leistung, raus aus seiner WEZ |
-| Er hat überschossen, ihr seid nah nebeneinander | [Scissors](/grundlagen/neutral/scissors) | Neutral-Thema, gezielt einsetzen oder vermeiden |
+| Rate nötig, Speed halten, Höhe da | [Slice Turn](/grundlagen/defensiv/slice-turn) | Überbankt, Nase unter Horizont, nahe max G |
+| Langsam, er klebt hinter dir, viel Höhe | [Defensive Spirale](/grundlagen/defensiv/spirale) | Steil nose-low, geladen, langsam |
+| Kein Sieg möglich oder Unterzahl | [Separation](/grundlagen/defensiv/separation) | Unload, volle Leistung, raus aus seiner WEZ |
+| Er hat überschossen, ihr seid nah nebeneinander | [Scissors](/grundlagen/neutral/scissors) | Gezielt einsetzen oder vermeiden |
 
 ## VFM-Hinweise
 
-- **Jet-Wahl prägt die Defensive.** Die T-15 hat laut Daten (Stand Okt 2026) die beste Instant Rate und den kleinsten Radius: Ihr Break ist der stärkste. Die T-16 hat die schwächste Instant Rate und den größten Radius, ist aber im Band ~420–500 KIAS in der sustained Kurve am stärksten: Sie verteidigt am besten, indem sie Speed hält. Die T-18 ist unterhalb ~380 KIAS stark und will den Kampf langsam machen. Siehe [Flugzeugvergleich](/flugzeuge/vergleich).
-- **Ranked 1v1:** Bei Zeitablauf (Runde 8 min) gewinnt der Verfolger (seit v1.2.2). Defensiv nur zu überleben reicht dort nicht, du musst neutralisieren und umdrehen. Siehe [Separation](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis).
+- **Jet-Wahl prägt die Defensive.** Die [T-15](/flugzeuge/t15) bricht am härtesten (beste Instant Rate, kleinster Radius), die [T-16](/flugzeuge/t16) verteidigt am besten, indem sie im Band ~420–500 KIAS Speed hält, die [T-18](/flugzeuge/t18) will den Kampf langsam machen. Daten: [Flugzeugvergleich](/flugzeuge/vergleich).
+- **Ranked 1v1:** Bei Zeitablauf gewinnt der Verfolger. Nur überleben reicht nicht, du musst neutralisieren und umdrehen ([Separation im Ranked](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis)).
 
 ::: tip MERKE
 - Sehen, Schuss schlagen, Sicht halten, Eintritt verweigern, Overshoot erzwingen, neutralisieren, umdrehen oder raus.
 - Immer die oberste offene Priorität zuerst.
 - Max G nur, solange eine Bedrohung da ist. Danach Energie halten.
-- Der Overshoot des Angreifers ist dein Weg zurück, aber nicht durch Bremsen in seine Tracking-Lösung hinein.
+- Der Overshoot des Angreifers ist dein Weg zurück – aber nicht durch Bremsen in seine Tracking-Lösung hinein.
 :::
 
 Weiter: [Break Turn](/grundlagen/defensiv/break-turn)
