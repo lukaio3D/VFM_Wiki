@@ -11,11 +11,11 @@ Am Merge hat noch niemand einen Vorteil. Wer danach als Erster die Nase auf den 
 Der verbreitete Rat „schnell rein, Mach 0.8 oder mehr“ ist für einen Kurvenkampf falsch. Bei gleichem G wächst dein Wenderadius mit dem Quadrat der Geschwindigkeit (r = V² / (g·√(n²−1)), Herleitung unter [Kurvenphysik](/grundlagen/kurvenphysik)).
 
 ::: details Rechnung: Was zu viel Speed kostet
-Auf 10.000 ft entsprechen 450 KIAS grob 520–540 kt wahrer Geschwindigkeit (TAS), also etwa 880 ft/s. Bei 9 G:
+Auf 10.000 ft entsprechen 450 KIAS in VFM grob 500 kt wahrer Geschwindigkeit (TAS, ~12 % über KIAS), also etwa 850 ft/s. Bei 9 G:
 
-r = 880² / (32,2 · √80) ≈ 774.400 / 288 ≈ **2.700 ft**
+r = 850² / (32,2 · √80) ≈ 722.500 / 288 ≈ **2.500 ft**
 
-Mit 600 KIAS (≈ 700 kt TAS ≈ 1.180 ft/s) sind es ≈ 1.392.400 / 288 ≈ **4.800 ft**, also fast der doppelte Radius. Wer mit Corner Speed in den Merge kommt, dreht in deinen Kreis hinein, während du noch in deinem viel größeren Bogen hängst.
+Mit 600 KIAS (≈ 670 kt TAS ≈ 1.130 ft/s) sind es ≈ 1.276.900 / 288 ≈ **4.400 ft**, also fast der doppelte Radius. Wer mit Corner Speed in den Merge kommt, dreht in deinen Kreis hinein, während du noch in deinem viel größeren Bogen hängst.
 :::
 
 Ziel ist ein Band zwischen deiner **Corner Speed** (die niedrigste Speed, bei der du max G ziehen kannst, also maximale Instant Rate) und deiner **Best-Sustained-Speed** (die Speed, bei der du die höchste Turn Rate halten kannst, ohne Energie zu verlieren). Darüber verschenkst du Radius, darunter hast du keine Reserve für den ersten Turn.
@@ -23,13 +23,13 @@ Ziel ist ein Band zwischen deiner **Corner Speed** (die niedrigste Speed, bei de
 | Jet | Corner Speed (10.000 ft) | Best Sustained (10.000 ft) | Merge-Band (Richtwert) |
 |---|---|---|---|
 | [T-15 Excalibur](/flugzeuge/t15) | ~360–385 KIAS | ~495 KIAS | ~380–450 KIAS |
-| [T-16 Falchion](/flugzeuge/t16) | ~409–434 KIAS | ~470 KIAS | ~430–470 KIAS, nie unter ~420 |
+| [T-16 Falchion](/flugzeuge/t16) | ~409–421 KIAS | ~470 KIAS | ~430–470 KIAS, nie unter ~420 |
 | [T-18 Cutlass](/flugzeuge/t18) | ~385–409 KIAS | ~470 KIAS | ~380–420 KIAS, nicht über ~480 |
 
-Daten: Ingame „Aircraft Performance Analysis“, Stand Dez 2025 (vor Patch v1.1). Die Merge-Bänder sind daraus abgeleitete Richtwerte, im Spiel testen. Details unter [Flugzeugvergleich](/flugzeuge/vergleich). Auf Meereshöhe liegen alle Werte etwas niedriger (z. B. T-15 Corner ~337 KIAS).
+Daten: Ingame „Aircraft Performance Analysis“, Stand Okt 2026. Die Merge-Bänder sind daraus abgeleitete Richtwerte, im Spiel testen. Details unter [Flugzeugvergleich](/flugzeuge/vergleich). Auf Meereshöhe liegen alle Werte etwas niedriger (z. B. T-15 Corner ~337 KIAS).
 
 ::: info IM SPIEL PRÜFEN
-- Ob die Merge-Bänder nach den Patches v1.1 und v1.4.1 noch passen. Übung dazu: [Corner Speed finden](/grundlagen/uebungen).
+- Ob die abgeleiteten Merge-Bänder im echten Kampf passen. Übung dazu: [Corner Speed finden](/grundlagen/uebungen).
 :::
 
 ## Der Lead Turn

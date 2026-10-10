@@ -2,10 +2,10 @@
 
 > Alle Leistungsdaten der drei Jets an einem Ort: was die Ingame-Analyse zeigt, wie du das Diagramm liest und was das für deinen Kampf bedeutet.
 
-::: warning DATENSTAND: DEZEMBER 2025 (VOR PATCH v1.1)
-Alle Zahlen und Screenshots auf dieser Seite stammen aus der Ingame-Ansicht **„Aircraft Performance Analysis“** und den Info-Karten der Jets – aufgenommen **vor Patch v1.1** (Stand Dez 2025). Die aktuelle Spielversion ist **v1.4.2**. Seitdem gab es zwei Balance-Patches (siehe [Patch-Historie](#patch-historie)). Die **Rangfolge** der Jets ist wahrscheinlich noch ähnlich, die **genauen Zahlen** sind es nicht mehr.
+::: info DATENSTAND: OKTOBER 2026
+Alle Zahlen und Diagramme auf dieser Seite stammen aus der Ingame-Ansicht **„Aircraft Performance Analysis“**, aufgenommen im **Oktober 2026** in neun Bedingungen (0 / 10.000 / 20.190 ft × 0 / 50 / 100 % Fuel). Die Info-Karten weiter unten sind von Dez 2025.
 
-**Hilf mit:** Wenn du aktuelle Screenshots der Performance-Analyse hast (gleiche Einstellungen: 10.000 ft / 100 %, 10.000 ft / 50 %, ~21.500 ft / 50 %, 0 ft / 50 %), reich sie über das [GitHub-Repo](https://github.com/lukaio3D/VFM_Wiki) ein. Dann ersetzen wir die Tabellen.
+**Was sich seit Dez 2025 geändert hat:** Bei **T-15 und T-18** zeigt die Analyse exakt dieselben Werte wie damals. Nur die **T-16** ist durch −20 % Treibstoffgewicht (Patch v1.4.1) etwas leichter und minimal besser geworden. Die Rangfolge und alle Grundaussagen gelten weiter. Details: [Patch-Historie](#patch-historie).
 :::
 
 ## Die drei Jets in einem Satz
@@ -14,7 +14,7 @@ Es gibt kein Stein-Schere-Papier. Welcher Jet vorne liegt, hängt vom **Geschwin
 
 | Jet | Charakter | Spielplan | Profil |
 |---|---|---|---|
-| **T-15 Excalibur** | Allrounder mit Kraft: schwerster Jet, stärkster Schub, beste Instant Rate, kleinster Radius, beste Sustained Rate über ~500 KIAS | Merge gewinnen, schnell oder langsam kämpfen – nur nicht im 400–500-KIAS-Kreis gegen die T-16 | [T-15 Profil](/flugzeuge/t15) |
+| **T-15 Excalibur** | Allrounder mit Kraft: schwerster Jet, stärkster Schub, beste Instant Rate, kleinster Radius, beste Sustained Rate über ~520 KIAS | Merge gewinnen, schnell oder langsam kämpfen – nur nicht im 400–500-KIAS-Kreis gegen die T-16 | [T-15 Profil](/flugzeuge/t15) |
 | **T-16 Falchion** | Rate-Spezialist: leichtester Jet, beste Sustained Rate – aber nur bei ~420–500 KIAS und tief | Speed halten, Two-Circle, tief, nie langsam werden | [T-16 Profil](/flugzeuge/t16) |
 | **T-18 Cutlass** | Low-Speed-Brawler: Platz 2 bei Instant Rate und Radius, schlechteste Energiehaltung bei hoher Speed | Kampf langsam machen, One-Circle, tief, nie schnell kämpfen | [T-18 Profil](/flugzeuge/t18) |
 
@@ -28,50 +28,75 @@ Alle Geschwindigkeiten in **KIAS** (Knots Indicated Airspeed, angezeigte Fahrt).
 
 | | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---|---|---|---|
-| Gewicht | 37.615 lbs | 25.009 lbs | 36.597 lbs |
+| Gewicht | 37.615 lbs | 24.417 lbs | 36.597 lbs |
 | Max Instant | **24 °/s** @ 360 KIAS | 21 °/s @ 409 KIAS | 22 °/s @ 385 KIAS |
 | Max Sustained | 17 °/s @ 495 KIAS | **18 °/s** @ 470 KIAS | 16 °/s @ 470 KIAS |
-| Min Radius | **1.644 ft** | 2.102 ft | 1.899 ft |
+| Min Radius | **1.644 ft** | 2.099 ft | 1.899 ft |
 
-![Performance-Analyse 10.000 ft, 50 % Treibstoff](/images/img5.jpg)
-*10.000 ft, 50 % Treibstoff (Stand Dez 2025). Orange = T-15, Blau = T-16, Magenta = T-18. Die Referenzbedingung dieses Wikis.*
+![Performance-Analyse 10.000 ft, 50 % Treibstoff](/images/perf/10000ft_050.jpg)
+*10.000 ft, 50 % Treibstoff (Okt 2026). Orange = T-15, Blau = T-16, Magenta = T-18. Die Referenzbedingung dieses Wikis.*
 
-### 10.000 ft, 100 % Treibstoff
+### Alle neun Bedingungen
 
-| | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
+Je Zelle: Max Instant · Max Sustained · Min Radius. Fett = bester Wert der Zeile.
+
+**Meereshöhe (0 ft)**
+
+| Fuel | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---|---|---|---|
-| Gewicht | 42.160 lbs | 27.972 lbs | 41.226 lbs |
-| Max Instant | **23 °/s** @ 385 KIAS | 20 °/s @ 434 KIAS | 21 °/s @ 409 KIAS |
-| Max Sustained | 15 °/s @ 495 KIAS | **16 °/s** @ 470 KIAS | 15 °/s @ 470 KIAS |
-| Min Radius | **1.851 ft** | 2.387 ft | 2.123 ft |
+| 0 % | **31 °/s** @ 310 · 22 °/s @ 434 · **974 ft** | 27 °/s @ 365 · **24 °/s** @ 406 · 1.304 ft | 28 °/s @ 337 · 23 °/s @ 420 · 1.155 ft |
+| 50 % | **29 °/s** @ 337 · 20 °/s @ 475 · **1.138 ft** | 26 °/s @ 378 · **22 °/s** @ 447 · 1.428 ft | 27 °/s @ 365 · 20 °/s @ 447 · 1.313 ft |
+| 100 % | **27 °/s** @ 351 · 18 °/s @ 516 · **1.255 ft** | 24 °/s @ 406 · **20 °/s** @ 475 · 1.621 ft | 25 °/s @ 378 · 18 °/s @ 447 · 1.465 ft |
 
-![Performance-Analyse 10.000 ft, 100 % Treibstoff](/images/img4.jpg)
-*10.000 ft, voller Tank (Stand Dez 2025). Alle Kurven etwas tiefer und Corner Speeds etwas höher als bei 50 %; die Rangfolge bleibt gleich.*
+**10.000 ft**
 
-### ~21.500 ft, 50 % Treibstoff
-
-| | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
+| Fuel | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---|---|---|---|
-| Max Instant | **19 °/s** @ 383 KIAS | 17 °/s @ 436 KIAS | 17 °/s @ 426 KIAS |
-| Max Sustained | **13 °/s** @ 405 KIAS | **13 °/s** @ 405 KIAS | 12 °/s @ 405 KIAS |
-| Min Radius | **2.578 ft** | 3.287 ft | 3.086 ft |
+| 0 % | **26 °/s** @ 336 · 19 °/s @ 458 · **1.433 ft** | 22 °/s @ 385 · **20 °/s** @ 446 · 1.894 ft | 24 °/s @ 360 · 19 °/s @ 458 · 1.667 ft |
+| 50 % | **24 °/s** @ 360 · 17 °/s @ 495 · **1.644 ft** | 21 °/s @ 409 · **18 °/s** @ 470 · 2.099 ft | 22 °/s @ 385 · 16 °/s @ 470 · 1.899 ft |
+| 100 % | **23 °/s** @ 385 · 15 °/s @ 495 · **1.851 ft** | 20 °/s @ 421 · **16 °/s** @ 470 · 2.275 ft | 21 °/s @ 409 · 15 °/s @ 470 · 2.123 ft |
 
-![Performance-Analyse 21.483 ft, 50 % Treibstoff](/images/img6.jpg)
-*21.483 ft, 50 % Treibstoff (Stand Dez 2025). Der Sustained-Vorsprung der T-16 ist weg; die T-15 hält über 400–600 KIAS ein flaches Plateau bei ~12 °/s.*
+**20.190 ft**
 
-### 0 ft (Meereshöhe), 50 % Treibstoff
-
-| | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
+| Fuel | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---|---|---|---|
-| Max Instant | **29 °/s** @ 337 KIAS | 25 °/s @ 392 KIAS | 27 °/s @ 365 KIAS |
-| Max Sustained | 20 °/s @ 475 KIAS | **22 °/s** @ 447 KIAS | 20 °/s @ 447 KIAS |
-| Min Radius | **1.138 ft** | 1.524 ft | 1.313 ft |
+| 0 % | **21 °/s** @ 359 · **15 °/s** @ 412 · **2.107 ft** | 18 °/s @ 412 · **15 °/s** @ 423 · 2.807 ft | 19 °/s @ 380 · **15 °/s** @ 423 · 2.427 ft |
+| 49 % | **20 °/s** @ 380 · 13 °/s @ 412 · **2.387 ft** | 18 °/s @ 434 · **14 °/s** @ 423 · 3.073 ft | 18 °/s @ 412 · 13 °/s @ 423 · 2.816 ft |
+| 100 % | **19 °/s** @ 402 · **12 °/s** @ 412 · **2.681 ft** | 17 °/s @ 445 · **12 °/s** @ 423 · 3.261 ft | 17 °/s @ 434 · 11 °/s @ 423 · 3.131 ft |
 
-![Performance-Analyse 0 ft, 50 % Treibstoff](/images/img7.jpg)
-*Meereshöhe, 50 % Treibstoff (Stand Dez 2025). Hier ist der Sustained-Vorsprung der T-16 am größten (22 vs 20 °/s).*
+**Gewichte:** T-15 33.069 / 37.615 / 42.160 lbs, T-16 22.046 / 24.417 / 26.787 lbs, T-18 31.967 / 36.597 / 41.226 lbs (0 / 50 / 100 % Fuel; auf 20.190 ft lag der Regler bei 49 %).
+
+::: details Die neun Diagramme
+![Performance-Analyse 0 ft, 0 % Treibstoff](/images/perf/00000ft_000.jpg)
+*0 ft, 0 % Treibstoff.*
+
+![Performance-Analyse 0 ft, 50 % Treibstoff](/images/perf/00000ft_050.jpg)
+*0 ft, 50 % Treibstoff. Hier ist der Sustained-Vorsprung der T-16 groß (22 vs 20 °/s).*
+
+![Performance-Analyse 0 ft, 100 % Treibstoff](/images/perf/00000ft_100.jpg)
+*0 ft, 100 % Treibstoff.*
+
+![Performance-Analyse 10.000 ft, 0 % Treibstoff](/images/perf/10000ft_000.jpg)
+*10.000 ft, 0 % Treibstoff.*
+
+![Performance-Analyse 10.000 ft, 50 % Treibstoff](/images/perf/10000ft_050.jpg)
+*10.000 ft, 50 % Treibstoff (Referenz).*
+
+![Performance-Analyse 10.000 ft, 100 % Treibstoff](/images/perf/10000ft_100.jpg)
+*10.000 ft, voller Tank. Alle Kurven tiefer und Corner Speeds höher als bei 50 %; die Rangfolge bleibt gleich.*
+
+![Performance-Analyse 20.190 ft, 0 % Treibstoff](/images/perf/20190ft_000.jpg)
+*20.190 ft, 0 % Treibstoff. Sustained-Maximum bei allen drei 15 °/s.*
+
+![Performance-Analyse 20.190 ft, 49 % Treibstoff](/images/perf/20190ft_049.jpg)
+*20.190 ft, 49 % Treibstoff. Der Sustained-Vorsprung der T-16 schrumpft auf 1 °/s; die T-15 hält bis ~600 KIAS ein flaches Plateau bei ~12 °/s.*
+
+![Performance-Analyse 20.190 ft, 100 % Treibstoff](/images/perf/20190ft_100.jpg)
+*20.190 ft, 100 % Treibstoff.*
+:::
 
 ::: tip PLAUSIBILITÄTS-CHECK
-„Min Radius“ ist der Radius **am Corner-Punkt** (max G bei Corner Speed), also ein Instant-Wert. Nachgerechnet für die T-15 (10.000 ft, 50 %): 360 KIAS ≈ 420 kt wahre Fahrt (TAS) ≈ 709 ft/s; 24 °/s = 0,419 rad/s → r = V/ω ≈ 1.690 ft. Die Tabelle sagt 1.644 ft – passt im Rahmen der Rundung. Die Tabellenwerte sind also physikalisch konsistent.
+„Min Radius“ ist der Radius **am Corner-Punkt** (9 G bei Corner Speed), also ein Instant-Wert. Für alle 27 Werte gilt exakt r = V² / (g · √80), also genau 9 G. Umgekehrt verrät das die wahre Fahrt, mit der VFM rechnet: Auf 10.000 ft liegt sie nur **~12 % über KIAS**, auf 20.190 ft ~28 %, weniger als in der realen Standardatmosphäre (16 % bzw. 31–37 %). Details: [Das VFM-Flugmodell](/grundlagen/physik#die-atmosphare-in-vfm).
 :::
 
 ## Das Diagramm lesen
@@ -112,7 +137,7 @@ Das Diagramm in der Performance-Analyse zeigt **Turn Rate (°/s) über KIAS**. D
 | **Gestrichelt, fallend (9G-Limit)** | Rechts vom Corner-Punkt begrenzt das G-Limit. Bei festem G gilt ω = g·√(n²−1)/V: die Rate sinkt mit steigender Speed. | Die 9G-Linie ist für **alle drei Jets dieselbe**. Über ~435 KIAS haben alle die gleiche Instant Rate – Unterschiede gibt es dort nur noch bei Sustained. |
 | **Durchgezogen (Sustained, Ps = 0)** | Höchste Drehrate, bei der der Jet weder Speed noch Höhe verliert (Ps = spezifische Überschussleistung = 0). | Alles zwischen Sustained- und Instant-Linie kostet Energie. Je höher über der Sustained-Linie du ziehst, desto schneller verlierst du Speed. |
 | **Best-Sustained-Punkt** (Gipfel der durchgezogenen Linie) | Die Speed, bei der der Jet dauerhaft am schnellsten dreht. Liegt **über** der Corner Speed (in VFM ~450–500 KIAS). | Das ist die Speed für lange Kreiskämpfe. Nicht mit Corner Speed verwechseln. |
-| **Ende der Sustained-Linie (Rate 0)** | Bei dieser Speed reicht der Schub gerade noch für 1 G Horizontalflug. Das ist die **Höchstgeschwindigkeit im Horizontalflug** bei dieser Höhe und diesem Gewicht. | Im Dez-2025-Diagramm auf 10.000 ft: T-18 ~700 KIAS, T-16 ~770 KIAS, T-15 über dem Diagrammrand. |
+| **Ende der Sustained-Linie (Rate 0)** | Bei dieser Speed reicht der Schub gerade noch für 1 G Horizontalflug. Das ist die **Höchstgeschwindigkeit im Horizontalflug** bei dieser Höhe und diesem Gewicht. | 10.000 ft, 50 % Fuel: T-18 ~720 KIAS, T-16 ~835 KIAS, T-15 über dem Diagrammrand (bei ~885 KIAS noch 7 °/s). Meereshöhe: T-18 ~737, T-16 ~858, T-15 ~1.000 KIAS. |
 
 Die Ingame-Info-Karten (siehe [unten](#info-karten-balken-und-widerspruche)) beschriften die beiden wichtigsten Punkte als **MAX** (= Corner Speed) und **SUS** (= Best Sustained Speed).
 
@@ -125,15 +150,15 @@ Der Radius steht nicht direkt im Diagramm, lässt sich aber ablesen: r = V/ω. B
 - Der kleinste Radius liegt am Corner-Punkt (deshalb ist „Min Radius“ in der Tabelle ein Instant-Wert).
 
 ::: details Abgeleitet: Radius im Sustained-Turn (10.000 ft, 50 %)
-Rechnung: wahre Fahrt auf 10.000 ft ≈ KIAS × 1,16 (Luftdichte ~74 % von Meereshöhe, √0,74 ≈ 0,86). Dann r = V/ω mit ω in rad/s.
+Rechnung: wahre Fahrt auf 10.000 ft ≈ KIAS × 1,115 (in VFM gemessen, siehe [Atmosphäre](/grundlagen/physik#die-atmosphare-in-vfm)). Dann r = V/ω mit ω in rad/s.
 
 | | Best Sustained | TAS | Radius (sustained) |
 |---|---|---|---|
-| T-15 | 17 °/s @ 495 KIAS | ~576 kt ≈ 973 ft/s | ~3.300 ft |
-| T-16 | 18 °/s @ 470 KIAS | ~547 kt ≈ 924 ft/s | ~2.950 ft |
-| T-18 | 16 °/s @ 470 KIAS | ~547 kt ≈ 924 ft/s | ~3.300 ft |
+| T-15 | 17 °/s @ 495 KIAS | ~551 kt ≈ 931 ft/s | ~3.150 ft |
+| T-16 | 18 °/s @ 470 KIAS | ~524 kt ≈ 884 ft/s | ~2.800 ft |
+| T-18 | 16 °/s @ 470 KIAS | ~524 kt ≈ 884 ft/s | ~3.150 ft |
 
-Heißt: Im **dauerhaften** Kreis bei Best-Sustained-Speed fliegt die T-16 sogar den engsten Kreis. Den kleinsten **Momentan**-Radius (Corner) hat die T-15. Grobe Schätzung, Kompressibilität vernachlässigt.
+Heißt: Im **dauerhaften** Kreis bei Best-Sustained-Speed fliegt die T-16 sogar den engsten Kreis. Den kleinsten **Momentan**-Radius (Corner) hat die T-15. Grobe Schätzung, da die Tabellenwerte auf ganze °/s gerundet sind.
 :::
 
 ## Wer ist wo am besten? Speedbänder
@@ -142,9 +167,13 @@ Die wichtigste Tabelle dieser Seite.
 
 | Speedband | Instant Rate / Radius | Sustained Rate | Wer gewinnt den Kreiskampf? |
 |---|---|---|---|
-| **unter ~380 KIAS** | T-15 > T-18 > T-16 | T-15 ≈ T-18 > T-16 (auf Meereshöhe die T-18 zwischen 250–350 KIAS knapp vor der T-15) | **T-15 und T-18**, die T-16 ist hier am schwächsten |
+| **unter ~380 KIAS** | T-15 > T-18 > T-16 | T-15 ≈ T-18 > T-16 bis ~350 KIAS (auf Meereshöhe die T-18 zwischen 250–350 KIAS knapp vor der T-15); darüber holt die T-16 auf | **T-15 und T-18**, die T-16 ist hier am schwächsten |
 | **~400–500 KIAS** | Über ~435 KIAS alle gleich (9G-Linie), darunter T-15 > T-18 > T-16 | **T-16** vorne, Vorsprung 1–2 °/s | **T-16** im Two-Circle, vor allem tief |
-| **über ~500 KIAS** | alle gleich (9G-Linie) | **T-15** klar vorne, T-16 dahinter, T-18 fällt ab ~480 KIAS steil ab | **T-15**; die T-18 kann hier nicht mithalten |
+| **über ~520 KIAS** | alle gleich (9G-Linie) | **T-15** vorne: Sie hält auf 10.000 ft bis ~800 KIAS fast 9 G dauerhaft. T-16 dahinter, T-18 bricht ab ~510 KIAS ein (≈ Mach 0,9) | **T-15**; die T-18 kann hier nicht mithalten |
+
+::: info TIEF IST ES ENGER BEISAMMEN
+Auf Meereshöhe erreichen T-15 und T-16 die 9G-Linie dauerhaft: die T-16 zwischen ~450 und ~650 KIAS, die T-15 ab ~480 bis ~880 KIAS. In diesem Bereich drehen beide gleich schnell. Die T-15 setzt sich erst über ~650 KIAS ab, die T-18 fällt ab ~600 KIAS (≈ Mach 0,9) steil ab.
+:::
 
 Daraus folgt die Grundlogik aller Matchups:
 
@@ -163,33 +192,40 @@ Umgekehrt: Die **ersten ~180°** eines Two-Circle gewinnt die bessere **Instant 
 ## Höhe
 
 - **Alle drei verlieren mit der Höhe** an Instant Rate, Sustained Rate und Radius. In absoluten Zahlen dreht jeder Jet tief am besten.
-- **T-16:** Ihr Sustained-Vorsprung ist auf Meereshöhe am größten (22 vs 20 °/s) und auf ~21.500 ft **weg** (13 vs 13 °/s).
-- **T-15:** Profitiert relativ von der Höhe. Auf ~21.500 ft ist sie in jeder Spalte vorn oder gleichauf und hält über 400–600 KIAS ein flaches Sustained-Plateau bei ~12 °/s, während die anderen abfallen.
-- **T-18:** Verliert ähnlich wie die T-16; ihre Low-Speed-Stärke ist tief am größten.
-- **Corner Speed in KIAS** steigt mit der Höhe leicht (T-15: 337 → 360 → 383 KIAS von 0 über 10.000 auf 21.500 ft).
+- **T-16:** Ihr Sustained-Vorsprung ist auf Meereshöhe am größten (22 vs 20 °/s) und schrumpft auf 20.190 ft auf **0–1 °/s** (49 % Fuel: 13 / 14 / 13 °/s, voller Tank: 12 / 12 / 11 °/s für T-15 / T-16 / T-18).
+- **T-15:** Profitiert relativ von der Höhe. Auf 20.190 ft hält sie das flachste Sustained-Plateau: ~12–13 °/s von 350 bis ~600 KIAS. Die T-16 fällt dort ab ~470 KIAS unter sie (500 KIAS: 12,3 vs 11,3 °/s), die T-18 ab ~450 KIAS deutlich.
+- **T-18:** Verliert ähnlich wie die T-16; ihre Low-Speed-Stärke ist tief am größten. Ihr Einbruch bei hoher Speed liegt in jeder Höhe bei etwa Mach 0,9 – oben also schon bei ~450 KIAS.
+- **Corner Speed in KIAS** steigt mit der Höhe (T-15, 50 %: 337 → 360 → 380 KIAS von 0 über 10.000 auf 20.190 ft).
 
 Faustregel: **T-16 und T-18 wollen tief kämpfen, die T-15 kann den Kampf nach oben ziehen.** Im Training ein einheitliches Hard Deck (Mindesthöhe) von 2.000 ft über Grund verwenden (im Spiel ist kein echtes Hard Deck bekannt).
 
 ## Treibstoff
 
-- 100 % → 50 % Treibstoff senkt das Gewicht um **~11 %** (T-15 −10,8 %, T-16 −10,6 %, T-18 −11,2 %).
-- Effekt: etwa **+1 °/s Instant** und **+1–2 °/s Sustained**, Radius ~11 % kleiner, Corner Speed ~25 KIAS niedriger.
+| 10.000 ft | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| Treibstoff voll | 9.091 lbs | 4.741 lbs | 9.259 lbs |
+| Instant 100 → 50 → 0 % | 23 → 24 → 26 °/s | 20 → 21 → 22 °/s | 21 → 22 → 24 °/s |
+| Sustained 100 → 50 → 0 % | 15 → 17 → 19 °/s | 16 → 18 → 20 °/s | 15 → 16 → 19 °/s |
+| Corner Speed 100 → 50 → 0 % | 385 → 360 → 336 KIAS | 421 → 409 → 385 KIAS | 409 → 385 → 360 KIAS |
+
+- Voller Tank → leer: T-15 und T-18 werden **~22 % leichter**, die T-16 nur ~18 % (sie trägt viel weniger Treibstoff).
+- Effekt (T-15/T-18): **+3 °/s Instant**, **+4 °/s Sustained**, Corner Speed ~50 KIAS niedriger. Die T-16 gewinnt +2 °/s Instant und +4 °/s Sustained.
 - Physik dahinter: Die Corner Speed wächst mit √Gewicht. T-15: 385 KIAS × √(37.615/42.160) ≈ 385 × 0,944 ≈ 363 KIAS – die Tabelle zeigt 360 KIAS.
-- **Die Rangfolge ändert sich nicht.** Bei vollem Tank ist der Sustained-Vorsprung der T-16 nur kleiner (16 vs 15 °/s).
+- **Die Rangfolge ändert sich nicht.** Bei vollem Tank ist der Sustained-Vorsprung der T-16 kleiner (16 vs 15 °/s), mit leerem Tank holen T-15 und T-18 auf (20 vs 19 °/s).
 
 ::: tip PRAXIS
-Wer die Match-Einstellungen kennt, kennt den Treibstoffstand: Mit vollem Tank sind alle träger, die Corner Speeds liegen ~25 KIAS höher. Plane deine Merge-Speed entsprechend etwas höher.
+Wer die Match-Einstellungen kennt, kennt den Treibstoffstand: Mit vollem Tank sind alle träger, die Corner Speeds liegen ~25 KIAS höher als bei halbem Tank. Gegen Ende eines langen Kampfes, mit fast leerem Tank, liegen sie ~25 KIAS darunter. Plane deine Merge-Speed entsprechend etwas höher.
 :::
 
 ## Patch-Historie
 
-| Patch | Änderung (laut Patchnotes) | Erwarteter Effekt (Schätzung, nicht gemessen) |
+| Patch | Änderung (laut Patchnotes) | Was die Analyse im Okt 2026 zeigt |
 |---|---|---|
-| **v1.1** | T-15: −3 % Lift, +7 % Schub | Instant Rate unterhalb Corner ~3 % geringer (24 → ~23 °/s), Corner Speed ~1,5 % höher (≈ +5 KIAS), Min Radius ~3 % größer (≈ 1.700 ft statt 1.644 ft). Damit wahrscheinlich immer noch kleiner als bei der T-18 (1.899 ft). Sustained Rate und Beschleunigung höher, vor allem bei hoher Speed. → Mehr „Energie-Jet“, Instant-/Radius-Vorsprung kleiner. |
-| **v1.1** | T-18: mehr Treibstoffgewicht, weniger Leergewicht | Mit wenig Sprit leichter und agiler als zuvor, mit vollem Tank vermutlich ähnlich oder schwerer. Der Treibstoffstand wird für die T-18 wichtiger. |
-| **v1.4.1** | T-15: Top-Speed reduziert | Wahrscheinlich mehr Widerstand im Hochgeschwindigkeitsbereich: Das Sustained-Ende rechts im Diagramm rückt nach links. Ob ihr Vorsprung über ~500 KIAS kleiner geworden ist: prüfen. |
-| **v1.4.1** | T-16: Treibstoffgewicht −20 % | Voller Tank kostet weniger. Bei 50 % ca. 600 lbs (~2,4 %) leichter → Corner Speed ~5 KIAS niedriger, Rates ~2 % höher. Kleiner Effekt. |
-| **v1.4.1** | T-18: Top-Speed erhöht | Ihre größte Schwäche (Energie bei hoher Speed) ist vermutlich etwas abgemildert. Wie stark: prüfen. |
+| **v1.1** | T-15: −3 % Lift, +7 % Schub | Alle T-15-Werte sind identisch mit den Dez-2025-Screenshots. Entweder waren die schon nach v1.1 aufgenommen, oder die Analyse bildet die Änderung nicht ab. Die Werte auf dieser Seite sind jedenfalls der aktuelle Stand. |
+| **v1.1** | T-18: mehr Treibstoffgewicht, weniger Leergewicht | Gewichte identisch mit Dez 2025 (leer 31.967, voll 41.226 lbs), also bereits enthalten. Mit wenig Sprit ist die T-18 deutlich agiler (10.000 ft: Sustained 15 → 19 °/s von voll auf leer). |
+| **v1.4.1** | T-15: Top-Speed reduziert | Im Diagramm nicht sichtbar: Die Sustained-Linie reicht auf 10.000 ft weiter über den Diagrammrand hinaus. |
+| **v1.4.1** | T-16: Treibstoffgewicht −20 % | Bestätigt: 5.926 → 4.741 lbs Treibstoff. Meereshöhe, 50 %: Instant 25 → 26 °/s, Corner 392 → 378 KIAS, Min Radius 1.524 → 1.428 ft. 10.000 ft, 100 %: Corner 434 → 421 KIAS, Radius 2.387 → 2.275 ft. Sustained unverändert. Kleiner Effekt. |
+| **v1.4.1** | T-18: Top-Speed erhöht | Im Diagramm nicht sichtbar: Das Sustained-Ende liegt wie in den Dez-2025-Bildern bei ~720 KIAS (10.000 ft, 50 %). |
 
 ## Info-Karten: Balken und Widersprüche
 
@@ -213,8 +249,8 @@ Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MA
 *Info-Karte T-18 Cutlass: MAX 408, SUS 466. Turn-Radius-Balken voll – im Widerspruch zur Tabelle.*
 
 ::: warning WIDERSPRÜCHE ZUR TABELLE
-- **Turn Radius:** Der Balken zeigt die T-18 vorn, die Tabelle in **allen vier** Bedingungen die T-15 (z. B. 1.644 vs 1.899 ft). **Für den dargestellten Bereich gilt die Tabelle.** Möglich ist, dass der Balken etwas anderes bewertet (etwa den Radius bei sehr niedriger Speed oder mit hohem AoA, also unterhalb des Diagramms). Das ist eine Vermutung, keine Tatsache.
-- **Max Speed:** Laut Balken ist die T-18 schneller als die T-16. Im Dez-2025-Diagramm erreicht die T-16 aber die höhere Horizontal-Höchstgeschwindigkeit (Sustained 0 bei ~770 vs ~700 KIAS auf 10.000 ft). Patch v1.4.1 hat die T-18 schneller gemacht – der Balken könnte heute besser passen. Unklar.
+- **Turn Radius:** Der Balken zeigt die T-18 vorn, die Tabelle in **allen neun** Bedingungen die T-15 (z. B. 1.644 vs 1.899 ft). **Für den dargestellten Bereich gilt die Tabelle.** Möglich ist, dass der Balken etwas anderes bewertet (etwa den Radius bei sehr niedriger Speed oder mit hohem AoA, also unterhalb des Diagramms). Das ist eine Vermutung, keine Tatsache.
+- **Max Speed:** Laut Balken ist die T-18 schneller als die T-16. Im Diagramm erreicht die T-16 aber klar die höhere Horizontal-Höchstgeschwindigkeit (Sustained 0 bei ~835 vs ~720 KIAS auf 10.000 ft, Meereshöhe ~858 vs ~737 KIAS). Für den dargestellten Bereich gilt das Diagramm.
 - **Thrust to Weight:** Für diesen Balken gibt es keine Tabellenwerte. Er ist der einzige Hinweis auf die Beschleunigung: T-15 > T-18 > T-16.
 :::
 
@@ -225,23 +261,23 @@ Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MA
 - **Post-Stall mit AoA-Override:** Der Override-Button erlaubt Nose Authority über das AoA-Limit hinaus. Wie viel jeder Jet davon hat, zeigt kein Diagramm.
 - **Rollrate**
 - **Steigleistung / Vertikal-Performance**
-- **Beschleunigung** (nur der T/W-Balken deutet T-15 > T-18 > T-16 an)
+- **Beschleunigung** (nur der T/W-Balken deutet T-15 > T-18 > T-16 an; Messung läuft)
 - **Sicht aus dem Cockpit**
-- **Alles nach Patch v1.1**
 :::
 
 ::: info IM SPIEL PRÜFEN
-- Aktuelle Werte in der „Aircraft Performance Analysis“ ablesen (v1.4.2) und mit den Tabellen hier vergleichen. Wo genau sich die Ansicht im Menü befindet, bitte ergänzen.
+- Nach künftigen Balance-Patches die „Aircraft Performance Analysis“ erneut ablesen (gleiche neun Bedingungen) und mit den Tabellen hier vergleichen. Wo genau sich die Ansicht im Menü befindet, bitte ergänzen.
 - Sustained Rate selbst messen: Free Flight, Speed und Höhe in einer Kurve konstant halten, Zeit für 360° stoppen → Rate = 360° / Zeit. Der Beschleunigungs-Indikatorkreis im HUD (seit v1.2.7) hilft vermutlich, Ps = 0 zu halten – Darstellung prüfen.
 - Low-Speed- und Vertikal-Tests: siehe die Boxen auf den Profilseiten [T-15](/flugzeuge/t15), [T-16](/flugzeuge/t16), [T-18](/flugzeuge/t18).
 :::
 
 ::: tip MERKE
-- Es zählt das **Speedband**: unter ~380 KIAS T-15/T-18, bei 400–500 KIAS T-16, über ~500 KIAS T-15.
+- Es zählt das **Speedband**: unter ~380 KIAS T-15/T-18, bei 400–500 KIAS T-16, über ~520 KIAS T-15.
 - **Corner Speed** (max Instant, kleinster Radius) ist nicht **Best Sustained Speed** (dauerhaft schnellste Drehung). Die zweite liegt in VFM deutlich höher (~450–500 KIAS statt ~360–435 KIAS).
 - Im Diagramm: **höher und weiter links = engerer Radius**, Linien gleichen Radius sind Strahlen aus dem Ursprung.
 - Tief dreht jeder besser; die T-16 profitiert am meisten, die T-15 verliert relativ am wenigsten.
-- Alle Zahlen sind von **Dez 2025** (vor v1.1). Rangfolge vermutlich noch gültig, genaue Werte nicht.
+- **Weniger Fuel** macht alle deutlich besser (voll → leer bis +4 °/s Sustained), an der Rangfolge ändert das nichts.
+- Datenstand **Okt 2026**: T-15 und T-18 unverändert seit Dez 2025, die T-16 durch leichteren Treibstoff minimal besser.
 :::
 
 Weiter: [T-15 Excalibur](/flugzeuge/t15) · [T-16 Falchion](/flugzeuge/t16) · [T-18 Cutlass](/flugzeuge/t18)

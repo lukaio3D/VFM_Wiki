@@ -87,7 +87,7 @@ Auf Meereshöhe sind KIAS (angezeigte Speed) und wahre Speed praktisch gleich. 1
 
 Rechnung für 9 G bei 360 KIAS: V = 360 · 0,514 = 185 m/s, √(81 − 1) = 8,94. Rate = 9,81 · 8,94 / 185 = 0,474 rad/s = **27,1 °/s**. Radius = 185² / (9,81 · 8,94) = 391 m = **1.280 ft**.
 
-Vergleich mit dem Spiel: Die T-15 hat laut Ingame-Analyse auf Meereshöhe (50 % Fuel, Stand Dez 2025) ihre Max Instant Rate von **29 °/s bei 337 KIAS** und einen Mindestradius von **1.138 ft** – genau das, was die Formel bei 9 G ergibt. Gleiches gilt für T-16 (25 °/s @ 392 KIAS) und T-18 (27 °/s @ 365 KIAS). Die Ingame-Werte sind also schlicht "9 G bei Corner Speed".
+Vergleich mit dem Spiel: Die T-15 hat laut Ingame-Analyse auf Meereshöhe (50 % Fuel, Stand Okt 2026) ihre Max Instant Rate von **29 °/s bei 337 KIAS** und einen Mindestradius von **1.138 ft** – genau das, was die Formel bei 9 G ergibt. Gleiches gilt für T-16 (26 °/s @ 378 KIAS) und T-18 (27 °/s @ 365 KIAS) und für alle anderen Höhen und Fuel-Stände. Die Ingame-Werte sind also schlicht "9 G bei Corner Speed".
 
 Was die Tabelle zeigt:
 
@@ -96,7 +96,7 @@ Was die Tabelle zeigt:
 
 ### KIAS vs. wahre Speed in der Höhe
 
-Die Formeln brauchen die **wahre** Speed (TAS). In der Höhe ist die Luft dünner, die wahre Speed liegt über der angezeigten: auf 10.000 ft etwa 16 % höher, auf ~21.500 ft etwa 40 %. Bei gleicher KIAS und gleichen 9 G drehst du in der Höhe also langsamer und weiter. Das erklärt einen großen Teil, warum alle Jets mit der Höhe Rate verlieren (Beispiel T-15: 29 °/s auf Meereshöhe, 24 °/s auf 10.000 ft, 19 °/s auf ~21.500 ft). Details: [Das VFM-Flugmodell](/grundlagen/physik#hohe).
+Die Formeln brauchen die **wahre** Speed (TAS). In der Höhe ist die Luft dünner, die wahre Speed liegt über der angezeigten. In VFM sind es auf 10.000 ft etwa **12 %**, auf 20.190 ft etwa **28 %**, gemessen an der 9G-Linie der Ingame-Diagramme. In der realen Standardatmosphäre wären es 16 % bzw. ~36 %. Bei gleicher KIAS und gleichen 9 G drehst du in der Höhe also langsamer und weiter. Dazu kommt: Die Corner Speed in KIAS steigt mit der Höhe. Beides zusammen erklärt, warum alle Jets mit der Höhe Rate verlieren (Beispiel T-15, 50 % Fuel: 29 °/s auf Meereshöhe, 24 °/s auf 10.000 ft, 20 °/s auf 20.190 ft). Details: [Die Atmosphäre in VFM](/grundlagen/physik#die-atmosphare-in-vfm).
 
 ## Corner Speed
 
@@ -107,11 +107,11 @@ Zwei Grenzen bestimmen, wie viel G du ziehen kannst:
 
 Die **Corner Speed** ist der Schnittpunkt: die niedrigste Speed, bei der du 9 G erreichst. Dort hast du die **höchste Instant Turn Rate und den kleinsten Radius bei 9 G**.
 
-| Jet (Stand Dez 2025) | Corner Speed 10.000 ft, 50 % Fuel | Meereshöhe, 50 % | 10.000 ft, 100 % |
-|---|---|---|---|
-| T-15 Excalibur | ~360 KIAS (24 °/s) | ~337 KIAS (29 °/s) | ~385 KIAS (23 °/s) |
-| T-16 Falchion | ~409 KIAS (21 °/s) | ~392 KIAS (25 °/s) | ~434 KIAS (20 °/s) |
-| T-18 Cutlass | ~385 KIAS (22 °/s) | ~365 KIAS (27 °/s) | ~409 KIAS (21 °/s) |
+| Jet (Stand Okt 2026) | Corner Speed 10.000 ft, 50 % Fuel | Meereshöhe, 50 % | 10.000 ft, 100 % | 10.000 ft, 0 % |
+|---|---|---|---|---|
+| T-15 Excalibur | ~360 KIAS (24 °/s) | ~337 KIAS (29 °/s) | ~385 KIAS (23 °/s) | ~336 KIAS (26 °/s) |
+| T-16 Falchion | ~409 KIAS (21 °/s) | ~378 KIAS (26 °/s) | ~421 KIAS (20 °/s) | ~385 KIAS (22 °/s) |
+| T-18 Cutlass | ~385 KIAS (22 °/s) | ~365 KIAS (27 °/s) | ~409 KIAS (21 °/s) | ~360 KIAS (24 °/s) |
 
 ### Warum die Corner Speed so wichtig ist
 

@@ -53,9 +53,9 @@ Der 3D-Replay-/Debrief-Raum zeigt seit v1.2.0 einen **Specific-Energy-Graph**. S
 
 Im Spiel findest du die "Aircraft Performance Analysis" mit Turn Rate über KIAS. Das ist ein vereinfachtes **E-M-Diagramm** (Energy-Maneuverability). Höhe und Fuel lassen sich einstellen.
 
-![Aircraft Performance Analysis: Turn Rate über KIAS für T-15, T-16, T-18 auf 10.000 ft, 50 % Fuel](/images/img5.jpg)
+![Aircraft Performance Analysis: Turn Rate über KIAS für T-15, T-16, T-18 auf 10.000 ft, 50 % Fuel](/images/perf/10000ft_050.jpg)
 
-*10.000 ft, 50 % Fuel, Stand Dez 2025 (vor Patch v1.1). Orange = T-15, Blau = T-16, Pink = T-18.*
+*10.000 ft, 50 % Fuel, Stand Okt 2026. Orange = T-15, Blau = T-16, Pink = T-18.*
 
 So liest du es:
 
@@ -76,9 +76,9 @@ Und die Flächen dazwischen:
 
 ### Was das Diagramm über die drei Jets sagt
 
-- **Unter ~370–380 KIAS:** Sustained T-15 ≈ T-18 > T-16.
-- **~400–500 KIAS:** Die T-16 hat die beste Sustained Rate (1–2 °/s Vorsprung).
-- **Über ~500 KIAS:** Die T-15 ist klar am besten. Auf 10.000 ft kann sie 9 G bis etwa 700 KIAS halten (ihre durchgezogene Linie liegt dort auf der 9G-Linie). Die T-16 fällt ab und erreicht Sustained 0 bei ~770 KIAS; die T-18 fällt ab ~480 KIAS steil und erreicht 0 bei ~700 KIAS.
+- **Unter ~350 KIAS:** Sustained T-15 ≈ T-18 > T-16.
+- **~400–500 KIAS:** Die T-16 hat die beste Sustained Rate (rund 1–1,7 °/s Vorsprung).
+- **Über ~520 KIAS:** Die T-15 ist klar am besten. Auf 10.000 ft kann sie 9 G bis etwa 700 KIAS halten (ihre durchgezogene Linie liegt dort auf der 9G-Linie) und hat am Diagrammende (~885 KIAS) noch 7 °/s. Die T-16 fällt ab und erreicht Sustained 0 bei ~835 KIAS; die T-18 fällt ab ~510 KIAS (etwa Mach 0,9) steil und erreicht 0 bei ~720 KIAS.
 - **Instant Rate:** Die T-15 liegt bei jeder Speed unter Corner vorne und hat die niedrigste Corner Speed.
 
 Alle Zahlen und Diagramme für andere Höhen und Fuel-Stände: [Flugzeugvergleich](/flugzeuge/vergleich).
@@ -90,23 +90,23 @@ Zwei verschiedene Speeds, zwei verschiedene Zwecke:
 - **Corner Speed:** maximale Instant Rate, kleinster Radius bei 9 G – aber Ps stark negativ. Für **kurze** Momente: erster Turn am Merge, Break Turn, Schussgelegenheit.
 - **Best Sustained Speed:** höchste Rate, die du **halten** kannst (Ps = 0). Für **lange** Kurvenkämpfe, vor allem Two-Circle.
 
-Werte aus der Ingame-Analyse (Stand Dez 2025, vor v1.1 – im Spiel gegenprüfen):
+Werte aus der Ingame-Analyse (Stand Okt 2026 – im Spiel gegenprüfen):
 
 | Bedingung | | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
 |---|---|---|---|---|
-| Meereshöhe, 50 % | Corner | 337 KIAS / 29 °/s | 392 / 25 °/s | 365 / 27 °/s |
+| Meereshöhe, 50 % | Corner | 337 KIAS / 29 °/s | 378 / 26 °/s | 365 / 27 °/s |
 | | Best Sustained | 475 KIAS / 20 °/s | 447 / 22 °/s | 447 / 20 °/s |
 | 10.000 ft, 50 % | Corner | 360 / 24 °/s | 409 / 21 °/s | 385 / 22 °/s |
 | | Best Sustained | 495 / 17 °/s | 470 / 18 °/s | 470 / 16 °/s |
-| 10.000 ft, 100 % | Corner | 385 / 23 °/s | 434 / 20 °/s | 409 / 21 °/s |
+| 10.000 ft, 100 % | Corner | 385 / 23 °/s | 421 / 20 °/s | 409 / 21 °/s |
 | | Best Sustained | 495 / 15 °/s | 470 / 16 °/s | 470 / 15 °/s |
-| ~21.500 ft, 50 % | Corner | 383 / 19 °/s | 436 / 17 °/s | 426 / 17 °/s |
-| | Best Sustained | 405 / 13 °/s | 405 / 13 °/s | 405 / 12 °/s |
+| 20.190 ft, 49 % | Corner | 380 / 20 °/s | 434 / 18 °/s | 412 / 18 °/s |
+| | Best Sustained | 412 / 13 °/s | 423 / 14 °/s | 423 / 13 °/s |
 
 Was du daraus mitnimmst:
 
-- Best Sustained liegt bei allen Jets **über** der Corner Speed – auf mittlerer Höhe um 450–500 KIAS.
-- Mit mehr Höhe und mehr Fuel steigt die Corner Speed; Best Sustained sinkt in großer Höhe auf ~405 KIAS.
+- Best Sustained liegt auf niedriger und mittlerer Höhe bei allen Jets **über** der Corner Speed – um 450–500 KIAS. Auf 20.190 ft rücken beide eng zusammen (bei der T-16 liegt Best Sustained dort sogar knapp darunter).
+- Mit mehr Höhe und mehr Fuel steigt die Corner Speed; Best Sustained sinkt in großer Höhe auf ~410–425 KIAS.
 - Wer ständig um Corner Speed herum kurvt, verliert Energie. Wer mit Best Sustained Speed kurvt, kann das lange tun – dreht aber langsamer als ein Gegner, der gerade Energie für Rate ausgibt.
 
 ## Speedbänder je Jet
@@ -115,9 +115,9 @@ Statt allgemeiner "nie unter X Knoten"-Regeln: Die Daten zeigen, in welchem Band
 
 | Jet | Stark | Kampf-Fenster (Corner bis Best Sustained) | Meiden |
 |---|---|---|---|
-| **T-15 Excalibur** | Instant Rate unter Corner, Sustained über ~500 KIAS | ~360–495 KIAS | Das Sustained-Duell bei 400–500 KIAS gegen die T-16 |
+| **T-15 Excalibur** | Instant Rate unter Corner, Sustained über ~520 KIAS | ~360–495 KIAS | Das Sustained-Duell bei 400–500 KIAS gegen die T-16 |
 | **T-16 Falchion** | Sustained Rate bei ~420–500 KIAS, am stärksten tief | ~409–470 KIAS | Alles unter ~380 KIAS – dort ist sie der schwächste Jet |
-| **T-18 Cutlass** | Langsam: Sustained gleichauf mit T-15 unter ~380 KIAS, Platz 2 bei Instant und Radius | ~385–470 KIAS | Alles über ~480 KIAS – dort bricht ihre Sustained Rate ein |
+| **T-18 Cutlass** | Langsam: Sustained gleichauf mit T-15 unter ~350 KIAS, Platz 2 bei Instant und Radius | ~385–470 KIAS | Alles über ~480 KIAS – dort bricht ihre Sustained Rate ein |
 
 ### Unterhalb der Daten
 

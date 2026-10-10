@@ -57,18 +57,18 @@ Bugout ist der Abbruch ohne Rückkehr. Im echten Luftkampf heißt das: nach Haus
 
 ## VFM: Wer kann wem davonlaufen?
 
-Daten Stand Dez 2025 (vor den Patches v1.1 und v1.4.1), siehe [Flugzeugvergleich](/flugzeuge/vergleich):
+Daten Stand Okt 2026, siehe [Flugzeugvergleich](/flugzeuge/vergleich):
 
 | Jet | Separation | Warum |
 |---|---|---|
-| **T-15 Excalibur** | Am besten | Laut Entwickler höchster Schub und höchste Top-Speed. Hält laut Diagramm 9 G bis über ~700 KIAS (10.000 ft). Die T-15 kann sich praktisch immer aussuchen, ob sie bleibt. |
-| **T-16 Falchion** | Mittel | Leicht, aber niedrigster Schub-Gewicht-Balken. Sustained Rate erst bei ~770 KIAS (10.000 ft) bei null, also eine hohe Endgeschwindigkeit. Davonlaufen gegen die T-18 möglich, gegen die T-15 nicht. |
-| **T-18 Cutlass** | Am schlechtesten | Schlechteste Energiehaltung über ~480 KIAS, Sustained Rate schon bei ~700 KIAS (10.000 ft) bei null. Die T-18 muss ihre Kämpfe so wählen, dass sie nicht weglaufen muss. |
+| **T-15 Excalibur** | Am besten | Laut Entwickler höchster Schub, laut Diagramm höchste Top-Speed: Auf 10.000 ft liegt ihr Sustained-Nullpunkt jenseits des Diagrammendes (bei ~885 KIAS noch 7 °/s). Hält 9 G bis über ~700 KIAS (10.000 ft). Die T-15 kann sich praktisch immer aussuchen, ob sie bleibt. |
+| **T-16 Falchion** | Mittel | Leicht, aber niedrigster Schub-Gewicht-Balken. Sustained Rate erst bei ~835 KIAS (10.000 ft) bei null, also eine hohe Endgeschwindigkeit. Davonlaufen gegen die T-18 möglich, gegen die T-15 nicht. |
+| **T-18 Cutlass** | Am schlechtesten | Schlechteste Energiehaltung über ~480 KIAS, Sustained Rate schon bei ~720 KIAS (10.000 ft) bei null. Die T-18 muss ihre Kämpfe so wählen, dass sie nicht weglaufen muss. |
 
-Die Patches haben die Abstände verschoben: v1.1 gab der T-15 +7 % Schub, v1.4.1 hat ihre Top-Speed reduziert und die der T-18 erhöht. Die Reihenfolge oben ist die Lage nach den Daten, nicht nach dem aktuellen Patch.
+Top-Speed heißt hier: der Punkt, an dem die Sustained-Kurve im Ingame-Diagramm auf null fällt (Höchstgeschwindigkeit im Horizontalflug). Auf Meereshöhe: T-18 ~737, T-16 ~858, T-15 ~1.000 KIAS. Auf 20.190 ft: T-18 ~680 KIAS, T-16 und T-15 über dem Diagrammende (~770 KIAS). Die T-18 ist also auf jeder Höhe die langsamste.
 
 ::: info IM SPIEL PRÜFEN
-- Aktuelle Top-Speed und Beschleunigung der drei Jets nach v1.4.1. Teste es im Free Flight auf gleicher Höhe mit gleicher Treibstoffmenge.
+- Beschleunigung der drei Jets (steht nicht in den Diagrammen, wird gerade gemessen). Teste es im Free Flight auf gleicher Höhe mit gleicher Treibstoffmenge.
 :::
 
 ## VFM: Separation im Ranked 1v1 hat einen Preis

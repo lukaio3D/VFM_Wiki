@@ -67,16 +67,17 @@ Widerstands-BEIWERT C_D            Widerstands-KRAFT D
          0,9 1,0                            0,9 1,0
 ```
 
-Wo liegt Mach 1 in KIAS? Die angezeigte Speed bei Mach 1 sinkt mit der Höhe (Standardatmosphäre, gerechnet):
+Wo liegt Mach 1 in KIAS? Die angezeigte Speed bei Mach 1 sinkt mit der Höhe. Gerechnet mit dem in VFM gemessenen Verhältnis von wahrer Fahrt zu KIAS (siehe [Die Atmosphäre in VFM](#die-atmosphare-in-vfm)) und der Schallgeschwindigkeit der Standardatmosphäre:
 
 | Höhe | Mach 0,9 | Mach 1,0 |
 |---|---|---|
 | Meereshöhe | ~595 KIAS | ~661 KIAS |
-| 10.000 ft | ~507 KIAS | ~566 KIAS |
-| ~21.500 ft | ~412 KIAS | ~462 KIAS |
-| 25.000 ft | ~384 KIAS | ~432 KIAS |
+| 10.000 ft | ~516 KIAS | ~573 KIAS |
+| 20.190 ft | ~433 KIAS | ~482 KIAS |
 
-Das passt zu den Ingame-Daten: Auf ~21.500 ft liegt die Best Sustained Speed aller drei Jets bei 405 KIAS (≈ Mach 0,89), und auf 10.000 ft bricht die Sustained Rate der T-18 ab ~480 KIAS (≈ Mach 0,85) ein. Dass genau der transsonische Widerstand die Ursache ist, ist eine plausible Deutung, keine Herstellerangabe.
+Welche Schallgeschwindigkeit VFM verwendet, ist nicht bekannt. Die Tabelle ist deshalb eine gute Näherung, kein exakter Wert.
+
+Das passt zu den Ingame-Daten: **Die T-18 bricht in allen drei Höhen bei etwa Mach 0,9 ein** – auf Meereshöhe ab ~600 KIAS, auf 10.000 ft ab ~510 KIAS, auf 20.190 ft ab ~450 KIAS. Auf 20.190 ft liegt die Best Sustained Speed aller drei Jets bei 412–423 KIAS (≈ Mach 0,86–0,88). Dass der Einbruch so sauber an einer Mach-Zahl hängt statt an einer KIAS-Zahl, ist ein starkes Indiz für transsonischen Widerstand. Eine Herstellerangabe ist es nicht.
 
 Was das für dich heißt:
 
@@ -88,25 +89,51 @@ Was das für dich heißt:
 
 Mit der Höhe sinkt die Luftdichte. Bei gleicher KIAS bist du in der Höhe wahr schneller – dadurch werden Rate kleiner und Radius größer (siehe [Kurvenphysik](/grundlagen/kurvenphysik#kias-vs-wahre-speed-in-der-hohe)). Dazu kommt der transsonische Widerstand bei niedrigerer KIAS.
 
-Ingame-Daten, 50 % Fuel (Stand Dez 2025):
+Ingame-Daten, 50 % Fuel (auf 20.190 ft 49 %), Stand Okt 2026:
 
 | Höhe | | T-15 | T-16 | T-18 |
 |---|---|---|---|---|
-| Meereshöhe | Instant | 29 °/s @ 337 | 25 °/s @ 392 | 27 °/s @ 365 |
+| Meereshöhe | Instant | 29 °/s @ 337 | 26 °/s @ 378 | 27 °/s @ 365 |
 | | Sustained | 20 °/s @ 475 | 22 °/s @ 447 | 20 °/s @ 447 |
-| | Min Radius | 1.138 ft | 1.524 ft | 1.313 ft |
+| | Min Radius | 1.138 ft | 1.428 ft | 1.313 ft |
 | 10.000 ft | Instant | 24 °/s @ 360 | 21 °/s @ 409 | 22 °/s @ 385 |
 | | Sustained | 17 °/s @ 495 | 18 °/s @ 470 | 16 °/s @ 470 |
-| | Min Radius | 1.644 ft | 2.102 ft | 1.899 ft |
-| ~21.500 ft | Instant | 19 °/s @ 383 | 17 °/s @ 436 | 17 °/s @ 426 |
-| | Sustained | 13 °/s @ 405 | 13 °/s @ 405 | 12 °/s @ 405 |
-| | Min Radius | 2.578 ft | 3.287 ft | 3.086 ft |
+| | Min Radius | 1.644 ft | 2.099 ft | 1.899 ft |
+| 20.190 ft | Instant | 20 °/s @ 380 | 18 °/s @ 434 | 18 °/s @ 412 |
+| | Sustained | 13 °/s @ 412 | 14 °/s @ 423 | 13 °/s @ 423 |
+| | Min Radius | 2.387 ft | 3.073 ft | 2.816 ft |
 
 Was du daraus mitnimmst:
 
-- **Alle Jets verlieren mit der Höhe**, und zwar deutlich: Von Meereshöhe auf ~21.500 ft fallen Instant und Sustained um rund ein Drittel bis 40 %, der Radius wächst auf mehr als das Doppelte.
-- **Der Sustained-Vorsprung der T-16 ist auf Meereshöhe am größten** (22 vs. 20 °/s) und auf ~21.500 ft weg.
-- **Die T-15 profitiert relativ von Höhe:** Sie behält auf ~21.500 ft zwischen ~400 und 600 KIAS ein flaches Sustained-Plateau um 12 °/s, die anderen fallen ab.
+- **Alle Jets verlieren mit der Höhe**, und zwar deutlich: Von Meereshöhe auf 20.190 ft fallen Instant und Sustained um rund ein Drittel, der Radius wächst auf mehr als das Doppelte.
+- **Der Sustained-Vorsprung der T-16 ist auf Meereshöhe am größten** (22 vs. 20 °/s) und schrumpft auf 20.190 ft auf 0–1 °/s.
+- **Die T-15 profitiert relativ von Höhe:** Sie hält auf 20.190 ft zwischen ~350 und ~600 KIAS ein flaches Sustained-Plateau um 12–13 °/s. Die T-16 fällt dort ab ~470 KIAS unter sie, die T-18 ab ~450 KIAS deutlich.
+
+## Die Atmosphäre in VFM
+
+VFM rechnet nicht mit der Standardatmosphäre der echten Luftfahrt. Das lässt sich aus den Diagrammen messen: Auf der 9G-Linie gilt ω = g·√80 / V. Aus jeder abgelesenen Rate folgt also die wahre Fahrt V, mit der das Spiel rechnet.
+
+| Höhe | Wahre Fahrt / KIAS in VFM | zum Vergleich: Standardatmosphäre | Luftdichte in VFM (aus dem Lift-Limit) |
+|---|---|---|---|
+| Meereshöhe | 1,00 | 1,00 | 100 % |
+| 10.000 ft | **~1,12** | ~1,16 | ~69 % (real: 74 %) |
+| 20.190 ft | **~1,28** | ~1,36 | ~48 % (real: 54 %) |
+
+Was das heißt:
+
+- **Bei gleicher KIAS bist du in der Höhe weniger schnell als in der Realität**, das Mach-Problem kommt also etwas später (siehe Tabelle oben).
+- **Der Flügel trägt in der Höhe weniger, als die KIAS vermuten lassen.** Deshalb steigt die Corner Speed in KIAS mit der Höhe, bei allen drei Jets um denselben Faktor: Auf 20.190 ft brauchst du ~13 % mehr KIAS für 9 G als auf Meereshöhe (T-15, 50 %: 337 → 380 KIAS).
+- Die Dichte folgt sehr gut einer einfachen Exponentialkurve (halbiert sich etwa alle 5.800 m bzw. ~19.000 ft). Das ist eine Ableitung aus den Diagrammen, keine Herstellerangabe.
+
+## Was die Kurven über das Flugmodell verraten
+
+Wertet man alle neun Diagramme gemeinsam aus, ergibt sich ein klassisches Flugmodell:
+
+- **Corner = genau 9 G.** Alle 27 Min-Radius-Werte passen exakt zu r = V² / (g · √80).
+- **Schub hängt nicht vom Gewicht ab, der induzierte Widerstand wächst mit (G × Gewicht)².** Gemessen: Bei gleicher Höhe und KIAS ist „dauerhafte G × Gewicht“ über alle Fuel-Stände auf 1 % konstant. Faustregel: **10 % leichter = 10 % mehr dauerhafte G** (solange du nicht am 9-G-Limit hängst).
+- **Schub und Widerstand ändern sich frei mit der Mach-Zahl.** Die Sustained-Kurven haben Knicke und Plateaus, etwa die T-16 auf 10.000 ft bei ~520 KIAS. Eine einfache Formel reicht dafür nicht.
+
+Ein daraus kalibriertes Rechenmodell trifft alle Sustained-Kurven im Kampfbereich (300–550 KIAS) auf etwa 0,1–0,5 °/s. Es ist die Grundlage für eine geplante 3D-Lernsimulation. Daten und Skripte: [tools/flugmodell im Repo](https://github.com/lukaio3D/VFM_Wiki/tree/main/tools/flugmodell).
 
 ## Treibstoff und Munition
 
@@ -114,23 +141,17 @@ VFM simuliert Treibstoff- und Munitionsgewicht. Die Ingame-Daten (10.000 ft) zei
 
 | | T-15 | T-16 | T-18 |
 |---|---|---|---|
-| Gewicht 100 % Fuel | 42.160 lbs | 27.972 lbs | 41.226 lbs |
-| Gewicht 50 % Fuel | 37.615 lbs | 25.009 lbs | 36.597 lbs |
-| Instant 100 % → 50 % | 23 → 24 °/s | 20 → 21 °/s | 21 → 22 °/s |
-| Sustained 100 % → 50 % | 15 → 17 °/s | 16 → 18 °/s | 15 → 16 °/s |
+| Gewicht 100 / 50 / 0 % Fuel | 42.160 / 37.615 / 33.069 lbs | 26.787 / 24.417 / 22.046 lbs | 41.226 / 36.597 / 31.967 lbs |
+| Instant 100 → 50 → 0 % | 23 → 24 → 26 °/s | 20 → 21 → 22 °/s | 21 → 22 → 24 °/s |
+| Sustained 100 → 50 → 0 % | 15 → 17 → 19 °/s | 16 → 18 → 20 °/s | 15 → 16 → 19 °/s |
 
-- Von 100 auf 50 % Fuel sinkt das Gewicht um **~11 %**. Das bringt **~+1 °/s Instant** und **+1–2 °/s Sustained**.
-- **Die Reihenfolge der Jets ändert sich nicht.** Bei vollem Tank ist der Sustained-Vorsprung der T-16 nur kleiner (16 vs. 15 °/s).
+- Von 100 auf 50 % Fuel sinkt das Gewicht um **~9–11 %**. Das bringt **~+1 °/s Instant** und **+1–2 °/s Sustained**. Mit leerem Tank sind es bis zu +3 °/s Instant und +4 °/s Sustained.
+- **Die Reihenfolge der Jets ändert sich nicht.** Bei vollem Tank ist der Sustained-Vorsprung der T-16 nur kleiner (16 vs. 15 °/s), mit leerem Tank holen T-15 und T-18 auf (20 vs. 19 °/s).
 - **Munition:** Ihr Gewicht wird simuliert, wie groß der Effekt ist, ist nicht bekannt. Sind alle Waffen leer, startet ein Selbstzerstörungs-Countdown – Nachladen gibt es nicht. Siehe [Waffen](/avionik/waffen).
 
 ## Patch-Stand der Daten
 
-Alle Zahlen auf dieser Seite stammen aus der Ingame-Analyse **vor Patch v1.1** (Stand Dez 2025). Seitdem wurde nachjustiert:
-
-- **v1.1:** T-15 −3 % Lift, +7 % Schub. T-18 mehr Treibstoffgewicht, weniger Leergewicht.
-- **v1.4.1:** T-15 Top-Speed reduziert. T-16 Treibstoffgewicht −20 %. T-18 Top-Speed erhöht.
-
-Die Grundaussagen (wer wo stark ist) sind dadurch nicht umgedreht, aber die genauen Zahlen können abweichen. Aktuelle Übersicht: [Flugzeugvergleich](/flugzeuge/vergleich).
+Alle Zahlen auf dieser Seite stammen aus der Ingame-Analyse, **Stand Okt 2026** (neun Bedingungen: 0 / 10.000 / 20.190 ft × 0 / 50 / 100 % Fuel). Gegenüber den Screenshots von Dez 2025 sind T-15 und T-18 unverändert. Die T-16 ist durch −20 % Treibstoffgewicht (v1.4.1) etwas leichter und minimal besser. Übersicht und Patch-Historie: [Flugzeugvergleich](/flugzeuge/vergleich#patch-historie).
 
 ## Was wir nicht wissen
 
@@ -138,10 +159,10 @@ Die Grundaussagen (wer wo stark ist) sind dadurch nicht umgedreht, aber die gena
 - **Unter ~170 KIAS:** Die Diagramme beginnen erst bei ~170–200 KIAS. Steuerbarkeit, Rollrate und Stall-Verhalten darunter sind unbekannt.
 - **Post-Stall mit AoA-Override:** Wie viel Nase bekommst du, wie viel Speed kostet es, wie fängst du ab?
 - **Rollrate** der drei Jets.
-- **Steigleistung und Beschleunigung:** Nicht in den Daten. Die T/W-Balken der Info-Karten deuten T-15 > T-18 > T-16 an – grob und nicht exakt.
+- **Steigleistung und Beschleunigung:** Nicht in den Daten. Die T/W-Balken der Info-Karten deuten T-15 > T-18 > T-16 an – grob und nicht exakt. Eine Messung (Beschleunigung 300 → 500 KIAS auf 10.000 ft) läuft.
 - **Speedbrake:** Gibt es eine, und wie stark bremst sie?
 - **Greyout-Modell:** G-Schwelle, Zeitverhalten, Erholung.
-- **Aktuelle Zahlen nach v1.1 und v1.4.1:** Die Ingame-Analyse im aktuellen Spiel aufrufen und mit den Tabellen hier vergleichen.
+- **Schallgeschwindigkeit:** Welches Temperaturmodell VFM nutzt und wo Mach 1 damit genau in KIAS liegt.
 :::
 
 ::: tip MERKE
@@ -149,7 +170,8 @@ Die Grundaussagen (wer wo stark ist) sind dadurch nicht umgedreht, aber die gena
 - **Override** = Nase sofort, Energie weg. Nur für einen Schuss oder als letztes Mittel.
 - **Transsonischer Widerstand:** Der Beiwert hat sein Maximum um Mach 1, die Kraft steigt weiter. Kämpf bei ~350–500 KIAS, nicht im Überschall.
 - **Tief ist schneller und enger** – für alle Jets, besonders für T-16 und T-18.
-- **Halber Tank** bringt ~1–2 °/s, ändert aber die Reihenfolge der Jets nicht.
+- **VFM-Luft ist nicht die echte Luft:** wahre Fahrt nur ~12 % (10.000 ft) bzw. ~28 % (20.190 ft) über KIAS, die Corner Speed in KIAS steigt mit der Höhe.
+- **Halber Tank** bringt ~1–2 °/s, leerer Tank bis zu 4 °/s – die Reihenfolge der Jets ändert das nicht.
 :::
 
 Weiter: [Relative Geometrie](/grundlagen/geometrie)

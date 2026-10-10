@@ -105,7 +105,7 @@ Gas raus und Speed abbauen, um ihn vorbeizulassen, funktioniert nur, wenn er **n
 ## VFM-Hinweise
 
 - **AoA-Override ("Cobra-Button"):** Der Override gibt dir sofort Nose Authority über das AoA-Limit hinaus und kostet extrem viel Energie. Als Verteidiger kann das einen Overshoot erzwingen oder einen Snapshot ermöglichen, wenn der Angreifer schnell und nah ist. Danach bist du aber sehr langsam. Gegen einen zweiten Gegner oder einen Angreifer, der einfach nach oben ausweicht, ist das ein Kill für ihn.
-- **Jet-Unterschiede:** Die T-15 hat laut Daten (Stand Dez 2025) die beste Instant Rate und den kleinsten Radius. Als Verteidiger kann sie einen schnelleren Angreifer besonders leicht zum Overshoot bringen. Die T-16 mit dem größten Radius muss als Angreifer besonders früh Closure abbauen.
+- **Jet-Unterschiede:** Die T-15 hat laut Daten (Stand Okt 2026) die beste Instant Rate und den kleinsten Radius. Als Verteidiger kann sie einen schnelleren Angreifer besonders leicht zum Overshoot bringen. Die T-16 mit dem größten Radius muss als Angreifer besonders früh Closure abbauen.
 
 ::: info IM SPIEL PRÜFEN
 - Wie viel Speed ein kurzer AoA-Override-Einsatz in deinem Jet kostet. Teste es im Free Flight und lies den Specific-Energy-Graph im Replay.

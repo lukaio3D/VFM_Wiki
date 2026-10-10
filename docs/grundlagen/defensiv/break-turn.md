@@ -26,13 +26,13 @@ Der Break ist die härteste Kurve, die dein Jet in diesem Moment fliegen kann. E
 - **Schneller als Corner:** Das G-Limit deckelt die Last, die Rate sinkt mit wachsendem V. Der Break bremst dich aber schnell herunter.
 - **Langsamer als Corner:** Du schaffst das G nicht mehr, die Rate fällt mit jedem Knoten weniger weiter ab.
 
-| Jet | Corner Speed (10.000 ft, Stand Dez 2025) | Max Instant Rate dort |
+| Jet | Corner Speed (10.000 ft, Stand Okt 2026) | Max Instant Rate dort |
 |---|---|---|
 | T-15 Excalibur | ~360–385 KIAS | 23–24 °/s |
-| T-16 Falchion | ~409–434 KIAS | 20–21 °/s |
+| T-16 Falchion | ~409–421 KIAS | 20–21 °/s |
 | T-18 Cutlass | ~385–409 KIAS | 21–22 °/s |
 
-Spanne jeweils 100 % bis 50 % Treibstoff. Daten vor Patch v1.1. Die T-15 hat seitdem 3 % Lift verloren (Instant Rate etwas niedriger). Details auf der [Vergleichsseite](/flugzeuge/vergleich).
+Spanne jeweils 100 % bis 50 % Treibstoff. Mit fast leerem Tank (0 %) liegt die Corner Speed noch einmal rund 25 KIAS tiefer, die Instant Rate 1–2 °/s höher. Details auf der [Vergleichsseite](/flugzeuge/vergleich).
 
 ## Danach: die sustained Defensivkurve
 
@@ -43,7 +43,7 @@ Bei Corner Speed und max G ist dein Ps (spezifische Überschussleistung, siehe [
 - **Weiter beobachten:** Zieht er wieder Lead und kommt rein: wieder hart. Fällt er in Lag zurück: Energie halten.
 - **Kein Leerlauf:** Volle Leistung in der Defensivkurve, außer gegen eine IR-Rakete (siehe unten).
 
-| Jet | Best Sustained (10.000 ft, Stand Dez 2025) | Sustained Rate dort |
+| Jet | Best Sustained (10.000 ft, Stand Okt 2026) | Sustained Rate dort |
 |---|---|---|
 | T-15 | ~495 KIAS | 15–17 °/s |
 | T-16 | ~470 KIAS | 16–18 °/s |
@@ -87,7 +87,7 @@ VFM hat nur IR-Raketen. Chaff gibt es nicht und würde gegen einen Wärmesucher 
 
 ::: tip MERKE
 - Lift Vector auf den Angreifer, max ziehen, Sicht halten.
-- Max Instant Rate liegt nahe Corner Speed: T-15 ~360–385, T-16 ~409–434, T-18 ~385–409 KIAS (10.000 ft).
+- Max Instant Rate liegt nahe Corner Speed: T-15 ~360–385, T-16 ~409–421, T-18 ~385–409 KIAS (10.000 ft).
 - Break so lange wie nötig, dann in die sustained Defensivkurve und Energie halten.
 - Gegen IR-Raketen: Break + Flares in kurzen Gruppen + Idle. Kein Chaff, kein Nachbrenner.
 :::

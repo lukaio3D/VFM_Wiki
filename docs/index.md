@@ -37,7 +37,7 @@ Danach: Lerne **[dein Flugzeug](/flugzeuge/vergleich)** und die **Matchups** geg
 Das ist **kein Stein-Schere-Papier**. Welcher Jet gewinnt, hängt vor allem davon ab, **in welchem Geschwindigkeitsband** gekämpft wird. Wer den Kampf in sein Band zwingt, gewinnt. Details: [Performance-Daten](/flugzeuge/vergleich) und die Matchups [T-15 vs. T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs. T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs. T-18](/flugzeuge/matchups/t16-vs-t18).
 
 ::: warning DATENSTAND
-Die Leistungsdaten stammen aus Ingame-Screenshots vom Dezember 2025, also **vor** den Balance-Patches v1.1 und v1.4.1. Die Tendenzen gelten weiter, einzelne Zahlen haben sich verschoben. Details auf der [Datenseite](/flugzeuge/vergleich).
+**Stand Okt 2026.** Die Leistungsdaten stammen aus Ingame-Screenshots vom Oktober 2026. T-15 und T-18 zeigen Zahl für Zahl dieselben Werte wie im Dezember 2025; nur die T-16 ist durch das um 20 % reduzierte Treibstoffgewicht etwas leichter und minimal besser. Beschleunigung und Steigleistung stehen nicht in den Diagrammen und werden gerade gemessen. Details auf der [Datenseite](/flugzeuge/vergleich).
 :::
 
 ---

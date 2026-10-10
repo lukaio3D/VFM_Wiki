@@ -56,7 +56,7 @@ flowchart TD
 
 ## VFM-Hinweise
 
-- **Jet-Wahl prägt die Defensive.** Die T-15 hat laut Daten (Stand Dez 2025) die beste Instant Rate und den kleinsten Radius: Ihr Break ist der stärkste. Die T-16 hat die schwächste Instant Rate und den größten Radius, ist aber im Band ~420–500 KIAS in der sustained Kurve am stärksten: Sie verteidigt am besten, indem sie Speed hält. Die T-18 ist unterhalb ~380 KIAS stark und will den Kampf langsam machen. Siehe [Flugzeugvergleich](/flugzeuge/vergleich).
+- **Jet-Wahl prägt die Defensive.** Die T-15 hat laut Daten (Stand Okt 2026) die beste Instant Rate und den kleinsten Radius: Ihr Break ist der stärkste. Die T-16 hat die schwächste Instant Rate und den größten Radius, ist aber im Band ~420–500 KIAS in der sustained Kurve am stärksten: Sie verteidigt am besten, indem sie Speed hält. Die T-18 ist unterhalb ~380 KIAS stark und will den Kampf langsam machen. Siehe [Flugzeugvergleich](/flugzeuge/vergleich).
 - **Ranked 1v1:** Bei Zeitablauf (Runde 8 min) gewinnt der Verfolger (seit v1.2.2). Defensiv nur zu überleben reicht dort nicht, du musst neutralisieren und umdrehen. Siehe [Separation](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis).
 
 ::: tip MERKE

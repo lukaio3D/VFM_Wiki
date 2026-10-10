@@ -57,13 +57,13 @@ Angle of Attack: Winkel zwischen Flügel und anströmender Luft. Mehr AoA = mehr
 Der Limiter begrenzt den Anstellwinkel. Der Override-Button ("Cobra-Button") hebt die Grenze auf und gibt sofortige Nasen-Autorität darüber hinaus – kostet extrem viel Energie. Das G-Limit bleibt aktiv. → [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override)
 
 ### Best Sustained Speed
-Die Speed mit der höchsten Sustained Turn Rate. Liegt über der Corner Speed – in VFM bei ~450–500 KIAS (je nach Jet und Höhe). **Nicht mit der Corner Speed verwechseln.**
+Die Speed mit der höchsten Sustained Turn Rate. Liegt meist über der Corner Speed – in VFM bei ~450–500 KIAS, in großer Höhe (20.190 ft) bei ~410–425 KIAS (je nach Jet und Fuel). **Nicht mit der Corner Speed verwechseln.**
 
 ### Buffet
 Rütteln des Jets bei hoher Last bzw. hohem AoA durch abreißende, turbulente Strömung. VFM simuliert Buffeting.
 
 ### Corner Speed
-Die **niedrigste Speed, bei der du das G-Limit (9 G) erreichst**. Dort hast du die maximale Instant Turn Rate und den kleinsten Radius bei 9 G – verlierst aber schnell Energie. VFM (10.000 ft, 50 % Fuel, Stand Dez 2025): T-15 ~360, T-16 ~409, T-18 ~385 KIAS. → [Kurvenphysik](/grundlagen/kurvenphysik#corner-speed)
+Die **niedrigste Speed, bei der du das G-Limit (9 G) erreichst**. Dort hast du die maximale Instant Turn Rate und den kleinsten Radius bei 9 G – verlierst aber schnell Energie. VFM (10.000 ft, 50 % Fuel, Stand Okt 2026): T-15 ~360, T-16 ~409, T-18 ~385 KIAS. → [Kurvenphysik](/grundlagen/kurvenphysik#corner-speed)
 
 ### E-M-Diagramm
 Energy-Maneuverability-Diagramm: Turn Rate über Speed mit Lift-Limit, G-Limit und Sustained-Linie (Ps = 0). In VFM als "Aircraft Performance Analysis" im Spiel. → [Energie-Management](/grundlagen/energie-management#das-leistungsdiagramm-in-vfm-lesen)
@@ -81,7 +81,7 @@ Bei hoher G wird das Bild erst grau (Greyout), dann schwarz (Blackout). VFM simu
 Die höchste Turn Rate, die du in einem Moment erreichen kannst – auch wenn du dabei Speed verlierst. Maximal bei Corner Speed.
 
 ### KIAS / TAS
-**KIAS**: angezeigte Speed in Knoten. Bestimmt Auftrieb und G-Verfügbarkeit. **TAS**: wahre Speed durch die Luft. In der Höhe ist TAS größer als KIAS (10.000 ft: ~16 %). Turn Rate und Radius hängen von der TAS ab.
+**KIAS**: angezeigte Speed in Knoten. Bestimmt Auftrieb und G-Verfügbarkeit. **TAS**: wahre Speed durch die Luft. In der Höhe ist TAS größer als KIAS (in VFM 10.000 ft: ~12 %, 20.190 ft: ~28 %). Turn Rate und Radius hängen von der TAS ab.
 
 ### Lift-Limit
 Die aerodynamische Grenze: Unterhalb der Corner Speed kann der Flügel nicht genug Auftrieb für 9 G erzeugen. Im E-M-Diagramm die steigende gestrichelte Linie.

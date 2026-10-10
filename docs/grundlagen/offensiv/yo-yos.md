@@ -152,7 +152,7 @@ Die Quarter Plane ist ein **kleiner High Yo-Yo**: Du legst den Lift Vector nur *
 
 ## VFM: Was die Jets für Yo-Yos bedeuten
 
-Die Daten (Stand Dez 2025, siehe [Flugzeugvergleich](/flugzeuge/vergleich)) sagen nichts direkt über Steigleistung oder Rollrate. Daraus lässt sich aber logisch ableiten:
+Die Daten (Stand Okt 2026, siehe [Flugzeugvergleich](/flugzeuge/vergleich)) sagen nichts direkt über Steigleistung oder Rollrate. Daraus lässt sich aber logisch ableiten:
 
 - **T-15 Excalibur:** Höchster Schub, höchste Top-Speed. Sie holt Speed nach einem Yo-Yo am schnellsten zurück und kann die Vertikale am großzügigsten nutzen. Damit sind größere High Yo-Yos für sie am billigsten.
 - **T-16 Falchion:** Leichtester Jet, aber laut Infokarte der niedrigste Schub-Gewicht-Balken. Ihr Band ist ~420–500 KIAS, darunter ist sie am schwächsten. Ein großer High Yo-Yo, der dich am Apex deutlich unter ~400 KIAS bringt, bringt dich genau dorthin. Lieber Quarter Plane und flache Yo-Yos, Speed im Band halten.

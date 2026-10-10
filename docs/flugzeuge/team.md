@@ -120,7 +120,7 @@ In der Unterzahl gilt: **Überleben, einen erwischen, wenn er sich anbietet, rau
 - **Beide auf eine Seite bringen.** Dreh so, dass beide vor dir oder auf derselben Seite sind. Dann kann keiner unbemerkt hinter dich.
 - **Schüsse nehmen, die sich anbieten** – aber nicht die eigene Energie für einen unsicheren Schuss opfern.
 - **Raus, wenn du kannst.** Siehe [Separation](/grundlagen/defensiv/separation). Wie gut das klappt, hängt vom Jet ab:
-  - **T-15:** Beste Chancen, sich abzusetzen (stärkster Schub, laut Entwickler höchster Top-Speed).
+  - **T-15:** Beste Chancen, sich abzusetzen (stärkster Schub, höchster Top-Speed).
   - **T-16:** Tief und im Band bleiben, Speed nie hergeben. Einen Gegner, der langsam wird, nicht in den langsamen Kampf verfolgen.
   - **T-18:** Kann kaum weglaufen. Mach den Kampf eng und langsam, lass die Gegner dich überschießen und bring sie möglichst einander in die Quere.
 - **Im größeren Team-Match:** Zieh den Kampf zu deinen Teamkameraden, nicht weg von ihnen, und sag an, wo du bist.
@@ -133,8 +133,8 @@ Ein Klassiker im Team: Der **Dragger** (der Gezogene) fliegt mit dem Bandit im S
 
 | Jet | Als Dragger | Warum |
 |---|---|---|
-| **T-15** | Am besten | Stärkster Schub, laut Entwickler höchster Top-Speed, beste Energiehaltung bei hoher Speed. |
-| **T-16** | Bedingt | Hält hohe Speed besser als die T-18, hat aber den niedrigsten T/W-Balken. Nur mit Speedvorsprung. |
+| **T-15** | Am besten | Stärkster Schub, höchster Top-Speed (Meereshöhe ~1.000 KIAS), beste Energiehaltung bei hoher Speed. |
+| **T-16** | Bedingt | Hält hohe Speed besser als die T-18 (Top-Speed ~835 vs ~720 KIAS auf 10.000 ft), hat aber den niedrigsten T/W-Balken. Nur mit Speedvorsprung. |
 | **T-18** | Am schlechtesten | Schlechteste Energiehaltung über ~480 KIAS. Eine T-18 als Köder oder Dragger einzusetzen, ist meist ein geschenkter Abschuss für den Gegner. |
 
 ::: danger DRAG & BAG MIT RAKETEN

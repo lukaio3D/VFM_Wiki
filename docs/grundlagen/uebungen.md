@@ -41,7 +41,7 @@ Such dir einen Punkt im Gelände (Bergspitze, Insel). Roll so, dass dein **Lift 
 3. Wiederhole das bei 350, 400, 450 und 500 KIAS.
 4. Turn Rate = 180° / Zeit. Achte auf HUD-G und AoA: Unter Corner Speed stößt du ans AoA-/Lift-Limit, ehe du 9 G erreichst. Darüber stößt du an die 9-G-Grenze.
 
-**Die Speed mit der kürzesten Zeit ist deine Corner Speed.** Erwartung laut Daten (Stand Dez 2025, 10.000 ft): T-15 ~360–385, T-16 ~409–434, T-18 ~385–409 KIAS.
+**Die Speed mit der kürzesten Zeit ist deine Corner Speed.** Erwartung laut Daten (Stand Okt 2026, 10.000 ft): T-15 ~360–385, T-16 ~409–421, T-18 ~385–409 KIAS.
 
 | Einstieg | 300 | 350 | 400 | 450 | 500 KIAS |
 |---|---|---|---|---|---|
@@ -64,7 +64,7 @@ Such dir einen Punkt im Gelände (Bergspitze, Insel). Roll so, dass dein **Lift 
 2. Dosier das G so, dass die Speed **konstant** bleibt. Das ist deine Sustained Turn.
 3. Stopp die Zeit für 360°. Wiederhole das bei 400 und 550 KIAS.
 
-**Lektion**: Du spürst, wo dein Jet Rate halten kann und wo er sie verliert. Die T-16 sollte im Band 420–500 KIAS 1–2 °/s vorn sein, die T-15 über ~500 KIAS, und die T-18 bricht über ~480 KIAS ein.
+**Lektion**: Du spürst, wo dein Jet Rate halten kann und wo er sie verliert. Die T-16 sollte im Band 420–500 KIAS 1–2 °/s vorn sein, die T-15 über ~520 KIAS, und die T-18 bricht über ~480 KIAS ein.
 
 ### B5 Vertikal-Tests
 

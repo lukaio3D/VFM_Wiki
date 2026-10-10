@@ -81,9 +81,9 @@ Ein Teil dieser Drehung lässt die Nase sinken, statt nur die Richtung zu änder
 
 ## VFM: die Jets im Slice
 
-Daten Stand Dez 2025 (vor v1.1), siehe [Flugzeugvergleich](/flugzeuge/vergleich):
+Daten Stand Okt 2026, siehe [Flugzeugvergleich](/flugzeuge/vergleich):
 
-- **T-16 Falchion:** Höchste Corner Speed (~409–434 KIAS) und stärkste sustained Kurve bei ~420–500 KIAS. Für sie ist der Slice das natürliche Werkzeug, um in diesem Band zu bleiben, statt in der Kurve unter ~400 KIAS zu fallen.
+- **T-16 Falchion:** Höchste Corner Speed (~409–421 KIAS) und stärkste sustained Kurve bei ~420–500 KIAS. Für sie ist der Slice das natürliche Werkzeug, um in diesem Band zu bleiben, statt in der Kurve unter ~400 KIAS zu fallen.
 - **T-18 Cutlass:** Ab ~480 KIAS steigt ihr Widerstand stark, die sustained Rate bricht ein. Lange, tiefe Slices, die sie weit über diesen Bereich beschleunigen, verschenken ihren Vorteil.
 - **T-15 Excalibur:** Niedrigste Corner Speed (~360–385 KIAS). Sie braucht den Slice weniger, um Speed zu halten, kann aber mit ihrem Schub nach einem Slice Höhe am schnellsten zurückholen.
 

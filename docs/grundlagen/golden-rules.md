@@ -18,7 +18,7 @@ Im Gefecht hast du keine Zeit für Theorie. Diese fünf Regeln fassen zusammen, 
 
 - **Nicht sinnlos ziehen:** Ein Turn mit 9 G kostet massiv Speed. Zieh so hart wie nötig, nicht so hart wie möglich.
 - **Unload:** Wenn du gerade nichts gewinnen musst, entlaste den Flügel (**≈ 0 bis 0,5 G**, Nase am oder leicht unter dem Horizont, volle Leistung). So beschleunigst du am schnellsten. Nicht, wenn der Gegner in Waffenreichweite hinter dir sitzt. Details: [Energie-Management](/grundlagen/energie-management#unload-richtig-gemacht).
-- **Corner Speed kennen:** Das ist die niedrigste Speed, bei der du 9 G erreichst – dort drehst du am schnellsten und engsten, verlierst aber auch am meisten Energie. Schneller: Radius und Rate werden schlechter. Langsamer: du bekommst keine 9 G mehr, die Rate sinkt. Werte (Stand Dez 2025, 10.000 ft, 50 % Fuel): **T-15 ~360, T-16 ~409, T-18 ~385 KIAS.**
+- **Corner Speed kennen:** Das ist die niedrigste Speed, bei der du 9 G erreichst – dort drehst du am schnellsten und engsten, verlierst aber auch am meisten Energie. Schneller: Radius und Rate werden schlechter. Langsamer: du bekommst keine 9 G mehr, die Rate sinkt. Werte (Stand Okt 2026, 10.000 ft, 50 % Fuel): **T-15 ~360, T-16 ~409, T-18 ~385 KIAS.**
 
 ## 3. Don't Play the Bandit's Game
 

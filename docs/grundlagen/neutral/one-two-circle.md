@@ -122,8 +122,8 @@ Den Flow bestimmt ihr **beide**. Keiner kann ihn allein erzwingen:
 
 ## Flow-Wahl in VFM: alle 9 Paarungen
 
-Grundlage sind die Ingame-Daten (Stand Dez 2025, vor Patch v1.1) und die Speedbänder aus dem [Flugzeugvergleich](/flugzeuge/vergleich). Kurz:
-- Die **T-15** hat die beste Instant Rate, die niedrigste Corner Speed und die beste Sustained Rate über ~500 KIAS.
+Grundlage sind die Ingame-Daten (Stand Okt 2026) und die Speedbänder aus dem [Flugzeugvergleich](/flugzeuge/vergleich). Kurz:
+- Die **T-15** hat die beste Instant Rate, die niedrigste Corner Speed und die beste Sustained Rate über ~520 KIAS.
 - Die **T-16** hat die beste Sustained Rate, aber nur bei ~420–500 KIAS, am stärksten in Bodennähe.
 - Die **T-18** ist unter ~380 KIAS stark und bricht über ~480 KIAS ein.
 
@@ -142,7 +142,7 @@ Es ist kein Stein-Schere-Papier, sondern eine Frage des **Speedbands**.
 | T-18 | T-18 | kein Flow-Vorteil. One-Circle liegt nahe, dann gewinnt, wer besser langsam fliegt und seine Energie einteilt. | < 380 KIAS | Kampf über ~480 KIAS (beide verlieren dort Energie) | [T-18](/flugzeuge/t18) |
 
 ::: warning Daten sind kein Ersatz für Testen
-Die Werte stammen aus der Zeit vor Patch v1.1. Seitdem hat die T-15 Lift verloren und Schub gewonnen (v1.1). Mit v1.4.1 wurden Top-Speeds und das Treibstoffgewicht der T-16 geändert. Die Reihenfolge der Speedbänder ist plausibel, die exakten Grenzen nicht. Prüfe sie mit den Übungen unter [Trainingsplan](/grundlagen/uebungen).
+Die Werte stammen aus der Ingame-Analyse (Stand Okt 2026). Die Speedbänder sind daraus abgeleitet: Die Reihenfolge ist belastbar, die exakten Grenzen verschieben sich mit Höhe, Treibstoff und Flugweise. Prüfe sie mit den Übungen unter [Trainingsplan](/grundlagen/uebungen).
 :::
 
 ::: info IM SPIEL PRÜFEN
