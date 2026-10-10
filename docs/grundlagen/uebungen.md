@@ -1,212 +1,170 @@
 # Trainingsplan
 
-> Lesen allein macht dich nicht besser, Fliegen schon. Hier sind konkrete Übungen von der Academy bis zum Lobby-Duell, in sinnvoller Reihenfolge, mit Werten zum Eintragen.
+> Lesen allein macht dich nicht besser, Fliegen schon. Konkrete Übungen von der Academy bis zum Lobby-Duell, in sinnvoller Reihenfolge.
 
-Gute BFM-Piloten trainieren nicht nur „ein paar Runden Ranked“, sondern gezielt: **ein Fokus pro Session, gleiche Bedingungen, danach Debrief.** Dieser Plan führt dich in vier Stufen von „ich kenne meinen Jet“ bis „ich gewinne den Merge gegen Menschen“.
+Trainier gezielt statt „ein paar Runden Ranked“. Der Plan führt in vier Stufen von „ich kenne meinen Jet“ bis „ich gewinne den Merge gegen Menschen“.
 
-## Grundregeln fürs Training
+## Grundregeln
 
-- **Ein Fokus pro Session**: z. B. nur Lead Turns, nicht alles gleichzeitig.
-- **Gleiche Bedingungen**: Miss auf derselben Höhe (10.000 ft, damit du mit den [Ingame-Daten](/flugzeuge/vergleich) vergleichen kannst) und mit ähnlichem Treibstoff. 100 % statt 50 % Fuel kostet etwa 1 °/s Instant und 1–2 °/s Sustained.
-- **Aufschreiben**: Werte und Beobachtungen notieren, sonst bleibt nur ein Gefühl.
-- **Hard Deck**: Im Training ist 2.000 ft über Grund der Boden. Wer darunter kommt, hat die Übung verloren.
-- **Kurze Pulls**: VFM simuliert Greyout und Blackout. Wiederhole Max-G-Übungen lieber kurz und oft.
-
-::: info IM SPIEL PRÜFEN
-- Ob du in Free Flight Jet, Höhe und Treibstoffmenge frei wählen kannst.
-- In welchem Format das HUD Speed (KIAS?), Höhe und Kurs anzeigt. Für die Rate-Messungen brauchst du eine Kursanzeige oder einen markanten Punkt im Gelände.
-:::
+- **Ein Fokus pro Session**, z. B. nur Lead Turns.
+- **Gleiche Bedingungen:** 10.000 ft und voller Tank, wie die [Referenzmessungen](/flugzeuge/vergleich). Treibstoff verändert die Werte deutlich (voll → leer bis zu +4 °/s Sustained).
+- **Aufschreiben**, sonst bleibt nur ein Gefühl.
+- **Hard Deck** 2.000 ft über Grund: Wer darunter kommt, hat die Übung verloren ([Golden Rules](/grundlagen/golden-rules#hard-deck-2-000-ft)).
+- **Kurze Pulls:** VFM simuliert Greyout und Blackout. Max-G-Übungen lieber kurz und oft.
 
 ## Stufe A: Academy
 
-Fang mit den eingebauten Tutorials an, auch wenn du schon fliegen kannst:
+1. **BFM-Tutorials** der Academy komplett durchfliegen, auch wenn du schon fliegen kannst.
+2. **Gunsight-Tutorial**: Funnel und Boresight-Kreuz verstehen.
+3. Steuerung einrichten: [Steuerung & Einstellungen](/einstieg/cockpit).
 
-1. **BFM-Tutorials** der Academy komplett durchfliegen.
-2. **Gunsight-Tutorial** (seit v1.2.8): Funnel und Boresight-Kreuz verstehen.
-3. Steuerung sauber einrichten (Stick-Position, Modus, HOTAS): [Steuerung & Einstellungen](/einstieg/cockpit).
-
-**Ziel**: Du findest im HUD ohne Suchen die AoA-Zahl, den Beschleunigungs-Indikator und den Funnel ([HUD](/avionik/hud)).
+**Ziel:** Du findest im [HUD](/avionik/hud) ohne Suchen Speed, G, Drehrate, AoA, Beschleunigungs-Indikator und Funnel.
 
 ## Stufe B: Free Flight, lerne deinen Jet kennen
 
 ### B1 Lift-Vector-Drill
 
-Such dir einen Punkt im Gelände (Bergspitze, Insel). Roll so, dass dein **Lift Vector** (die Richtung über dein Kabinendach) genau auf den Punkt zeigt, dann zieh. Wechsle nach links und rechts, über und unter dem Horizont.
-**Ziel**: Rollen und Ziehen werden eine flüssige Bewegung, 10 saubere Wiederholungen pro Seite. Wer nicht weiß, wohin er zieht, lernt hier am meisten.
+Such dir einen Punkt im Gelände. Roll so, dass dein **Lift Vector** (die Richtung über dein Kabinendach) genau auf den Punkt zeigt, dann zieh. Wechsle links und rechts, über und unter dem Horizont.
+**Ziel:** Rollen und Ziehen werden eine Bewegung, 10 saubere Wiederholungen pro Seite.
 
-### B2 Corner Speed finden
+### B2 Eigenen Jet vermessen
 
-1. Fliege auf 10.000 ft geradeaus mit 300 KIAS.
-2. Roll in die Kurve und zieh **maximal** (bis G-Limit oder AoA-Limit, **ohne** Override) für eine 180°-Kurve. Stoppe die Zeit.
-3. Wiederhole das bei 350, 400, 450 und 500 KIAS.
-4. Turn Rate = 180° / Zeit. Achte auf HUD-G und AoA: Unter Corner Speed stößt du ans AoA-/Lift-Limit, ehe du 9 G erreichst. Darüber stößt du an die 9-G-Grenze.
+**Aufbau:** Free Flight, 10.000 ft, voller Tank, nur Guns. Nimm jeden Flug als Video auf und halte den Kopf so, dass **das HUD vollständig im Bild** ist. Danach liest du die Werte Sekunde für Sekunde aus dem Video ab. Jeden Flug zweimal fliegen.
 
-**Die Speed mit der kürzesten Zeit ist deine Corner Speed.** Erwartung laut Daten (Stand Dez 2025, 10.000 ft): T-15 ~360–385, T-16 ~409–434, T-18 ~385–409 KIAS.
+| Flug | So fliegst du ihn | Das liest du ab |
+|---|---|---|
+| **M1 Beschleunigung** | Geradeaus mit 300 KIAS, Höhe halten, Nachbrenner rein, bis 500 KIAS | Zeit von 300 auf 500 KIAS |
+| **M2 Ausrollen** | Von ~550 KIAS geradeaus, Gas auf Leerlauf, **ohne Speedbrake**, Höhe halten, bis ~350 KIAS | Speedverlust in kt/s bei ~450 KIAS |
+| **M3 Sustained-Kurve** | Kurve bei ~450 KIAS mit Nachbrenner, G so dosieren, dass Speed und Höhe konstant bleiben. Blick geradeaus durchs HUD, nicht in die Kurve | G und Drehrate |
+| **M4 Voller Zug** | Aus ~450 KIAS Knüppel voll ziehen und halten, ohne Override | Zeit bis zur Höchst-G, Höchst-G, α am Anschlag, Winkel und Speed nach 4 und 8 s |
+
+**Auswertung:** M1 zeigt, wie schnell du nach einem Turn wieder ins Band kommst; M2 zusammen mit M1 trennt Schub und Widerstand; M3 ist deine dauerhafte Rate im Ranked-Startbereich; M4 zeigt, was der erste Turn bringt und was er kostet. Referenzwerte: [Beschleunigung (gemessen)](/flugzeuge/vergleich#beschleunigung-gemessen), [Schub und Widerstand getrennt](/flugzeuge/vergleich#schub-und-widerstand-getrennt), [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht), [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen). Variante: M3 bei 400 und 520 KIAS wiederholen, dann siehst du, wo dein Jet Rate hält und wo nicht.
+
+| | M1: 300 → 500 KIAS (s) | M2: Verlust bei 450 (kt/s) | M3: G / °/s | M4: Höchst-G / α |
+|---|---|---|---|---|
+| Lauf 1 | | | | |
+| Lauf 2 | | | | |
+
+### B3 Corner Speed finden
+
+1. 10.000 ft, geradeaus mit 300 KIAS.
+2. Für 180° **maximal** ziehen (bis G- oder AoA-Limit, **ohne** Override). Drehrate im HUD ablesen oder die Zeit stoppen (Rate = 180° / Zeit).
+3. Wiederholen bei 350, 400, 450 und 500 KIAS.
+
+**Die Speed mit der höchsten Rate ist deine Corner Speed.** Darunter stößt du ans AoA-Limit, ehe du 9 G erreichst, darüber an die 9 G. Erwartung laut Diagramm (10.000 ft): T-15 ~360–385, T-16 ~409–421, T-18 ~385–409 KIAS. Für 9 G musst du wegen des G-Aufbaus deutlich über Corner Speed anfangen zu ziehen.
 
 | Einstieg | 300 | 350 | 400 | 450 | 500 KIAS |
 |---|---|---|---|---|---|
-| Zeit für 180° | | | | | |
 | Rate (°/s) | | | | | |
 | Speed nach 180° | | | | | |
 
-### B3 Beschleunigung: Unload vs. 1 G
+### B4 Unload vs. 1 G
 
 1. 10.000 ft, 250 KIAS, volle Leistung.
-2. **Variante a**: geradeaus mit 1 G bis 450 KIAS, Zeit stoppen.
-3. **Variante b**: **unloaded**, also ca. 0–0,5 G mit der Nase leicht unter dem Horizont, bis 450 KIAS. Zeit stoppen und Höhenverlust notieren.
-4. Beobachte dabei den **Beschleunigungs-Indikator** im HUD.
+2. **a:** geradeaus mit 1 G bis 450 KIAS, Zeit stoppen.
+3. **b:** **unloaded** (ca. 0–0,5 G, Nase leicht unter dem Horizont) bis 450 KIAS, Zeit und Höhenverlust notieren.
 
-**Lektion**: Ohne Lift sinkt der induzierte Widerstand, und du beschleunigst deutlich schneller. Das ist dein wichtigstes Werkzeug, um nach einem harten Turn wieder ins Speedband zu kommen. Vergleiche die Jets: Die Schub-Balken lassen T-15 > T-18 > T-16 erwarten.
-
-### B4 Best Sustained Turn
-
-1. 10.000 ft, volle Leistung, Kurve bei ~470 KIAS (T-15: ~495).
-2. Dosier das G so, dass die Speed **konstant** bleibt. Das ist deine Sustained Turn.
-3. Stopp die Zeit für 360°. Wiederhole das bei 400 und 550 KIAS.
-
-**Lektion**: Du spürst, wo dein Jet Rate halten kann und wo er sie verliert. Die T-16 sollte im Band 420–500 KIAS 1–2 °/s vorn sein, die T-15 über ~500 KIAS, und die T-18 bricht über ~480 KIAS ein.
+**Lektion:** Ohne Lift sinkt der induzierte Widerstand, du beschleunigst deutlich schneller. Das ist dein Werkzeug, um nach einem harten Turn zurück ins Band zu kommen ([Unload richtig gemacht](/grundlagen/energie-management#unload-richtig-gemacht)).
 
 ### B5 Vertikal-Tests
 
-Looping-Einstiegsspeed, Speed oben am Scheitel und Zoom-Höhe von 450 auf 200 KIAS, für jeden Jet. Tabelle und Ablauf: [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf).
+Für jeden Jet unter gleichen Bedingungen ([Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)):
+
+1. **Looping:** Mit welcher Einstiegsspeed kommst du mit max G kontrolliert über den Scheitel, und wie schnell bist du oben? Einmal mit, einmal ohne Override.
+2. **Zoom:** Von 450 KIAS mit ~60° Steigwinkel hoch, bis 200 KIAS. Höhengewinn notieren.
+
+| | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| Min. Einstiegsspeed Looping (max G) | | | |
+| Speed oben am Scheitel | | | |
+| Höhengewinn Zoom 450 → 200 KIAS | | | |
 
 ### B6 Die T-18-Hypothese testen
 
-Der Entwickler beschreibt die T-18 als High-AoA-/Low-Speed-Jet. Ihre vermutete Stärke liegt **unter** den Ingame-Diagrammen (unter ~170–200 KIAS), wo es keine Daten gibt. Teste das:
-
-1. T-18, 10.000 ft, 50 % Fuel (falls einstellbar), geradeaus mit **200 KIAS**.
-2. Zieh maximal für 180°: einmal **mit** AoA-Limiter, einmal **mit Override**. Notiere die Zeit und die Speed danach.
-3. **Reversal-Test**: Bei 150–200 KIAS schnell von einer Kurve in die Gegenkurve rollen. Wie schnell kommt der Jet herum, und bleibt er kontrollierbar?
-4. Dasselbe mit der **T-15** (und der T-16) unter identischen Bedingungen.
-
-| Bei 200 KIAS | T-15 | T-16 | T-18 |
-|---|---|---|---|
-| 180° mit Limiter (s) | | | |
-| 180° mit Override (s) | | | |
-| Speed danach | | | |
-| Reversal-Gefühl | | | |
-
-Dreht die T-18 hier klar schneller oder enger, ist die Hypothese gestützt, und das ist ihr Terrain in [Scissors](/grundlagen/neutral/scissors) und im langsamen One-Circle. Teil deine Ergebnisse mit der Community.
+Ihre vermutete Stärke liegt unter dem gemessenen Bereich (unter ~280 KIAS, hoher AoA, Override). Flieg bei ~200 KIAS mit T-18, T-15 und T-16 je eine 180°-Kurve mit Limiter und eine mit Override, dazu schnelle Reversals. Ablauf und Tabelle: [T-18, Hypothese testen](/flugzeuge/t18#hypothese-testen). Dreht die T-18 dort klar schneller, ist das ihr Terrain in [Scissors](/grundlagen/neutral/scissors) und im langsamen One-Circle.
 
 ## Stufe C: Gegen Bots
 
-Bots gibt es offline und in Lobbys („Fill with bots“). Sie haben **keine Schwierigkeitsstufe** (Bot-Rating 1000). Sie sind gute, konstante Sparringspartner, aber keine Menschen. Lern keine Tricks, die nur gegen Bots funktionieren.
-
-**Setups**: Startdistanz **nah** für schnelle neutrale Merges, **BVR**, wenn du Speed und Versatz vor dem Merge selbst einstellen willst.
-
-::: info IM SPIEL PRÜFEN
-- Ob Lobby oder Offline-Modus offensive oder defensive Startpositionen gegen Bots anbieten. Falls nicht, beginnen alle Bot-Drills neutral.
-- Ob Bots in Free Flight verfügbar sind.
-:::
+Bots gibt es offline und in Lobbys („Fill with bots“), ohne Schwierigkeitsstufe (Bot-Rating 1000). Sie sind konstante Sparringspartner, aber keine Menschen: Lern keine Tricks, die nur gegen Bots funktionieren. Startdistanz **nah** für schnelle Merges, **BVR**, wenn du Speed und Versatz selbst einstellen willst.
 
 | Drill | Aufgabe | Erfolgskriterium |
 |---|---|---|
-| **C1 Merge-Speed** | 10 Merges, jedes Mal im eigenen [Merge-Band](/grundlagen/neutral/der-merge) ankommen | im Replay 8 von 10 im Band |
-| **C2 Lead Turn** | 10 Merges, nur der erste Turn zählt | nach 90° bist du öfter vorn als er |
-| **C3 Flow** | Fliege den Flow aus der [Flow-Tabelle](/grundlagen/neutral/one-two-circle) gegen jeden Bot-Jet, je 5 Kämpfe | du erkennst nach dem Pass sofort, ob One- oder Two-Circle entsteht |
-| **C4 Guns** | Guns-only, Infinite Ammo: nur Tracking Shots aus dem Rear Quarter | Treffer ohne Overshoot ([Schusslösung](/grundlagen/offensiv/schussloesung)) |
+| **C1 Merge-Speed** | 10 Merges, jedes Mal im eigenen [Merge-Band](/grundlagen/neutral/der-merge) | im Replay 8 von 10 im Band |
+| **C2 Erster Turn** | 10 Merges aus ~450 KIAS, nur der erste Turn zählt, geflogen wie für deinen Jet empfohlen | nach 90° bist du öfter vorn als er, ohne unnötig Speed zu verlieren |
+| **C3 Flow** | den Flow aus der [Flow-Tabelle](/grundlagen/neutral/one-two-circle#flow-wahl-in-vfm) gegen jeden Bot-Jet, je 5 Kämpfe | du erkennst nach dem Pass sofort, ob One- oder Two-Circle entsteht |
+| **C4 Guns** | Guns-only, Infinite Ammo, Tracking Shots aus dem Rear Quarter | Treffer ohne Overshoot ([Schusslösung](/grundlagen/offensiv/schussloesung)) |
 | **C5 Raketenabwehr** | Raketen an: Break, Flares, Gas auf Idle | jede Rakete überlebt ([Break Turn](/grundlagen/defensiv/break-turn)) |
-| **C6 Schlechtes Matchup** | Fliege bewusst dein schwierigstes Matchup | du hältst dein Speedband trotz Druck |
+| **C6 Schlechtes Matchup** | bewusst dein schwierigstes Matchup | du hältst dein Speedband trotz Druck |
+
+::: info IM SPIEL PRÜFEN
+- Ob Lobby oder Offline-Modus offensive oder defensive Startpositionen gegen Bots anbieten (sonst beginnen alle Bot-Drills neutral).
+- Ob Bots in Free Flight verfügbar sind.
+:::
 
 ## Stufe D: Lobby mit Partner
 
-Mit einem Partner kannst du die klassischen BFM-Setups fliegen, mit denen echte Piloten trainieren. Custom-Lobby, Push-to-Talk-Voice-Chat, abwechselnd die Rollen tauschen.
-
-**Lobby**: Guns-only (Raketen aus), Infinite Ammo, Startdistanz BVR (gibt Zeit zum Aufstellen). Die Position fliegt ihr nach dem Start selbst an.
-**Funk**: „Fight's on“ startet, „Knock it off“ bricht ab (Hard Deck verletzt, Tally verloren, Setup falsch).
+Custom-Lobby, Push-to-Talk, Rollen abwechselnd tauschen. **Lobby:** Guns-only, Infinite Ammo, Startdistanz BVR; die Position fliegt ihr nach dem Start selbst an. **Funk:** „Fight's on“ startet, „Knock it off“ bricht ab.
 
 ### D1 Offensive / Defensive Perch
 
-- **Aufstellung**: Der Verteidiger fliegt geradeaus, gleichmäßig, mit vereinbarter Speed (z. B. ~400 KIAS). Der Angreifer sitzt **3.000–6.000 ft** hinter ihm, etwa 30–45° seitlich versetzt, leicht überhöht.
-- **Fight's on**: Der Verteidiger macht einen Break Turn in den Angreifer.
-- **Angreifer-Ziel**: Turn Circle Entry in Lag, Control Zone halten, kein Overshoot, Guns ([Offensiv-Manöver](/grundlagen/offensiv-manoever)).
-- **Verteidiger-Ziel**: Schusslösung verweigern, Overshoot erzwingen, neutralisieren oder sauber separieren ([Defensiv-Manöver](/grundlagen/defensiv-manoever)).
-- **Steigerung**: Erst 6.000 ft (mehr Zeit), dann 3.000 ft (mehr Overshoot-Gefahr).
+- **Aufstellung:** Der Verteidiger fliegt geradeaus mit vereinbarter Speed (z. B. ~400 KIAS). Der Angreifer sitzt **3.000–6.000 ft** dahinter, 30–45° seitlich, leicht überhöht.
+- **Fight's on:** Der Verteidiger breakt in den Angreifer.
+- **Angreifer:** Turn Circle Entry in Lag, Control Zone halten, kein Overshoot, Guns ([Offensiv-Manöver](/grundlagen/offensiv-manoever)).
+- **Verteidiger:** Schusslösung verweigern, Overshoot erzwingen, neutralisieren oder separieren ([Defensiv-Manöver](/grundlagen/defensiv-manoever)).
+- **Steigerung:** erst 6.000 ft, dann 3.000 ft. Entfernung ablesen: [Radar](/avionik/radar), [HUD](/avionik/hud).
 
-Die Abstände sind Richtwerte aus dem realen BFM-Training. Wo du die Entfernung zum Gegner ablesen kannst (Radar-Lock, HUD), findest du unter [Radar](/avionik/radar) und [HUD](/avionik/hud).
+### D2 Butterfly (neutral)
 
-### D2 Butterfly (High Aspect / Neutral)
-
-- **Aufstellung**: Nebeneinander (line abreast), gleiche Höhe und Speed, etwa 1–1,5 NM Abstand.
-- **Call „Turn away“**: Beide drehen 45° auseinander und fliegen ein Stück geradeaus.
-- **Call „Turn in“**: Beide drehen zueinander, es folgt ein Merge mit Versatz.
-- **Fokus**: Merge-Speed, Lead-Turn-Timing, Flow-Wahl, den Turn des Gegners lesen ([Der Merge](/grundlagen/neutral/der-merge)).
+- **Aufstellung:** nebeneinander, gleiche Höhe und Speed, 1–1,5 NM Abstand.
+- **„Turn away“:** beide drehen 45° auseinander und fliegen ein Stück geradeaus. **„Turn in“:** beide drehen zueinander, es folgt ein Merge mit Versatz.
+- **Fokus:** Merge-Speed, Lead-Turn-Timing, Flow-Wahl, den Turn des Gegners lesen ([Der Merge](/grundlagen/neutral/der-merge)).
 
 ### D3 Matchup-Abend
 
-Fliegt alle Paarungen eurer Jets aus beiden Cockpits, je 3 Kämpfe, dann wechseln. Davor die passende Matchup-Seite lesen: [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18).
+Alle Paarungen aus beiden Cockpits, je 3 Kämpfe. Vorher die Matchup-Seite lesen: [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18).
 
 ## Replay und Debrief
 
-VFM hat einen 3D-Replay-/Debrief-Raum mit **Specific-Energy-Graph** und einer S-Cam mit HUD-Modus. Nutze ihn nach jeder Session, mindestens für die Kämpfe, die du verloren hast.
+VFM hat einen 3D-Replay-Raum mit **Specific-Energy-Graph** und einer S-Cam mit HUD-Modus. Nutze ihn nach jeder Session, mindestens für verlorene Kämpfe:
 
-**Worauf du achtest:**
+1. **Merge:** Speed beim Pass, seitlicher Versatz, wer zuerst gedreht hat, welcher Flow entstand.
+2. **Energie-Graph:** Wo fällt deine Energie steil ab? Meist ein Max-G-Pull weit über Corner Speed oder eine lange Kurve außerhalb deines Bands. Wer hatte bei jedem Pass mehr Energie?
+3. **Erster Nachteil:** Zurückspulen zum Moment, in dem du zum ersten Mal schlechter standest. Welche Entscheidung kam davor?
+4. **Lift Vector:** Hast du dorthin gezogen, wo du hinwolltest?
+5. **Schüsse** (S-Cam, HUD-Modus): War er im Funnel? Zu früh oder zu spät?
 
-1. **Merge**: Welche Speed hattest du beim Pass? Wie groß war der seitliche Versatz? Wer hat zuerst gedreht, und welcher Flow ist entstanden?
-2. **Energie-Graph**: Wo fällt deine Energie steil ab? Meist ist das ein Max-G-Pull weit über Corner Speed oder eine lange Kurve außerhalb deines Bands. Vergleiche das mit der Kurve des Gegners: Wer hatte bei jedem Pass mehr Energie?
-3. **Der erste Nachteil**: Spul zu dem Moment zurück, in dem du zum ersten Mal schlechter standest. Welche Entscheidung kam direkt davor?
-4. **Lift Vector**: Hast du dorthin gezogen, wo du hinwolltest, oder nur „irgendwie hart“?
-5. **Schüsse** (S-Cam im HUD-Modus): War der Gegner im Funnel? Zu früh oder zu spät geschossen?
-6. **Hard Deck**: Wie tief bist du gekommen?
-
-**Debrief in drei Sätzen**: Was ist passiert? Warum? Was mache ich beim nächsten Mal anders? Schreib den dritten Satz auf und mach ihn zum Fokus der nächsten Session.
+**Debrief in drei Sätzen:** Was ist passiert? Warum? Was mache ich nächstes Mal anders? Der dritte Satz ist der Fokus der nächsten Session.
 
 ## Wochenplan (Beispiel)
 
-Pass den Plan an deine Zeit an. Wichtiger als die Länge ist die Regelmäßigkeit.
-
 | Tag | Session (30–45 min) | Fokus |
 |---|---|---|
-| 1 | Free Flight | B1 Lift Vector + B2/B3 (eine Messreihe) |
-| 2 | Bots | C1/C2 Merge-Speed und Lead Turn, danach Replay |
-| 3 | Pause oder Lesen | eine Grundlagen-Seite, passend zum Fehler aus dem Debrief |
+| 1 | Free Flight | B1 Lift Vector + B2 oder B3 |
+| 2 | Bots | C1/C2 Merge-Speed und erster Turn, danach Replay |
+| 3 | Pause oder Lesen | eine Grundlagen-Seite zum Fehler aus dem Debrief |
 | 4 | Lobby mit Partner | D1 Perch (beide Rollen) |
 | 5 | Bots oder Lobby | C3 Flow / D3 Matchup |
-| 6 | Ranked oder freie Lobby | anwenden, danach 2 verlorene Kämpfe im Replay analysieren |
+| 6 | Ranked oder freie Lobby | anwenden, danach 2 verlorene Kämpfe im Replay |
 | 7 | Pause | |
 
-Nach etwa vier Wochen: B2–B4 noch einmal messen, vor allem nach einem Balance-Patch.
+Regelmäßigkeit schlägt Länge. Nach einem Balance-Patch B2 und B3 neu fliegen.
 
-## Selbstcheck pro Lernstufe
+## Selbstcheck
 
-Geh die Liste ehrlich durch. Wo du „noch nicht“ sagst, lies die Seite und mach die passende Übung.
+Wo du „noch nicht“ sagst, lies die Seite und mach die Übung.
 
-**Stufe 0: Grundlagen**
-- Ich kenne die [Golden Rules](/grundlagen/golden-rules) und halte Tally durch den Merge.
-- Ich benutze die Begriffe und Brevity-Calls aus dem [Glossar](/grundlagen/begriffe) richtig.
-
-**Stufe 1: Flugphysik**
-- Ich kenne die Corner Speed und die Best-Sustained-Speed meines Jets, und zwar **gemessen** (B2, B4). → [Kurvenphysik](/grundlagen/kurvenphysik)
-- Ich unloade bewusst, um zu beschleunigen (B3), und kann ein E-M-Diagramm lesen. → [Energie-Management](/grundlagen/energie-management)
-- Ich weiß, was das VFM-Flugmodell simuliert. → [Flugmodell](/grundlagen/physik)
-
-**Stufe 2: Geometrie**
-- Ich schätze Aspect Angle, 3/9-Linie und Closure im Kampf ein. → [Relative Geometrie](/grundlagen/geometrie)
-- Ich wähle Lead, Pure oder Lag bewusst. → [Verfolgungskurven](/grundlagen/verfolgungskurven)
-
-**Stufe 3: Offensiv**
-- Ich komme aus einem Perch in die Control Zone, ohne zu überschießen. → [Offensiv-Manöver](/grundlagen/offensiv-manoever), [Yo-Yos](/grundlagen/offensiv/yo-yos), [Lag Roll](/grundlagen/offensiv/lag-roll)
-- Ich erkenne Flight-Path- und 3/9-Overshoot. → [Overshoot](/grundlagen/offensiv/overshoot)
-- Ich unterscheide Snapshot und Tracking Shot. → [Schusslösung](/grundlagen/offensiv/schussloesung)
-
-**Stufe 4: Defensiv**
-- Ich breake auf Call sofort richtig. → [Break Turn](/grundlagen/defensiv/break-turn)
-- Ich jinke gegen Guns, ohne langsam zu werden. → [Guns Defense](/grundlagen/defensiv/guns-defense)
-- Ich kenne Slice, Spirale und den richtigen Moment für Separation. → [Slice Turn](/grundlagen/defensiv/slice-turn), [Spirale](/grundlagen/defensiv/spirale), [Separation](/grundlagen/defensiv/separation)
-
-**Stufe 5: Neutral**
-- Ich komme im Merge-Band an und time den Lead Turn über die Sichtlinienrate. → [Der Merge](/grundlagen/neutral/der-merge)
-- Ich wähle den Flow passend zum Matchup und erkenne sofort, welcher entstanden ist. → [One-/Two-Circle](/grundlagen/neutral/one-two-circle)
-- Ich erkenne Scissors früh und weiß, ob mein Jet sie gewinnt. → [Scissors](/grundlagen/neutral/scissors)
-- Ich setze Vertikale und schräge Kurven gezielt zur Speed-Regelung ein. → [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)
-
-**Stufe 6: Training**
-- Ich trainiere mit Fokus und mache nach jeder Session ein Debrief im Replay.
+- **Flugphysik:** Ich kenne Corner Speed, Sustained Rate und Beschleunigung meines Jets aus eigener Messung (B2, B3) und unloade bewusst (B4). → [Energie-Management](/grundlagen/energie-management)
+- **Geometrie:** Ich schätze Aspect Angle und Closure ein und wähle Lead, Pure oder Lag bewusst. → [Verfolgungskurven](/grundlagen/verfolgungskurven)
+- **Offensiv:** Ich komme aus dem Perch in die Control Zone, ohne zu überschießen. → [Offensiv-Manöver](/grundlagen/offensiv-manoever)
+- **Defensiv:** Ich breake auf Call sofort richtig und weiß, wann Separation geht. → [Defensiv-Manöver](/grundlagen/defensiv-manoever)
+- **Neutral:** Ich komme im Merge-Band an, time den Lead Turn und wähle den Flow passend zum Matchup. → [Der Merge](/grundlagen/neutral/der-merge)
 
 ::: tip MERKE
-- Erst den eigenen Jet vermessen (Corner, Sustained, Beschleunigung), dann kämpfen.
+- Erst den eigenen Jet vermessen (B2, B3), dann kämpfen.
 - Ein Fokus pro Session, gleiche Bedingungen, Werte aufschreiben.
 - Bots für Wiederholung, Partner für klassische Setups, Ranked zum Anwenden.
 - Jede Session endet im Replay: Energie-Graph lesen, ersten Nachteil finden, einen Satz für das nächste Mal.
-- Nach Balance-Patches neu messen und die Daten nicht blind glauben.
+- Nach Balance-Patches neu messen.
 :::
+
+Weiter: [Flugzeugvergleich](/flugzeuge/vergleich)

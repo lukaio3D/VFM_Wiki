@@ -1,22 +1,30 @@
 # Head-Up Display (HUD)
 
-> Die HUD-Elemente, die dir im Dogfight wirklich helfen: Gun-Funnel, Boresight-Kreuz, AoA-Zahl und Beschleunigungs-Indikator.
+> Was dir das HUD im Dogfight sagt: Gun-Funnel, Drehrate, Speed, α und ob du gerade Energie gewinnst.
 
-Das HUD ist in allen drei Jets identisch. Diese Seite trennt **gesicherte Elemente** (aus den Patchnotes) von solchen, die bisher nur beobachtet oder vermutet wurden.
+Das HUD ist in allen drei Jets identisch.
 
-## Gesichert (Patchnotes)
+## Die Anzeigen im Überblick
 
-| Element | Seit | Wofür |
-|---|---|---|
-| **Gun-Funnel** (EEGS-artig) | Release | Zielhilfe für die Kanone mit Vorhalt |
-| **Funnel ohne Lock: Durchschnitts-Spannweite** | v1.2.8 | Funnel funktioniert auch ohne Radar-Lock |
-| **Gun-Boresight-Kreuz** | v1.3.1 | Zeigt, wohin die Kanone ohne Vorhalt zeigt |
-| **AoA-Zahl** | v1.2.0 | Aktueller Anstellwinkel als Zahl |
-| **Beschleunigungs-Indikator (Kreis)** | v1.2.7 | Zeigt, ob du gerade Speed gewinnst oder verlierst |
+| Position | Anzeige |
+|---|---|
+| **Oben links** | **G** (Lastvielfaches) und **Drehrate** in °/s |
+| **Darunter** | **Speed in KIAS**, **Mach** und **α** (Anstellwinkel, seit v1.2.0) |
+| **Rechts** | **Höhe** |
+| **Unten rechts** | **„BRAKE“**, solange die Speedbrake ausgefahren ist |
+| **Mitte** | **Gun-Funnel** (seit Release), **Gun-Boresight-Kreuz** (v1.3.1), **Beschleunigungs-Indikator** (v1.2.7) |
+
+Beobachtet, aber nicht bestätigt: Kursband oben, Steig-/Sinkanzeige rechts, gewählte Waffe und Munition links, Velocity Vector, Box um ein gelocktes Ziel.
+
+## Drehrate und G: dein Messgerät im Turn
+
+Die Drehrate in °/s zeigt dir direkt, was die Leistungsdiagramme versprechen. Zusammen mit dem Beschleunigungs-Indikator findest du so deinen besten Sustained Turn: Indikator neutral, Drehrate ablesen. Bei ~450 KIAS auf 10.000 ft sind das gemessen 15,4 °/s (T-15), 17,6 °/s (T-16) und 15,6 °/s (T-18). Alle Werte: [Flugzeugvergleich](/flugzeuge/vergleich).
+
+Die G-Zahl zeigt, wie nah du am 9-G-Limit bist. Bei niedriger Speed sagt sie wenig über deinen Zug; dann schau auf α.
 
 ## Gun-Funnel
 
-Der Funnel (Trichter) ist eine Vorhaltehilfe nach dem Prinzip des **EEGS** (Enhanced Envelope Gun Sight): Zwei Linien zeigen, wo deine Geschosse in den nächsten Momenten fliegen werden, wenn du deine aktuelle Kurve beibehältst. Der Abstand zwischen den Linien entspricht an jeder Stelle der **Spannweite eines Ziels** in der dazugehörigen Entfernung.
+Der Funnel (Trichter) ist eine Vorhaltehilfe nach dem Prinzip des **EEGS** (Enhanced Envelope Gun Sight): Zwei Linien zeigen, wo deine Geschosse fliegen, wenn du deine Kurve beibehältst. Ihr Abstand entspricht an jeder Stelle der **Spannweite eines Ziels** in der zugehörigen Entfernung.
 
 <svg viewBox="0 0 320 220" width="100%" style="max-width:520px" role="img" aria-label="Gun-Funnel: zwei Linien, unten weit, oben eng. Ein Ziel, dessen Flügelspitzen beide Linien berühren, ist in der passenden Entfernung.">
 <path d="M70 210 Q120 120 145 20" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2"/>
@@ -30,98 +38,48 @@ Der Funnel (Trichter) ist eine Vorhaltehilfe nach dem Prinzip des **EEGS** (Enha
 <line x1="35" y1="190" x2="35" y2="40" stroke="var(--vp-c-text-2)" stroke-width="1"/>
 </svg>
 
-So benutzt du ihn:
+1. **Ebene zuerst.** Roll deinen Lift Vector in seine Bewegungsebene, dann läuft der Funnel entlang seiner Flugbahn.
+2. **Ziel in den Funnel**, dort, wo seine Flügelspitzen beide Linien berühren.
+3. **Feuern, solange das passt.** Tracking Shot: Du hältst ihn im Funnel. Snapshot: Er läuft durch, du feuerst kurz vorher.
 
-1. **Ebene zuerst.** Roll deinen Lift Vector in seine Bewegungsebene. Dann läuft der Funnel entlang seiner Flugbahn und er bleibt länger darin.
-2. **Ziel in den Funnel bringen**, dort, wo seine Flügelspitzen beide Linien berühren.
-3. **Feuern, solange das passt.** Bei einem **Tracking Shot** hältst du ihn im Funnel; bei einem **Snapshot** läuft er durch den Funnel und du feuerst kurz vorher, sodass die Geschosse ihn kreuzen.
-
-**Ohne Lock** rechnet der Funnel mit einer **durchschnittlichen Spannweite** (v1.2.8). Er stimmt dann nur ungefähr. **Mit Radar-Lock** kennt das System die echte Entfernung und liefert eine bessere Lösung (siehe [Radar](/avionik/radar)).
-
-Ausführlich zu Schusstypen und Waffenreichweite: [Schusslösung](/grundlagen/offensiv/schussloesung).
-
-::: info IM SPIEL PRÜFEN
-- Haben die drei Jets unterschiedliche Spannweiten? Falls ja, passt der Funnel ohne Lock bei manchen Gegnern systematisch zu weit oder zu eng.
-- Wie sieht die Lock-Anzeige im HUD aus (Zielmarkierung, Entfernung)?
-:::
+**Ohne Lock** rechnet der Funnel mit einer **durchschnittlichen Spannweite** (v1.2.8) und stimmt nur ungefähr. **Mit Radar-Lock** kennt er die echte Entfernung (siehe [Radar](/avionik/radar)). Schusstypen und Reichweite: [Schusslösung](/grundlagen/offensiv/schussloesung).
 
 ## Gun-Boresight-Kreuz
 
-Das Boresight-Kreuz (seit v1.3.1) zeigt die Richtung, in die die Kanone **ohne Vorhalt** zeigt – also die Waffenachse. Nützlich:
+Das Kreuz zeigt die Kanonenachse **ohne Vorhalt**:
 
-- **Head-on-Schuss** (falls in der Lobby erlaubt): Bei hoher Closure und kleinem Winkel ist der Vorhalt klein; das Kreuz zeigt dir, wo die Geschosse hingehen.
-- **Referenz für die Nase:** Wo zeigt deine Nase gerade, relativ zum Gegner? Hilfreich, um Lead, Pure und Lag zu erkennen (siehe [Verfolgungskurven](/grundlagen/verfolgungskurven)).
+- **Head-on-Schuss** (falls erlaubt): Bei kleinem Winkel ist der Vorhalt klein, das Kreuz zeigt, wohin die Geschosse gehen.
+- **Referenz für die Nase:** Wo zeigt sie relativ zum Gegner? So erkennst du Lead, Pure und Lag (siehe [Verfolgungskurven](/grundlagen/verfolgungskurven)).
 
-## AoA-Zahl
+## α (AoA)
 
-Die AoA-Zahl (seit v1.2.0) zeigt deinen aktuellen Anstellwinkel. Damit erkennst du:
-
-- **Wann der AoA-Limiter greift.** Merke dir, bei welchem Wert dein Jet normalerweise begrenzt. Alles darüber geht nur mit dem Override ("Cobra-Button").
-- **Wie hart du gerade ziehst**, wenn du langsam bist und die G-Anzeige wenig aussagt.
-
-::: info IM SPIEL PRÜFEN
-- Bei welchem AoA greift der Limiter in jedem Jet?
-- Welche AoA-Werte erreichst du mit Override, und ab wann wird der Jet unkontrollierbar?
-:::
+Die α-Zahl zeigt, wie hart du gerade ziehst, gerade wenn du langsam bist und die G wenig aussagen. Voll gezogen stoppt der Limiter gemessen bei ~24–25° (T-15) und ~23° (T-16). Die T-18 geht bis 35°, hat ihre meisten G aber bei ~26°: Halte dort zum Kurven und nimm 35° nur für den Snapshot. Mehr nur mit Override (siehe [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override)).
 
 ## Beschleunigungs-Indikator
 
-Der Kreis (seit v1.2.7) zeigt, ob du **gerade beschleunigst oder verzögerst**. Das ist im Kern das Vorzeichen von **Ps** (spezifische Überschussleistung): Ps > 0 = du gewinnst Energie, Ps < 0 = du verlierst Energie. Mehr dazu: [Energie-Management](/grundlagen/energie-management).
+Der Kreis zeigt, ob du **gerade beschleunigst oder verzögerst**, also das Vorzeichen von **Ps** (siehe [Energie-Management](/grundlagen/energie-management)). Die Speed-Zahl sagt dir, wo du **bist**; der Indikator sagt dir, wohin du **gehst**.
 
-Warum das wertvoll ist: Die Speed-Zahl sagt dir, wo du **bist**. Der Indikator sagt dir, wohin du **gehst** – früher, als du es an der Zahl merkst.
-
-So nutzt du ihn (Tipps):
-
-- **Sustained Turn finden:** Zieh im Turn so, dass der Indikator neutral steht (weder Gewinn noch Verlust). Dann fliegst du auf der Sustained-Linie, Ps = 0. Ziehst du mehr, verlierst du Speed; weniger, und du gewinnst.
-- **Unload kontrollieren:** Beim Unload (Lift nahe null, volle Leistung) sollte der Indikator klar Beschleunigung zeigen. Wenn nicht: Du ziehst noch zu viel.
-- **Bleed bewusst einsetzen:** Willst du Speed abbauen (z.B. auf Corner Speed), zeigt er dir, wie schnell das geht.
-- **Im Kampf ein kurzer Blick:** "Verliere ich gerade Energie, ohne Winkel zu gewinnen?" Wenn ja, ändere etwas.
-
-::: info IM SPIEL PRÜFEN
-- Wie genau wird die Beschleunigung dargestellt (Position relativ zu einem anderen Symbol, Größe, Farbe)?
-- Wo ist der neutrale Punkt?
-:::
-
-## Weitere Elemente (laut Beobachtung, Stand Dez 2025)
-
-Eine frühere Version dieses Wikis beschreibt folgende Elemente. Sie sind plausibel, aber nicht durch Patchnotes bestätigt:
-
-| Element | Laut Beobachtung |
-|---|---|
-| **Geschwindigkeit** | Links, vermutlich KIAS |
-| **Mach** | Links, unter der Geschwindigkeit |
-| **G** | Links, aktuelle Lastvielfache |
-| **Waffe / Munition** | Links, gewählte Waffe und Anzahl |
-| **Höhe** | Rechts, in Fuß |
-| **Steig-/Sinkanzeige** | Rechts |
-| **Kurs** | Band oben |
-| **Velocity Vector** | Zeigt, wohin der Jet tatsächlich fliegt (nicht wohin die Nase zeigt) |
-| **Zielmarkierung bei Lock** | Box um den Gegner |
-
-::: info IM SPIEL PRÜFEN
-- Gibt es einen Velocity Vector (Flight Path Marker)? Wenn ja: Im Turn liegt er unterhalb der Nase, der Abstand entspricht ungefähr dem AoA.
-- Format der Geschwindigkeit: KIAS, TAS oder Mach?
-- Wird die Höhe barometrisch (über Meer) oder über Grund angezeigt?
-- Gibt es eine Treibstoffanzeige im HUD?
-:::
+- **Sustained Turn:** Zieh so, dass er neutral steht. Mehr Zug kostet Speed, weniger bringt Speed.
+- **Unload:** Er muss klar Beschleunigung zeigen. Wenn nicht, ziehst du noch.
+- **Bleed:** Er zeigt, wie schnell du Speed abbaust, etwa auf Corner Speed.
+- **Im Kampf:** „Verliere ich Energie, ohne Winkel zu gewinnen?“ Wenn ja, ändere etwas.
 
 ## Greyout und Blackout
 
-Greyout (Sichtfeld wird grau und eng) und Blackout (Sicht weg) sind simuliert. Bei welcher G-Last und nach welcher Dauer sie einsetzen, ist nicht dokumentiert.
-
-**Was das heißt:** Ein zu langer, harter Pull kann dir den Gegner aus dem Blick nehmen – und damit den Kampf. Ziehe so hart, wie es die Situation braucht, nicht reflexhaft immer bis 9 G.
+Beides ist simuliert. Ein zu langer, harter Zug kann dir den Gegner aus dem Blick nehmen. Zieh so hart, wie die Situation es braucht, nicht reflexhaft bis 9 G (siehe [Golden Rules](/grundlagen/golden-rules#g-awareness-greyout-und-blackout)).
 
 ::: info IM SPIEL PRÜFEN
-- Ab welcher G-Last und Dauer setzt Greyout ein, wie schnell erholt sich die Sicht?
-- Gibt es Redout bei negativer G-Last?
+- Wie sieht die Lock-Anzeige aus, und haben die Jets unterschiedliche Spannweiten (dann liegt der Funnel ohne Lock systematisch daneben)?
+- Welche α-Werte erreichst du mit Override?
+- Ab welcher G-Last und nach welcher Dauer setzt Greyout ein?
 :::
 
 ::: tip MERKE
-- Funnel: Ebene des Gegners treffen, Flügelspitzen an die Linien, dann feuern.
-- Ohne Lock nutzt der Funnel eine Durchschnitts-Spannweite – mit Lock ist er genauer.
-- Boresight-Kreuz = Kanonenachse ohne Vorhalt; AoA-Zahl zeigt, wann der Limiter greift.
-- Der Beschleunigungs-Indikator zeigt das Vorzeichen von Ps: neutral = Sustained Turn, beim Unload deutlich positiv.
-- Greyout/Blackout existieren – unnötig langes Ziehen kostet Sicht und Tally.
+- Oben links G und Drehrate, darunter KIAS, Mach und α, rechts die Höhe, unten rechts „BRAKE“.
+- Funnel: Ebene des Gegners treffen, Flügelspitzen an die Linien, dann feuern. Mit Lock genauer.
+- Indikator neutral + Drehrate ablesen = dein Sustained Turn.
+- α zeigt den Zug bei niedriger Speed; die T-18 kurvt bei ~26°, 35° nur für den Snapshot.
+- Unnötig langes Ziehen kostet Sicht und Tally.
 :::
 
 Weiter: [RWR & MWS](/avionik/rwr)

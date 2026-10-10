@@ -2,12 +2,7 @@
 
 > Zwei Jets weben langsam umeinander, und wer weniger vorwärts kommt, landet hinten. Erkenne Scissors früh und entscheide bewusst, ob dein Jet sie gewinnt.
 
-**Scissors** (Schere) sind eine **neutrale** Situation: Beide Jets sind nah beieinander, keiner hat eine Schusslösung, und beide versuchen, hinter den anderen zu kommen. Sie entstehen typischerweise, wenn
-
-- ein Angreifer mit zu viel Closure oder zu hohem Aspect Angle **überschießt** ([Overshoot](/grundlagen/offensiv/overshoot)) und der Verteidiger sofort umkehrt,
-- ein [One-Circle](/grundlagen/neutral/one-two-circle) immer langsamer wird und keiner den Radius-Kampf klar gewinnt.
-
-Das Grundprinzip beider Formen: Ihr fliegt grob in dieselbe Richtung. Wer seine **Vorwärtsbewegung** schneller abbaut, fällt hinter den anderen. Dann ist der andere vorn, also das Ziel.
+**Scissors** (Schere) sind **neutral**: Beide Jets sind nah beieinander, keiner hat eine Schusslösung, beide wollen hinter den anderen. Sie entstehen meist, wenn ein Angreifer [überschießt](/grundlagen/offensiv/overshoot) und der Verteidiger sofort umkehrt, oder wenn ein [One-Circle](/grundlagen/neutral/one-two-circle) immer langsamer wird. Das Prinzip: Ihr fliegt grob in dieselbe Richtung. Wer seine **Vorwärtsbewegung** schneller abbaut, fällt hinter den anderen und ist damit im Vorteil.
 
 ## Flat Scissors
 
@@ -31,93 +26,67 @@ Das Grundprinzip beider Formen: Ihr fliegt grob in dieselbe Richtung. Wer seine 
 <line x1="130" y1="214" x2="250" y2="210" stroke="var(--vp-c-text-2)" stroke-width="1"/>
 </svg>
 
-### So erkennst du sie
+**Erkennen:** Ihr seid nah, fast nebeneinander, mit hohem Aspect Angle und kaum Closure. Ihr kreuzt immer wieder die Flugbahn des anderen und kehrt danach jeweils um. Die Nasen bleiben am Horizont, beide werden langsamer.
 
-- Ihr seid nah beieinander, fast nebeneinander oder knapp versetzt, mit hohem Aspect Angle und kaum Closure.
-- Ihr kreuzt **immer wieder** die Flugbahn des anderen. Nach jedem Kreuzen kehrt jeder um und dreht wieder zum anderen hin.
-- Die Nasen bleiben ungefähr am Horizont, und beide werden **langsamer**.
+**Wer gewinnt:**
 
-### Wer gewinnt
+1. **Wer schneller verlangsamt:** Gas auf Idle, hoher AoA.
+2. **Wer dabei Kontrolle und Rollrate behält:** Zu langsam kommst du nicht mehr schnell genug herum.
+3. **Wer die Umkehr richtig timet:** Kehr um, wenn er dich gerade kreuzt. Zu früh schiebt dich vor ihn, zu spät schenkt ihm Winkel.
 
-1. **Wer schneller verlangsamt**: Gas auf Idle, hoher AoA. Jeder Knoten weniger heißt weniger Vorwärtsbewegung.
-2. **Wer dabei Kontrolle und Rollrate behält**: Wer zu langsam wird, kann nicht mehr schnell genug umkehren und bekommt die Nase nicht für den Schuss herum.
-3. **Wer die Umkehr richtig timet**: Kehr um, wenn er dich gerade kreuzt. Kehrst du zu früh um, schiebst du dich vor ihn. Zu spät, und er gewinnt Winkel.
-
-### Ausführung
-
-- Bei jedem Kreuzen: rollen, bis dein **Lift Vector** auf ihn zeigt, und ziehen.
-- Gas zurück, AoA hoch, aber nur so weit, dass dein Jet noch rollt und reagiert.
-- Behalte ihn im Blick (Tally). Wer in der Schere den Gegner verliert, verliert die Schere.
-- Sobald er vor dir ist: Nase auf ihn, Guns. Bleibt er in einer Linie, ist das ein [Tracking Shot](/grundlagen/offensiv/schussloesung). Kreuzt er, ist es ein Snapshot.
+**Ausführung:** Bei jedem Kreuzen Lift Vector auf ihn rollen und ziehen. Gas zurück, AoA hoch, aber nur so weit, dass der Jet noch rollt. Tally halten. Sobald er vor dir ist: Nase auf ihn, Guns ([Schusslösung](/grundlagen/offensiv/schussloesung)).
 
 ::: warning AoA-Override
-Mit dem AoA-Override („Cobra-Button“) bekommst du die Nase über das AoA-Limit hinaus sofort herum. Das kostet extrem viel Energie. In einer Flat Scissors kann ein Override dir den entscheidenden Schuss geben oder dich so langsam machen, dass du danach wehrlos bist. Setz ihn nur ein, wenn der Schuss danach sicher ist.
+Der Override („Cobra-Button“) bringt die Nase sofort über das AoA-Limit hinaus herum, kostet aber extrem viel Energie. Setz ihn nur ein, wenn der Schuss danach sicher ist, sonst bist du danach wehrlos.
 :::
 
 ## Rolling Scissors
 
-Bei der **Rolling Scissors** bewegen sich beide Jets wie in Fassrollen umeinander. Ist einer oben, ist der andere unten. Ihr kreuzt euch oben und unten, und jeder nutzt die Vertikale, um Vorwärtsbewegung in Höhe umzusetzen.
+Beide Jets bewegen sich wie in Fassrollen umeinander: Ist einer oben, ist der andere unten. Jeder nutzt die Vertikale, um Vorwärtsbewegung in Höhe umzusetzen.
 
-### So erkennst du sie
+**Erkennen:** Typisch nach einem Overshoot mit höherer Speed: Der Verteidiger zieht aus der Ebene nach oben, der Angreifer folgt. Speed und Höhe tauschen sich ständig, oben langsam, unten schnell.
 
-- Typisch nach einem Overshoot mit höherer Speed: Der Verteidiger zieht nach oben aus der Ebene, der Angreifer folgt nach oben.
-- Ihr rollt beide um eine gemeinsame, ungefähr vorwärts zeigende Achse.
-- Speed und Höhe tauschen sich ständig: oben langsam, unten schnell.
+**Wer gewinnt:** Wer die Nase schneller über oben bringt (dort hilft die Schwerkraft) und mehr Schub hat, um oben langsam zu werden, ohne die Kontrolle zu verlieren. Wer oben ist, hat die Wahl; wer unten wenig Energie hat, kann nur reagieren.
 
-### Wer gewinnt
-
-- **Wer die Nase schneller über oben bzw. durch unten bringt.** Oben hilft die Schwerkraft beim Herumziehen.
-- **Energie spielt mit**: Wer mehr Schub hat, kann oben langsamer und höher werden, ohne die Kontrolle zu verlieren, und baut dabei Vorwärtsbewegung ab.
-- **Wer oben ist, hat die Wahl**: Von oben kannst du auf ihn herunterziehen. Wer unten mit wenig Energie ist, kann nur reagieren.
-
-### Ausführung
-
-- Geht er hoch, geh mit hoch. Lässt du ihn allein steigen, kommt er von oben.
-- Oben: Lift Vector über den Kabinenhimmel auf ihn rollen und die Nase herunterziehen.
-- Schub so einsetzen, dass du oben noch Kontrolle hast, aber nicht nach vorn an ihm vorbeischießt.
+**Ausführung:** Geht er hoch, geh mit, sonst kommt er von oben. Oben Lift Vector über den Kabinenhimmel auf ihn rollen und die Nase herunterziehen. Schub so dosieren, dass du oben Kontrolle hast, aber nicht an ihm vorbeischießt.
 
 ## Vermeiden und Aussteigen
 
-Aus einer Schere kommst du schwer wieder heraus. Am besten verhinderst du sie:
-
-- **Als Angreifer**: Closure kontrollieren, nicht in einen Overshoot fliegen. Werkzeuge sind [High Yo-Yo](/grundlagen/offensiv/yo-yos), [Lag Roll](/grundlagen/offensiv/lag-roll) und eine Lag-Verfolgungskurve ([Verfolgungskurven](/grundlagen/verfolgungskurven)).
-- **Als Verteidiger**: Der Gegner überschießt, und du willst ihn vor dich zwingen? Dann prüf vorher, ob dein Jet die Schere gewinnt. Wenn nicht, nutze den Overshoot lieber, um Abstand und Speed zu gewinnen.
-
-Wenn du schon drin bist und verlierst:
+Verhindern ist leichter als aussteigen. Als **Angreifer** Closure kontrollieren: [High Yo-Yo](/grundlagen/offensiv/yo-yos), [Lag Roll](/grundlagen/offensiv/lag-roll), [Lag Pursuit](/grundlagen/verfolgungskurven). Als **Verteidiger** vorher prüfen, ob dein Jet die Schere gewinnt; wenn nicht, den Overshoot für Abstand und Speed nutzen.
 
 | Ausweg | Wann | Risiko |
 |---|---|---|
-| **Flat → Rolling** (in die Vertikale wechseln) | Du hast mehr Schub/Energie als er | Bist du oben langsamer als gedacht, hängst du vor seiner Nase |
-| **Rolling → Flat** (in der Ebene bleiben, langsam werden) | Du bist der bessere Low-Speed-Jet | Wer zu langsam wird, verliert die Kontrolle |
-| **Separation** (unload, beschleunigen, weg) | Nur mit deutlich mehr Speed und wenn seine Nase gerade von dir weg zeigt | Langsam und in Kanonenreichweite wirst du von hinten getroffen, siehe [Separation](/grundlagen/defensiv/separation) |
-| **Nose-low beschleunigen** | Genug Höhe über dem [Hard Deck](/grundlagen/begriffe) | Er folgt von oben und bekommt den Schuss |
+| **Flat → Rolling** | du hast mehr Schub als er | bist du oben zu langsam, hängst du vor seiner Nase |
+| **Rolling → Flat** | du bist der bessere Low-Speed-Jet | zu langsam verlierst du die Kontrolle |
+| **[Separation](/grundlagen/defensiv/separation)** | nur mit deutlich mehr Speed und wenn seine Nase von dir weg zeigt | langsam in Kanonenreichweite wirst du von hinten getroffen |
+| **Nose-low beschleunigen** | genug Höhe über dem [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) | er folgt von oben und bekommt den Schuss |
 
 ## Scissors in VFM
 
 | Jet | Flat Scissors | Rolling Scissors |
 |---|---|---|
-| **T-18 Cutlass** | **wahrscheinlich am besten**. Der Entwickler positioniert sie als High-AoA-/Low-Speed-Jet. *Hypothese, nicht durch Daten belegt.* | mittel (Schub zwischen T-15 und T-16, laut Balken) |
-| **T-15 Excalibur** | stark im Datenbereich (beste Instant Rate, kleinster Radius im dargestellten Bereich), darunter unbekannt | **wahrscheinlich am besten** wegen des stärksten Schubs (Folgerung) |
-| **T-16 Falchion** | **am schwächsten**: höchste Corner Speed, unter ~380 KIAS der schwächste Jet | **am schwächsten**: niedrigster Schub-Balken (Folgerung) |
+| **T-15** | stark: zieht bei gleicher Speed die meisten G (gemessen bis ~285 KIAS); darunter keine Daten | **am besten**: mit Abstand der meiste Schubüberschuss |
+| **T-16** | **am schwächsten**: höchste Corner Speed, unter ~380 KIAS der schwächste Jet | schwach: wenig Schub, und jede Schere kostet ihr Speedband |
+| **T-18** | verliert im Leerlauf am schnellsten Speed (wird schnell langsam) und hat Nase bis α 35°; ihr vermuteter Vorteil sehr langsam ist eine **Hypothese** | etwa wie die T-16: mehr Schub, aber fast doppelt so viel Widerstand |
 
-Daraus folgt:
-- **T-16**: Meide Scheren grundsätzlich. Halte deine Speed, und wenn ein Overshoot droht, nutze ihn für Separation statt für eine Schere.
-- **T-18**: Eine Flat Scissors ist vermutlich dein Terrain. Bleib in der Ebene und lass dich nicht in die Vertikale ziehen.
-- **T-15**: Gegen die T-18 lieber Rolling als Flat. Gegen die T-16 kannst du beides annehmen.
+Daten: [Flugzeugvergleich](/flugzeuge/vergleich). Daraus folgt:
+
+- **T-16:** Meide Scheren. Halte deine Speed und nutze einen drohenden Overshoot für Separation.
+- **T-18:** Die Flat Scissors ist vermutlich dein Terrain. Bleib in der Ebene, Gas raus, und lass dich nicht in die Vertikale ziehen.
+- **T-15:** Die Rolling Scissors ist deins. Gegen die T-18 geh in der Flat Scissors nicht unter ~280 KIAS, dort fehlen Daten.
 
 ::: info IM SPIEL PRÜFEN
-- Ob die T-18 in einer Flat Scissors unter ~200 KIAS tatsächlich besser ist als die T-15 (mit und ohne AoA-Override). Testaufbau im [Trainingsplan](/grundlagen/uebungen).
-- Die Rollrate der Jets bei niedriger Speed (keine Daten).
-- Ob VFM eine Speedbrake hat und wie sie bedient wird.
-- Wie das Spiel im Ranked bei Zeitablauf den „Verfolger“ bestimmt, wenn ihr gerade in einer Schere seid.
+- Ob die T-18 in der Flat Scissors unter ~280 KIAS besser ist als die T-15, mit und ohne Override ([Trainingsplan](/grundlagen/uebungen)).
+- Die Rollrate der Jets bei niedriger Speed.
+- Wie stark die Speedbrake bremst.
 :::
 
 ::: tip MERKE
-- Scissors sind neutral. Gewinner ist, wer weniger vorwärts kommt und dabei die Kontrolle behält.
+- Scissors sind neutral. Es gewinnt, wer weniger vorwärts kommt und dabei die Kontrolle behält.
 - Flat: schneller verlangsamen, Rollrate behalten, Umkehr timen.
-- Rolling: Nase schneller über oben bringen. Schub und Energie zählen.
-- Vermeiden ist leichter als aussteigen. Als Angreifer Closure kontrollieren.
-- VFM: T-18 vermutlich Flat-Spezialist (testen), T-16 meidet Scheren, T-15 nutzt Schub in der Rolling Scissors.
+- Rolling: Nase schneller über oben bringen, Schub zählt.
+- Vermeiden ist leichter als aussteigen: Als Angreifer Closure kontrollieren.
+- VFM: T-15 gewinnt die Rolling Scissors, T-18 vermutlich die Flat Scissors (testen), T-16 meidet Scheren.
 :::
 
 Weiter: [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)

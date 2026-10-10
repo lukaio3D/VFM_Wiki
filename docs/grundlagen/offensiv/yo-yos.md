@@ -2,30 +2,24 @@
 
 > Mit der Vertikalen Closure und Winkel steuern: zu schnell, dann nach oben; zu weit weg, dann nach unten.
 
-Ein Yo-Yo ist kein Kunstflugmanöver, sondern eine Korrektur. Du bist hinter ihm, aber deine Closure (Annäherungsgeschwindigkeit) oder dein Winkel passt nicht zu seiner Kurve. Statt in seiner Ebene weiterzuziehen und entweder zu überschießen oder zurückzufallen, gehst du kurz **aus seiner Ebene heraus**: nach oben, um Speed in Höhe zu parken, oder nach unten, um mit der Schwerkraft Winkel und Closure zu holen.
+Ein Yo-Yo ist eine Korrektur, kein Kunstflug. Du bist hinter ihm, aber Closure oder Winkel passen nicht zu seiner Kurve. Statt in seiner Ebene zu überschießen oder zurückzufallen, gehst du kurz **aus seiner Ebene heraus**: nach oben, um Speed in Höhe zu parken, oder nach unten, um mit der Schwerkraft Winkel und Closure zu holen.
 
-Alles auf dieser Seite wird in Lift-Vector-Sprache beschrieben. Der [Lift Vector](/grundlagen/begriffe) zeigt aus deinem Kabinendach heraus. Dorthin, wohin er zeigt, kurvst du, wenn du ziehst. Ein Yo-Yo heißt also immer: **Lift Vector platzieren, dann ziehen.** Nie "Nase runterdrücken". Wer drückt (negative G), verliert Sicht, Kontrolle und Zeit.
+Ein Yo-Yo heißt immer: **[Lift Vector](/grundlagen/begriffe) platzieren, dann ziehen.** Nie die Nase runterdrücken – negative G kosten Sicht, Kontrolle und Zeit.
 
-::: info ABKÜRZUNGEN IN DEN SKIZZEN
-G1/G2/G3 = Gegner zu drei Zeitpunkten, A1/A2/A3 = du (Angreifer) zu denselben Zeitpunkten. Gegner in Textfarbe, Angreifer in Akzentfarbe. Die Seitenansicht ist "abgewickelt": Die Kurvenebene des Gegners ist als gerade Linie gezeichnet, du siehst nur, wie weit du darüber oder darunter bist.
+::: info SKIZZEN
+G1–G3 = Gegner, A1–A3 = du (Angreifer, Akzentfarbe) zu denselben Zeitpunkten. In der abgewickelten Seitenansicht ist seine Kurvenebene eine gerade Linie; du siehst nur, wie weit du darüber oder darunter bist.
 :::
 
 ## High Yo-Yo
 
-### Wann
+**Wann:** Deine Closure ist zu hoch, du bist schneller als er, seine AA wächst – typisch, wenn er einbricht, während du mit Speed in seinen Kreis kommst.
 
-- Deine **Closure ist zu hoch** und du bist schneller als er.
-- Seine **AA wächst** (Aspect Angle, dein Winkel zu seinem Heck), weil er härter dreht, als du in der Ebene mitdrehen kannst, ohne zu überschießen.
-- Typisch: Er bricht ein (Break Turn), während du mit Speed in seinen Kreis kommst.
+1. **Lift Vector über ihn rollen**, also oberhalb seiner Kurvenebene.
+2. **Ziehen.** Die Nase geht nach oben aus seiner Ebene. Du drehst in seiner Ebene langsamer mit und tauschst Speed gegen Höhe. Closure und AA sinken.
+3. **Am Apex Lift Vector zurück auf ihn rollen**, oft deutlich über 90° Querlage.
+4. **Wieder ziehen.** Du kommst von oben in sein Rear Quarter, die geparkte Höhe wird wieder zu Speed.
 
-### Ausführung
-
-1. **Lift Vector über ihn rollen.** Roll so weit Richtung Flächen-waagerecht, dass dein Lift Vector nicht mehr auf ihm liegt, sondern **über ihm**, oberhalb seiner Kurvenebene.
-2. **Ziehen.** Deine Nase geht nach oben aus seiner Ebene. Du drehst in seiner Ebene langsamer mit, kletterst und tauschst Speed gegen Höhe. Die Closure sinkt, die AA wird kleiner, weil du hinter ihm bleibst statt an seiner Seite vorbeizuschießen.
-3. **Am Scheitelpunkt (Apex) Lift Vector zurück auf ihn rollen.** Dafür rollst du so weit, bis das Kabinendach wieder auf ihn zeigt, oft deutlich über 90° Querlage.
-4. **Wieder ziehen.** Die Nase kommt von oben in sein hinteres Viertel (Rear Quarter). Die Schwerkraft hilft dir beim Herunterkurven, die geparkte Höhe wird wieder zu Speed.
-
-Die Energie ist nicht weg, sie liegt als Höhe auf Vorrat. Genau das unterscheidet den High Yo-Yo vom einfachen Gas-raus-Nehmen.
+Die Energie ist nicht weg, sie liegt als Höhe auf Vorrat. Das unterscheidet den High Yo-Yo vom einfachen Gas-raus-Nehmen.
 
 <svg viewBox="0 0 520 280" width="100%" style="max-width:520px" role="img" aria-label="High Yo-Yo: Draufsicht und abgewickelte Seitenansicht. Der Angreifer verlässt die Kurvenebene nach oben, seine Bahn läuft kurz außerhalb des Kurvenkreises und kommt von oben hinter den Gegner zurück.">
 <defs>
@@ -59,30 +53,20 @@ Die Energie ist nicht weg, sie liegt als Höhe auf Vorrat. Genau das unterscheid
 <text x="400" y="234" font-size="12" fill="currentColor" text-anchor="middle">Kurvenebene des Gegners</text>
 </svg>
 
-*High Yo-Yo: Von oben gesehen läuft deine Bahn kurz nach außen, weil du in seiner Ebene weniger mitdrehst. Weil du dabei steigst, überschießt du ihn nicht, sondern kommst von oben hinter ihm wieder herunter.*
+*High Yo-Yo: Von oben gesehen läuft deine Bahn kurz nach außen, weil du in seiner Ebene weniger mitdrehst. Weil du steigst, überschießt du nicht, sondern kommst von oben hinter ihm herunter.*
 
-### Timing und Größe
-
-- **Früh und klein ist besser als spät und groß.** Sobald du merkst, dass die Closure zu hoch ist, ein kleiner Yo-Yo. Wer wartet, bis der Overshoot unvermeidbar ist, braucht einen riesigen Yo-Yo, und der gibt dem Gegner Zeit.
-- Wie weit du aus der Ebene gehst, hängt davon ab, wie viel Closure du loswerden musst. Ein bisschen zu schnell: Lift Vector nur knapp über ihn (das ist die [Quarter Plane](#quarter-plane)). Deutlich zu schnell: weiter hoch.
-- Den Apex legst du so, dass du von oben in sein Rear Quarter zurückkommst, bevor er seine Kurve so weit fortgesetzt hat, dass du außerhalb seines Kreises landest.
+**Timing:** Früh und klein ist besser als spät und groß. Ein bisschen zu schnell: Lift Vector nur knapp über ihn (das ist die [Quarter Plane](#quarter-plane)). Deutlich zu schnell: weiter hoch. Leg den Apex so, dass du in sein Rear Quarter zurückkommst, bevor er so weit gedreht hat, dass du außerhalb seines Kreises landest.
 
 ## Low Yo-Yo
 
-### Wann
+**Wann:** Du bist hinter ihm, aber zu weit weg, die Closure ist null oder negativ, und in seiner Ebene bekommst du die Nase nicht in Lead. Höhe unter dir ist vorhanden.
 
-- Du bist hinter ihm, aber **zu weit weg und die Closure ist null oder negativ.**
-- Du schaffst es in seiner Ebene nicht, die Nase in Lead (vor ihn) zu bekommen, weil er mindestens so schnell dreht wie du.
-- Du hast **genug Höhe** unter dir.
+1. **Überbanken**, bis der Lift Vector **unter** seiner Kurvenebene liegt.
+2. **Ziehen.** Die Schwerkraft zieht jetzt in dieselbe Richtung wie dein Auftrieb: Die Kurve wird enger und schneller, du schneidest seinen Kreis ab und wirst schneller. Beides bringt Closure.
+3. **Wenn Abstand und Closure passen: Lift Vector zurück auf ihn, hochziehen.** Du kommst von unten in sein Rear Quarter.
+4. **Rechtzeitig aufhören.** Hältst du ihn zu lange, hast du zu viel Closure und brauchst einen High Yo-Yo.
 
-### Ausführung
-
-1. **Überbanken.** Roll über die Querlage hinaus, die du für eine Kurve in seiner Ebene bräuchtest, bis der Lift Vector **unter ihm** liegt, also unterhalb seiner Kurvenebene.
-2. **Ziehen.** Deine Nase geht unter seine Ebene. Jetzt arbeitet die Schwerkraft mit dir: Sie zieht in dieselbe Richtung wie dein Auftrieb, deine Kurve wird enger und schneller. Du schneidest seinen Kreis ab und wirst dabei schneller. Beides bringt Closure.
-3. **Wenn Abstand und Closure passen: Lift Vector zurück auf ihn und hochziehen.** Du kommst von unten in sein Rear Quarter.
-4. **Rechtzeitig aufhören.** Der Low Yo-Yo erzeugt Closure. Hältst du ihn zu lange, hast du am Ende zu viel davon und brauchst einen High Yo-Yo.
-
-Warum die Schwerkraft hilft: Bei einer Kurve mit dem Lift Vector unter dem Horizont addiert sich ein Teil der Erdbeschleunigung zu deiner Radialbeschleunigung. Näheres in [Kurvenphysik](/grundlagen/kurvenphysik) und beim [Slice Turn](/grundlagen/defensiv/slice-turn), dem defensiven Verwandten.
+Warum die Schwerkraft hilft: [Kurvenphysik](/grundlagen/kurvenphysik) und [Slice Turn](/grundlagen/defensiv/slice-turn), der defensive Verwandte.
 
 <svg viewBox="0 0 520 280" width="100%" style="max-width:520px" role="img" aria-label="Low Yo-Yo: Draufsicht und abgewickelte Seitenansicht. Der Angreifer legt den Lift Vector unter die Kurvenebene, schneidet den Kurvenkreis innen ab und kommt von unten hinter den Gegner.">
 <defs>
@@ -118,56 +102,45 @@ Warum die Schwerkraft hilft: Bei einer Kurve mit dem Lift Vector unter dem Horiz
 
 *Low Yo-Yo: Von oben gesehen schneidest du seinen Kreis innen ab. Von der Seite tauchst du unter seine Ebene und kommst von unten in sein Rear Quarter zurück.*
 
-### Der Preis
-
-- **Höhe.** Du landest tiefer als er. Das gibt ihm die Option, nach oben auszuweichen, wenn er die Energie dafür hat.
-- **Closure-Überschuss.** Zu lang oder zu tief gehalten, und aus "zu weit weg" wird "zu schnell". Dann folgt der High Yo-Yo.
-- **Boden.** Unter ~2.000 ft über Grund (Trainings-Hard-Deck, siehe [Energie-Management](/grundlagen/energie-management)) ist der Low Yo-Yo keine Option mehr.
+**Der Preis:** Du landest tiefer als er, er kann nach oben ausweichen. Zu lang gehalten wird aus „zu weit weg“ ein „zu schnell“. Und nahe am [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) ist der Low Yo-Yo keine Option.
 
 ## Quarter Plane
 
-Die Quarter Plane ist ein **kleiner High Yo-Yo**: Du legst den Lift Vector nur **etwas** über ihn statt deutlich darüber. Du gehst also nur ein wenig aus seiner Ebene, gerade genug, um ein bisschen Closure abzubauen, ohne Zeit und Position wie bei einem großen Yo-Yo zu verlieren.
-
-- Nimm sie, wenn du nur leicht zu schnell bist oder die AA nur langsam wächst.
-- Sie ist das Feinwerkzeug: viele kleine Korrekturen statt einer großen.
-- Eine Garantie gegen den Overshoot gibt es nicht. Wenn die Closure zu groß ist, reicht die Quarter Plane nicht, dann musst du weiter aus der Ebene oder einen [Lag Roll](/grundlagen/offensiv/lag-roll) fliegen.
+Die Quarter Plane ist ein **kleiner High Yo-Yo**: Lift Vector nur knapp über ihn. Du baust ein bisschen Closure ab, ohne Zeit und Position zu verlieren. Sie ist das Feinwerkzeug für leichte Korrekturen. Reicht sie nicht, musst du weiter aus der Ebene oder einen [Lag Roll](/grundlagen/offensiv/lag-roll) fliegen.
 
 ## Vergleich
 
 | | High Yo-Yo | Quarter Plane | Low Yo-Yo |
 |---|---|---|---|
-| Problem | Zu viel Closure / AA | Etwas zu viel Closure | Zu wenig Closure, zu weit weg |
+| Problem | Zu viel Closure / AA | Etwas zu viel Closure | Zu wenig Closure |
 | Lift Vector | Deutlich über ihm | Knapp über ihm | Unter ihm (überbankt) |
-| Energie | Speed wird zu Höhe (bleibt erhalten) | Kaum Änderung | Höhe wird zu Speed |
+| Energie | Speed wird zu Höhe | Kaum Änderung | Höhe wird zu Speed |
 | Hauptrisiko | Zu groß/zu spät: Er dreht ein, du verlierst Sicht | Reicht nicht | Zu viel Closure danach, Höhe weg |
 
 ## Typische Fehler
 
-- **Drücken statt rollen.** "Nase runter" mit negativer G ist kein Yo-Yo. Immer: rollen, bis der Lift Vector dort liegt, wo du hinwillst, dann ziehen.
-- **Zu spät.** Der High Yo-Yo hilft nur, solange du noch hinter ihm bist. Wenn er schon neben dir ist, ist es ein Overshoot, siehe [Overshoot](/grundlagen/offensiv/overshoot).
-- **Zu groß.** Ein riesiger High Yo-Yo macht dich langsam, nimmt dir die Sicht und gibt ihm Zeit für eine Umkehr. Ein guter Verteidiger wartet genau darauf, dass du hochgehst, und dreht dann in die andere Richtung.
-- **Tally verloren.** Am Apex, kopfüber, schaust du durch das Kabinendach. Wenn du ihn dort nicht siehst, war der Yo-Yo zu groß oder falsch gerollt.
-- **Low Yo-Yo ohne Ende.** Wer unten bleibt, bis die Closure zu groß ist, verwandelt ein Problem in das andere.
-- **Yo-Yo gegen einen Gegner, der nicht dreht.** Fliegt er geradeaus weg, hilft nur Speed und Lead (oder ein Fox-2-Schuss), kein Yo-Yo.
+- **Drücken statt rollen.** Erst rollen, bis der Lift Vector stimmt, dann ziehen.
+- **Zu spät.** Ist er schon neben dir, ist es ein [Overshoot](/grundlagen/offensiv/overshoot), kein Yo-Yo mehr.
+- **Zu groß.** Ein riesiger High Yo-Yo macht dich langsam und gibt ihm Zeit, in die Gegenrichtung umzukehren.
+- **Tally verloren.** Siehst du ihn am Apex nicht durch das Kabinendach, war der Yo-Yo zu groß oder falsch gerollt.
+- **Yo-Yo gegen einen Gegner, der nicht dreht.** Fliegt er geradeaus weg, helfen nur Speed und Lead.
 
-## VFM: Was die Jets für Yo-Yos bedeuten
+## Die Jets
 
-Die Daten (Stand Dez 2025, siehe [Flugzeugvergleich](/flugzeuge/vergleich)) sagen nichts direkt über Steigleistung oder Rollrate. Daraus lässt sich aber logisch ableiten:
+- **[T-15](/flugzeuge/t15):** Beschleunigt mit Abstand am besten und holt Speed nach einem Yo-Yo am schnellsten zurück. Für sie sind auch größere High Yo-Yos billig.
+- **[T-16](/flugzeuge/t16):** Lebt im Band ~420–500 KIAS. Ein großer High Yo-Yo, der sie am Apex weit darunter bringt, kostet ihren Vorteil – lieber Quarter Plane und flache Yo-Yos.
+- **[T-18](/flugzeuge/t18):** Hoher Widerstand, über ~480–510 KIAS schwach. Überschüssige Speed parkt sie besser im High Yo-Yo als sie in der Kurve zu verbrennen; Low Yo-Yos, die sie in diesen Bereich beschleunigen, sind ungünstig.
 
-- **T-15 Excalibur:** Höchster Schub, höchste Top-Speed. Sie holt Speed nach einem Yo-Yo am schnellsten zurück und kann die Vertikale am großzügigsten nutzen. Damit sind größere High Yo-Yos für sie am billigsten.
-- **T-16 Falchion:** Leichtester Jet, aber laut Infokarte der niedrigste Schub-Gewicht-Balken. Ihr Band ist ~420–500 KIAS, darunter ist sie am schwächsten. Ein großer High Yo-Yo, der dich am Apex deutlich unter ~400 KIAS bringt, bringt dich genau dorthin. Lieber Quarter Plane und flache Yo-Yos, Speed im Band halten.
-- **T-18 Cutlass:** Verliert über ~480 KIAS am stärksten Energie (hoher Widerstand bei Speed). Wenn du mit ihr zu schnell bist, ist ein High Yo-Yo die bessere Wahl, als die überschüssige Speed in einer harten Kurve in Widerstand zu verbrennen: Als Höhe bleibt sie dir erhalten. Low Yo-Yos, die dich weit über ~480 KIAS beschleunigen, sind für sie dagegen ungünstig.
-- **Alle:** T-16 und T-18 wollen tief kämpfen. Tief heißt aber auch: wenig Platz für Low Yo-Yos. Behalte den Boden im Blick, besonders auf der Map Mountains.
+Daten: [Flugzeugvergleich](/flugzeuge/vergleich)
 
 ::: info IM SPIEL PRÜFEN
-- Wie schnell deine Jet-Wahl nach einem High Yo-Yo (z.B. 2.000 ft Steigen) wieder auf Ausgangsspeed ist. Teste es im Free Flight und vergleiche die Jets.
-- Wie stark sich die Rollrate der Jets unterscheidet (nicht in den Daten). Sie bestimmt, wie schnell du den Lift Vector am Apex wieder auf ihn bekommst.
+- Rollrate der Jets (nicht gemessen): Sie bestimmt, wie schnell du den Lift Vector am Apex wieder auf ihn bekommst.
 :::
 
 ::: tip MERKE
 - Yo-Yo = Lift Vector aus seiner Ebene legen und ziehen. Nie drücken.
 - High Yo-Yo: Lift Vector über ihn, Speed wird zu Höhe, Closure und AA sinken. Früh und klein.
-- Low Yo-Yo: überbanken, Lift Vector unter ihn, Schwerkraft hilft, Closure steigt. Rechtzeitig wieder hoch.
+- Low Yo-Yo: überbanken, Lift Vector unter ihn, Closure steigt. Rechtzeitig wieder hoch.
 - Quarter Plane: der kleine High Yo-Yo für leichte Korrekturen.
 - Am Apex muss der Gegner im Blick sein, sonst war das Manöver zu groß.
 :::
