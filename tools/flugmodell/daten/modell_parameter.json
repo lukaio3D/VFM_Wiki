@@ -78,8 +78,7 @@
           -1.3703231721058446
         ]
       },
-      "massstab_c": 2.6054590551869214,
-      "schub_tw_quelle": "gemessen"
+      "massstab_c": 2.608
     },
     "T-16": {
       "SCLmax_m2": {
@@ -142,8 +141,7 @@
           -0.9520593520485161
         ]
       },
-      "massstab_c": 2.9085737998584777,
-      "schub_tw_quelle": "Annahme"
+      "massstab_c": 2.44
     },
     "T-18": {
       "SCLmax_m2": {
@@ -206,8 +204,7 @@
           -2.620675578838041
         ]
       },
-      "massstab_c": 1.6696756155894295,
-      "schub_tw_quelle": "Annahme"
+      "massstab_c": 1.783
     }
   }
 }

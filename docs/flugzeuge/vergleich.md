@@ -227,6 +227,34 @@ Wer die Match-Einstellungen kennt, kennt den Treibstoffstand: Mit vollem Tank si
 | **v1.4.1** | T-16: Treibstoffgewicht −20 % | Bestätigt: 5.926 → 4.741 lbs Treibstoff. Meereshöhe, 50 %: Instant 25 → 26 °/s, Corner 392 → 378 KIAS, Min Radius 1.524 → 1.428 ft. 10.000 ft, 100 %: Corner 434 → 421 KIAS, Radius 2.387 → 2.275 ft. Sustained unverändert. Kleiner Effekt. |
 | **v1.4.1** | T-18: Top-Speed erhöht | Im Diagramm nicht sichtbar: Das Sustained-Ende liegt wie in den Dez-2025-Bildern bei ~720 KIAS (10.000 ft, 50 %). |
 
+## Beschleunigung (gemessen)
+
+Die Diagramme zeigen nur, wo ein Jet dauerhaft kurven kann, nicht wie schnell er Speed aufbaut. Deshalb wurde gemessen: 10.000 ft, voller Tank, nur Guns, Vollgas mit Nachbrenner im Geradeausflug, je zwei Läufe pro Jet, HUD-Werte Sekunde für Sekunde aus dem Video abgelesen (Okt 2026).
+
+| 10.000 ft, voller Tank | T-15 Excalibur | T-16 Falchion | T-18 Cutlass |
+|---|---|---|---|
+| 300 → 500 KIAS (Lauf 1 / Lauf 2) | **8,5 / 8,3 s** | 11,6 / 11,4 s | 12,4 / 12,2 s |
+| Zuwachs im Mittel (300–500 KIAS) | **~24 kt/s** | ~17 kt/s | ~16 kt/s |
+| Schubüberschuss bei 1 G (T − D) / Gewicht | **~1,4** | ~1,0 | ~0,95 |
+| nahe Mach 0,95 (~540 KIAS) | ~1,4, kaum Einbruch | ~0,8 | ~0,7 |
+
+Was du daraus mitnimmst:
+
+- **Die T-15 beschleunigt in einer eigenen Liga**, rund 40 % schneller als die anderen beiden. Sie kann einen Kampf fast immer verlassen und mit Speed zurückkommen.
+- **T-16 und T-18 sind gleichauf.** Unter ~370 KIAS beschleunigt die T-18 minimal besser, darüber die T-16. Ab Mach 0,9 bricht die T-18 deutlich stärker ein.
+- **Dieselbe Reihenfolge gilt vertikal.** Bei konstanter Speed von ~450 KIAS reicht der Überschuss für ~1.200 ft/s Steigrate (T-15), ~900 ft/s (T-16) und ~770 ft/s (T-18). Die T-15 hat sogar mehr Schubüberschuss als Gewicht: Sie kann senkrecht steigen und dabei noch Speed aufbauen.
+
+::: details Kontrolle: Sustained-Kurven im Spiel nachgeflogen
+In denselben Flügen wurde je eine Kurve bei ~450 KIAS mit gehaltener Speed geflogen (Messwerte aus dem HUD: G und Drehrate):
+
+| | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| geflogen | 7,0 G, 15,4 °/s | 7,9 G, 17,6 °/s | 7,0 G, 15,6 °/s |
+| aus den Diagrammen berechnet (gleiches Gewicht) | 7,0 G | 7,8 G | 6,9 G |
+
+Die Ingame-Diagramme stimmen also im Flug auf ±2–3 %. Und: Bei ~450 KIAS und vollem Tank dreht die T-16 dauerhaft gut 2 °/s schneller als die beiden anderen.
+:::
+
 ## Info-Karten: Balken und Widersprüche
 
 Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MAX** (Corner Speed) und **SUS** (Best Sustained Speed) sowie vier grobe Balken.
@@ -251,7 +279,7 @@ Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MA
 ::: warning WIDERSPRÜCHE ZUR TABELLE
 - **Turn Radius:** Der Balken zeigt die T-18 vorn, die Tabelle in **allen neun** Bedingungen die T-15 (z. B. 1.644 vs 1.899 ft). **Für den dargestellten Bereich gilt die Tabelle.** Möglich ist, dass der Balken etwas anderes bewertet (etwa den Radius bei sehr niedriger Speed oder mit hohem AoA, also unterhalb des Diagramms). Das ist eine Vermutung, keine Tatsache.
 - **Max Speed:** Laut Balken ist die T-18 schneller als die T-16. Im Diagramm erreicht die T-16 aber klar die höhere Horizontal-Höchstgeschwindigkeit (Sustained 0 bei ~835 vs ~720 KIAS auf 10.000 ft, Meereshöhe ~858 vs ~737 KIAS). Für den dargestellten Bereich gilt das Diagramm.
-- **Thrust to Weight:** Für diesen Balken gibt es keine Tabellenwerte. Er ist der einzige Hinweis auf die Beschleunigung: T-15 > T-18 > T-16.
+- **Thrust to Weight:** Der Balken sagt T-15 > T-18 > T-16. Gemessen ist die T-15 klar vorn, T-16 und T-18 sind aber praktisch gleichauf (die T-18 nur unter ~370 KIAS minimal besser). Siehe [Beschleunigung (gemessen)](#beschleunigung-gemessen).
 :::
 
 ## Nicht in den Daten
@@ -260,8 +288,7 @@ Auf den Info-Karten der Einzeljets gibt es ein Mini-Diagramm mit den Werten **MA
 - **Alles unter ~170 KIAS:** Die Diagramme beginnen erst bei ~170–200 KIAS. Langsamflug, Stall-Verhalten und Steuerbarkeit bei hohem AoA (Anstellwinkel) sind nicht abgebildet.
 - **Post-Stall mit AoA-Override:** Der Override-Button erlaubt Nose Authority über das AoA-Limit hinaus. Wie viel jeder Jet davon hat, zeigt kein Diagramm.
 - **Rollrate**
-- **Steigleistung / Vertikal-Performance**
-- **Beschleunigung** (nur der T/W-Balken deutet T-15 > T-18 > T-16 an; Messung läuft)
+- **Steigleistung / Vertikal-Performance** (nur indirekt über die [Beschleunigung](#beschleunigung-gemessen))
 - **Sicht aus dem Cockpit**
 :::
 

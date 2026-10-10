@@ -8,8 +8,9 @@ Struktur (aus den Daten bestätigt, siehe UEBERGABE.md):
   Schub ist gewichtsunabhängig, induzierter Widerstand ~ (n W)² (Test: n_s * W über Fuel-Stände konstant).
 
 Achtung: Aus Ps = 0 allein ist der gemeinsame Maßstab von Schub und Widerstand nicht bestimmbar.
-Er wird über SCHUB_TW festgelegt: gemessen per Beschleunigungsflug (messflug.py), sonst angenommen.
-Energiegewinn und -verlust abseits der Sustained-Linie skalieren mit diesem Wert.
+Er wird über MASSSTAB_C festgelegt, gemessen per Beschleunigungsflug (messflug.py).
+Belastbar ist damit der Überschuss T - D (Energiegewinn und -verlust); wie er sich auf Schub und
+Widerstand verteilt, bleibt offen.
 
 Aufruf: python modell.py  -> Fit, Kreuzvalidierung, daten/modell_parameter.json
 """
@@ -24,12 +25,9 @@ DATEN = os.path.join(HIER, 'daten')
 g, KT, LB, FT, RHO0 = 9.80665, 0.514444, 4.44822, 0.3048, 1.225
 JETS = ['T-15', 'T-16', 'T-18']
 HOEHEN = [0, 10000, 20190]
-# T/W auf Meereshöhe, M 0,4, 50 % Fuel (nicht aus den Diagrammen bestimmbar)
-SCHUB_TW = {
-    'T-15': 1.75,   # gemessen: Beschleunigungsläufe 10.000 ft, 100 % Fuel, 2026-10-10 (messflug.py, Rest 4 %)
-    'T-16': 1.0,    # Annahme, Messung fehlt
-    'T-18': 1.0,    # Annahme, Messung fehlt
-}
+# Maßstab von Schub und Widerstand, gemessen: Beschleunigungsläufe 10.000 ft, 100 % Fuel, 2026-10-10
+# (messflug.py; Schubüberschuss bei 1 G, 300–500 KIAS: T-15 1,40, T-16 1,02, T-18 0,95 x Gewicht)
+MASSSTAB_C = {'T-15': 2.608, 'T-16': 2.440, 'T-18': 1.783}
 
 
 def schall(h_ft):
@@ -218,14 +216,11 @@ def main():
                 zeile.append(f"{np.sqrt(np.mean(e ** 2)):6.2f}{'' if h in hoehen else '*':1}")
             print(f'  {jet} {name:34} ' + '   '.join(zeile), flush=True)
             if name == 'alle Höhen':
-                W50 = float(tab[('00000ft_050', jet)]['gewicht_lbs']) * LB
-                T, _, _ = schub_widerstand(p, 0, 0.4, atm)
                 ergebnisse['jets'][jet] = {
                     'SCLmax_m2': dict(zip(['c0', 'c1', 'c2'], scl_par[jet])),
                     'schub_widerstand_roh': {'x': float(p[0]), 'k1': float(p[1]), 'mach': MK.tolist(),
                                              'ln_tau': p[2:2 + NK].tolist(), 'ln_cd0': p[2 + NK:].tolist()},
-                    'massstab_c': float(SCHUB_TW[jet] * W50 / T),
-                    'schub_tw_quelle': 'gemessen' if jet == 'T-15' else 'Annahme',
+                    'massstab_c': MASSSTAB_C[jet],
                 }
     print('  (* = Höhe nicht im Fit, also Vorhersage)')
     kontrollplot(daten, atm, scl_par)

@@ -134,7 +134,7 @@ Ein Klassiker im Team: Der **Dragger** (der Gezogene) fliegt mit dem Bandit im S
 | Jet | Als Dragger | Warum |
 |---|---|---|
 | **T-15** | Am besten | Stärkster Schub, höchster Top-Speed (Meereshöhe ~1.000 KIAS), beste Energiehaltung bei hoher Speed. |
-| **T-16** | Bedingt | Hält hohe Speed besser als die T-18 (Top-Speed ~835 vs ~720 KIAS auf 10.000 ft), hat aber den niedrigsten T/W-Balken. Nur mit Speedvorsprung. |
+| **T-16** | Bedingt | Hält hohe Speed besser als die T-18 (Top-Speed ~835 vs ~720 KIAS auf 10.000 ft), beschleunigt aber deutlich schlechter als die T-15 (300 → 500 KIAS ~11,5 vs ~8,4 s). Nur mit Speedvorsprung. |
 | **T-18** | Am schlechtesten | Schlechteste Energiehaltung über ~480 KIAS. Eine T-18 als Köder oder Dragger einzusetzen, ist meist ein geschenkter Abschuss für den Gegner. |
 
 ::: danger DRAG & BAG MIT RAKETEN

@@ -61,14 +61,14 @@ Daten Stand Okt 2026, siehe [Flugzeugvergleich](/flugzeuge/vergleich):
 
 | Jet | Separation | Warum |
 |---|---|---|
-| **T-15 Excalibur** | Am besten | Laut Entwickler höchster Schub, laut Diagramm höchste Top-Speed: Auf 10.000 ft liegt ihr Sustained-Nullpunkt jenseits des Diagrammendes (bei ~885 KIAS noch 7 °/s). Hält 9 G bis über ~700 KIAS (10.000 ft). Die T-15 kann sich praktisch immer aussuchen, ob sie bleibt. |
-| **T-16 Falchion** | Mittel | Leicht, aber niedrigster Schub-Gewicht-Balken. Sustained Rate erst bei ~835 KIAS (10.000 ft) bei null, also eine hohe Endgeschwindigkeit. Davonlaufen gegen die T-18 möglich, gegen die T-15 nicht. |
-| **T-18 Cutlass** | Am schlechtesten | Schlechteste Energiehaltung über ~480 KIAS, Sustained Rate schon bei ~720 KIAS (10.000 ft) bei null. Die T-18 muss ihre Kämpfe so wählen, dass sie nicht weglaufen muss. |
+| **T-15 Excalibur** | Am besten | Gemessen mit Abstand die beste Beschleunigung (300 → 500 KIAS ~8,4 s), laut Diagramm höchste Top-Speed: Auf 10.000 ft liegt ihr Sustained-Nullpunkt jenseits des Diagrammendes (bei ~885 KIAS noch 7 °/s). Hält 9 G bis über ~700 KIAS (10.000 ft). Die T-15 kann sich praktisch immer aussuchen, ob sie bleibt. |
+| **T-16 Falchion** | Mittel | Beschleunigt gemessen wie die T-18 (300 → 500 KIAS ~11,5 s), deutlich langsamer als die T-15. Sustained Rate erst bei ~835 KIAS (10.000 ft) bei null, also eine hohe Endgeschwindigkeit. Davonlaufen gegen die T-18 möglich, gegen die T-15 nicht. |
+| **T-18 Cutlass** | Am schlechtesten | Beschleunigt bis ~500 KIAS fast wie die T-16 (300 → 500 KIAS ~12,3 s), bricht darüber ein. Schlechteste Energiehaltung über ~480 KIAS, Sustained Rate schon bei ~720 KIAS (10.000 ft) bei null. Die T-18 muss ihre Kämpfe so wählen, dass sie nicht weglaufen muss. |
 
 Top-Speed heißt hier: der Punkt, an dem die Sustained-Kurve im Ingame-Diagramm auf null fällt (Höchstgeschwindigkeit im Horizontalflug). Auf Meereshöhe: T-18 ~737, T-16 ~858, T-15 ~1.000 KIAS. Auf 20.190 ft: T-18 ~680 KIAS, T-16 und T-15 über dem Diagrammende (~770 KIAS). Die T-18 ist also auf jeder Höhe die langsamste.
 
 ::: info IM SPIEL PRÜFEN
-- Beschleunigung der drei Jets (steht nicht in den Diagrammen, wird gerade gemessen). Teste es im Free Flight auf gleicher Höhe mit gleicher Treibstoffmenge.
+- Die Beschleunigung ist gemessen (10.000 ft, voller Tank, 300 → 500 KIAS): T-15 ~8,4 s, T-16 ~11,5 s, T-18 ~12,3 s, siehe [Flugzeugvergleich](/flugzeuge/vergleich#beschleunigung-gemessen). Offen ist, wie viel Abstand das im echten Extend gegen einen folgenden Gegner bringt.
 :::
 
 ## VFM: Separation im Ranked 1v1 hat einen Preis

@@ -159,7 +159,7 @@ Alle Zahlen auf dieser Seite stammen aus der Ingame-Analyse, **Stand Okt 2026** 
 - **Unter ~170 KIAS:** Die Diagramme beginnen erst bei ~170–200 KIAS. Steuerbarkeit, Rollrate und Stall-Verhalten darunter sind unbekannt.
 - **Post-Stall mit AoA-Override:** Wie viel Nase bekommst du, wie viel Speed kostet es, wie fängst du ab?
 - **Rollrate** der drei Jets.
-- **Steigleistung und Beschleunigung:** Nicht in den Daten. Die T/W-Balken der Info-Karten deuten T-15 > T-18 > T-16 an – grob und nicht exakt. Eine Messung (Beschleunigung 300 → 500 KIAS auf 10.000 ft) läuft.
+- **Steigleistung:** Nicht direkt gemessen. Die Beschleunigung ist gemessen (siehe [Flugzeugvergleich](/flugzeuge/vergleich#beschleunigung-gemessen)), daraus folgt die Reihenfolge T-15 deutlich vor T-16 ≈ T-18.
 - **Speedbrake:** Gibt es eine, und wie stark bremst sie?
 - **Greyout-Modell:** G-Schwelle, Zeitverhalten, Erholung.
 - **Schallgeschwindigkeit:** Welches Temperaturmodell VFM nutzt und wo Mach 1 damit genau in KIAS liegt.
