@@ -17,6 +17,7 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 | `daten/tabellen_2026-10.csv` | Tabellenwerte aus den Screenshots (Gewicht, Instant, Sustained, Min Radius) |
 | `digitalisieren.py` | liest die Kurven aus den Screenshots → `daten/kurven_2026-10.csv`, Kontrollbilder in `daten/kontrolle/` |
 | `modell.py` | fittet das Flugmodell, Kreuzvalidierung, → `daten/modell_parameter.json`, `daten/kontrolle/modell_fit.png` |
+| `messflug.py` | wertet aus Videos abgelesene Messflüge aus (Beschleunigung → Schub-Maßstab, Kurve → Validierung) |
 
 ## Was bisher feststeht
 
@@ -39,7 +40,13 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 | Vorhersage einer weggelassenen Höhe | 0,23–0,37 °/s (T-15, T-16), 0,49–1,12 °/s (T-18) |
 | Corner Speed | ±4 KIAS (T-16 einmal 8,5) |
 
-**Offene Lücke: Energie-Maßstab.** Aus den Diagrammen (nur Ps = 0) ist der gemeinsame Maßstab von Schub und Widerstand nicht bestimmbar. Wo der Jet stationär kurvt, ist damit festgelegt. Wie schnell er abseits davon Energie gewinnt oder verliert, ist es nicht. Gesetzt ist T/W = 1,0 (Meereshöhe, M 0,4, 50 % Fuel) als Annahme. **Eine einzige Beschleunigungsmessung je Jet** schließt die Lücke, zum Beispiel Vollgas im Horizontalflug auf 10.000 ft von 300 auf 500 KIAS mit Zeit stoppen, oder dieselbe Auswertung aus einem Replay.
+**Energie-Maßstab (aus den Diagrammen nicht bestimmbar) – T-15 gemessen:** Beschleunigungsläufe im Quest-Video (`daten/messflug_t15_2026-10-10.csv`, ausgewertet mit `messflug.py`), 10.000 ft, 100 % Fuel, Nachbrenner:
+- 300 → 550 KIAS mit ~23–24 kt/s (KIAS) bzw. ~26–27 kt/s wahre Fahrt, leicht steigend; zwei Läufe fast deckungsgleich.
+- Schubüberschuss bei 1 G: (T − D)/W = 1,33–1,44 von Mach 0,54 bis 0,95. Kalibriert: **T/W ≈ 1,75** (Meereshöhe, M 0,4, 50 % Fuel). Das Modell trifft die Läufe danach auf 4 % RMS; es unterschätzt den Überschuss nahe Mach 0,9 etwas (gemeinsamer Fit von Diagrammen und Beschleunigung würde das verbessern).
+- Unabhängige Prüfung durch eine Kurve (447 KIAS, ~7 G, ~15 °/s, 16 s): Modell-Sustained 7,07 G, geflogen 6,93 G bei leichtem Energieverlust → Modell ~2 % optimistisch.
+- Nebenbefunde: Schallgeschwindigkeit im Spiel auf ~10.000 ft ≈ 630 kt (ISA 638); die HUD-Drehrate passt zu g·√(n²−1)/V mit der Modell-Atmosphäre auf 2 %.
+- HUD (T-15): oben links G und Drehrate °/s, darunter Speed (KIAS), Mach und α; rechts Höhe; „BRAKE“ unten rechts bei ausgefahrener Speedbrake. Fuel Flow im Cockpit (Nachbrenner ~115.000–140.000 PPH).
+- **T-16 und T-18 fehlen noch** (gleiches Protokoll: 10.000 ft, Vollgas ab ~250 KIAS bis ~550, Kopf so, dass das HUD komplett im Bild ist; Kurve mit Blick durchs HUD).
 
 **Datenstand vs. Wiki:** T-15 und T-18 zeigen exakt dieselben Werte wie die Wiki-Screenshots von Dez 2025. Die T-16 ist durch −20 % Treibstoffgewicht leichter (50 %: 24.417 statt 25.009 lbs) und etwas besser (Meereshöhe 50 %: 26 °/s @ 378 statt 25 @ 392, Min Radius 1.428 statt 1.524 ft). Die Wiki-Angabe „vor v1.1“ stimmt vermutlich nicht.
 

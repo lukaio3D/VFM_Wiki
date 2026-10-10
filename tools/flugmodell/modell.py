@@ -8,8 +8,8 @@ Struktur (aus den Daten bestätigt, siehe UEBERGABE.md):
   Schub ist gewichtsunabhängig, induzierter Widerstand ~ (n W)² (Test: n_s * W über Fuel-Stände konstant).
 
 Achtung: Aus Ps = 0 allein ist der gemeinsame Maßstab von Schub und Widerstand nicht bestimmbar.
-Er wird über SCHUB_ANNAHME festgelegt; Energiegewinn und -verlust abseits der Sustained-Linie
-skalieren mit dieser Annahme, bis eine Beschleunigungsmessung im Spiel sie ersetzt.
+Er wird über SCHUB_TW festgelegt: gemessen per Beschleunigungsflug (messflug.py), sonst angenommen.
+Energiegewinn und -verlust abseits der Sustained-Linie skalieren mit diesem Wert.
 
 Aufruf: python modell.py  -> Fit, Kreuzvalidierung, daten/modell_parameter.json
 """
@@ -24,7 +24,12 @@ DATEN = os.path.join(HIER, 'daten')
 g, KT, LB, FT, RHO0 = 9.80665, 0.514444, 4.44822, 0.3048, 1.225
 JETS = ['T-15', 'T-16', 'T-18']
 HOEHEN = [0, 10000, 20190]
-SCHUB_ANNAHME = 1.0   # T/W auf Meereshöhe, M 0,4, 50 % Fuel (nicht aus den Diagrammen bestimmbar)
+# T/W auf Meereshöhe, M 0,4, 50 % Fuel (nicht aus den Diagrammen bestimmbar)
+SCHUB_TW = {
+    'T-15': 1.75,   # gemessen: Beschleunigungsläufe 10.000 ft, 100 % Fuel, 2026-10-10 (messflug.py, Rest 4 %)
+    'T-16': 1.0,    # Annahme, Messung fehlt
+    'T-18': 1.0,    # Annahme, Messung fehlt
+}
 
 
 def schall(h_ft):
@@ -219,7 +224,8 @@ def main():
                     'SCLmax_m2': dict(zip(['c0', 'c1', 'c2'], scl_par[jet])),
                     'schub_widerstand_roh': {'x': float(p[0]), 'k1': float(p[1]), 'mach': MK.tolist(),
                                              'ln_tau': p[2:2 + NK].tolist(), 'ln_cd0': p[2 + NK:].tolist()},
-                    'massstab_c': float(SCHUB_ANNAHME * W50 / T),
+                    'massstab_c': float(SCHUB_TW[jet] * W50 / T),
+                    'schub_tw_quelle': 'gemessen' if jet == 'T-15' else 'Annahme',
                 }
     print('  (* = Höhe nicht im Fit, also Vorhersage)')
     kontrollplot(daten, atm, scl_par)
