@@ -1,6 +1,6 @@
 # BFM-Simulator: Konzept und Auftrag
 
-Stand 2026-10-10. Dieses Dokument ist der Auftrag für die Umsetzung in einer eigenen Session. Es fasst zusammen, was gebaut werden soll, welche Daten es gibt und was vorher am Flugmodell noch zu tun ist. Die Datenherkunft steht in [`../flugmodell/UEBERGABE.md`](../flugmodell/UEBERGABE.md).
+Stand 2026-10-10, umgesetzt 2026-10-11 als eigene App in `app/` (siehe `tools/kampfsim/README.md`). Dieses Dokument war der Auftrag für die Umsetzung in einer eigenen Session. Es fasst zusammen, was gebaut werden soll, welche Daten es gibt und was vorher am Flugmodell noch zu tun ist. Die Datenherkunft steht in [`../flugmodell/UEBERGABE.md`](../flugmodell/UEBERGABE.md).
 
 ## Ziel
 
@@ -44,7 +44,10 @@ Kräfte:
 - **Sustained-Kurven** aller 27 Bedingungen auf ~0,1–0,5 °/s getroffen (300–550 KIAS).
 - **Maßstab** `MASSSTAB_C` je Jet aus den Beschleunigungsläufen: Der Überschuss T − D bei 1 G stimmt.
 
-### Muss vor dem Simulator neu gefittet werden
+### Neu gefittet (erledigt 2026-10-11)
+
+Erledigt in `tools/flugmodell/refit.py` → `daten/modell_v2.json`, Ergebnisse und Abnahmetests in `tools/kampfsim/README.md`. Der Batch-Simulator `tools/kampfsim/sim.py` nutzt das Modell schon; seine Physik kann als Vorlage für das TS-Modul dienen. Ursprünglicher Auftrag:
+
 
 Die Aufteilung in Schub und Widerstand im Modell ist **falsch** (nur T − D stimmt), und der Widerstand bei hohem α fehlt. Für einen Lernsimulator ist das kritisch, weil harte Züge sonst viel zu „billig“ wirken (Energieverlust im vollen Zug bei der T-18 ~4-fach unterschätzt).
 

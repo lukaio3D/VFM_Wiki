@@ -6,3 +6,6 @@ docs/.vitepress/dist/
 .venv/
 venv/
 __pycache__/
+
+# Rohdaten des Turniers (reproduzierbar mit tools/kampfsim/turnier.py, ~15 min)
+tools/kampfsim/ergebnisse/*.npz
