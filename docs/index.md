@@ -32,7 +32,7 @@ Danach: [dein Flugzeug](/flugzeuge/vergleich) und die Matchups.
 | **[T-16 Falchion](/flugzeuge/t16)** | Leichter Rate-Spezialist | Two-Circle bei ~420–500 KIAS, tief | Wenn sie langsam wird (unter ~380 KIAS) oder einer hochziehenden T-15 folgt |
 | **[T-18 Cutlass](/flugzeuge/t18)** | Low-Speed-Brawler mit Nasenautorität (α bis 35° für den Snapshot) | Langsamer One-Circle von unten, tief | Sobald es schnell wird: ab ~480–510 KIAS bricht sie ein |
 
-Kein Stein-Schere-Papier: Wer den Kampf in **sein Speedband** zwingt, gewinnt. Matchups: [T-15 vs. T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs. T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs. T-18](/flugzeuge/matchups/t16-vs-t18).
+Kein Stein-Schere-Papier: Wer den Kampf in **sein Speedband** zwingt, gewinnt. Matchups: [T-15 vs. T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs. T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs. T-18](/flugzeuge/matchups/t16-vs-t18). Was ~800.000 simulierte Kämpfe dazu sagen: [Simulation](/flugzeuge/simulation).
 
 **Datenstand:** Die Zahlen stammen aus den Ingame-Diagrammen (Okt 2026) und aus Messflügen zu Beschleunigung, Ausrollen und vollem Zug; Details und offene Punkte stehen im [Flugzeugvergleich](/flugzeuge/vergleich).
 

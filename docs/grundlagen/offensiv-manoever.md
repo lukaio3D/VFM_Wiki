@@ -59,6 +59,8 @@ flowchart TD
 | Overshoot verstehen und vermeiden | [Overshoot](/grundlagen/offensiv/overshoot) | – |
 | In WEZ, Parameter passen | [Schusslösung](/grundlagen/offensiv/schussloesung) | – |
 
+**Im 3D-Simulator:** [Offensiver Perch: hinten bleiben](/VFM_Wiki/sim/?szenario=perch){target="_self"}.
+
 ::: tip MERKE
 - Gültiger Schuss da? Schießen. Alles andere dient nur dazu, diesen Moment herbeizuführen.
 - Control Zone ist Position, nicht Reichweite.

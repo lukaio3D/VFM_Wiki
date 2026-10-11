@@ -59,6 +59,8 @@ flowchart TD
 - **Jet-Wahl prägt die Defensive.** Die [T-15](/flugzeuge/t15) bricht am härtesten (beste Instant Rate, kleinster Radius), die [T-16](/flugzeuge/t16) verteidigt am besten, indem sie im Band ~420–500 KIAS Speed hält, die [T-18](/flugzeuge/t18) will den Kampf langsam machen. Daten: [Flugzeugvergleich](/flugzeuge/vergleich).
 - **Ranked 1v1:** Bei Zeitablauf gewinnt der Verfolger. Nur überleben reicht nicht, du musst neutralisieren und umdrehen ([Separation im Ranked](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis)).
 
+**Im 3D-Simulator:** [Defensiv: Bandit an deiner Six](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}.
+
 ::: tip MERKE
 - Sehen, Schuss schlagen, Sicht halten, Eintritt verweigern, Overshoot erzwingen, neutralisieren, umdrehen oder raus.
 - Immer die oberste offene Priorität zuerst.
