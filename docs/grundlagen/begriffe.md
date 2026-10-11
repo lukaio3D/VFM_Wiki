@@ -21,6 +21,8 @@ Die Ebene aus Flugrichtung und Lift Vector, in der ein Jet kurvt. Was außerhalb
 ### Bubble
 Der Raum rund um den Gegner, in dem er dich mit Nase und Waffen nicht erreicht – vor allem außerhalb seines Kurvenkreises und hinter seiner 3/9-Linie. In der Bubble bleiben heißt sicher sein, etwa in Lag Pursuit außerhalb seines Kreises. Typischer Fehler: zu nah oder zu schnell in seinen Kurvenkreis hineinziehen – damit verlässt du die Bubble, und er bekommt die Nase herum. → [Verfolgungskurven](/grundlagen/verfolgungskurven), [Overshoot](/grundlagen/offensiv/overshoot)
 
+Im 3D-Simulator: [T-16 gegen T-18 im One-Circle, in der Bubble bleiben](/VFM_Wiki/sim/?szenario=t16-bubble){target="_self"}.
+
 ### Closure (Vc)
 Die Geschwindigkeit, mit der die Entfernung zum Gegner abnimmt. Zu viel Closure nahe am Gegner führt zum Overshoot.
 

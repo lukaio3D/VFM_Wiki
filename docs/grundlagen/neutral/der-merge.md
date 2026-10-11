@@ -32,7 +32,7 @@ Eine feste Sekundenregel gibt es nicht. Beginne, wenn die **Sichtlinienrate** de
 
 ## Der erste Turn aus 450 KIAS (gemessen)
 
-Ranked startet mit ~450 KIAS, also liegen alle drei Jets **über** ihrer Corner Speed. Gemessen (10.000 ft, voller Tank, HUD-Werte, gezählt ab einer Drehrate über 10 °/s):
+Ranked startet mit ~450 KIAS, also liegen alle drei Jets **über** ihrer Corner Speed. Bis zum Merge vergehen ~5 s; auf 10.000 ft (je ~500 kt wahre Fahrt) sind das ~8.500 ft Startabstand. Wer bis dahin Nachbrenner gibt, kommt mit ~565 (T-15), ~535 (T-16) bzw. ~520 KIAS (T-18) zum Merge (*Modell*). Gemessen (10.000 ft, voller Tank, HUD-Werte, gezählt ab einer Drehrate über 10 °/s):
 
 | | nach 4 s | nach 8 s | Speed nach 8 s |
 |---|---|---|---|
@@ -52,6 +52,8 @@ Bei T-15 und T-16 stoppt der AoA-Limiter am Optimum, Knüppel voll ist dort die 
 - **T-18:** fliegt ihn mit **α ~26°**, dann ist sie mit der T-16 etwa gleichauf und schneller. Voll durchgezogen verliert sie ihn (127° gegen 141°). Die vollen 35° sind für den Snapshot: Die Nase zeigt dann ~10° weiter in die Kurve als die Flugbahn.
 
 Einschränkung: ein Messflug je Jet, jeweils mit leichtem Sinkflug (~600–900 ft); die T-18-Zeile mit α ~26° ist aus den Messdaten geschätzt.
+
+**Im 3D-Simulator:** [Erster Turn aus 450 KIAS, mit Haltepunkt am Merge](/VFM_Wiki/sim/?szenario=erster-turn){target="_self"}.
 
 ## Merge-Strategien für Ranked (Start ~450 KIAS)
 
@@ -93,6 +95,8 @@ Nach dem Pass entscheidest du sofort, **in welche Ebene** du drehst. Wohin dein 
 Slice und Nose-low tauschen Höhe gegen Speed. 3.000 ft bringen allein durch die Schwerkraft nur grob 60–80 kt. Wer schon tief ist, kann nicht beliebig slicen. Im Training gilt das [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) von 2.000 ft.
 :::
 
+**Im 3D-Simulator:** [Nose-low gegen nose-high](/VFM_Wiki/sim/?szenario=nose-low){target="_self"}.
+
 ## Den Turn des Banditen lesen
 
 Behalte den Gegner durch den Pass im Blick (Lose Sight, Lose Fight). In den ersten zwei Sekunden liest du ab:
@@ -111,6 +115,8 @@ Nicht jeder Merge endet in einem Turn. Beim **Blow-Through** fliegst du ohne Tur
 - **Wann:** Er hat den Lead Turn klar gewonnen, er bietet einen Flow an, den dein Jet verliert, oder du bist unter deinem Merge-Band.
 - **Wie:** Unload (ca. 0–0,5 G), Nase am oder knapp unter dem Horizont, volle Leistung, geradeaus weg und nicht zu früh wieder eindrehen.
 - **Grenze:** Extend funktioniert nur, solange seine Nase von dir weg zeigt, etwa weil er noch in seiner Kurve gebunden ist. Selbst die T-15 hat nach 5 s erst ~200 ft mehr Abstand. Im Ranked kostet Abstand außerdem Zeit, siehe [Separation](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis).
+
+**Im 3D-Simulator:** [Extend direkt am Merge kostet](/VFM_Wiki/sim/?szenario=extend-merge){target="_self"}.
 
 ## VFM: Lobby-Einstellungen und Ranked
 

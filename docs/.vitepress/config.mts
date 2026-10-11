@@ -8,6 +8,13 @@ export default withMermaid(
     lang: 'de-DE',
     base: '/VFM_Wiki/',
 
+    // Der BFM-Simulator ist eine eigene App (app/) unter /VFM_Wiki/sim/. Links dorthin sind keine Wiki-Seiten.
+    ignoreDeadLinks: [/\/sim\//],
+    // Lokal: /VFM_Wiki/sim/ an den App-Server (Port 5181) weiterreichen, damit Wiki und App unter einer Adresse laufen.
+    vite: {
+      server: { proxy: { '/VFM_Wiki/sim': { target: 'http://127.0.0.1:5181', ws: true } } }
+    },
+
     head: [
       ['meta', { name: 'theme-color', content: '#1a1a2e' }]
     ],
@@ -19,7 +26,8 @@ export default withMermaid(
         { text: 'Grundlagen', link: '/grundlagen/golden-rules' },
         { text: 'Avionik', link: '/avionik/radar' },
         { text: 'Flugzeuge', link: '/flugzeuge/vergleich' },
-        { text: 'Training', link: '/grundlagen/uebungen' }
+        { text: 'Training', link: '/grundlagen/uebungen' },
+        { text: 'Simulator', link: '/sim/', target: '_self' }
       ],
 
       sidebar: [
@@ -116,6 +124,8 @@ export default withMermaid(
             { text: 'T-15 Excalibur', link: '/flugzeuge/t15' },
             { text: 'T-16 Falchion', link: '/flugzeuge/t16' },
             { text: 'T-18 Cutlass', link: '/flugzeuge/t18' },
+            { text: 'Simulation: beste Strategien', link: '/flugzeuge/simulation' },
+            { text: '3D-Simulator', link: '/sim/', target: '_self' },
             {
               text: 'Matchups',
               collapsed: false,

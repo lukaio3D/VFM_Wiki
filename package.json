@@ -4,13 +4,17 @@
   "description": "Taktische Doktrin für Virtual Fighter Maneuvers",
   "type": "module",
   "scripts": {
+    "dev": "npm --prefix app run dev & vitepress dev docs --port 5180 --host 127.0.0.1",
+    "build": "vitepress build docs && npm --prefix app run build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "app:dev": "npm --prefix app run dev",
+    "app:build": "npm --prefix app run build"
   },
   "devDependencies": {
+    "mermaid": "^11.4.0",
     "vitepress": "^1.5.0",
-    "vitepress-plugin-mermaid": "^2.0.17",
-    "mermaid": "^11.4.0"
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }
