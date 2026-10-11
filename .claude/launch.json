@@ -4,7 +4,10 @@
     {
       "name": "vfm-wiki",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "docs:dev", "--", "--port", "5180"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5180,
       "url": "http://localhost:5180"
     }
