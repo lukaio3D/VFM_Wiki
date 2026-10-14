@@ -72,7 +72,7 @@ Der Simulator ist eine eigene Vite-App in `app/` (Vue 3, Three.js), veröffentli
 
 - `physik.js` – Portierung von `sim.py` für einen Kampf, dazu eigene Startlagen (`geo.start`, `geo.imKampf`) und **AoA-Override** (Annahmen: maximales α T-15 50°, T-16 32°, T-18 80°; jenseits von 35° Auftrieb und Widerstand wie eine flache Platte).
 - `modelle.js` – Low-Poly-Modelle der drei Jets im gleichen Maßstab (Maße nach den Vorbildern angenommen).
-- `analyse.js` – die drei Probleme (Winkel, Aspect, Abstand/Closure) mit Lösung, Kurvenkreis, Ps.
+- `lage.js` – die drei Probleme (Winkel, Aspect, Abstand/Closure) mit Lösung, Kurvenkreis, Ps.
 - `hud.js` – HUD der Cockpit-Ansicht.
 - `editor.js` – Vorlagen für eigene Szenarien und die Suche nach den besten Strategien (eigene Kandidaten gegen die Antworten des Bandits, im Browser).
 - `szenarien.js` – Lern-Szenarien mit Kategorie, Haltepunkt-Frage und Wiki-Link.

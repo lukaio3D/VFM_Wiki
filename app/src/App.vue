@@ -7,7 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { simuliere, FT, OVERRIDE } from './sim/physik.js'
 import { SZENARIEN, KATEGORIEN, OPTIONEN } from './sim/szenarien.js'
 import { jetModell, silhouettePfad } from './sim/modelle.js'
-import { dreiProbleme, kurvenkreis, ps, modusText, schubText, zahl } from './sim/analyse.js'
+import { dreiProbleme, kurvenkreis, ps, modusText, schubText, zahl } from './sim/lage.js'
 import { zeichneHud } from './sim/hud.js'
 import { VORLAGEN, neueLage, lageZuGeo, besteStrategien } from './sim/editor.js'
 

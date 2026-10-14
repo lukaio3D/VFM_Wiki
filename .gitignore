@@ -9,3 +9,6 @@ __pycache__/
 
 # Rohdaten des Turniers (reproduzierbar mit tools/kampfsim/turnier.py, ~15 min)
 tools/kampfsim/ergebnisse/*.npz
+
+# Replay-Proben aus erkunden.ps1 -Proben (können Namen anderer Spieler enthalten)
+tools/replays/erkundung/proben/
