@@ -12,3 +12,7 @@ tools/kampfsim/ergebnisse/*.npz
 
 # Replay-Proben aus erkunden.ps1 -Proben (können Namen anderer Spieler enthalten)
 tools/replays/erkundung/proben/
+# CSV-Exporte aus tools/replays/vrb.py --csv (enthalten Namen anderer Spieler)
+tools/replays/ausgabe/
+# Aus der VFM-Installation gelesene Spieldaten (tools/spieldaten/lesen.py), nur lokal verwenden
+tools/spieldaten/ausgabe/

@@ -24,9 +24,11 @@ for (const [port, name] of Object.entries(PORTS)) {
   }
 }
 
+// Unter Windows sind npm und npx .cmd-Dateien, die nur über eine Shell starten
+const opt = { stdio: 'inherit', shell: process.platform === 'win32' }
 const kinder = [
-  spawn('npm', ['--prefix', 'app', 'run', 'dev'], { stdio: 'inherit' }),
-  spawn('npx', ['vitepress', 'dev', 'docs', '--port', '5180', '--strictPort', '--host', '127.0.0.1'], { stdio: 'inherit' }),
+  spawn('npm', ['--prefix', 'app', 'run', 'dev'], opt),
+  spawn('npx', ['vitepress', 'dev', 'docs', '--port', '5180', '--strictPort', '--host', '127.0.0.1'], opt),
 ]
 let ende = false
 function beenden(code = 0) {
