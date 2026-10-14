@@ -31,23 +31,24 @@ def manoever(m, typ, kias0=450.0, dauer=10.0, dt=0.02, alpha_grenze=None, n_ziel
         q = 0.5 * rho * V * V
         M = V / atm.schall(np.array([h]))
         kias = atm.kias(np.array([h]), np.array([V]))
-        T = fl.schub(rho, M) * gas
-        scd0, ks, sclm = fl.polare(q, M)
+        T = fl.schub(rho, M, alpha) * gas
         if n_ziel is None:
             a_cmd = a_gr
         else:
-            a_cmd = np.minimum(fl.alpha_von_c(n_ziel(kias) * W / (q * sclm)), a_gr)
+            a_cmd = np.minimum(fl.alpha_fuer_L(n_ziel(kias) * W, q), a_gr)
         da = (a_cmd - alpha) / S.ANNAHMEN['alpha_tau_s']
         alpha = alpha + np.clip(da, -S.ANNAHMEN['alpha_rate_ab_dps'], fl.alpha_rate) * dt
-        L = np.minimum(fl.c_von_alpha(alpha) * q * sclm, 9 * W)
+        L = np.minimum(fl.auftrieb(q, alpha), 9 * W)
         n = float((L / W)[0])
-        D = fl.widerstand(q, scd0, ks, sclm, L, alpha)
+        D = fl.widerstand(q, M, V, W / S.g, alpha)
+        ws = fl.winkel_schub(alpha)
+        n = float(((L + T * np.sin(ws)) / W)[0])
         # Kurve in der Horizontalen, so weit n reicht; Rest sinkt (wie im Video, leichter Sinkflug)
         n_h = np.sqrt(max(n * n - 1, 0))
         omega = S.g * n_h / V
         out.append((t, float(kias[0]), n, float(alpha[0]), kurs, h / S.FT))
         kurs += np.degrees(omega) * dt
-        V = float(V + (T - D)[0] / (W[0] / S.g) * dt)
+        V = float(V + (T * np.cos(ws) - D)[0] / (W[0] / S.g) * dt)
         W = W - fl.burn * dt
     return np.array(out)
 

@@ -2,7 +2,7 @@
 import { simuliere, FT } from './physik.js'
 
 export const VORLAGEN = {
-  ranked: { name: 'Ranked-Start (450 KIAS, Merge in ~5 s)', merge: true, versatz_ft: 500 },
+  ranked: { name: 'Ranked-Start (~430 KIAS, 13.100 ft Abstand, Merge in ~8 s)', merge: true, versatz_ft: 1300 },
   pass: { name: 'High-Aspect-Pass, 2.000 ft Versatz', merge: true, versatz_ft: 2000 },
   perch: { name: 'Offensiver Perch: 3.000 ft hinter ihm', merge: false, abstand_ft: 3000, peilung: 0, kurs: 0, dh_ft: 500, kiasA: 420, kiasB: 400 },
   defensiv: { name: 'Defensiv: Bandit 3.000 ft an deiner Six', merge: false, abstand_ft: 3000, peilung: 180, kurs: 0, dh_ft: 500, kiasA: 400, kiasB: 420 },
@@ -13,7 +13,7 @@ export function neueLage(id = 'ranked') {
   const v = VORLAGEN[id]
   return {
     vorlage: id, a: 'T-16', b: 'T-18', hoehe_ft: 10000, fuel: 100,
-    kiasA: v.kiasA ?? 450, kiasB: v.kiasB ?? 450, versatz_ft: v.versatz_ft ?? 500,
+    kiasA: v.kiasA ?? 430, kiasB: v.kiasB ?? 430, versatz_ft: v.versatz_ft ?? 1300,
     abstand_ft: v.abstand_ft ?? 3000, peilung: v.peilung ?? 0, kurs: v.kurs ?? 0, dh_ft: v.dh_ft ?? 0,
   }
 }

@@ -74,7 +74,7 @@ def main():
                           f'| {S.strategie_name(sb[ib[int(np.argmax(y))]], typ_b)} |')
         zeilen.append('')
     text = '\n'.join(zeilen) + '\n'
-    open(os.path.join(TU.AUS, 'varianten.md'), 'w').write(text)
+    open(os.path.join(TU.AUS, 'varianten.md'), 'w', encoding='utf-8').write(text)
     print(text)
 
 

@@ -1,10 +1,11 @@
 """Vektorisierter 1v1-Kampfsimulator für die VFM-Jets (Punktmasse, 3D).
 
 Viele Kämpfe laufen gleichzeitig als Arrays. Jet i kämpft gegen Jet (i + N) mod 2N.
-Flugmodell aus tools/flugmodell/daten/modell_v2.json (refit.py):
-  Schub und Widerstand je Jet über Mach, Spiel-Atmosphäre, Lift-Limit der Diagramme,
-  im Flug erreichbarer Auftrieb über α (voller Zug), G-Limit 9.
+Flugmodell aus tools/flugmodell/daten/modell_original.json (export_original.py): Auftrieb, Widerstand und Schub aus
+den Originalkurven des Spiels über α, Mach und Dichte, kalibriert an den eigenen Messungen (kalibrieren.py),
+Dichte über der Höhe aus dem Spiel, G-Limit 9.
 Dynamik: α folgt dem Kommando mit Verzögerung (G-Aufbau wie gemessen), Lift Vector mit begrenzter Rollrate.
+α ist das HUD-α. Schub wirkt entlang der Rumpfachse (T cos α gegen D, T sin α zum Auftrieb).
 
 Annahmen, die nicht gemessen sind, stehen in ANNAHMEN.
 Einheiten intern SI (m, m/s, N); Ein- und Ausgabe in ft, KIAS, Grad.
@@ -14,16 +15,15 @@ import os
 import numpy as np
 
 HIER = os.path.dirname(os.path.abspath(__file__))
-MODELL = os.path.join(HIER, '..', 'flugmodell', 'daten', 'modell_v2.json')
+MODELL = os.path.join(HIER, '..', 'flugmodell', 'daten', 'modell_original.json')
 g, KT, LB, FT, RHO0 = 9.80665, 0.514444, 4.44822, 0.3048, 1.225
 UP = np.array([0.0, 0.0, 1.0])
 
 ANNAHMEN = {
-    'rollrate_dps': 180.0,        # nicht gemessen
+    'rollrate_dps': 180.0,        # nicht gemessen (Spiel: max. 325–420 °/s, im Kampf selten voll genutzt)
     'alpha_tau_s': 0.5,           # α-Verzögerung, mit alpha_rate so gewählt, dass der G-Aufbau zum vollen Zug passt
     'alpha_rate_ab_dps': 25.0,    # Entlasten
-    'alpha0_t16': -7.0,           # Nullauftriebs-α der T-16 (Fit degeneriert, Wert wie T-15)
-    'geschoss_mps': 1000.0,       # Mündungsgeschwindigkeit der Kanone
+    'geschoss_mps': 1030.0,       # Mündungsgeschwindigkeit der Kanone (Spieldaten, in Replays bestätigt)
     'gun_r_min_m': 150.0,
     'gun_r_max_m': 900.0,         # ~3.000 ft
     'ziel_radius_m': 6.0,         # halbe Spannweite als Trefferfenster
@@ -31,7 +31,11 @@ ANNAHMEN = {
     'treffer_s_bis_abschuss': 0.5,
     'fuel_start': 1.0,            # 100 % Fuel
 }
-LEER_LBS = {'T-15': 33069, 'T-16': 22046, 'T-18': 31967}
+# Ranked-Start, gemessen in 71 eigenen 1v1-Replays (alle gleich, Ranked und Casual): 10.000 ft, Mach 0,75
+# (246 m/s, im HUD ~427 KIAS), Head-on, 4.000 m Abstand (Merge nach ~8 s), 400 m seitlicher Versatz.
+# Voller Tank (keine Fuel-Option in der Lobby, startingFuel = maxFuel). Rundenzeit 8 min.
+RANKED = dict(mach=0.75, hoehe_ft=10000.0, abstand_m=4000.0, versatz_m=400.0)
+RUNDENZEIT_S = 480.0
 # Anstieg des α-Kommandos [°/s], abgestimmt auf die gemessenen G-Verläufe im vollen Zug (siehe kalibrierung.py)
 ALPHA_RATE_AUF = {'T-15': 9.0, 'T-16': 6.5, 'T-18': 7.5}
 JETS = ['T-15', 'T-16', 'T-18']
@@ -42,16 +46,17 @@ def lade_modell(pfad=MODELL):
 
 
 class Atmo:
+    """Dichte aus der Spielkurve; KIAS <-> wahre Fahrt wie gemessen (9G-Linie der Diagramme)."""
     def __init__(self, m):
         a = m['atmosphaere']
-        self.H = a['H_m']
+        self.h_tab, self.sigma_tab = np.array(a['h_m']), np.array(a['sigma'])
         hs = np.array([0.0, 10000.0, 20190.0])
         ra = np.array([a['r'][k][0] for k in ('0', '10000', '20190')])
         self.la = np.polyfit(hs, np.log(ra), 2)
         self.hs, self.b = hs, np.array([a['r'][k][1] for k in ('0', '10000', '20190')])
 
     def rho(self, h_m):
-        return RHO0 * np.exp(-h_m / self.H)
+        return RHO0 * np.interp(h_m, self.h_tab, self.sigma_tab)
 
     def r(self, h_m, kias):
         hf = h_m / FT
@@ -73,75 +78,82 @@ class Atmo:
         return np.sqrt(1.4 * 287.05 * np.maximum(288.15 - 0.0065 * h_m, 216.65))
 
 
+def _gleich(tab, x0, dx, x):
+    """Lineare Interpolation je Zeile in Tabellen mit gleichmäßigem Gitter. tab (J, K), x (J,)."""
+    K = tab.shape[1]
+    u = np.clip((np.asarray(x, float) - x0) / dx, 0, K - 1 - 1e-9)
+    i = u.astype(int)
+    f = u - i
+    r = np.arange(tab.shape[0])
+    return tab[r, i] * (1 - f) + tab[r, i + 1] * f
+
+
 class Flotte:
-    """Parameter-Arrays für J Jets (Typen je Index)."""
+    """Modell-Tabellen für J Jets (Typen je Index)."""
+    INV = 400   # Stützstellen der Umkehrtabellen
+
     def __init__(self, m, typen):
         self.typen = list(typen)
-        self.MK = np.array(m['mach_stuetz'])
-        self.cb, self.a_stall = m['cb'], m['alpha_stall']
         J = len(typen)
         pj = [m['jets'][t] for t in typen]
         f = lambda k: np.array([p[k] for p in pj], float)
-        self.scl = np.array([p['SCLmax_m2'] for p in pj])            # (J, 3)
-        self.x, self.a0, self.a1, self.kx, self.kst = f('x'), f('a0'), f('a1'), f('kx'), f('kst')
-        self.lnT = np.array([p['ln_T10'] for p in pj])
-        self.lnD = np.array([p['ln_SCD0'] for p in pj])
-        la = [p['lift_alpha'] for p in pj]
-        self.alpha_lim = f('alpha_lim')
-        self.alpha_max = f('alpha_max')
-        self.c_lim = np.array([l['ca'] * (al - l['a0']) for l, al in zip(la, self.alpha_lim)])
-        self.alpha0 = np.array([ANNAHMEN['alpha0_t16'] if t == 'T-16' else l['a0'] for l, t in zip(la, typen)])
-        self.c35 = np.array([l.get('c35', 0.0) for l in la])
-        self.stall = np.array([t == 'T-18' for t in typen])
-        self.W_voll = f('gewicht_voll_lbs') * LB
-        self.W_leer = np.array([LEER_LBS[t] for t in typen]) * LB
-        self.burn = f('ab_lbs_pro_s') * LB
+        A = np.array(m['alpha'])
+        self.a0, self.da = A[0], A[1] - A[0]
+        self.m0, self.dm = m['mach'][0], m['mach'][1] - m['mach'][0]
+        self.r0, self.dr = m['rho'][0], m['rho'][1] - m['rho'][0]
+        self.delta = m['delta_hud_alpha']
+        self.SLq, self.SDq, self.mf = f('SLq'), f('SDq'), f('machfaktor')
+        self.Tm, self.Td, self.Ta = f('T_mach'), f('T_dichte'), f('T_alpha')
+        self.daempfung = f('daempfung')
+        self.alpha_lim, self.alpha_max = f('alpha_lim'), f('alpha_max')
+        self.stall = self.alpha_max > self.alpha_lim
+        self.W_voll, self.W_leer, self.burn = f('W_voll'), f('W_leer'), f('burn')
         self.alpha_rate = np.array([ALPHA_RATE_AUF[t] for t in typen])
-        self.sig10 = np.exp(-10000 * FT / m['atmosphaere']['H_m'])
+        # Umkehrtabellen auf dem aufsteigenden Ast (δ .. α beim Auftriebsmaximum)
+        k0 = int(round((self.delta - self.a0) / self.da))
+        self.L_max, self.alpha_peak = np.zeros(J), np.zeros(J)
+        self.inv_L, self.inv_D = np.zeros((J, self.INV + 1)), np.zeros((J, self.INV + 1))
+        self.D_min, self.D_peak = np.zeros(J), np.zeros(J)
+        for j in range(J):
+            k1 = k0 + int(np.argmax(self.SLq[j, k0:]))
+            al = A[k0:k1 + 1]
+            sl = np.maximum.accumulate(self.SLq[j, k0:k1 + 1])
+            sdv = np.maximum.accumulate(self.SDq[j, k0:k1 + 1])
+            self.L_max[j], self.alpha_peak[j] = sl[-1], al[-1]
+            self.inv_L[j] = np.interp(np.linspace(0, sl[-1], self.INV + 1), sl, al)
+            self.D_min[j], self.D_peak[j] = sdv[0], sdv[-1]
+            self.inv_D[j] = np.interp(np.linspace(sdv[0], sdv[-1], self.INV + 1), sdv, al)
         self.J = J
 
-    def _interp(self, tab, M):
-        i = np.clip(((M - self.MK[0]) / 0.1).astype(int), 0, len(self.MK) - 2)
-        f = np.clip((M - self.MK[i]) / 0.1, 0, 1)
-        r = np.arange(self.J)
-        return tab[r, i] * (1 - f) + tab[r, i + 1] * f
+    def schub(self, rho, M, alpha):
+        """Voller Nachbrenner [N], Schubrichtung = Rumpfachse."""
+        return (_gleich(self.Tm, self.m0, self.dm, M) * _gleich(self.Td, self.r0, self.dr, rho)
+                * _gleich(self.Ta, self.a0, self.da, alpha))
 
-    def sclm(self, M):
-        d = M - 0.5
-        return self.scl[:, 0] + self.scl[:, 1] * d + self.scl[:, 2] * d * d
+    def auftrieb(self, q, alpha):
+        return q * _gleich(self.SLq, self.a0, self.da, alpha)
 
-    def schub(self, rho, M):
-        return 1e5 * np.exp(self._interp(self.lnT, M)) * (rho / RHO0 / self.sig10) ** self.x
+    def widerstand(self, q, M, V, masse, alpha):
+        return (q * _gleich(self.SDq, self.a0, self.da, alpha) * _gleich(self.mf, self.m0, self.dm, M)
+                + masse * self.daempfung * V)
 
-    def polare(self, q, M):
-        """SCD0, ks, SCLm für den aktuellen Zustand."""
-        return (np.exp(self._interp(self.lnD, M)), np.exp(self.a0) * np.maximum(1 + self.a1 * (M - 0.5) ** 2, 0.2),
-                self.sclm(M))
+    def alpha_fuer_L(self, L, q):
+        """α auf dem aufsteigenden Ast, bei dem der Auftrieb L erreicht wird (darüber: α beim Maximum)."""
+        c = np.asarray(L, float) / np.maximum(q, 1.0)
+        u = np.clip(np.abs(c) / self.L_max, 0, 1) * self.INV
+        a = _gleich(self.inv_L, 0, 1, u)
+        return self.delta + np.sign(c) * (a - self.delta)
 
-    def widerstand(self, q, scd0, ks, sclm, L, alpha):
-        c = L / (q * sclm)
-        D = q * scd0 + ks * L * L / q + self.kx * q * sclm * np.maximum(c - self.cb, 0) ** 2
-        return D + self.kst * q * sclm * np.maximum(alpha - self.a_stall, 0) / 9.0
+    def L_fuer_D(self, q, M, V, masse, D):
+        """Auftrieb, bei dem der Widerstand D erreicht wird (aufsteigender Ast, ohne Strömungsabriss)."""
+        sd = (np.asarray(D, float) - masse * self.daempfung * V) / (
+            np.maximum(q, 1.0) * _gleich(self.mf, self.m0, self.dm, M))
+        u = np.clip((sd - self.D_min) / (self.D_peak - self.D_min), 0, 1) * self.INV
+        return self.auftrieb(q, _gleich(self.inv_D, 0, 1, u))
 
-    def c_von_alpha(self, alpha):
-        """Anteil am Lift-Limit der Diagramme bei α (linear bis α_lim, T-18 darüber abfallend bis 35°)."""
-        c = self.c_lim * (alpha - self.alpha0) / (self.alpha_lim - self.alpha0)
-        ueber = self.stall & (alpha > self.a_stall)
-        c_st = self.c_lim + (self.c35 - self.c_lim) * (alpha - self.a_stall) / (35.0 - self.a_stall)
-        return np.where(ueber, c_st, c)
-
-    def alpha_von_c(self, c):
-        return self.alpha0 + (self.alpha_lim - self.alpha0) * c / self.c_lim
-
-    def L_fuer_D(self, q, scd0, ks, sclm, D):
-        """Auftrieb, bei dem der Widerstand D erreicht wird (ohne Strömungsabriss)."""
-        rest = np.maximum(D - q * scd0, 0)
-        L1 = np.sqrt(rest * q / ks)
-        A = ks * q * sclm ** 2 + self.kx * q * sclm
-        B = -2 * self.kx * q * sclm * self.cb
-        C = self.kx * q * sclm * self.cb ** 2 - rest
-        c2 = (-B + np.sqrt(np.maximum(B * B - 4 * A * C, 0))) / (2 * A)
-        return np.where(L1 <= self.cb * q * sclm, L1, c2 * q * sclm)
+    def winkel_schub(self, alpha):
+        """Winkel zwischen Rumpfachse und Bahn [rad] (Flügel-α)."""
+        return np.radians(alpha - self.delta)
 
 
 def norm(v):
@@ -184,7 +196,7 @@ def winkel(a, b):
 #   v_ziel: KIAS, die der Pilot im Kampf hält (darüber: ziehen, darunter: entlasten)
 #   lag:    Zielpunkt im Kampf [s] hinter dem Gegner (0 = Pure Pursuit)
 #   alpha_kampf: α-Grenze beim Kurven (T-18: 26 diszipliniert, 35 voll); für den Schuss gilt immer alpha_max
-#   merge_ab: 1 Nachbrenner bis zum Merge (schneller Merge), 0 Speed bei 450 KIAS halten
+#   merge_ab: 1 Nachbrenner bis zum Merge (schneller Merge), 0 Startspeed halten
 # Jeder weitere Pass (hoher Aspect, Abstand < 1.000 m) beginnt wieder mit dem ersten Turn derselben Strategie.
 STRATEGIE_FELDER = ('wende', 'ebene', 'v_ziel', 'lag', 'alpha_kampf', 'merge_ab')
 
@@ -199,11 +211,15 @@ def strategie_name(s, jet=None):
 
 
 # ---------------------------------------------------------------- Simulation
-def start_geometrie(N, atm, kias=450.0, hoehe_ft=10000.0, sek_bis_merge=5.0, versatz_m=300.0, hoehe_versatz_m=0.0):
-    """Ranked-Start: Head-on mit seitlichem Versatz, beide mit kias, Merge nach sek_bis_merge."""
+def start_geometrie(N, atm, mach=0.75, hoehe_ft=10000.0, abstand_m=4000.0, versatz_m=400.0, hoehe_versatz_m=0.0,
+                    kias=None):
+    """Ranked-Start (Standardwerte = RANKED): Head-on mit seitlichem Versatz, beide mit Mach (oder kias)."""
     h = hoehe_ft * FT
-    V = float(atm.tas(np.array(h), np.array(kias)))
-    abstand = 2 * V * sek_bis_merge
+    if kias is None:
+        V = mach * float(atm.schall(np.array(h)))
+    else:
+        V = float(atm.tas(np.array(h), np.array(kias)))
+    abstand = abstand_m
     P = np.zeros((2 * N, 3)); Vv = np.zeros((2 * N, 3))
     P[:N] = [0, -abstand / 2, h]
     P[N:] = [versatz_m, abstand / 2, h + hoehe_versatz_m]
@@ -212,7 +228,7 @@ def start_geometrie(N, atm, kias=450.0, hoehe_ft=10000.0, sek_bis_merge=5.0, ver
     return P, Vv
 
 
-def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur_alle=0.0, aenderung=None):
+def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=RUNDENZEIT_S, dt=0.04, spur_alle=0.0, aenderung=None):
     """N Kämpfe gleichzeitig. strat_a/strat_b: dict Feld -> Array (N,). Rückgabe dict mit Ergebnis-Arrays.
     aenderung: abweichende ANNAHMEN für Empfindlichkeitstests, dazu 'schub_<Jet>' als Faktor auf den Schub."""
     AN = dict(ANNAHMEN, **(aenderung or {}))
@@ -228,6 +244,7 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
 
     P, V = start_geometrie(N, atm, **geo)
     W = fl.W_leer + (fl.W_voll - fl.W_leer) * AN['fuel_start']
+    kias_start = atm.kias(P[:, 2], norm(V))
     l = np.tile(UP, (J, 1))                    # Lift Vector (Einheit, senkrecht zu v)
     alpha = np.full(J, 2.0)
     A_prev = np.zeros((J, 3))
@@ -266,8 +283,7 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
         min_v = np.minimum(min_v, np.where(lebt, kias, np.inf))
         im_kampf = lebt & (phase == 2)
         kias_sum += kias * im_kampf; kias_n += im_kampf
-        T = fl.schub(rho, M) * schub_f
-        scd0, ks, sclm = fl.polare(q, M)
+        T = fl.schub(rho, M, alpha) * schub_f
         mass = W / g
 
         # Geometrie zum Gegner
@@ -321,7 +337,7 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
         # Speed-Regler: G so, dass die Speed zum Ziel läuft
         dVdt = np.clip(0.3 * (S['v_ziel'] - kias), -40, 40) * KT * atm.r(h, kias)
         D_req = T - mass * (dVdt + g * sin_gam)
-        n_speed = np.clip(fl.L_fuer_D(q, scd0, ks, sclm, D_req) / W, 0.5, 9.0)
+        n_speed = np.clip(fl.L_fuer_D(q, M, Vm, mass, D_req) / W, 0.5, 9.0)
 
         # Kampf: Verfolgung (Pure / Lag) mit Ebenen-Neigung
         # Lag nur auf kurze Distanz (Überschießen vermeiden); weiter weg Pure, um aufzuschließen
@@ -383,7 +399,7 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
         # α-Kommando aus n_soll; Grenze: beim Kurven alpha_kampf, beim Schuss alpha_max
         a_grenze = np.where(gun, fl.alpha_max, np.minimum(S['alpha_kampf'], fl.alpha_max))
         a_grenze = np.minimum(a_grenze, np.where(fl.stall, 35.0, fl.alpha_lim))
-        a_cmd = fl.alpha_von_c(n_soll * W / (q * sclm))
+        a_cmd = fl.alpha_fuer_L(n_soll * W, q)
         bis_lim = np.minimum(a_grenze, fl.alpha_lim)
         a_cmd = np.where(a_cmd > bis_lim, np.where((n_soll >= 8.99) | gun, a_grenze, bis_lim), a_cmd)
         a_cmd = np.clip(a_cmd, -5, a_grenze)
@@ -391,9 +407,9 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
         alpha = alpha + np.clip(da, -AN['alpha_rate_ab_dps'], fl.alpha_rate) * dt
 
         # Auftrieb, 9-G-Limiter
-        L = fl.c_von_alpha(alpha) * q * sclm
+        L = fl.auftrieb(q, alpha)
         L = np.minimum(L, 9.0 * W)
-        alpha = np.where(L >= 9.0 * W - 1, np.minimum(alpha, fl.alpha_von_c(9.0 * W / (q * sclm))), alpha)
+        alpha = np.where(L >= 9.0 * W - 1, np.minimum(alpha, fl.alpha_fuer_L(9.0 * W, q)), alpha)
         n_akt = L / W
 
         # Rollen: l dreht um vh Richtung l_soll, begrenzt
@@ -404,13 +420,15 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=150.0, dt=0.04, spur
         l = l * np.cos(phi)[:, None] + np.cross(vh, l) * np.sin(phi)[:, None]
 
         # Bewegung
-        D = fl.widerstand(q, scd0, ks, sclm, L, alpha)
-        # Schub: vor dem Merge 450 KIAS halten oder Nachbrenner; im Kampf Leerlauf, wenn weit über Ziel-Speed
-        T_halten = np.clip(D + mass * (0.5 * (450 - kias) * KT + g * sin_gam), 0, T)
+        D = fl.widerstand(q, M, Vm, mass, alpha)
+        # Schub: vor dem Merge Startspeed halten oder Nachbrenner; im Kampf Leerlauf, wenn weit über Ziel-Speed
+        T_halten = np.clip(D + mass * (0.5 * (kias_start - kias) * KT + g * sin_gam), 0, T)
         gas = np.where(phase == 0, np.where(S['merge_ab'] > 0, 1.0, T_halten / T),
                        np.where(extend | (kias < S['v_ziel'] + 60), 1.0, 0.0))
         T = T * gas
-        A = ((T - D) / mass)[:, None] * vh + (L / mass)[:, None] * l + np.array([0, 0, -g])
+        ws = fl.winkel_schub(alpha)
+        A = (((T * np.cos(ws) - D) / mass)[:, None] * vh + ((L + T * np.sin(ws)) / mass)[:, None] * l
+             + np.array([0, 0, -g]))
         A = np.where(lebt[:, None], A, 0)
         V = V + A * dt
         P = P + V * dt

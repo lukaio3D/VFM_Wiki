@@ -96,7 +96,7 @@ def bericht():
     zeilen += ['## Übersicht Spielwerte', '', '| Paarung | Wert für den ersten Jet | mit Zeitwertung |', '|---|---|---|']
     zeilen += [f'| {a} gegen {b} | {v:+.2f} | {vz:+.2f} |' for (a, b), (v, vz) in gesamt.items()]
     text = '\n'.join(zeilen) + '\n'
-    open(os.path.join(AUS, 'bericht.md'), 'w').write(text)
+    open(os.path.join(AUS, 'bericht.md'), 'w', encoding='utf-8').write(text)
     print(text)
 
 

@@ -22,6 +22,14 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 | `zug_ausrollen.py` | wertet Ausrollen im Leerlauf (→ Widerstand) und vollen Zug (→ Flug-Lift-Limit, Energieverlust) aus |
 | `messflug.py` | wertet aus Videos abgelesene Messflüge aus (Beschleunigung → Schub-Maßstab, Kurve → Validierung) |
 
+## Originalmodell (Stand 2026-10-14)
+
+Die Parameter der Jets stehen in den Unity-Assets der Installation und werden mit `../spieldaten/lesen.py` gelesen (nur lokal, gitignored). `original.py` baut daraus das Spielmodell als Punktmasse nach: Auftrieb und Widerstand über α aus den Flächen und Profilkurven, Schub über Mach, Dichte und α, Dichte über der Höhe, Massen, Limits. `kalibrieren.py` legt die Faktoren aus dem Spielcode an allen Messungen fest, `export_original.py` schreibt die Tabellen für Kampfsimulator und 3D-App (`daten/modell_original.json`). Ergebnisse und Prüfungen: `../kampfsim/README.md`.
+
+Was die Originaldaten an den bisherigen Befunden bestätigen: Dichte über der Höhe (0,69 / 0,48), Vollgewichte (±0,2 %), Schub mit Nachbrenner (Faktor 0,96–0,98 auf die Spieldaten), Mündungsgeschwindigkeit 1.030 m/s, 9-G-Limit. Neu: der große Widerstand bei hohem α steckt in den Profilkurven; HUD-α ≈ Flügel-α + 2°; das Lift-Limit der Diagramme liegt 13–24 % über dem im Flug erreichbaren Auftrieb.
+
+Der Abschnitt unten beschreibt den Stand vor dem Auslesen und das alte Modell v2 (`modell.py`, `refit.py`), das zum Vergleich erhalten bleibt.
+
 ## Was bisher feststeht
 
 **Digitalisierung:** Achsen und jede Gitterlinie werden einzeln gefittet; eine Homographie fängt die VR-Perspektive ab (Rest ~1 px). Die erste vertikale Gitterlinie liegt bei 200 KIAS, die Markerlinien treffen die Tabellen-KIAS auf ±2 KIAS. Gitter: 4 °/s bzw. 50 KIAS je Linie.
@@ -70,18 +78,16 @@ Stand 2026-10-10. Diese Datei ist der Einstieg für die Weiterarbeit, auch auf d
 
 **Was weiter fehlt:** Rollrate, G-Onset, Verhalten unter ~170 KIAS, Override und Post-Stall, Speedbrake, Greyout, Raketen- und Gun-Ballistik.
 
-**Replays:** VFM hat eine Replay-Szene mit S-Cam. Die Patch Notes zu v1.2.8 nennen „AoA desync in replays reduziert“, das spricht für aufgezeichnete Flugzustände. Ein Export (Tacview/ACMI), ein dokumentiertes Format oder Mod-Support ist nicht bekannt. Engine: Unity.
+**Replays (entschlüsselt 2026-10-14, siehe [`../replays/FORMAT.md`](../replays/FORMAT.md)):** `.vri` ist JSON (Spieler, Elo, Jet, Kills), `.vrb` ein LZ4-Block mit je Spieler Position und Geschwindigkeit ~4,5-mal pro Sekunde sowie allen Geschossen. Leser und CSV-Export: `../replays/vrb.py`. Auf dem Windows-PC liegen 76 eigene Matches (~7 h, alle drei Jets) und drei Lehr-Replays des Entwicklers. Offen ist nur die Lage (Quaternion-Deltas driften), damit fehlt der Anstellwinkel. Engine: Unity 6000.2, IL2CPP.
 
 ## Nächste Schritte auf dem Windows-PC
 
-1. **Installation ansehen** (nur lesen, nichts verändern):
-   - Steam-Ordner finden: `Steam\steamapps\common\Virtual Fighter Maneuvers\` (Name prüfen).
-   - Mono oder IL2CPP? `*_Data\Managed\Assembly-CSharp.dll` heißt Mono (Code mit ILSpy lesbar), `GameAssembly.dll` heißt IL2CPP (deutlich schwerer).
-   - Lesbare Konfigurationsdateien (`.json`, `.xml`, `.txt`, `.ini`, `StreamingAssets\`)? Flugzeugparameter stecken bei Unity meist binär in `*.assets`.
-   - Falls Parameter lesbar sind: mit `modell.py` vergleichen (Atmosphäre, Schubkurve über Mach, CLmax).
-2. **Replays finden:** typischerweise `%USERPROFILE%\AppData\LocalLow\<Firma>\<Spiel>\` oder `Documents\`. Größe, Endung, erste Bytes (Hexdump): Text, JSON, gzip/zlib oder eigenes Binärformat?
-3. **Format entschlüsseln:** einen kurzen, bekannten Flug aufnehmen (30 s geradeaus mit Vollgas, dann ein 9-G-Kreis) und schauen, welche Werte sich wie ändern. Derselbe Flug liefert gleich die fehlende Beschleunigungsmessung.
-4. **Regeln:** Vor dem Auslesen von Spieldateien die EULA prüfen. Nur offline arbeiten, nie etwas ins laufende Spiel injizieren (Ranked, möglicher Anti-Cheat).
+Erledigt am 2026-10-14: Installation erkundet (`../replays/erkunden.ps1`; IL2CPP, keine lesbaren Flugzeugparameter, nur Videos und Replays in `StreamingAssets`), Replayformat entschlüsselt.
+
+1. **Modell an Replays prüfen:** In den eigenen Tracks (glatt, nicht die verrauschten Gegner-Tracks) liefert jeder Satz Höhe, KIAS, G und Ps. Die obere Hülle von Ps über (G, KIAS, Höhe) ist Vollgas mit Nachbrenner und prüft `modell.py` außerhalb der Diagrammpunkte, vor allem den Widerstand bei hohem G, der laut Zug-Messung fehlt. Unbekannt bleibt der Treibstoffstand.
+2. **Gun-Ballistik:** Die Geschosse haben Start- und Endzustand mit Zeit, daraus Widerstandsbeiwert und Reichweite.
+3. **Lage-Feld:** Falls der Anstellwinkel gebraucht wird, einen kurzen bekannten Flug aufnehmen (Geradeausflug, dann Vollzug bei ~450 KIAS mit α-Ablesung) und dLage daran prüfen.
+4. **Regeln:** Vor dem Auslesen von Spielcode die EULA prüfen. Nur offline arbeiten, nie etwas ins laufende Spiel injizieren (Ranked, möglicher Anti-Cheat).
 
 ## Setup
 

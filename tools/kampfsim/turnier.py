@@ -1,6 +1,7 @@
 """Turnier: jede Strategie gegen jede, für alle Paarungen und Startgeometrien -> ergebnisse/*.npz
 
-Ranked-Start: beide 450 KIAS auf 10.000 ft, Head-on, Merge nach ~5 s, seitlicher Versatz 150 m bzw. 600 m.
+Ranked-Start wie in den Replays (sim.RANKED): 10.000 ft, Mach 0,75 (~427 KIAS), Head-on, 4.000 m Abstand,
+400 m seitlicher Versatz, voller Tank; Rundenzeit 8 min.
 
 Aufruf: python turnier.py [--schnell]
 """
@@ -18,7 +19,7 @@ EBENE = (60, 25, 0, -30)
 V_ZIEL = (280, 360, 440, 520)
 LAG = (0.0, 1.0)
 MERGE_AB = (0, 1)
-GEOMETRIEN = {'versatz_150m': dict(versatz_m=150.0), 'versatz_600m': dict(versatz_m=600.0)}
+GEOMETRIEN = {'ranked': {}}
 PAARUNGEN = [('T-15', 'T-15'), ('T-16', 'T-16'), ('T-18', 'T-18'),
              ('T-15', 'T-16'), ('T-15', 'T-18'), ('T-16', 'T-18')]
 BLOCK = 6000

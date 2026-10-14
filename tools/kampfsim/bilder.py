@@ -1,4 +1,4 @@
-"""Beispielkämpfe für das Wiki: je Paarung die stärkste reine Strategie beider Seiten (Nash-Mischung)
+"""Beispielkämpfe für das Wiki: je Paarung die stärkste Strategie beider Seiten gegen ein breites Feld
 -> docs/public/images/sim/<a>_vs_<b>.png
 
 Aufruf: python bilder.py
@@ -18,9 +18,9 @@ def main():
         if typ_a == typ_b:
             continue
         d = AW.lade(typ_a, typ_b)
-        v, x, y = AW.nash(d['ergebnis'].mean(axis=2))
-        sa, sb = TU.strategien(typ_a)[int(np.argmax(x))], TU.strategien(typ_b)[int(np.argmax(y))]
-        r = Z.kampf(typ_a, sa, typ_b, sb, 150.0)
+        P = d['ergebnis'].mean(axis=2)
+        sa, sb = TU.strategien(typ_a)[int(np.argmax(P.mean(axis=1)))], TU.strategien(typ_b)[int(np.argmin(P.mean(axis=0)))]
+        r = Z.kampf(typ_a, sa, typ_b, sb)
         datei = os.path.join(ZIEL, f'{typ_a.lower().replace("-", "")}_vs_{typ_b.lower().replace("-", "")}.png')
         Z.bild(r, typ_a, sa, typ_b, sb, datei)
         print(datei, r['ergebnis'][0])

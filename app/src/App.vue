@@ -637,7 +637,7 @@ onBeforeUnmount(() => {
               <label class="feld">Höhe {{ zahl(lage.hoehe_ft) }} ft<input type="range" min="5000" max="20000" step="500" v-model.number="lage.hoehe_ft" @change="lageAnwenden()" /></label>
               <label class="feld">Fuel {{ lage.fuel }} %<input type="range" min="10" max="100" step="5" v-model.number="lage.fuel" @change="lageAnwenden()" /></label>
             </div>
-            <label v-if="VORLAGEN[lage.vorlage].merge" class="feld">Seitlicher Versatz {{ zahl(lage.versatz_ft) }} ft<input type="range" min="0" max="4000" step="250" v-model.number="lage.versatz_ft" @change="lageAnwenden()" /></label>
+            <label v-if="VORLAGEN[lage.vorlage].merge" class="feld">Seitlicher Versatz {{ zahl(lage.versatz_ft) }} ft<input type="range" min="0" max="4000" step="100" v-model.number="lage.versatz_ft" @change="lageAnwenden()" /></label>
             <template v-else>
               <div class="zwei">
                 <label class="feld">Abstand {{ zahl(lage.abstand_ft) }} ft<input type="range" min="1000" max="9000" step="250" v-model.number="lage.abstand_ft" @change="lageAnwenden()" /></label>

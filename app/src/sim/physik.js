@@ -1,9 +1,10 @@
 // 1v1-Kampfsimulation der VFM-Jets im Browser.
 // Portierung von tools/kampfsim/sim.py (ein Kampf, zwei Jets, gleiche Physik und Bot-Logik).
-// Modell und Annahmen kommen aus docs/public/sim/modell.json (tools/kampfsim/export_web.py).
+// Modell und Annahmen kommen aus app/public/data/modell.json (tools/kampfsim/export_web.py): Auftrieb, Widerstand
+// und Schub als Tabellen aus den Originalkurven des Spiels, kalibriert an den eigenen Messungen.
 //
-// Zusatz gegenüber sim.py: AoA-Override für Snapshots (Strategie-Feld `override`). Nicht gemessen,
-// Werte und Verhalten jenseits von 35° sind Annahmen (siehe OVERRIDE).
+// Zusatz gegenüber sim.py: AoA-Override für Snapshots (Strategie-Feld `override`). Die maximalen α im Override
+// sind Annahmen (siehe OVERRIDE), Auftrieb und Widerstand dort kommen aus den Originalkurven bis 90°.
 
 export const g = 9.80665, KT = 0.514444, LB = 4.44822, FT = 0.3048, RHO0 = 1.225
 
@@ -36,8 +37,17 @@ export const vek = { add, sub, mul, dot, cross, norm, einheit, senkrecht, winkel
 
 // --------------------------------------------------------------- Atmosphäre
 export class Atmo {
-  constructor(m) { Object.assign(this, m.atm) }
-  rho(h) { return RHO0 * Math.exp(-h / this.H) }
+  constructor(m) {
+    const a = m.atmosphaere, hs = [0, 10000, 20190], k = ['0', '10000', '20190']
+    this.hTab = a.h_m; this.sTab = a.sigma; this.hs = hs
+    this.la = polyfit2(hs, k.map(x => Math.log(a.r[x][0])))
+    this.b = k.map(x => a.r[x][1])
+  }
+  rho(h) {
+    const { hTab, sTab } = this, dh = hTab[1] - hTab[0]
+    const u = clip((h - hTab[0]) / dh, 0, hTab.length - 1 - 1e-9), i = Math.floor(u)
+    return RHO0 * (sTab[i] + (sTab[i + 1] - sTab[i]) * (u - i))
+  }
   _b(hf) {
     const { hs, b } = this
     if (hf <= hs[0]) return b[0]
@@ -55,60 +65,82 @@ export class Atmo {
   static schall(h) { return Math.sqrt(1.4 * 287.05 * Math.max(288.15 - 0.0065 * h, 216.65)) }
 }
 
+// Quadratischer Ausgleich durch drei Punkte (wie np.polyfit(x, y, 2) bei drei Höhen)
+function polyfit2(x, y) {
+  const [x0, x1, x2] = x, [y0, y1, y2] = y
+  const d0 = (x0 - x1) * (x0 - x2), d1 = (x1 - x0) * (x1 - x2), d2 = (x2 - x0) * (x2 - x1)
+  const c2 = y0 / d0 + y1 / d1 + y2 / d2
+  const c1 = -(y0 * (x1 + x2) / d0 + y1 * (x0 + x2) / d1 + y2 * (x0 + x1) / d2)
+  const c0 = y0 * x1 * x2 / d0 + y1 * x0 * x2 / d1 + y2 * x0 * x1 / d2
+  return [c2, c1, c0]
+}
+
 // --------------------------------------------------------------- Jet
+// Tabellen über HUD-α, Mach und Dichte (gleichmäßige Gitter), wie Flotte in sim.py
+const INV = 400
+function gleich(tab, x0, dx, x) {
+  const u = clip((x - x0) / dx, 0, tab.length - 1 - 1e-9), i = Math.floor(u)
+  return tab[i] + (tab[i + 1] - tab[i]) * (u - i)
+}
+function umkehr(xs, ys, n) {   // ys monoton steigend -> Werte von xs auf gleichmäßigem ys-Gitter
+  const out = [], y0 = ys[0], y1 = ys[ys.length - 1]
+  let k = 0
+  for (let s = 0; s <= n; s++) {
+    const y = y0 + (y1 - y0) * s / n
+    while (k < ys.length - 2 && ys[k + 1] < y) k++
+    const f = ys[k + 1] > ys[k] ? clip((y - ys[k]) / (ys[k + 1] - ys[k]), 0, 1) : 0
+    out.push(xs[k] + (xs[k + 1] - xs[k]) * f)
+  }
+  return out
+}
+
 export class Jet {
   constructor(m, typ) {
     Object.assign(this, m.jets[typ])
     this.typ = typ
-    this.MK = m.MK; this.cb = m.cb; this.a_stall = m.a_stall; this.sig10 = m.sig10
-  }
-  _interp(tab, M) {
-    const MK = this.MK
-    const i = clip(Math.floor((M - MK[0]) / 0.1), 0, MK.length - 2)
-    const f = clip((M - MK[i]) / 0.1, 0, 1)
-    return tab[i] * (1 - f) + tab[i + 1] * f
-  }
-  sclm(M) { const d = M - 0.5; return this.scl[0] + this.scl[1] * d + this.scl[2] * d * d }
-  schub(rho, M) { return 1e5 * Math.exp(this._interp(this.lnT, M)) * Math.pow(rho / RHO0 / this.sig10, this.x) }
-  polare(M) {
-    return [Math.exp(this._interp(this.lnD, M)), Math.exp(this.a0) * Math.max(1 + this.a1 * (M - 0.5) ** 2, 0.2), this.sclm(M)]
-  }
-  // Grenze, ab der Strömungsabriss gilt: T-18 26°, sonst α-Limiter
-  aStall() { return this.stall ? this.a_stall : this.alpha_lim }
-  widerstand(q, scd0, ks, sclm, L, alpha) {
-    const c = L / (q * sclm)
-    let D = q * scd0 + ks * L * L / q + this.kx * q * sclm * Math.max(c - this.cb, 0) ** 2
-    const ueber = alpha - this.aStall()
-    if (ueber > 0) {
-      // gemessen (T-18 bis 35°): linear; Override darüber: Flachplatte 2 sin²α bezogen auf S ≈ SCLm / 1,6 (Annahme)
-      const kst = this.stall ? this.kst : KST_ANDERE
-      D += kst * q * sclm * Math.min(ueber, 9) / 9
-      if (ueber > 9) D += q * (sclm / 1.6) * 2 * (Math.sin(rad(alpha)) ** 2 - Math.sin(rad(this.aStall() + 9)) ** 2)
+    const A = m.alpha
+    this.a0 = A[0]; this.da = A[1] - A[0]
+    this.m0 = m.mach[0]; this.dm = m.mach[1] - m.mach[0]
+    this.r0 = m.rho[0]; this.dr = m.rho[1] - m.rho[0]
+    this.delta = m.delta_hud_alpha
+    this.stall = this.alpha_max > this.alpha_lim
+    // aufsteigender Ast δ .. α beim Auftriebsmaximum
+    const k0 = Math.round((this.delta - this.a0) / this.da)
+    let k1 = k0
+    for (let k = k0; k < A.length; k++) if (this.SLq[k] > this.SLq[k1]) k1 = k
+    const al = A.slice(k0, k1 + 1), sl = [], sd = []
+    for (let k = k0; k <= k1; k++) {
+      sl.push(Math.max(this.SLq[k], sl.length ? sl[sl.length - 1] : -Infinity))
+      sd.push(Math.max(this.SDq[k], sd.length ? sd[sd.length - 1] : -Infinity))
     }
-    return D
+    this.Lmax = sl[sl.length - 1]; this.alpha_peak = al[al.length - 1]
+    this.Dmin = sd[0]; this.Dpeak = sd[sd.length - 1]
+    this.invL = umkehr(al, sl, INV)   // sl[0] = 0 (Flügel-α 0)
+    this.invD = umkehr(al, sd, INV)
   }
-  cVonAlpha(alpha) {
-    const s = this.aStall()
-    if (alpha <= s) {
-      return this.c_lim * (alpha - this.alpha0) / (this.alpha_lim - this.alpha0)
-    }
-    const c35 = this.stall ? this.c35 : 0.93 * this.c_lim
-    if (alpha <= s + 9) return this.c_lim + (c35 - this.c_lim) * (alpha - s) / 9
-    // Override jenseits: Auftrieb wie Flachplatte, fällt bis 90° auf 0 (Annahme)
-    return c35 * Math.sin(rad(2 * alpha)) / Math.sin(rad(2 * (s + 9)))
+  // voller Nachbrenner [N], Schubrichtung = Rumpfachse
+  schub(rho, M, alpha) {
+    return gleich(this.T_mach, this.m0, this.dm, M) * gleich(this.T_dichte, this.r0, this.dr, rho)
+      * gleich(this.T_alpha, this.a0, this.da, alpha)
   }
-  alphaVonC(c) { return this.alpha0 + (this.alpha_lim - this.alpha0) * c / this.c_lim }
-  LfuerD(q, scd0, ks, sclm, D) {
-    const rest = Math.max(D - q * scd0, 0)
-    const L1 = Math.sqrt(rest * q / ks)
-    if (L1 <= this.cb * q * sclm) return L1
-    const A = ks * q * sclm ** 2 + this.kx * q * sclm
-    const B = -2 * this.kx * q * sclm * this.cb
-    const C = this.kx * q * sclm * this.cb ** 2 - rest
-    return (-B + Math.sqrt(Math.max(B * B - 4 * A * C, 0))) / (2 * A) * q * sclm
+  auftrieb(q, alpha) { return q * gleich(this.SLq, this.a0, this.da, alpha) }
+  widerstand(q, M, V, masse, alpha) {
+    return q * gleich(this.SDq, this.a0, this.da, alpha) * gleich(this.machfaktor, this.m0, this.dm, M) + masse * this.daempfung * V
   }
+  // α auf dem aufsteigenden Ast, bei dem der Auftrieb L erreicht wird (darüber: α beim Maximum)
+  alphaFuerL(L, q) {
+    const c = L / Math.max(q, 1)
+    const a = gleich(this.invL, 0, 1, clip(Math.abs(c) / this.Lmax, 0, 1) * INV)
+    return this.delta + Math.sign(c) * (a - this.delta)
+  }
+  // Auftrieb, bei dem der Widerstand D erreicht wird (aufsteigender Ast)
+  LfuerD(q, M, V, masse, D) {
+    const sd = (D - masse * this.daempfung * V) / (Math.max(q, 1) * gleich(this.machfaktor, this.m0, this.dm, M))
+    const u = clip((sd - this.Dmin) / (this.Dpeak - this.Dmin), 0, 1) * INV
+    return this.auftrieb(q, gleich(this.invD, 0, 1, u))
+  }
+  winkelSchub(alpha) { return rad(alpha - this.delta) }
 }
-const KST_ANDERE = 0.27   // Strömungsabriss-Widerstand wie T-18 (Annahme für T-15/T-16 im Override)
 
 function mitSchwerkraft(lDir, n, gS) {
   const lg = dot(lDir, gS)
@@ -127,19 +159,24 @@ export function strategieName(s, jet) {
 }
 
 // --------------------------------------------------------------- Simulation
-// geo: { versatz_m, kias, hoehe_ft, sek_bis_merge, fuel }  (Ranked-Start, Head-on)
+// Ranked-Start wie in den Replays: 10.000 ft, Mach 0,75 (~427 KIAS), Head-on, 4.000 m Abstand, 400 m Versatz,
+// voller Tank, Rundenzeit 8 min.
+export const RANKED = { mach: 0.75, hoehe_ft: 10000, abstand_m: 4000, versatz_m: 400 }
+export const RUNDENZEIT_S = 480
+// geo: { versatz_m, mach oder kias, hoehe_ft, abstand_m, fuel }  (Ranked-Start, Head-on; fehlende Werte = RANKED)
 //   oder geo.start = [{ x, y (m), hoehe_ft, kurs (° rechtweisend, 0 = +y), kias, fuel }, {…}], geo.imKampf = true:
 //   beide Bots starten direkt im Kampf (kein Merge), z. B. Perch oder Defensive.
 // Rückgabe: { ergebnis (+1 A, -1 B, 0 offen), t_ende, frames: [{t, j:[{P, vh, l, alpha, n, kias, h, gas, phase, gun, bedroht, schuss, treffer}]}], ... }
 export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
   const AN = { ...m.annahmen, ...(opt.annahmen || {}) }
-  const dt = opt.dt ?? 0.04, tMax = opt.tMax ?? 150, frameAlle = opt.frameAlle ?? 2
+  const dt = opt.dt ?? 0.04, tMax = opt.tMax ?? RUNDENZEIT_S, frameAlle = opt.frameAlle ?? 2
   const atm = new Atmo(m)
   const fl = [new Jet(m, typA), new Jet(m, typB)]
   const S = [{ ...STRATEGIE_STANDARD, ...stratA }, { ...STRATEGIE_STANDARD, ...stratB }]
-  const kias0 = geo.kias ?? 450, h0 = (geo.hoehe_ft ?? 10000) * FT
-  const V0 = atm.tas(h0, kias0), abstand = 2 * V0 * (geo.sek_bis_merge ?? 5)
-  let P = [[0, -abstand / 2, h0], [geo.versatz_m ?? 150, abstand / 2, h0 + (geo.hoehe_versatz_m ?? 0)]]
+  const h0 = (geo.hoehe_ft ?? RANKED.hoehe_ft) * FT
+  const V0 = geo.kias != null ? atm.tas(h0, geo.kias) : (geo.mach ?? RANKED.mach) * Atmo.schall(h0)
+  const abstand = geo.abstand_m ?? RANKED.abstand_m
+  let P = [[0, -abstand / 2, h0], [geo.versatz_m ?? RANKED.versatz_m, abstand / 2, h0 + (geo.hoehe_versatz_m ?? 0)]]
   let V = [[0, V0, 0], [0, -V0, 0]]
   const fuel = geo.fuel ?? AN.fuel_start
   let W = fl.map(f => f.W_leer + (f.W_voll - f.W_leer) * fuel)
@@ -151,6 +188,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
     })
     W = geo.start.map((s, i) => fl[i].W_leer + (fl[i].W_voll - fl[i].W_leer) * (s.fuel ?? fuel))
   }
+  const kiasStart = [0, 1].map(i => atm.kias(P[i][2], norm(V[i])))
   let l = [[0, 0, 1], [0, 0, 1]]
   const p0 = geo.imKampf ? 2 : 0
   let alpha = [2, 2], Aprev = [[0, 0, 0], [0, 0, 0]], phase = [p0, p0], tPhase = [0, 0]
@@ -171,8 +209,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
       const vh = einheit(V[i], [0, 1, 0])
       const rho = atm.rho(h), q = 0.5 * rho * Vm * Vm, M = Vm / Atmo.schall(h)
       const kias = atm.kias(h, Vm)
-      const [scd0, ks, sclm] = fl[i].polare(M)
-      return { h, Vm, vh, rho, q, M, kias, T: fl[i].schub(rho, M), scd0, ks, sclm, mass: W[i] / g }
+      return { h, Vm, vh, rho, q, M, kias, T: fl[i].schub(rho, M, alpha[i]), mass: W[i] / g }
     })
     const geo2 = [0, 1].map(i => {
       const o = 1 - i
@@ -231,7 +268,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
       const sinGam = Z.vh[2]
       const dVdt = clip(0.3 * (s.v_ziel - Z.kias), -40, 40) * KT * atm.r(Z.h, Z.kias)
       const Dreq = Z.T - Z.mass * (dVdt + g * sinGam)
-      const nSpeed = clip(f.LfuerD(Z.q, Z.scd0, Z.ks, Z.sclm, Dreq) / W[i], 0.5, 9)
+      const nSpeed = clip(f.LfuerD(Z.q, Z.M, Z.Vm, Z.mass, Dreq) / W[i], 0.5, 9)
 
       const lagEff = s.lag * clip((2000 - G.R) / 800, 0, 1)
       const ziel = sub(P[o], mul(V[o], lagEff))
@@ -286,7 +323,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
 
     for (const i of [0, 1]) {
       const Z = z[i], f = fl[i]
-      let aCmd = f.alphaVonC(nSoll[i] * W[i] / (Z.q * Z.sclm))
+      let aCmd = f.alphaFuerL(nSoll[i] * W[i], Z.q)
       const bisLim = Math.min(aGrenze[i], f.alpha_lim)
       if (aCmd > bisLim) aCmd = (nSoll[i] >= 8.99 || gun[i]) ? aGrenze[i] : bisLim
       if (overrideAktiv[i]) aCmd = Math.min(alpha[i] + fehler[i], aGrenze[i])
@@ -298,19 +335,19 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
     const A = [], Lsave = []
     for (const i of [0, 1]) {
       const Z = z[i], f = fl[i]
-      let L = Math.min(f.cVonAlpha(alpha[i]) * Z.q * Z.sclm, 9 * W[i])
-      if (L >= 9 * W[i] - 1 && !overrideAktiv[i]) alpha[i] = Math.min(alpha[i], f.alphaVonC(9 * W[i] / (Z.q * Z.sclm)))
+      let L = Math.min(f.auftrieb(Z.q, alpha[i]), 9 * W[i])
+      if (L >= 9 * W[i] - 1 && !overrideAktiv[i]) alpha[i] = Math.min(alpha[i], f.alphaFuerL(9 * W[i], Z.q))
       nAkt[i] = L / W[i]; Lsave[i] = L
       // Rollen
       const ls = einheit(senkrecht(lSoll[i], Z.vh), l[i])
       const sinp = dot(cross(l[i], ls), Z.vh), cosp = dot(l[i], ls)
       const phi = clip(Math.atan2(sinp, cosp), -roll, roll)
       l[i] = add(mul(l[i], Math.cos(phi)), mul(cross(Z.vh, l[i]), Math.sin(phi)))
-      const D = f.widerstand(Z.q, Z.scd0, Z.ks, Z.sclm, L, alpha[i])
-      const Thalten = clip(D + Z.mass * (0.5 * (450 - Z.kias) * KT + g * Z.vh[2]), 0, Z.T)
+      const D = f.widerstand(Z.q, Z.M, Z.Vm, Z.mass, alpha[i])
+      const Thalten = clip(D + Z.mass * (0.5 * (kiasStart[i] - Z.kias) * KT + g * Z.vh[2]), 0, Z.T)
       gas[i] = phase[i] === 0 ? (S[i].merge_ab > 0 ? 1 : Thalten / Z.T) : ((extend[i] || Z.kias < S[i].v_ziel + 60) ? 1 : 0)
-      const T = Z.T * gas[i]
-      A[i] = add(add(mul(Z.vh, (T - D) / Z.mass), mul(l[i], L / Z.mass)), [0, 0, -g])
+      const T = Z.T * gas[i], ws = f.winkelSchub(alpha[i])
+      A[i] = add(add(mul(Z.vh, (T * Math.cos(ws) - D) / Z.mass), mul(l[i], (L + T * Math.sin(ws)) / Z.mass)), [0, 0, -g])
       Lsave[i] = senkrecht(A[i], Z.vh)   // Beschleunigung quer zur Bahn: Kurvenkreis
     }
     if (it % frameAlle === 0) {

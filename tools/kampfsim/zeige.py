@@ -17,7 +17,7 @@ def parse(txt):
                 alpha_kampf=float(t[4]) if len(t) > 4 and t[4] != 'ab' else 26.0, merge_ab=float(t[-1] == 'ab'))
 
 
-def kampf(typ_a, sa, typ_b, sb, versatz_m=150.0, t_max=150.0):
+def kampf(typ_a, sa, typ_b, sb, versatz_m=S.RANKED['versatz_m'], t_max=S.RUNDENZEIT_S):
     m = S.lade_modell()
     fa = {k: np.array([sa[k]]) for k in S.STRATEGIE_FELDER}
     fb = {k: np.array([sb[k]]) for k in S.STRATEGIE_FELDER}
@@ -60,7 +60,7 @@ def bild(r, typ_a, sa, typ_b, sb, datei):
 
 if __name__ == '__main__':
     typ_a, sa, typ_b, sb = sys.argv[1], parse(sys.argv[2]), sys.argv[3], parse(sys.argv[4])
-    vers = float(sys.argv[5]) if len(sys.argv) > 5 else 150.0
+    vers = float(sys.argv[5]) if len(sys.argv) > 5 else S.RANKED['versatz_m']
     datei = sys.argv[6] if len(sys.argv) > 6 else 'kampf.png'
     r = kampf(typ_a, sa, typ_b, sb, vers)
     print({k: v[0] for k, v in r.items() if k != 'spur'})
