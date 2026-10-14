@@ -279,7 +279,7 @@ Die Info-Karten der Einzeljets zeigen MAX (Corner Speed), SUS (Best Sustained Sp
 
 - **Langsamflug:** Die Diagramme beginnen bei ~170–200 KIAS, die Messflüge reichen bis ~280 KIAS. Stall und Steuerbarkeit bei hohem α sind offen.
 - **AoA-Override:** Wie viel Nose Authority er welchem Jet bringt.
-- **Außerdem offen:** Rollrate, Leerlaufschub, Speedbrake-Wirkung, Gun-Reichweite und Streuung, Greyout-Modell, seitlicher Versatz am Ranked-Start (bekannt: ~450 KIAS, ~5 s bis zum Merge).
+- **Außerdem offen:** Rollrate, Leerlaufschub, Speedbrake-Wirkung, Gun-Reichweite und Streuung, Greyout-Modell. Der Ranked-Start ist inzwischen aus den Replays bekannt (siehe [Spielmodi](/einstieg/spielmodi#ranked)).
 
 ::: info IM SPIEL PRÜFEN
 - **T-18 mit α ~26° aus 450 KIAS:** Der erste Turn ist bisher nur geschätzt (≥ ~138° nach 8 s).

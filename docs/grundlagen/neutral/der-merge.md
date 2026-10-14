@@ -32,7 +32,7 @@ Eine feste Sekundenregel gibt es nicht. Beginne, wenn die **Sichtlinienrate** de
 
 ## Der erste Turn aus 450 KIAS (gemessen)
 
-Ranked startet mit ~450 KIAS, also liegen alle drei Jets **über** ihrer Corner Speed. Bis zum Merge vergehen ~5 s; auf 10.000 ft (je ~500 kt wahre Fahrt) sind das ~8.500 ft Startabstand. Wer bis dahin Nachbrenner gibt, kommt mit ~565 (T-15), ~535 (T-16) bzw. ~520 KIAS (T-18) zum Merge (*Modell*). Gemessen (10.000 ft, voller Tank, HUD-Werte, gezählt ab einer Drehrate über 10 °/s):
+Ranked startet auf 10.000 ft mit **Mach 0,75, im HUD ~427 KIAS**, also liegen alle drei Jets **über** ihrer Corner Speed. Die Jets starten **13.100 ft (4.000 m)** voneinander entfernt, Head-on, mit **~1.300 ft (400 m) seitlichem Versatz**; der Merge kommt nach ~8 s. So sieht es in allen 71 eigenen 1v1-Replays aus (Auswertung: `tools/replays`). Wer bis zum Merge Nachbrenner gibt, kommt mit ~605 (T-15), ~550 (T-16) bzw. ~535 KIAS (T-18) an (*Modell*). Die Messung unten startet bei 450 KIAS, also etwas schneller als im Ranked. Gemessen (10.000 ft, voller Tank, HUD-Werte, gezählt ab einer Drehrate über 10 °/s):
 
 | | nach 4 s | nach 8 s | Speed nach 8 s |
 |---|---|---|---|
@@ -55,7 +55,7 @@ Einschränkung: ein Messflug je Jet, jeweils mit leichtem Sinkflug (~600–900 f
 
 **Im 3D-Simulator:** [Erster Turn aus 450 KIAS, mit Haltepunkt am Merge](/VFM_Wiki/sim/?szenario=erster-turn){target="_self"}.
 
-## Merge-Strategien für Ranked (Start ~450 KIAS)
+## Merge-Strategien für Ranked (Start ~430 KIAS) {#merge-strategien-fur-ranked-start-450-kias}
 
 | Du fliegst | gegen T-15 | gegen T-16 | gegen T-18 |
 |---|---|---|---|
@@ -122,25 +122,24 @@ Nicht jeder Merge endet in einem Turn. Beim **Blow-Through** fliegst du ohne Tur
 
 | Einstellung | Bedeutung für den Merge |
 |---|---|
-| **Merge Safety** (seit v1.4.1 standardmäßig an) | beeinflusst den ersten Pass, Wirkung noch unklar |
+| **Merge Safety** (seit v1.4.1 standardmäßig an) | In 7.314 Schüssen aus eigenen Ranked-Replays fiel keiner vor dem ersten Pass. Danach sind Schüsse auf der Nase möglich (14 % aller Schüsse bei fast frontalem Aspect). |
 | **Head-on Guns** | erlaubt: Ein Pass auf der Nase ist eine Schussgelegenheit für beide. Verboten: Du kannst enger passen und ihm Turning Room nehmen. |
 | **Startdistanz** | nah: Merge-Speed kommt aus dem Start. BVR: Zeit, Speed, Höhe und Versatz selbst einzustellen. |
 | **Raketen** | aus: reiner Kanonenkampf, Extend ist sicherer. An: Fox 2 kann vor oder kurz nach dem Merge entscheiden. |
 
 ::: warning Ranked
-Eine Runde dauert 8 Minuten. Läuft die Zeit ab, gewinnt der **Verfolger** (seit v1.2.2). Endloses neutrales Kreisen ist also kein Unentschieden: Wer in der letzten Minute hinten sitzt, gewinnt. Ranked 1v1 wird als Guns-only berichtet, Start mit ~450 KIAS.
+Eine Runde dauert 8 Minuten. Läuft die Zeit ab, gewinnt der **Verfolger** (seit v1.2.2). Endloses neutrales Kreisen ist also kein Unentschieden: Wer in der letzten Minute hinten sitzt, gewinnt. Ranked 1v1 ist Guns-only (in allen eigenen Replays nur Kanonen-Abschüsse). Start: 10.000 ft, Mach 0,75 (~427 KIAS), 13.100 ft Abstand, ~1.300 ft seitlicher Versatz, voller Tank.
 :::
 
 ::: info IM SPIEL PRÜFEN
-- Was **Merge Safety** genau bewirkt (Schüsse oder Kollisionen beim ersten Pass unterdrückt, wie lange?).
-- Was **Head-on Guns verboten** technisch heißt: Ist der Schuss gesperrt oder zählt der Treffer nur nicht?
-- Ranked-Start: Höhe, Abstand, seitlicher Versatz und Fuel.
+- Ob **Merge Safety** auch Kollisionen beim ersten Pass unterdrückt und bis wann sie gilt.
+- Was **Head-on Guns verboten** technisch heißt: Ist der Schuss gesperrt oder zählt der Treffer nur nicht? (Das Spiel meldet „Head-on gunshot blocked!“.)
 :::
 
 ::: tip MERKE
 - Komm mit Corner- bis Best-Sustained-Speed in den Merge, nicht mit Mach 0,8+.
 - Starte den Lead Turn, wenn die Sichtlinienrate deutlich steigt.
-- Aus 450 KIAS ist der erste Turn fast ausgeglichen: T-16 sustained, T-18 mit α ~26°, die T-15 gewinnt knapp und ist danach langsam.
+- Aus dem Ranked-Start (~430 KIAS) ist der erste Turn fast ausgeglichen: T-16 sustained, T-18 mit α ~26°, die T-15 gewinnt knapp und ist danach langsam.
 - Lies nach dem Pass Drehrichtung, Ebene und Planform des Gegners, dann entscheide.
 - Ein Blow-Through ist keine Niederlage, wenn der Turn dich defensiv machen würde.
 :::

@@ -48,19 +48,20 @@ So nutzt du die Lobby fürs Training:
 | **Matchmaking** | Elo, Seasons seit Februar 2026, Rang-Patches bis zu „Ace“-Rängen, Hall of Fame (Top 10 der letzten Season) |
 | **Rundenzeit** | 8 Minuten |
 | **Zeitablauf im 1v1** | Der **Verfolger gewinnt** (seit v1.2.2) |
-| **Waffen im 1v1** | Laut Community-Berichten Guns-only |
-| **Start** | Mit ~450 KIAS |
+| **Waffen im 1v1** | Guns-only (in 71 eigenen 1v1-Replays nur Kanonen-Abschüsse und Abstürze) |
+| **Start** | 10.000 ft, Mach 0,75 (im HUD ~427 KIAS), Head-on, 13.100 ft Abstand, ~1.300 ft seitlicher Versatz, Merge nach ~8 s |
+| **Fuel** | Voller Tank (die Lobby hat keine Fuel-Option, der Tank startet laut Spieldaten voll) |
+| **Erster Pass** | Keine Schüsse vor dem ersten Pass (Merge Safety); danach sind Schüsse auf der Nase möglich |
 
 ### Was das taktisch bedeutet
 
-- **450 KIAS am Start** liegt über der Corner Speed aller drei Jets und mitten im Band der T-16. Der erste Turn ist dadurch fast ausgeglichen; die T-15 gewinnt ihn nur knapp. Strategien je Paarung: [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen).
+- **~430 KIAS am Start** liegt über der Corner Speed aller drei Jets und mitten im Band der T-16. Der erste Turn ist dadurch fast ausgeglichen; die T-15 gewinnt ihn nur knapp. Strategien je Paarung: [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen).
 - **Die Timeout-Regel belohnt Position, nicht Energie.** Bist du kurz vor Ablauf offensiv, sichere die Position: in Lag bleiben, keinen Overshoot riskieren.
 - **Defensiv kurz vor Ablauf?** Dann musst du die Rollen umdrehen; Durchhalten verliert.
 - **Kein neutraler Stillstand.** Plane den Kampf so, dass du rechtzeitig einen Vorteil umsetzt.
 - **Guns-only:** Flares und Raketenabwehr spielen keine Rolle, es zählen Merge, Kurvenkampf, Energie und Zielen.
 
 ::: info IM SPIEL PRÜFEN
-- Ranked-Start: Starthöhe, Abstand, seitlicher Versatz und Fuel-Stand.
 - Wie bestimmt das Spiel bei Zeitablauf den „Verfolger“ (Position, Aspect, Distanz)?
 - Was genau macht „Merge Safety“ (Kollisionen oder Schüsse vor dem ersten Pass)?
 :::
@@ -81,7 +82,7 @@ Eingebauter Voice-Chat mit **Push-to-Talk**. Im Teamkampf nutzt du kurze Brevity
 ::: tip MERKE
 - Erst Academy (inkl. Gunsight-Tutorial) und Free Flight; Bots haben ein festes Rating von 1000.
 - Lobbys gezielt fürs Training einstellen: Guns-only, Infinite Ammo, nahe Startdistanz.
-- Ranked: 8 Minuten, Start mit ~450 KIAS, im 1v1 gewinnt bei Zeitablauf der Verfolger.
+- Ranked: 8 Minuten, Start auf 10.000 ft mit ~430 KIAS und 13.100 ft Abstand, im 1v1 gewinnt bei Zeitablauf der Verfolger.
 - Offensiv kurz vor Ablauf: Position sichern. Defensiv: Rollen umdrehen.
 - Nach jedem Kampf in den Debrief: Energie-Graph und Merge-Geometrie zuerst.
 :::
