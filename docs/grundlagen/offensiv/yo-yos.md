@@ -127,14 +127,14 @@ Die Quarter Plane ist ein **kleiner High Yo-Yo**: Lift Vector nur knapp über ih
 
 ## Die Jets
 
-- **[T-15](/flugzeuge/t15):** Beschleunigt mit Abstand am besten und holt Speed nach einem Yo-Yo am schnellsten zurück. Für sie sind auch größere High Yo-Yos billig.
-- **[T-16](/flugzeuge/t16):** Lebt im Band ~420–500 KIAS. Ein großer High Yo-Yo, der sie am Apex weit darunter bringt, kostet ihren Vorteil – lieber Quarter Plane und flache Yo-Yos.
+- **[T-15](/flugzeuge/t15):** Beschleunigt mit Abstand am besten (Schub/Gewicht ~1,65, gemessen und laut Spieldaten) und holt Speed nach einem Yo-Yo am schnellsten zurück. Für sie sind auch größere High Yo-Yos billig. Rollt laut Spieldaten aber am langsamsten (325 statt 420 °/s): Den Lift Vector am Apex zurück auf ihn zu bringen, dauert etwas länger.
+- **[T-16](/flugzeuge/t16):** Kämpft laut Simulation am besten mit Ziel ~420 KIAS (geflogen ~420–440). Ein großer High Yo-Yo, der sie am Apex weit darunter bringt, kostet ihren Vorteil – lieber Quarter Plane und flache Yo-Yos.
 - **[T-18](/flugzeuge/t18):** Hoher Widerstand, über ~480–510 KIAS schwach. Überschüssige Speed parkt sie besser im High Yo-Yo als sie in der Kurve zu verbrennen; Low Yo-Yos, die sie in diesen Bereich beschleunigen, sind ungünstig.
 
-Daten: [Flugzeugvergleich](/flugzeuge/vergleich)
+**Klein halten (Simulation):** In allen Paarungen schlägt nose-low flach und flach hoch; wer in die Vertikale geht, verliert. Ein Yo-Yo ist deshalb eine kurze Korrektur aus der Ebene, kein Wechsel in den Vertikalkampf. Daten: [Flugzeugvergleich](/flugzeuge/vergleich), [Simulation](/flugzeuge/simulation)
 
 ::: info IM SPIEL PRÜFEN
-- Rollrate der Jets (nicht gemessen): Sie bestimmt, wie schnell du den Lift Vector am Apex wieder auf ihn bekommst.
+- Rollrate der Jets im Flug: Die Spieldaten geben 325 / 420 / 420 °/s vor (T-15 / T-16 / T-18), gemessen ist das nicht. Sie bestimmt, wie schnell du den Lift Vector am Apex wieder auf ihn bekommst.
 :::
 
 ::: tip MERKE

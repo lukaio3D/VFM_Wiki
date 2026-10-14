@@ -17,7 +17,7 @@ Im Gefecht hast du keine Zeit für Theorie. Diese fünf Regeln fassen zusammen, 
 
 - **Zieh so hart wie nötig, nicht so hart wie möglich.** Ein Vollzug kostet massiv Speed.
 - **Unload**, wenn du gerade nichts gewinnen musst: ≈ 0–0,5 G, Nase am oder leicht unter dem Horizont, volle Leistung. Nicht mit dem Gegner in Waffenreichweite hinter dir. → [Unload richtig gemacht](/grundlagen/energie-management#unload-richtig-gemacht)
-- **Kenne deine [Corner Speed](/grundlagen/kurvenphysik#corner-speed)** (10.000 ft, 50 % Fuel): **T-15 ~360, T-16 ~409, T-18 ~385 KIAS.** Dort drehst du am schnellsten, verlierst aber am meisten Energie.
+- **Kenne deine [Corner Speed](/grundlagen/kurvenphysik#corner-speed)** (10.000 ft, 50 % Fuel): **T-15 ~360, T-16 ~409, T-18 ~385 KIAS.** Mit vollem Tank, wie beim Ranked-Start, liegt sie ~25 KIAS höher. Dort drehst du am schnellsten, verlierst aber am meisten Energie.
 
 ## 3. Don't Play the Bandit's Game
 
@@ -25,11 +25,11 @@ Im Gefecht hast du keine Zeit für Theorie. Diese fünf Regeln fassen zusammen, 
 
 | Jet | Dein Spiel | Meiden |
 |---|---|---|
-| **T-16 Falchion** | Rate-Kampf: Two-Circle bei ~420–500 KIAS, tief, Lag Pursuit | langsam werden |
-| **T-18 Cutlass** | Kampf langsam machen: nose-low, One-Circle von unten | über ~480–510 KIAS kämpfen |
-| **T-15 Excalibur** | langsamer One-Circle (300–380 KIAS), Schub, sparsam ziehen | unnötige Vollzüge; gegen T-16 flaches Kreisen bei 400–500 KIAS |
+| **T-16 Falchion** | Rate-Kampf: Two-Circle bei ~420–440 KIAS, flach oder nose-low | langsam werden, hochziehen, schneller als ~460 KIAS |
+| **T-18 Cutlass** | Two-Circle nose-low bei ~440 KIAS, α ~26° zum Kurven, 35° für den Snapshot | über ~480–510 KIAS kämpfen; den Kampf auf ~280 KIAS bringen |
+| **T-15 Excalibur** | Two-Circle nose-low bei ~400–420 KIAS: mehr G, kleinerer Kreis, mehr Schub; sparsam ziehen | unnötige Vollzüge; gegen eine abtauchende T-16 hochziehen; schnell bleiben |
 
-Zieht dich der Gegner in seine Stärke, verweigere es – über die Vertikale, über Speed oder über [Separation](/grundlagen/defensiv/separation). Mehr: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle), [Flugzeugvergleich](/flugzeuge/vergleich).
+Laut [Simulation](/flugzeuge/simulation) liegt das beste Band für alle drei Jets bei ~360–440 KIAS; zu langsam (~280) und zu schnell (~520) verlieren. Die Unterschiede liegen darin, wo im Band du stark bist und welchen Fehler der Gegner dir anbietet. Zieht dich der Gegner in seine Stärke, verweigere es – über die Ebene, über Speed oder über [Separation](/grundlagen/defensiv/separation). Mehr: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle), [Flugzeugvergleich](/flugzeuge/vergleich).
 
 ## 4. Position Before Kill
 
@@ -44,7 +44,7 @@ Der häufigste Fehler ist Gier: Nase zu früh vor den Gegner, die Closure explod
 
 > **Der Boden hat eine Trefferquote von 100 %.**
 
-Im Tunnelblick vergisst man die Höhe – vor allem bei Nose-low-Manövern wie [Slice](/grundlagen/defensiv/slice-turn) oder [Low Yo-Yo](/grundlagen/offensiv/yo-yos). Mit Nase tief und hoher Speed brauchst du viel Höhe zum Abfangen. Ein Abschuss ist wertlos, wenn du drei Sekunden später im Boden steckst.
+Im Tunnelblick vergisst man die Höhe – vor allem bei Nose-low-Manövern wie [Slice](/grundlagen/defensiv/slice-turn) oder [Low Yo-Yo](/grundlagen/offensiv/yo-yos). Mit Nase tief und hoher Speed brauchst du viel Höhe zum Abfangen. Ein Abschuss ist wertlos, wenn du drei Sekunden später im Boden steckst. In 71 eigenen 1v1-Replays endeten ~12 % der Runden mit einem Absturz.
 
 ## Trainingsregeln
 

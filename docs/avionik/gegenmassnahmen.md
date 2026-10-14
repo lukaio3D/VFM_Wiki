@@ -4,6 +4,10 @@
 
 VFM hat **Flares** (Täuschkörper, heißer als dein Triebwerk), aber kein Chaff, und braucht es auch nicht, weil es keine Radar-Raketen gibt. Gegen die IR-Rakete hast du drei Mittel: **weniger Wärme** (Gas raus), **Flares** (falsche Ziele) und **Manöver** (die Rakete kurven lassen, bis sie es nicht mehr schafft).
 
+::: info WO DU DAS BRAUCHST
+In Lobbys mit Raketen. **Ranked 1v1 ist Guns-only:** In 71 eigenen 1v1-Replays fiel keine Rakete (*Replays*). Dort zählt [Guns Defense](/grundlagen/defensiv/guns-defense), nicht diese Seite.
+:::
+
 ## Wann du reagieren musst
 
 | Auslöser | Bedeutung |

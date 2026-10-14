@@ -13,7 +13,7 @@ Beide Manöver folgen demselben Prinzip: Statt in seiner Ebene weiterzuziehen un
 3. **Lift Vector wieder auf ihn legen und ziehen.** Du stehst außen und etwas über seiner Ebene, die Nase zeigt hinter ihn: Lag.
 4. **Aus Lag neu aufbauen**, zurück in die Control Zone und später in Lead für den Schuss.
 
-Du tauschst die Schussgelegenheit im Moment gegen eine stabile Position. Weil du in der Rolle wenig G ziehst, kostet das wenig Energie.
+Du tauschst die Schussgelegenheit im Moment gegen eine stabile Position. Weil du in der Rolle wenig G und damit wenig Anstellwinkel ziehst, kostet das wenig Energie – der Widerstand steigt mit dem α steil an (*Spieldaten*), mit wenig α ist er klein.
 
 **Unterschied zum High Yo-Yo:** Dort bleibst du innen und kommst von oben zurück. Beim Lag Roll kreuzt deine Nase seine Flugbahn auf die Außenseite – ein bewusster, kontrollierter [Flight-Path-Overshoot](/grundlagen/offensiv/overshoot) außerhalb seiner Ebene, der dich hinter seiner 3/9-Linie hält.
 
@@ -45,8 +45,12 @@ Du tauschst die Schussgelegenheit im Moment gegen eine stabile Position. Weil du
 - **Barrel Roll Attack gegen einen Gegner, der dich voll im Blick hat.**
 - **Verwechslung mit dem Jink.** Hier bleibst du als Angreifer hinter ihm. Ausweichen gegen Guns: [Guns Defense](/grundlagen/defensiv/guns-defense).
 
+## Die Jets
+
+Laut Spieldaten gibt das Fly-by-Wire als höchste Rollrate 325 °/s für die [T-15](/flugzeuge/t15) und 420 °/s für [T-16](/flugzeuge/t16) und [T-18](/flugzeuge/t18) vor. **Die T-15 rollt am langsamsten:** Für eine halbe Rolle braucht sie idealisiert ~0,55 statt ~0,43 s. Fang den Lag Roll mit ihr etwas früher an. Ob die Jets diese Werte im Flug erreichen, ist nicht gemessen.
+
 ::: info IM SPIEL PRÜFEN
-- Rollrate deines Jets mit und ohne Last (nicht gemessen). Je schneller du rollst, desto kleiner wird der Lag Roll.
+- Rollrate deines Jets mit und ohne Last im Flug. Je schneller du rollst, desto kleiner wird der Lag Roll.
 :::
 
 ::: tip MERKE

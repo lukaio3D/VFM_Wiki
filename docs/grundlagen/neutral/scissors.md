@@ -30,14 +30,14 @@
 
 **Wer gewinnt:**
 
-1. **Wer schneller verlangsamt:** Gas auf Idle, hoher AoA.
+1. **Wer schneller verlangsamt:** Gas auf Idle, hoher AoA. In VFM steigt der Widerstand mit dem α steil an (*Spieldaten*), hoher α bremst also sehr wirksam. Über HUD-α ~27° fällt aber der Auftrieb: Mehr α bremst dann nur noch und dreht nicht mehr.
 2. **Wer dabei Kontrolle und Rollrate behält:** Zu langsam kommst du nicht mehr schnell genug herum.
 3. **Wer die Umkehr richtig timet:** Kehr um, wenn er dich gerade kreuzt. Zu früh schiebt dich vor ihn, zu spät schenkt ihm Winkel.
 
 **Ausführung:** Bei jedem Kreuzen Lift Vector auf ihn rollen und ziehen. Gas zurück, AoA hoch, aber nur so weit, dass der Jet noch rollt. Tally halten. Sobald er vor dir ist: Nase auf ihn, Guns ([Schusslösung](/grundlagen/offensiv/schussloesung)).
 
 ::: warning AoA-Override
-Der Override („Cobra-Button“) bringt die Nase sofort über das AoA-Limit hinaus herum, kostet aber extrem viel Energie. Setz ihn nur ein, wenn der Schuss danach sicher ist, sonst bist du danach wehrlos.
+Der Override („Cobra-Button“) bringt die Nase sofort über das AoA-Limit hinaus herum, kostet aber extrem viel Energie. Setz ihn nur ein, wenn der Schuss danach sicher ist, sonst bist du danach wehrlos. In der Simulation schadet Override als Gewohnheit deutlich (T-18 gegen T-15 −0,76 statt −0,54), ein gezielter Snapshot kann trotzdem entscheiden ([AoA-Override](/flugzeuge/simulation#aoa-override-annahme)).
 :::
 
 ## Rolling Scissors
@@ -65,19 +65,21 @@ Verhindern ist leichter als aussteigen. Als **Angreifer** Closure kontrollieren:
 
 | Jet | Flat Scissors | Rolling Scissors |
 |---|---|---|
-| **T-15** | stark: zieht bei gleicher Speed die meisten G (gemessen bis ~285 KIAS); darunter keine Daten | **am besten**: mit Abstand der meiste Schubüberschuss |
+| **T-15** | stark: zieht bei gleicher Speed die meisten G (gemessen bis ~285 KIAS); darunter keine Daten. Rollt laut Spieldaten am langsamsten (Vorgabe 325 °/s) | **am besten**: mit Abstand der meiste Schubüberschuss |
 | **T-16** | **am schwächsten**: höchste Corner Speed, unter ~380 KIAS der schwächste Jet | schwach: wenig Schub, und jede Schere kostet ihr Speedband |
 | **T-18** | verliert im Leerlauf am schnellsten Speed (wird schnell langsam) und hat Nase bis α 35°; ihr vermuteter Vorteil sehr langsam ist eine **Hypothese** | etwa wie die T-16: mehr Schub, aber fast doppelt so viel Widerstand |
 
-Daten: [Flugzeugvergleich](/flugzeuge/vergleich). Daraus folgt:
+Daten: [Flugzeugvergleich](/flugzeuge/vergleich). Rollraten laut Spieldaten (Fly-by-Wire-Vorgabe, im Flug nicht gemessen): T-15 325, T-16 und T-18 je 420 °/s.
+
+Scheren sind langsame Kämpfe. Die [Simulation](/flugzeuge/simulation#was-fur-alle-jets-gilt) spielt sie nicht gezielt durch, zeigt aber für alle Jets: Wer den Kampf auf ~280 KIAS bringt, kommt aus dem Energieloch kaum heraus. **Geh nur in eine Schere, wenn es nicht anders geht** (meist nach einem Overshoot). Daraus folgt:
 
 - **T-16:** Meide Scheren. Halte deine Speed und nutze einen drohenden Overshoot für Separation.
-- **T-18:** Die Flat Scissors ist vermutlich dein Terrain. Bleib in der Ebene, Gas raus, und lass dich nicht in die Vertikale ziehen.
+- **T-18:** Bist du schon drin, ist die Flat Scissors vermutlich dein bestes Terrain: Bleib in der Ebene, Gas raus, und lass dich nicht in die Vertikale ziehen. Bewusst den langsamen Kampf suchen ist laut Simulation aber nicht deine beste Wahl.
 - **T-15:** Die Rolling Scissors ist deins. Gegen die T-18 geh in der Flat Scissors nicht unter ~280 KIAS, dort fehlen Daten.
 
 ::: info IM SPIEL PRÜFEN
 - Ob die T-18 in der Flat Scissors unter ~280 KIAS besser ist als die T-15, mit und ohne Override ([Trainingsplan](/grundlagen/uebungen)).
-- Die Rollrate der Jets bei niedriger Speed.
+- Die Rollrate der Jets bei niedriger Speed (die Spieldaten nennen nur die Vorgabe).
 - Wie stark die Speedbrake bremst.
 :::
 
@@ -86,7 +88,7 @@ Daten: [Flugzeugvergleich](/flugzeuge/vergleich). Daraus folgt:
 - Flat: schneller verlangsamen, Rollrate behalten, Umkehr timen.
 - Rolling: Nase schneller über oben bringen, Schub zählt.
 - Vermeiden ist leichter als aussteigen: Als Angreifer Closure kontrollieren.
-- VFM: T-15 gewinnt die Rolling Scissors, T-18 vermutlich die Flat Scissors (testen), T-16 meidet Scheren.
+- VFM: Scheren sind langsam und teuer, also nur, wenn es sein muss. T-15 gewinnt die Rolling Scissors, T-18 vermutlich die Flat Scissors (testen), T-16 meidet Scheren.
 :::
 
 Weiter: [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)

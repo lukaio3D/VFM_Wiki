@@ -32,6 +32,7 @@ Beobachtet, nicht durch Patchnotes bestätigt: drei Modi unten am Radar-Display,
 | **Vorteil** | Lock = genauerer Funnel; Ziele finden, die du nicht siehst | Du bist auf seinem RWR unsichtbar |
 | **Nachteil** | Er weiß, dass du da bist und woher du kommst | Funnel nur mit Durchschnitts-Spannweite; Suche nur mit den Augen |
 
+- **Ranked 1v1:** Er startet Head-on 13.100 ft vor dir, mit ~1.300 ft Versatz (*Replays*). Suchen musst du ihn nicht, und er weiß ohnehin, wo du bist: Radar an kostet kaum etwas, der Lock macht den Funnel genauer.
 - **Anflug, Gegner noch nicht gesehen:** abwägen. Radar an hilft dir suchen, gibt ihm aber die erste Information.
 - **Schussgelegenheit naht:** Radar an und locken.
 - **Teamkampf, Gegner ist gebunden:** Radar aus, mit den Augen anfliegen, erst kurz vor dem Schuss locken oder ohne Lock schießen.

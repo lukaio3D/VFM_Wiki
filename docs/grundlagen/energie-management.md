@@ -2,7 +2,7 @@
 
 > Energie ist Speed plus Höhe. Wer sie bewusst ausgibt und wieder auffüllt, hat am Ende des Kampfes noch Optionen.
 
-Jede Kurve kostet Energie, jeder Unload und jeder Sinkflug bringt welche. Hier lernst du, wie du das misst (Ps), wie du das Leistungsdiagramm liest und wann du Energie ausgibst. Grundlagen zu G, Rate und Radius: [Kurvenphysik](/grundlagen/kurvenphysik).
+Jede Kurve kostet Energie, jeder Unload und jeder Sinkflug bringt welche. Hier lernst du, wie du das misst (Ps), wie du das Leistungsdiagramm liest, mit welcher Speed du kämpfst und wann du Energie ausgibst. Grundlagen zu G, Rate und Radius: [Kurvenphysik](/grundlagen/kurvenphysik).
 
 ## Energie = Speed + Höhe
 
@@ -21,7 +21,7 @@ Energiehöhe = Höhe + V² / (2 · g)        (V = wahre Speed)
 Der Schritt von 400 auf 500 kt ist rund **4.000 ft Höhe wert**. Umgekehrt bringen 3.000 ft Sinkflug aus ~400 kt nur etwa **+77 kt** (ohne Schub und Widerstand).
 
 - **Steigen vernichtet keine Energie, es wandelt sie um.** Speed, die du in Höhe parkst, holst du dir später zurück.
-- **Verloren** geht Energie nur durch Widerstand – vor allem durch **G** und bei hoher Speed durch den [transsonischen Widerstand](/grundlagen/physik#transsonischer-widerstand). **Gewonnen** wird sie nur durch Schub.
+- **Verloren** geht Energie nur durch Widerstand – vor allem durch **G und hohen Anstellwinkel**, bei hoher Speed durch den [transsonischen Widerstand](/grundlagen/physik#transsonischer-widerstand). **Gewonnen** wird sie nur durch Schub.
 
 ## Ps: wie schnell du Energie gewinnst oder verlierst
 
@@ -62,12 +62,14 @@ Die „Aircraft Performance Analysis“ im Spiel zeigt Turn Rate über KIAS, ein
 
 Über der gestrichelten Linie ist alles unerreichbar. Zwischen gestrichelt und durchgezogen kurvst du mit **Ps < 0** und verlierst Energie, je weiter oben, desto schneller. Unter der durchgezogenen Linie ist **Ps > 0**: Du kannst so kurven und dabei noch beschleunigen.
 
-Was das Diagramm über die drei Jets sagt (10.000 ft): Unter ~350 KIAS liegen T-15 und T-18 vorn, bei ~420–500 KIAS die T-16 (+1–2 °/s), über ~520 KIAS die T-15. Die T-18 bricht ab ~510 KIAS ein. Die Speedbänder im Detail und alle Höhen und Fuel-Stände: [Flugzeugvergleich](/flugzeuge/vergleich).
+Die steigende Lift-Limit-Linie selbst erreichst du im Flug nicht ganz: Ohne Override gibt es dort rund ein Zehntel weniger G (*gemessen*, von den Spieldaten bestätigt). Die Sustained-Linie stimmt im Flug auf ±2–3 %. → [Corner Speed im Flug](/grundlagen/kurvenphysik#corner-speed-im-flug)
+
+Was das Diagramm über die drei Jets sagt (10.000 ft): Unter ~380 KIAS liegen T-15 und T-18 etwa gleich vorn, bei ~400–500 KIAS die T-16 (+1–2 °/s), über ~520 KIAS die T-15. Die T-18 bricht ab ~510 KIAS ein. Die Speedbänder im Detail und alle Höhen und Fuel-Stände: [Flugzeugvergleich](/flugzeuge/vergleich).
 
 ## Corner Speed vs. Best Sustained Speed
 
 - **Corner Speed:** maximale Instant Rate, kleinster Radius – aber Ps stark negativ. Für **kurze** Momente: erster Turn, Break Turn, Schussgelegenheit.
-- **Best Sustained Speed:** höchste Rate, die du **halten** kannst (Ps = 0). Für **lange** Kurvenkämpfe, vor allem Two-Circle.
+- **Best Sustained Speed:** höchste Rate, die du **halten** kannst (Ps = 0).
 
 | Diagramm, 10.000 ft, 50 % Fuel | T-15 | T-16 | T-18 |
 |---|---|---|---|
@@ -75,6 +77,22 @@ Was das Diagramm über die drei Jets sagt (10.000 ft): Unter ~350 KIAS liegen T-
 | Best Sustained | 495 KIAS / 17 °/s | 470 / 18 °/s | 470 / 16 °/s |
 
 Best Sustained liegt bei allen Jets deutlich **über** der Corner Speed. In großer Höhe rücken beide eng zusammen. Wer ständig um Corner Speed kurvt, verliert Energie; wer mit Best Sustained kurvt, hält das lange durch, dreht aber langsamer als ein Gegner, der gerade Energie für Rate ausgibt.
+
+### Mit welcher Speed kämpfen?
+
+Das Diagramm zeigt, wer in welchem Speedband **dauerhaft schneller dreht**. Die [Simulation](/flugzeuge/simulation) zeigt, was **im ganzen Kampf** gewinnt – und das ist weder Corner noch Best Sustained:
+
+| Kampf-Speed (*Simulation*, Ranked-Start, alle Jets) | Ergebnis |
+|---|---|
+| ~280 KIAS | klar schlechter: hoher α kostet zu viel Energie, aus dem Loch kommst du nicht mehr heraus |
+| **~360 und ~440 KIAS** | **am besten**, vor allem im Two-Circle nose-low oder flach |
+| ~520 KIAS | am schlechtesten: großer Kreis, langsame Nase |
+
+**Warum knapp unter Best Sustained?** Das Sustained-Plateau ist flach, der Radius wächst aber mit V². Beispiel T-16 (10.000 ft, voller Tank): Ihr Sustained-Optimum liegt bei ~460–470 KIAS. Bei 420 KIAS gibt sie nur ~0,2–0,3 °/s her (< 2 %), fliegt aber einen ~9 % kleineren Kreis (3.250 → 2.940 ft). In der Simulation ist eine Ziel-Speed von ~420 KIAS für sie am besten, 470 deutlich schlechter. Mit sinkendem Fuel wächst der Vorteil der niedrigeren Speed – **mit weniger Fuel nicht schneller werden**. Details: [T-16, Speed nach Fuel](/flugzeuge/t16#speed-nach-fuel-und-hohe).
+
+So passen Diagramm und Simulation zusammen: Bei ~360–440 KIAS stimmen Rate, Radius und Energie. Deshalb gewinnt dort die T-15 den Two-Circle sogar gegen die T-16, obwohl sie 1–2 °/s weniger Sustained Rate hat – sie zieht mehr G, fliegt den kleineren Radius und hat mehr Schub. Mehr: [Diagramm und Simulation](/flugzeuge/vergleich#diagramm-und-simulation).
+
+**Ziel-Speed im Kampf** (*Simulation*): T-15 ~400–420 KIAS, T-16 ~420 KIAS, T-18 ~440 KIAS. Spielpläne je Jet: [T-15](/flugzeuge/t15), [T-16](/flugzeuge/t16), [T-18](/flugzeuge/t18).
 
 ## Was Energie im Flug kostet
 
@@ -85,6 +103,27 @@ Die Messflüge (10.000 ft, voller Tank) zeigen, wie verschieden die Jets mit Ene
 
 Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht), [Beschleunigung](/flugzeuge/vergleich#beschleunigung-gemessen).
 
+### Warum voller Zug so teuer ist
+
+Laut Spieldaten steigt der Widerstand des Flügels mit dem Anstellwinkel steil: Bei α 15° ist er ~4–12-mal, bei α 25° ~12–34-mal so groß wie bei α 0. Der Auftrieb wächst dagegen nur bis HUD-α ~27° und wird davor schon flach. **Die letzten Grad bis zum Anschlag bringen wenig G, kosten aber viel Energie.**
+
+- **T-15:** Ihr Widerstand steigt mit α am stärksten. Das passt zur Messung: Im vollen Zug verliert sie ~2,3-mal so schnell Energie wie die T-16.
+- **T-18:** flachster Anstieg, aber der höchste Grundwiderstand. Über ~26° fällt ihr Auftrieb, der Widerstand steigt weiter, und über ~22° verliert sie etwas Schub. Bei 35° bekommt sie Nase, aber weniger G und viel weniger Speed.
+
+Das zeigt auch der erste Turn aus dem Ranked-Start (~427 KIAS, *Modell*, 8 s ab Beginn des Zugs):
+
+| | Voller Zug | Sustained |
+|---|---|---|
+| T-15 | 131°, danach ~276 KIAS | 111°, ~451 KIAS |
+| T-16 | 126°, ~368 KIAS | 114°, ~449 KIAS |
+| T-18 | α 26°: 123°, ~330 KIAS · α 35°: 108°, ~282 KIAS | – |
+
+Voller Zug kauft 12–20° Winkel für 80–175 KIAS. Bei der T-18 kosten die 35° sogar Winkel **und** Speed. Die gemessenen Werte aus 450 KIAS (anders gezählt): [Der erste Turn](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen).
+
+::: tip UNTER DEM ANSCHLAG FLIEGEN
+Im Kreis ziehst du nur so weit, wie es etwas bringt, und hältst ein paar Grad Abstand zum Limiter. An den Anschlag gehst du für einen Schuss, eine Verteidigung oder den entscheidenden Winkel am Merge – und lässt danach sofort nach. T-18: α ~26° zum Kurven, 35° nur für den Snapshot.
+:::
+
 ### Wenn du zu langsam geworden bist
 
 1. **Nicht weiter gegen die Schwerkraft ziehen.** Mehr Ziehen macht dich nur langsamer.
@@ -93,7 +132,7 @@ Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich
 4. **Erst wieder manövrieren**, wenn du in deinem Speedband bist – es sei denn, du musst einen Schuss verteidigen.
 
 ::: warning NICHT ZIEHEN
-Der Instinkt sagt „Nase hoch, zieh!“. Ohne Speed bringt Ziehen keine Rate, nur noch weniger Speed.
+Der Instinkt sagt „Nase hoch, zieh!“. Ohne Speed bringt Ziehen keine Rate, nur noch weniger Speed. In der Simulation verliert langsames Kämpfen (~280 KIAS) in allen Paarungen deutlich.
 :::
 
 ## Unload richtig gemacht
@@ -121,7 +160,7 @@ flowchart TD
     B -->|Schuss in kurzer Zeit| C[Ausgeben: ziehen, schießen]
     B -->|Verteidigung gegen Schuss oder Rakete| D[Immer ausgeben: Break]
     B -->|Entscheidenden Winkel am Merge| E[Ausgeben: Lead Turn mit max Rate]
-    B -->|Nichts Greifbares| F[Sparen: weniger G, unloaden, Höhe parken]
+    B -->|Nichts Greifbares| F[Sparen: unter dem Anschlag, unloaden, Höhe parken]
     C --> G[Danach sofort Energie zurückholen]
     D --> G
     E --> G
@@ -131,19 +170,21 @@ flowchart TD
 - **Defensiv gibt es kein Sparen.** Wer stirbt, braucht keine Energie mehr.
 - **Parke Speed in Höhe**, wenn du sie gerade nicht brauchst (z. B. [High Yo-Yo](/grundlagen/offensiv/yo-yos)).
 - **Vergleich dich mit dem Gegner:** Schneller und höher heißt, du entscheidest, ob und wie gekämpft wird.
-- **Kenne dein Band:** Eine T-16 unter ~380 KIAS hat ihren Vorteil verloren. Eine T-18 über ~480 KIAS verschenkt Energie an den Widerstand.
+- **Kenne dein Band:** Gekämpft wird bei ~360–440 KIAS. Eine T-16 unter ~380 KIAS hat ihren Rate-Vorteil verloren, eine T-18 über ~480 KIAS verschenkt Energie an den Widerstand.
 
 **Den Gegner lesen:** Dreht seine Nase schnell, gibt er Energie aus. Wird sie über mehrere Sekunden langsamer oder steigt er nicht mehr, ist er langsam. Ein enger Kreis mit langsamer Nase heißt wenig Speed.
 
 ::: info IM SPIEL PRÜFEN
 - Ab welcher Speed reagiert dein Jet nur noch träge? Unter ~280 KIAS ist im Flug nichts gemessen, die Diagramme beginnen bei ~170–200 KIAS. Übungen: [Trainingsplan](/grundlagen/uebungen)
 - Wie gut zeigt der HUD-Beschleunigungskreis einen Unload an?
+- Wie viel Energie sparst du, wenn du ein paar Grad unter dem Limiter bleibst statt am Anschlag? Wie viel G kostet das?
 :::
 
 ::: tip MERKE
-- **Energie = Speed + Höhe.** Steigen wandelt um, nur Widerstand (vor allem G) vernichtet.
+- **Energie = Speed + Höhe.** Steigen wandelt um, nur Widerstand (vor allem G und α) vernichtet.
 - **Ps = 0 ist die Sustained-Linie.** Darüber verlierst du Energie, darunter gewinnst du.
-- **Corner Speed** für kurze Momente, **Best Sustained** (~470–495 KIAS) für lange Kurven.
+- **Corner Speed** für kurze Momente, **Best Sustained** (~470–495 KIAS) ist die schnellste Dauerkurve. **Gekämpft wird knapp darunter, bei ~360–440 KIAS** – nicht langsam, nicht schnell.
+- **Die letzten Grad α sind die teuersten.** Unter dem Anschlag fliegen, voll ziehen nur für Schuss, Verteidigung oder den Merge.
 - **Unload = ≈ 0–0,5 G**, Nase am oder leicht unter dem Horizont, volle Leistung – nicht vor seiner Kanone.
 - **Gib Energie nur aus, wenn du dafür etwas bekommst.**
 :::

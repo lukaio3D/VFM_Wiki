@@ -13,7 +13,7 @@
   - Pure oder Lag, Merge mit oder ohne Nachbrenner, bei der T-18 α 26° oder 35° beim Kurven.
 
   Das sind 192 Strategien je Jet (T-18: 384), jede gegen jede.
-- **Feste Regeln** für alle Bots: Gun mit Vorhalt, sobald er vor der Nase ist (die T-18 immer bis α 35°), Break Turn, wenn er hinten die Nase auf mir hat, jeder neue Pass beginnt wieder mit dem eigenen ersten Turn, Hard Deck ~3.000 ft. Abschuss nach 0,5 s Treffern. Eine Runde dauert wie im Ranked bis zu 8 Minuten.
+- **Feste Regeln** für alle Bots: Gun mit Vorhalt, sobald er vor der Nase ist (die T-18 immer bis α 35°), Break Turn, wenn er hinten die Nase auf mir hat, jeder neue Pass beginnt wieder mit dem eigenen ersten Turn, unter ~3.000 ft ziehen die Bots hoch (eigene Regel, das Spiel hat kein Hard Deck). Abschuss nach 0,5 s Treffern. Eine Runde dauert wie im Ranked bis zu 8 Minuten.
 - **Bewertung:** +1 Abschuss, −1 abgeschossen, 0 offen nach 8 Minuten (75–92 % der Kämpfe enden mit Abschuss). Der **Spielwert** ist das Ergebnis, wenn beide Seiten optimal wählen (Nash-Gleichgewicht): 0 heißt ausgeglichen, +0,3 heißt deutlicher Vorteil.
 
 ::: tip NEU (Oktober 2026)
@@ -100,7 +100,7 @@ Gemittelt über alle Gegner-Strategien, in allen Paarungen gleich gerichtet:
 
 Feineres Raster für T-16 und T-15 (360–500 KIAS in 20er-Schritten, gegen die stärksten Gegner-Strategien, bei 100, 50 und 15 % Fuel):
 
-- **T-16:** am besten mit einer Ziel-Speed von **~400–420 KIAS** (geflogen ~400–440), mit wenig Fuel ähnlich. Über ~460 KIAS verliert sie gegen alle drei Jets deutlich. Ihr Sustained-Optimum auf 10.000 ft liegt bei ~460 KIAS; im Kampf lohnt der untere Rand des Plateaus. Details: [T-16, Speed nach Fuel und Höhe](/flugzeuge/t16#speed-nach-fuel-und-hohe).
+- **T-16:** am besten mit einer Ziel-Speed von **~420 KIAS** (geflogen ~420–440), mit wenig Fuel ebenso. Über ~460 KIAS verliert sie gegen alle drei Jets deutlich. Ihr Sustained-Optimum auf 10.000 ft liegt bei ~460–470 KIAS; das Plateau ist flach, bei 420 gibt sie nur ~0,2–0,3 °/s her und fliegt einen ~9 % kleineren Kreis. Mittel über alle Gegner und Fuel-Stände: Ziel 420 → +0,25, 470 → −0,20. Details: [T-16, Speed nach Fuel und Höhe](/flugzeuge/t16#speed-nach-fuel-und-hohe).
 - **T-15:** am besten mit einer Ziel-Speed von **~400–420 KIAS** (geflogen ~385–420), mit wenig Fuel ähnlich. Über ~460 KIAS verliert sie gegen T-15 und T-16 deutlich; gegen die T-18 gewinnt sie in jedem Band.
 
 Wie sich die Paarungen mit sinkendem Fuel verschieben, ist aus diesen Rechnungen nicht sicher abzulesen: Das Speed-Raster optimiert nur eine Seite, und die Robustheitstests mit halbem Tank zeigen teils das Gegenteil.
@@ -124,7 +124,8 @@ Abgleich mit Erfahrungen aus dem Ranked (Top-10-Spieler, vor allem T-16):
 ## Grenzen
 
 - **Bots sind keine Menschen.** Sie sehen alles, zielen perfekt, kennen keinen Stress und keine Täuschung, planen aber auch nicht voraus.
-- **Nicht gemessen:** Rollrate, Kanone (Reichweite, Treffer bis Abschuss), Verhalten unter ~280 KIAS und über 20.000 ft. Die Kraftformeln im Spielcode sind nicht gelesen, nur kalibriert. Die Rollrate ändert gegen die T-18 viel (siehe Robustheitstests).
+- **Nicht gemessen:** Rollrate, Kanone (Reichweite, Treffer bis Abschuss), Verhalten unter ~280 KIAS und über 20.000 ft. Die Kraftformeln im Spielcode sind nicht gelesen, nur kalibriert.
+- **Rollrate:** Die Bots rollen alle mit 180 °/s. Laut Spieldaten rollen T-16 und T-18 bis 420 °/s, die T-15 nur bis 325 °/s (Vorgabe, im Flug nicht gemessen). Die Rollrate ändert gegen die T-18 viel (siehe Robustheitstests); der Vorsprung der T-15 könnte kleiner sein.
 - **Schüsse** sind wie im Spiel erst nach dem ersten Pass erlaubt, danach auch auf der Nase; ein Teil der Abschüsse fällt dort, wo einer schon mehr Winkel hat.
 - **Nur der Ranked-Start** mit vollem Tank. Höher (wo die T-16 schwächer wird) und mit wenig Fuel kann es anders aussehen.
 

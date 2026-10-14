@@ -21,6 +21,8 @@ Der **Lift Vector** zeigt senkrecht aus den Flügeln Richtung Kabinendach. **Woh
 1. **Rollen:** Lift Vector auf das Ziel legen (auf den Gegner, vor ihn, über ihn, unter ihn).
 2. **Ziehen:** so viel G, wie die Situation verlangt.
 
+Wie schnell Schritt 1 geht, bestimmt die Rollrate. Das Fly-by-Wire lässt laut Spieldaten bis 325 °/s (T-15) bzw. 420 °/s (T-16, T-18) zu; im Flug gemessen ist das nicht ([Pitch- und Rollrate](/grundlagen/physik#pitch-und-rollrate)).
+
 <svg viewBox="0 0 520 300" width="100%" style="max-width:520px" role="img" aria-label="Jet von hinten in 60 Grad Querlage. Der Lift Vector zeigt schräg nach oben links, die Schwerkraft nach unten. Die senkrechte Komponente des Lifts hebt die Schwerkraft auf, die waagrechte Komponente zieht den Jet in die Kurve.">
 <defs><marker id="kp-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker><marker id="kp-ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--vp-c-brand-1)"/></marker><marker id="kp-ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--vp-c-danger-1)"/></marker></defs>
 <text x="260" y="24" font-size="12" fill="currentColor" text-anchor="middle">Blick von hinten: 60° Querlage links, Höhe wird gehalten (n = 2)</text>
@@ -85,7 +87,7 @@ Das Spiel rechnet genauso: Die T-15 hat laut Ingame-Diagramm auf Meereshöhe (50
 
 Was die Tabelle zeigt:
 
-- **500 statt 360 KIAS** bei 9 G: ein Viertel weniger Rate, fast doppelter Radius.
+- **500 statt 360 KIAS** bei 9 G: ein Viertel weniger Rate, fast doppelter Radius. Deshalb ist schnell kämpfen teuer: In der [Simulation](/flugzeuge/simulation) ist 520 KIAS für alle drei Jets die schlechteste Kampf-Speed, ~360–440 KIAS die beste.
 - **5 statt 9 G** bei 360 KIAS: halbe Rate. Wer am Merge nicht zieht, verschenkt Winkel.
 
 ### KIAS vs. wahre Speed in der Höhe
@@ -96,20 +98,26 @@ Die Formeln brauchen die **wahre** Speed (TAS). In der Höhe ist die Luft dünne
 
 Zwei Grenzen bestimmen, wie viel G du ziehen kannst:
 
-1. **Lift-Limit:** Langsam erzeugt der Flügel nicht genug Auftrieb für 9 G. Die mögliche G steigt etwa mit dem Quadrat der Speed, die Rate also mit der Speed.
+1. **Lift-Limit:** Langsam erzeugt der Flügel nicht genug Auftrieb für 9 G, auch nicht beim α mit dem meisten Auftrieb (in VFM HUD-α ~27°, laut Spieldaten bei allen Jets). Die mögliche G steigt etwa mit dem Quadrat der Speed, die Rate also mit der Speed.
 2. **G-Limit:** Ab einer bestimmten Speed hast du 9 G, mehr gibt es nicht. Ab hier sinkt die Rate mit 1/V.
 
 Die **Corner Speed** ist der Schnittpunkt: die niedrigste Speed mit 9 G. Dort hast du die **höchste Instant Turn Rate und den kleinsten Radius**.
 
-| Jet | Corner Speed (Diagramm, 10.000 ft, 50 % Fuel) |
-|---|---|
-| T-15 Excalibur | ~360 KIAS (24 °/s) |
-| T-16 Falchion | ~409 KIAS (21 °/s) |
-| T-18 Cutlass | ~385 KIAS (22 °/s) |
+| 10.000 ft | Diagramm, 50 % Fuel | Diagramm, voller Tank | voller Tank, im Flug (gerechnet) |
+|---|---|---|---|
+| T-15 Excalibur | ~360 KIAS (24 °/s) | ~385 KIAS | ~400–430 KIAS |
+| T-16 Falchion | ~409 KIAS (21 °/s) | ~421 KIAS | ~440–465 KIAS |
+| T-18 Cutlass | ~385 KIAS (22 °/s) | ~409 KIAS | ~425–455 KIAS |
 
 Mit mehr Höhe und mehr Fuel steigt die Corner Speed, mit leerem Tank liegt sie ~25 KIAS tiefer. Alle Bedingungen: [Flugzeugvergleich](/flugzeuge/vergleich).
 
-**Warum sie wichtig ist:** Am Merge und im Break Turn willst du in kurzer Zeit maximal Winkel gewinnen – das geht nahe Corner Speed am besten. Darunter fehlen dir G, darüber wird der Radius groß. **Aber:** Bei Corner Speed und 9 G verlierst du sehr schnell Energie und kannst dort nicht bleiben. Die Speed für die Dauerkurve ist die höhere **Best Sustained Speed** – [Corner Speed vs. Best Sustained Speed](/grundlagen/energie-management#corner-speed-vs-best-sustained-speed).
+### Corner Speed im Flug
+
+Das Lift-Limit der Diagramme erreichst du im Flug nicht: Ohne Override kommst du unterhalb der Höchst-G nur auf ~85–92 % der Diagramm-G (*gemessen*), laut Spieldaten liegt das Diagramm sogar 13–24 % über dem größten Auftrieb im Flug. Für 9 G brauchst du deshalb rund **5–10 % mehr Speed als die Diagramm-Corner** (letzte Spalte, *gerechnet*). Die Messflüge passen dazu: Aus ~450 KIAS kam nur die T-15 auf 9 G (9,1 G bei 419 KIAS), T-16 und T-18 blieben bei 8,4 und 8,7 G ([Voller Zug](/grundlagen/physik#voller-zug-gemessen)).
+
+Der **Ranked-Start** (~427 KIAS, voller Tank) liegt über der Diagramm-Corner aller drei Jets, aber an oder unter ihrer Corner im Flug. Ohne Nachbrenner bis zum Merge rechne eher mit etwas weniger als den Höchst-G, die aus 450 KIAS gemessen sind (9,1 / 8,4 / 8,7 G) ([Der Merge](/grundlagen/neutral/der-merge)).
+
+**Warum die Corner Speed wichtig ist:** Am Merge und im Break Turn willst du in kurzer Zeit maximal Winkel gewinnen – das geht nahe Corner Speed am besten. Darunter fehlen dir G, darüber wird der Radius groß. **Aber:** Bei Corner Speed und vollem Zug verlierst du sehr schnell Energie, weil der Widerstand mit dem Anstellwinkel steil steigt ([Warum voller Zug so teuer ist](/grundlagen/energie-management#warum-voller-zug-so-teuer-ist)). Dort kannst du nicht bleiben. Die schnellste Dauerkurve fliegst du bei der höheren **Best Sustained Speed**, gekämpft wird laut Simulation darunter, bei ~360–440 KIAS – [Corner Speed vs. Best Sustained Speed](/grundlagen/energie-management#corner-speed-vs-best-sustained-speed).
 
 ## Schwerkraft in schrägen und vertikalen Kurven
 
@@ -117,6 +125,8 @@ In der Horizontalkurve muss ein Teil des Lifts die Schwerkraft aufheben. Schräg
 
 - **Lift Vector unter dem Horizont (nose-low):** Die Schwerkraft zieht mit. Du drehst **schneller** und hältst Speed (Höhe wird zu Speed).
 - **Lift Vector über dem Horizont (nose-high):** Die Schwerkraft zieht dagegen. Du drehst **langsamer** und verlierst Speed (Speed wird zu Höhe).
+
+Die [Simulation](/flugzeuge/simulation#was-fur-alle-jets-gilt) bestätigt das für alle drei Jets: **nose-low schlägt flach, flach schlägt hoch, steil hoch ist am schlechtesten** – solange Höhe da ist.
 
 Im Looping wirkt Richtung Kurvenmitte:
 
@@ -139,14 +149,15 @@ Jeder Jet kurvt in seiner **Bewegungsebene** aus Flugrichtung und Lift Vector. R
 Mehr zur Bewegungsebene: [Relative Geometrie](/grundlagen/geometrie#bewegungsebene-plane-of-motion).
 
 ::: info IM SPIEL PRÜFEN
-- Rollrate der drei Jets – sie bestimmt, wie schnell du den Lift Vector umlegst.
+- **Rollrate im Flug:** Die Spieldaten nennen nur die Vorgabe (325 / 420 / 420 °/s). Wie schnell legst du den Lift Vector wirklich um, auch bei niedriger Speed?
+- **Corner Speed im Flug:** Bei welcher KIAS erreicht dein Jet mit vollem Tank gerade 9 G? Die Werte oben sind gerechnet.
 :::
 
 ::: tip MERKE
 - **Lift Vector platzieren, dann ziehen** – jedes Manöver ist das.
 - **Rate ~ 1/V, Radius ~ V²** bei gleicher G. Zu schnell heißt: großer Kreis, langsame Nase.
-- **Corner Speed** = niedrigste Speed mit 9 G = beste Instant Rate, aber hoher Energiepreis.
-- **Nose-low dreht schneller, nose-high langsamer** – je langsamer du bist, desto stärker.
+- **Corner Speed** = niedrigste Speed mit 9 G = beste Instant Rate, aber hoher Energiepreis. Im Flug liegt sie ~5–10 % über dem Diagrammwert.
+- **Nose-low dreht schneller, nose-high langsamer** – je langsamer du bist, desto stärker. In der Simulation gewinnt nose-low.
 - **Raus aus der Ebene** gibt dir Schwerkraft, Closure-Kontrolle und macht dich schwerer zu treffen.
 :::
 

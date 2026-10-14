@@ -7,7 +7,7 @@ Defensiv heißt: Der Gegner steht hinter deiner 3/9-Linie und bestimmt das Tempo
 ## Die Prioritäten
 
 1. **Bedrohung sehen.** Kopf drehen, RWR und MWS beachten ([RWR & MWS](/avionik/rwr)).
-2. **Den Schuss schlagen.** Rakete: [Break + Flares + Idle](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung). Kanone in Lösung: [Guns Defense](/grundlagen/defensiv/guns-defense). Alles andere wartet.
+2. **Den Schuss schlagen.** Kanone in Lösung: [Guns Defense](/grundlagen/defensiv/guns-defense). Rakete (nur in Custom-Lobbys): [Break + Flares + Idle](/grundlagen/defensiv/break-turn#raketenabwehr-kurzfassung). Alles andere wartet.
 3. **Sicht halten.** Ohne Sicht reagierst du nur noch auf Vermutungen.
 4. **Eintritt in deinen Kurvenkreis verweigern.** Mit [Break Turn](/grundlagen/defensiv/break-turn) und Defensivkurve hältst du seine AA hoch.
 5. **Overshoot erzwingen.** Siehe [Overshoot](/grundlagen/offensiv/overshoot).
@@ -56,15 +56,25 @@ flowchart TD
 
 ## VFM-Hinweise
 
-- **Jet-Wahl prägt die Defensive.** Die [T-15](/flugzeuge/t15) bricht am härtesten (beste Instant Rate, kleinster Radius), die [T-16](/flugzeuge/t16) verteidigt am besten, indem sie im Band ~420–500 KIAS Speed hält, die [T-18](/flugzeuge/t18) will den Kampf langsam machen. Daten: [Flugzeugvergleich](/flugzeuge/vergleich).
-- **Ranked 1v1:** Bei Zeitablauf gewinnt der Verfolger. Nur überleben reicht nicht, du musst neutralisieren und umdrehen ([Separation im Ranked](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis)).
+- **Im Ranked ist die Bedrohung die Kanone.** In 71 eigenen Replays: 63 Abschüsse mit der Kanone, 9 Abstürze, keine Rakete (*Replays*). Stufe 2 heißt dort immer [Guns Defense](/grundlagen/defensiv/guns-defense) – und ~12 % der Runden enden am Boden: Nose-low-Abwehr nie ohne Blick auf das [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft).
+- **Nicht langsam werden.** Voller Zug kostet im Spiel sehr viel Energie, weil der Widerstand mit dem Anstellwinkel steil steigt (*Spieldaten*). Laut Simulation gewinnen alle drei Jets bei ~360–440 KIAS; wer auf ~280 KIAS absinkt, kommt aus dem Loch kaum heraus. Nach dem Break also zurück ins Band.
+- **Jet-Wahl prägt die Defensive.** Die [T-15](/flugzeuge/t15) bricht am härtesten (beste Instant Rate, kleinster Radius), verliert dabei aber am meisten Energie und rollt laut Spieldaten am langsamsten. Die [T-16](/flugzeuge/t16) verteidigt am besten, indem sie ihre Speed bei ~420–440 KIAS hält. Die [T-18](/flugzeuge/t18) zieht zum Kurven α ~26°, nicht 35°. Die alte Empfehlung „T-18: Kampf langsam machen“ deckt die Simulation nicht; auch für sie ist der Kreis nose-low bei ~440 KIAS am besten. Daten: [Flugzeugvergleich](/flugzeuge/vergleich), [Simulation](/flugzeuge/simulation).
 
-**Im 3D-Simulator:** [Defensiv: Bandit an deiner Six](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}.
+## Ranked 1v1: Überleben reicht nicht
+
+Bei Zeitablauf gewinnt der Verfolger (Rundenzeit 8 Minuten). Die Simulation zeigt, wie hart das ist: Sitzt ein gleichwertiger Gegner **3.000 ft an deiner Six**, gelingt es den Bots, den Schuss über die ganze Runde zu verweigern – **den Kampf umzudrehen gelingt ihnen aber nicht**. Am Ende gewinnt der Verfolger.
+
+- **Komm nicht in diese Lage.** Der Ranked-Start ist neutral (Head-on); defensiv wirst du durch verlorene erste Turns. Der beste Schutz ist ein guter [Merge](/grundlagen/neutral/der-merge).
+- **Bist du drin, arbeite auf seinen Fehler hin:** Schuss verweigern, Energie im Band halten, und den [Overshoot](/grundlagen/offensiv/overshoot) sofort nutzen, wenn er kommt. Menschen machen diese Fehler eher als Bots, die perfekt zielen und alles sehen.
+- **Plane rechtzeitig.** Separation ist im Ranked nur ein Zwischenschritt ([Separation im Ranked](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis)).
+
+**Im 3D-Simulator:** [Defensiv: Bandit an deiner Six](/VFM_Wiki/sim/?szenario=defensiv){target="_self"} – Break, zurück ins Band, Schuss verweigern; der helle Geist bleibt bei ~360 KIAS nose-low, unter dem Band der T-16, und wird getroffen.
 
 ::: tip MERKE
 - Sehen, Schuss schlagen, Sicht halten, Eintritt verweigern, Overshoot erzwingen, neutralisieren, umdrehen oder raus.
 - Immer die oberste offene Priorität zuerst.
-- Max G nur, solange eine Bedrohung da ist. Danach Energie halten.
+- Max G nur, solange eine Bedrohung da ist. Danach zurück ins Band ~360–440 KIAS.
+- Ranked: Den Schuss verweigern kannst du lange, umdrehen nur mit seinem Fehler. Bei Zeitablauf gewinnt der Verfolger.
 - Der Overshoot des Angreifers ist dein Weg zurück – aber nicht durch Bremsen in seine Tracking-Lösung hinein.
 :::
 

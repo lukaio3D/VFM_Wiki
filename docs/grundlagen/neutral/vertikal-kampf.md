@@ -55,15 +55,33 @@ Der klassische vertikale erste Zug am [Merge](/grundlagen/neutral/der-merge): Na
 
 - **Vorteil:** Du drehst im engen Teil des Eis und hast Höhe über ihm.
 - **Risiko:** Mit zu wenig Speed hängst du oben langsam vor seiner Nase, oder er taucht ab und gewinnt den vertikalen Two-Circle (siehe unten).
+- **In VFM:** Als erster Zug nach dem Pass ist „steil hoch“ in der Simulation für jeden Jet die schlechteste Ebene (siehe [Was die Simulation zeigt](#was-die-simulation-zeigt)).
 
 ## Vertikaler Two-Circle: Warum Abtauchen gegen Hochziehen gewinnen kann
 
 Zieht einer nach dem Pass hoch und der andere nose-low herum, entsteht ein Two-Circle in der Vertikalen. Der Hochziehende gewinnt Höhe und verliert Speed, der Abtauchende tauscht Höhe gegen Speed und bleibt in seinem Band.
 
-Typisch ist **T-15 gegen T-16**: Die T-15 verliert im harten Zug Energie ~2,3-mal so schnell wie die T-16. Die T-16 bleibt nose-low bei ~450 KIAS, wo sie dauerhaft ~2 °/s schneller dreht. Nach einem Kreis ist sie unten, schnell und mit der besseren Rate vorn, die T-15 oben und langsam.
+Typisch ist **T-15 gegen T-16**: Die T-15 verliert im harten Zug Energie ~2,3-mal so schnell wie die T-16 (*gemessen*). Die T-16 bleibt nose-low bei ~450 KIAS, wo sie dauerhaft ~2 °/s schneller dreht. Nach einem Kreis ist sie unten, schnell und mit der besseren Rate vorn, die T-15 oben und langsam.
 
 - **Als T-16:** Einer hochziehenden T-15 nie folgen, nose-low weiterkreisen.
-- **Als T-15:** Geht die T-16 nose-low, Nase ebenfalls runter, auf ihrer Höhe bleiben und den Kampf langsam und eng machen ([Merge-Strategien](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias)).
+- **Als T-15:** Geht die T-16 nose-low, Nase ebenfalls runter, auf ihrer Höhe bleiben und im Two-Circle bei ~400–420 KIAS weiterkreisen. Dort gewinnst du laut Simulation ([Merge-Strategien](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias)).
+
+## Was die Simulation zeigt
+
+Im Bot-Turnier (~405.000 Kämpfe, Originalmodell, Ranked-Start auf 10.000 ft) gilt in allen Paarungen dieselbe Reihenfolge der Ebenen: **nose-low > flach > hoch > steil hoch.** Im Nose-low-Turn arbeiten Auftrieb und Schwerkraft zusammen, und die Speed bleibt im Band. Wer steil hochzieht, wird langsam, und hoher α kostet im Originalmodell sehr viel Energie.
+
+| Vertikal (steil hoch, ~440 KIAS) gegen ein breites Feld | Wert | zum Vergleich: Two-Circle nose-low |
+|---|---|---|
+| T-15 gegen T-16 | +0,47 | +0,88 |
+| T-15 gegen T-18 | +0,53 | +0,86 |
+| T-16 gegen T-15 | **−0,49** | +0,48 |
+| T-16 gegen T-18 | +0,20 | +0,83 |
+| T-18 gegen T-15 | −0,20 | +0,04 |
+| T-18 gegen T-16 | −0,14 | +0,42 |
+
+- **Die T-15 bleibt auch vertikal vorn**, verliert damit aber etwa die Hälfte ihres Vorteils.
+- **Die T-16 verliert vertikal gegen die T-15 klar** (−0,5 bis −0,6 gegen ein breites Feld).
+- Gilt nur, solange Höhe da ist: Die Simulation startet auf 10.000 ft, die Bots ziehen unter ~3.000 ft hoch. Bots planen nicht über mehrere Pässe, einen echten Energy Fight mit Zoom und Wiedereinstieg spielen sie nicht.
 
 ## Zoom Climb
 
@@ -77,21 +95,21 @@ Ein **Zoom** ist ein steiler Steigflug, der Speed in Höhe umwandelt. Ohne Schub
 Bei der **Climbing Spiral** steigen beide in einer Spirale umeinander. Das ist ein reiner **Energie-Wettkampf**: Wer mehr Überschussleistung (Ps) hat, steigt länger und bleibt schneller. Der andere wird zuerst zu langsam und fällt heraus.
 
 - Bleibt er über dir, steig **früh** aus: Unload, Nase an oder knapp unter den Horizont, Ebene wechseln.
-- Geh nur in eine Spirale, wenn dein Jet klar mehr Schub hat. In VFM ist das fast nur die T-15.
+- Geh nur in eine Spirale, wenn dein Jet klar mehr Schub hat. In VFM ist das fast nur die T-15 (Schub/Gewicht mit Nachbrenner laut Spieldaten 1,64 gegen 1,29 / 1,37).
 
 ## Wann vertikal in VFM
 
 | Jet | Vertikal? | Warum |
 |---|---|---|
-| **T-15** | **Ja, deine Stärke:** Pitch-back, Zoom, Spirale, Angriffe von oben. Aber nicht gegen eine abtauchende T-16. | Mit Abstand der meiste Schubüberschuss (gemessen (T − D)/W ≈ 1,4): Sie kann senkrecht steigen und dabei noch beschleunigen. In der Höhe hält sie das flachste Sustained-Plateau. |
-| **T-16** | **Gegen die T-15 meiden.** Nose-low und kurze schräge Kurven. | Jeder Steigflug kostet dich dein Band um 450 KIAS. Dein Vorsprung ist tief am größten. |
-| **T-18** | **Kurze Zooms**, keine langen Steigflüge oder Spiralen gegen die T-15. | Über ~480–510 KIAS frisst ihr hoher Widerstand die Energie. Ein kurzer Zoom speichert diese Speed als Höhe. Danach wieder tief und langsam kämpfen. |
+| **T-15** | **Als Werkzeug, nicht als Spielplan:** Zoom, Separation, Angriffe von oben, Speed über dem Band abbauen. Nicht gegen eine abtauchende T-16. | Mit Abstand der meiste Schubüberschuss (gemessen (T − D)/W ≈ 1,4): Sie kann senkrecht steigen und dabei noch beschleunigen. In der Höhe hält sie das flachste Sustained-Plateau. Trotzdem gewinnt sie laut Simulation tief im Two-Circle fast doppelt so deutlich wie vertikal. |
+| **T-16** | **Meiden.** Nose-low und kurze schräge Kurven. | Jeder Steigflug kostet dich dein Band um ~420–440 KIAS. Dein Vorsprung ist tief am größten. Vertikal verliert in der Simulation gegen die T-15 klar. |
+| **T-18** | **Kurze Zooms**, keine langen Steigflüge oder Spiralen gegen die T-15. | Über ~480–510 KIAS frisst ihr hoher Widerstand die Energie. Ein kurzer Zoom speichert diese Speed als Höhe. Danach wieder nose-low bei ~440 KIAS kämpfen. |
 
 T-16 und T-18 steigen etwa gleich gut, die T-15 deutlich besser. Daten: [Beschleunigung (gemessen)](/flugzeuge/vergleich#beschleunigung-gemessen).
 
 ## Speed oben am Scheitel
 
-Wie langsam du oben werden darfst, ist für VFM nicht dokumentiert: Die Ingame-Diagramme beginnen erst bei ~170–200 KIAS, gemessen ist bisher nichts unter ~280 KIAS. Faustwerte aus anderen Sims gelten hier nicht automatisch.
+Wie langsam du oben werden darfst, ist für VFM nicht dokumentiert: Die Ingame-Diagramme beginnen erst bei ~170–200 KIAS, gemessen ist bisher nichts unter ~280 KIAS. Faustwerte aus anderen Sims gelten hier nicht automatisch. Sicher ist laut Spieldaten: Bei allen drei Jets liegt der größte Auftrieb bei **HUD-α ~27°**. Mehr α (T-18 bis 35°, Override) bringt oben die Nase herum, aber keine engere Kurve, und kostet viel Energie.
 
 ::: info IM SPIEL PRÜFEN
 - Ab welcher Einstiegsspeed kommst du mit max G kontrolliert über den Scheitel eines Loopings, und wie schnell bist du oben?
@@ -106,7 +124,7 @@ Ablauf und Tabelle: [Trainingsplan, Vertikal-Tests](/grundlagen/uebungen).
 - Schräge Kurven regeln die Speed: zu schnell → Lift Vector über den Horizont, zu langsam → darunter.
 - Zoom und Climbing Spiral sind Energie-Wettkämpfe: Es gewinnt, wer mehr Ps hat.
 - Abtauchen schlägt Hochziehen, wenn der Abtauchende dabei in seinem Band bleibt (T-16 gegen T-15).
-- In VFM: T-15 geht in die Vertikale, T-16 bleibt tief und schnell, T-18 zoomt nur kurz.
+- In VFM laut Simulation für jeden Jet: nose-low > flach > hoch > steil hoch. Die T-15 kann vertikal, gewinnt aber tief; T-16 bleibt tief, T-18 zoomt nur kurz.
 :::
 
 Weiter: [Trainingsplan](/grundlagen/uebungen)

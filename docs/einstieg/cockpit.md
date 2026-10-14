@@ -31,7 +31,7 @@ Leg diese Funktionen auf Tasten, die du **ohne Hinschauen und ohne den Stick los
 | Funktion | Warum |
 |---|---|
 | **Kanone feuern** | Schussfenster sind oft kürzer als eine Sekunde. |
-| **Waffe wählen / Rakete feuern** | Wechsel zwischen Kanone und IR-Rakete (Fox 2). |
+| **Waffe wählen / Rakete feuern** | Wechsel zwischen Kanone und IR-Rakete (Fox 2). Im Ranked 1v1 nicht nötig, dort gibt es nur die Kanone. |
 | **Flares** | Blind und sofort, auch mitten im Break Turn. |
 | **Speedbrake** | Speed abbauen, z. B. gegen einen Overshoot. Ausgefahren zeigt das HUD „BRAKE“. |
 | **AoA-Override („Cobra-Button“)** | Halten, nicht suchen (siehe unten). |
@@ -39,21 +39,21 @@ Leg diese Funktionen auf Tasten, die du **ohne Hinschauen und ohne den Stick los
 | **Push-to-Talk** | Eingebauter Voice-Chat, im Teamkampf Pflicht. |
 | **View Recenter** | Sitzposition nach Verrutschen sofort zurücksetzen. |
 
-Der Schubhebel hat einen **Nachbrenner**-Bereich; alle Beschleunigungsmessungen im [Flugzeugvergleich](/flugzeuge/vergleich#beschleunigung-gemessen) sind mit Nachbrenner geflogen.
+Der Schubhebel hat einen **Nachbrenner**-Bereich; alle Beschleunigungsmessungen im [Flugzeugvergleich](/flugzeuge/vergleich#beschleunigung-gemessen) sind mit Nachbrenner geflogen. Im Ranked startest du mit ~427 KIAS; Nachbrenner bis zum Merge bringt dich weit über dein Kampfband und ist laut [Simulation](/flugzeuge/simulation) kein klarer Vorteil.
 
 ::: info IM SPIEL PRÜFEN
 - Standardbelegung der Funktionen oben auf VR-Controllern, HOTAS und Gamepad, und welche Radarfunktionen genau belegbar sind.
 - Gibt es Einstellungen für Empfindlichkeit, Deadzone oder Kurve des VR-Sticks?
-- Wie stark bremst die Speedbrake?
+- Wie stark bremst die Speedbrake? (Messflug: [Trainingsplan, B2 M7](/grundlagen/uebungen#b2-eigenen-jet-vermessen))
 :::
 
 ### AoA-Limiter und Override
 
-Der Limiter begrenzt deinen Anstellwinkel (gemessen: T-15 ~24–25°, T-16 ~23°, T-18 bis 35°). Der Override hebt die Grenze auf und gibt dir **sofort Nase**:
+Der Limiter begrenzt deinen Anstellwinkel (gemessen: T-15 ~24–25°, T-16 ~23°, T-18 bis 35°). Den größten Auftrieb haben alle drei Jets bei HUD-α ~27° (*Spieldaten*): T-15 und T-16 stoppt der Limiter knapp davor, die T-18 kurvt am besten bei ~26° und nimmt 35° nur für den Snapshot. Der Override hebt die Grenze auf und gibt dir **sofort Nase**:
 
-- **Kosten:** extrem viel Energie. Danach bist du langsam.
+- **Kosten:** extrem viel Energie, denn über dem Auftriebsmaximum steigt nur noch der Widerstand. Danach bist du langsam.
 - **Das 9-G-Limit bleibt.** Strukturschaden durch G gibt es nicht.
-- **Einsatz:** gezielt für einen Schuss oder als letzte Abwehr, nie als Standard-Turn.
+- **Einsatz:** gezielt für einen Schuss oder als letzte Abwehr, nie als Standard-Turn. In der Simulation schadet Override als Gewohnheit, am meisten gegen die stärksten Gegner (T-18 gegen T-15: −0,76 statt −0,54), siehe [AoA-Override](/flugzeuge/simulation#aoa-override-annahme).
 
 Details: [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override).
 

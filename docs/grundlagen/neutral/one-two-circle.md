@@ -75,9 +75,9 @@ Beide Skizzen zeigen die Draufsicht nach einem **Links-an-Links-Pass**.
 | Abstand | groß, Raum für Fox 2 | klein, oft nur Guns |
 | Wer ihn will | Rate-Jets | Radius-Jets |
 
-**Two-Circle:** Den ersten halben Kreis gewinnt die bessere Instant Rate, aber nur, wenn beide nahe Corner Speed ankommen. Aus 450 KIAS (Ranked-Start) ist der erste Turn fast ausgeglichen, siehe [Der erste Turn aus 450 KIAS](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen). Danach holt Grad für Grad auf, wer die höhere Sustained Rate hat.
+**Two-Circle:** Den ersten halben Kreis gewinnt die bessere Instant Rate, aber nur, wenn beide nahe Corner Speed ankommen. Aus dem Ranked-Start (~427 KIAS) bringt der erste Turn nur wenige Grad und kostet viel Speed, siehe [Der erste Turn](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen). Danach holt Grad für Grad auf, wer die höhere Sustained Rate hat, und wer bei gleicher Speed mehr G zieht und den kleineren Kreis fliegt.
 
-**One-Circle:** Der Radius wächst mit dem Quadrat der Speed, also werden beide immer langsamer. Der Kampf wird eng, oft enger als die Mindestreichweite einer IR-Rakete.
+**One-Circle:** Der Radius wächst mit dem Quadrat der Speed, also werden beide immer langsamer. Der Kampf wird eng, oft enger als die Mindestreichweite einer IR-Rakete. Wie gut ein Jet dort ist, hängt auch davon ab, wie viel Energie ihn der hohe α kostet. In VFM ist das sehr viel (siehe unten).
 
 ## Wer wählt den Flow?
 
@@ -89,29 +89,57 @@ Den Flow bestimmt ihr **beide**, keiner kann ihn allein erzwingen. Drehst du zu 
 2. **Beim nächsten Pass umdrehen:** die Drehrichtung neu wählen.
 3. **Ebene wechseln:** Pitch-back oder schräge Kurve macht aus dem flachen Duell einen [Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf).
 4. **Pass-Geometrie steuern:** Ein Rate-Jet braucht Versatz für den Lead Turn, ein Radius-Jet will einen engen Pass.
-5. **Nicht mitspielen:** Blow-Through, Extend, neuer Merge unter deinen Bedingungen ([Separation](/grundlagen/defensiv/separation)).
+5. **Nicht mitspielen:** Blow-Through, Extend, neuer Merge unter deinen Bedingungen ([Separation](/grundlagen/defensiv/separation)). Am ersten Merge kostet das in VFM meist mehr, als es bringt ([Blow-Through](/grundlagen/neutral/der-merge#blow-through-und-extension)).
 
 ## Flow-Wahl in VFM
 
-Es ist kein Stein-Schere-Papier, sondern eine Frage des **Speedbands**: Die T-16 dreht dauerhaft am besten bei ~420–500 KIAS, die T-15 über ~520 KIAS und bei gleicher niedriger Speed (meiste G), die T-18 will den Kampf langsam machen und bricht über ~480–510 KIAS ein. Die vollständigen Merge-Strategien je Paarung stehen in der [Merge-Matrix](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias). Für die Flow-Wahl reicht:
+Zwei Quellen sagen hier Verschiedenes, und beide stimmen auf ihre Art.
+
+**Die Diagramme** zeigen, wer in welchem Speedband **dauerhaft schneller dreht** (gilt weiter, [Flugzeugvergleich](/flugzeuge/vergleich#wer-ist-wo-am-besten-speedbander)):
+
+| Band (10.000 ft) | Sustained Rate |
+|---|---|
+| unter ~380 KIAS | T-15 ≈ T-18 > T-16; die T-15 zieht bei gleicher Speed die meisten G |
+| ~400–500 KIAS | T-16 +1–2 °/s |
+| über ~520 KIAS | T-15; die T-18 bricht über ~480–510 KIAS ein |
+
+Daraus kamen die älteren Spielpläne: T-16 Two-Circle im Band, T-18 „Kampf langsam machen, One-Circle“, T-15 „langsamer One-Circle oder schnell“.
+
+**Die Simulation** (~405.000 Bot-Kämpfe mit dem Originalmodell, echter Ranked-Start, bis 8 Minuten) zeigt, was **im ganzen Kampf** gewinnt: **Für alle drei Jets ist der Two-Circle bei ~360–440 KIAS, nose-low oder flach, die beste Familie.** Am Pass zum Gegner hin drehen schlägt Wegdrehen (One-Circle) und Durchfliegen deutlich. Der langsame One-Circle (280 KIAS) ist überall schwächer, zum Beispiel gegen ein breites Feld:
+
+| Paarung | Two-Circle ~440 | langsamer One-Circle (280) |
+|---|---|---|
+| T-15 gegen T-16 | **+0,88** | +0,43 |
+| T-16 gegen T-15 | **+0,54** | −0,20 |
+| T-18 gegen T-16 | **+0,42** | +0,05 |
+| T-18 gegen T-15 | +0,08 | −0,19 |
+
+::: info SIMULATION: Warum der One-Circle in VFM verliert
+- **Hoher α kostet im Originalmodell sehr viel Energie.** Laut Spieldaten hat der Flügel bei α 25° ~12–34-mal so viel Widerstand wie bei α 0. Wer den Kampf langsam und eng macht, zieht dauerhaft viel α und kommt aus dem Loch nicht mehr heraus. Bei 280 KIAS verlieren beide Seiten zu viel Energie.
+- **Im Two-Circle bei 360–440 KIAS passen Rate, Radius und Energie zusammen.** Dort gewinnt die T-15 sogar gegen die T-16, obwohl diese 1–2 °/s mehr Sustained Rate hat: Die T-15 zieht bei gleicher Speed mehr G, fliegt den kleineren Kreis und hat mehr Schub.
+- **Schnell bleiben (520 KIAS) ist am schlechtesten.** Wer dafür entlastet, macht keine Winkel.
+- **Grenzen:** Bots zielen perfekt, sehen alles und planen nicht voraus. Unter ~280 KIAS und mit Override ist nichts gemessen. Die Diagramm-Fakten bleiben richtig, nur die Spielpläne daraus sind durch die Simulation nicht gedeckt.
+:::
+
+Für die Flow-Wahl heißt das (*Simulation*; vollständige Matrix: [Merge-Strategien](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias)):
 
 | Du fliegst | gegen T-15 | gegen T-16 | gegen T-18 |
 |---|---|---|---|
-| **T-15** | kein Flow-Vorteil; wer unnötig voll zieht, verliert | **One-Circle langsam** (300–380 KIAS) oder Blow-Through und von oben; kein flacher Kreis bei 400–500 | schnell (> 500 KIAS, vertikal) oder langsam bei mehr G; kein Lag-Kreisen bei ~450 |
-| **T-16** | **Two-Circle** bei ~450–470 KIAS, tief; nicht in die Vertikale folgen | **Two-Circle**, nie unter ~420 KIAS | **Two-Circle** bei ~450–470 KIAS; kein One-Circle unter ~380 |
-| **T-18** | **One-Circle** sehr langsam, tief; Two-Circle und Vertikale meiden | **One-Circle** unter ~380 KIAS; Two-Circle über ~420 meiden | One-Circle; wer besser langsam fliegt, gewinnt |
+| **T-15** | **Two-Circle** nose-low bei ~400–420 KIAS; nicht schnell bleiben | **Two-Circle** nose-low bei ~400–440; taucht sie ab, mitgehen; kein langsamer One-Circle, kein Durchfliegen | **Two-Circle** bei ~360–440; taucht sie ab, sofort zu ihr hin |
+| **T-16** | **Two-Circle** bei ~420–440, flach oder nose-low; Speed halten, nie in die Vertikale | **Two-Circle** bei ~420 | **Two-Circle** bei ~420–440; dreht sie weg, nicht in ihren langsamen Kreis folgen |
+| **T-18** | kein klarer Flow: am ehesten durchfliegen, abtauchen, dann ~360, oder flacher Two-Circle bei ~440 | **Two-Circle** nose-low bei ~440; nicht langsam machen | **Two-Circle** nose-low bei ~440, α diszipliniert |
 
 ::: info IM SPIEL PRÜFEN
-- Wie sich die Jets **unter ~280 KIAS** und mit AoA-Override verhalten. Dort soll laut Entwickler die Stärke der T-18 liegen (Hypothese).
-- Die Mindestreichweite der IR-Rakete, bevor du einen One-Circle als Raketenschutz einsetzt.
+- Wie sich die Jets **unter ~280 KIAS** und mit AoA-Override verhalten. Dort soll laut Entwickler die Stärke der T-18 liegen (*Hypothese*). Die Simulation spricht bisher dagegen, kann den Bereich aber nicht prüfen.
+- Die Mindestreichweite der IR-Rakete, bevor du einen One-Circle als Raketenschutz einsetzt (nur in Lobbys mit Raketen; Ranked 1v1 ist Guns-only).
 :::
 
 ::: tip MERKE
 - Gleicher Drehsinn = Two-Circle = Rate-Kampf. Entgegengesetzter Drehsinn = One-Circle = Radius-Kampf.
-- Two-Circle: erst Instant Rate (nur nahe Corner Speed), dann Sustained Rate.
-- One-Circle macht den Kampf langsam und eng.
+- Two-Circle: erst Instant Rate (nur nahe Corner Speed), dann Sustained Rate, G und Radius.
+- One-Circle macht den Kampf langsam und eng, und in VFM teuer.
 - Keiner kann den Flow allein erzwingen. Kontrolliere Speed, Pass-Geometrie und Ebene.
-- In VFM entscheidet das Speedband: T-16 im Band um 450, T-18 langsam, T-15 schnell oder langsam, aber nicht im Band der T-16.
+- In VFM laut Simulation für jeden Jet: am Pass zu ihm hin, Two-Circle bei ~360–440 KIAS, nose-low oder flach. Langsamer One-Circle (280) und schnell bleiben (520) verlieren.
 :::
 
 Weiter: [Scissors](/grundlagen/neutral/scissors)

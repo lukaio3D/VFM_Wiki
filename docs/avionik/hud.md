@@ -20,7 +20,16 @@ Beobachtet, aber nicht bestätigt: Kursband oben, Steig-/Sinkanzeige rechts, gew
 
 Die Drehrate in °/s zeigt dir direkt, was die Leistungsdiagramme versprechen. Zusammen mit dem Beschleunigungs-Indikator findest du so deinen besten Sustained Turn: Indikator neutral, Drehrate ablesen. Bei ~450 KIAS auf 10.000 ft sind das gemessen 15,4 °/s (T-15), 17,6 °/s (T-16) und 15,6 °/s (T-18). Alle Werte: [Flugzeugvergleich](/flugzeuge/vergleich).
 
-Die G-Zahl zeigt, wie nah du am 9-G-Limit bist. Bei niedriger Speed sagt sie wenig über deinen Zug; dann schau auf α.
+Die schnellste Dauerkurve ist nicht automatisch die beste Kampf-Speed: Laut [Simulation](/flugzeuge/simulation) kämpfen alle drei Jets am besten bei ~360–440 KIAS, die T-16 mit Ziel ~420 statt ihres Sustained-Optimums bei ~460. Dort gibt sie kaum Rate her und fliegt den kleineren Kreis.
+
+Die G-Zahl zeigt, wie nah du am 9-G-Limit bist (9 G gilt für alle Jets, *Spieldaten*). Bei niedriger Speed sagt sie wenig über deinen Zug; dann schau auf α.
+
+## Speed: KIAS und Mach
+
+KIAS bestimmt, wie viel G du ziehen kannst; nach KIAS richten sich alle Speed-Angaben im Wiki. Mach zählt für den Schub (die T-16 hat ihr Schubmaximum bei ~Mach 0,8, die T-15 bei ~1,0, die T-18 bei ~1,2, *Spieldaten*) und für den Wellenwiderstand um Mach 1 (~+20 %).
+
+- **Ranked-Start:** Mach 0,75 auf 10.000 ft, im HUD **~427 KIAS** (gemessen 424–427 KIAS).
+- **Höher** zeigt dieselbe Mach-Zahl weniger KIAS, weil die Luft dünner ist (im Spiel 69 % der Bodendichte auf 10.000 ft, 48 % auf ~20.000 ft). Siehe [Die Atmosphäre in VFM](/grundlagen/physik#die-atmosphare-in-vfm).
 
 ## Gun-Funnel
 
@@ -53,7 +62,19 @@ Das Kreuz zeigt die Kanonenachse **ohne Vorhalt**:
 
 ## α (AoA)
 
-Die α-Zahl zeigt, wie hart du gerade ziehst, gerade wenn du langsam bist und die G wenig aussagen. Voll gezogen stoppt der Limiter gemessen bei ~24–25° (T-15) und ~23° (T-16). Die T-18 geht bis 35°, hat ihre meisten G aber bei ~26°: Halte dort zum Kurven und nimm 35° nur für den Snapshot. Mehr nur mit Override (siehe [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override)).
+Die α-Zahl zeigt, wie hart du gerade ziehst, gerade wenn du langsam bist und die G wenig aussagen.
+
+| | T-15 | T-16 | T-18 |
+|---|---|---|---|
+| **Limiter, voll gezogen** (gemessen) | ~24–25° | ~23° | 35° |
+| **Größter Auftrieb** (*Spieldaten*) | HUD ~27° | HUD ~27° | HUD ~27° |
+
+- **Das HUD zeigt ~2° mehr als der Flügel sieht** (HUD-α ≈ Flügel-α + 2°, *Spieldaten*). Alle α-Werte im Wiki sind HUD-Werte.
+- **T-15 und T-16** stoppt der Limiter knapp unter dem Auftriebsmaximum: Voll gezogen holst du dort das meiste heraus, ohne zu überziehen.
+- **T-18:** Der Limiter lässt sie über das Maximum hinaus. Darüber fällt der Auftrieb, deshalb zieht sie bei ~26° gemessen die meisten G. Halte dort zum Kurven und nimm 35° nur für den Snapshot.
+- **Unter dem Anschlag fliegen spart Energie.** Der Widerstand steigt mit α steil: Bei α 15° hat der Flügel ein Vielfaches des Widerstands bei α 0, bei 25° noch einmal ein Mehrfaches davon (*Spieldaten*). Ein paar Grad weniger als voll kosten kaum Rate, sparen aber viel Speed.
+
+Mehr nur mit Override (siehe [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override)).
 
 ## Beschleunigungs-Indikator
 
@@ -70,7 +91,7 @@ Beides ist simuliert. Ein zu langer, harter Zug kann dir den Gegner aus dem Blic
 
 ::: info IM SPIEL PRÜFEN
 - Wie sieht die Lock-Anzeige aus, und haben die Jets unterschiedliche Spannweiten (dann liegt der Funnel ohne Lock systematisch daneben)?
-- Welche α-Werte erreichst du mit Override?
+- Welche α-Werte erreichst du mit Override? Die Spieldaten nennen je Jet einen zweiten, viel höheren α-Grenzwert, möglicherweise das Override-Limit (*Hypothese*).
 - Ab welcher G-Last und nach welcher Dauer setzt Greyout ein?
 :::
 
@@ -78,7 +99,8 @@ Beides ist simuliert. Ein zu langer, harter Zug kann dir den Gegner aus dem Blic
 - Oben links G und Drehrate, darunter KIAS, Mach und α, rechts die Höhe, unten rechts „BRAKE“.
 - Funnel: Ebene des Gegners treffen, Flügelspitzen an die Linien, dann feuern. Mit Lock genauer.
 - Indikator neutral + Drehrate ablesen = dein Sustained Turn.
-- α zeigt den Zug bei niedriger Speed; die T-18 kurvt bei ~26°, 35° nur für den Snapshot.
+- Ranked-Start: ~427 KIAS = Mach 0,75 auf 10.000 ft.
+- α zeigt den Zug bei niedriger Speed. Größter Auftrieb bei HUD ~27°; die T-18 kurvt bei ~26°, 35° nur für den Snapshot. Knapp unter dem Anschlag spart viel Energie.
 - Unnötig langes Ziehen kostet Sicht und Tally.
 :::
 

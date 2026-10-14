@@ -30,7 +30,7 @@ Was dir ein Spike sagt:
 
 ## MWS: die Warnung vor der Rakete
 
-Das MWS warnt vor **anfliegenden Raketen**, egal ob der Schütze sein Radar an hatte. Gegen die IR-Rakete ist es deine eigentliche Warnung. Schlägt es an: sofort Raketenabwehr mit Idle, Break Turn und Flares (siehe [Gegenmaßnahmen](/avionik/gegenmassnahmen)).
+Das MWS warnt vor **anfliegenden Raketen**, egal ob der Schütze sein Radar an hatte. Gegen die IR-Rakete ist es deine eigentliche Warnung. Schlägt es an: sofort Raketenabwehr mit Idle, Break Turn und Flares (siehe [Gegenmaßnahmen](/avionik/gegenmassnahmen)). Im Ranked 1v1 bleibt es still: Dort gibt es nur die Kanone (*Replays*).
 
 ::: tip NICHT AUF DAS MWS WARTEN
 Siehst du einen Gegner in Fox-2-Position (hinter dir, Nase auf dich, in Reichweite), reagiere schon vor der Warnung, z. B. mit vorbeugenden Flares.
@@ -44,7 +44,7 @@ Dein Radar ist für ihn genauso sichtbar (siehe [Radar](/avionik/radar)).
 |---|---|
 | **Er hat dich noch nicht gesehen** | Aus. Gib ihm keine Information über deine Richtung. |
 | **Teamkampf, er ist mit deinem Partner beschäftigt** | Aus, mit den Augen anfliegen, erst kurz vor dem Schuss locken. |
-| **1v1 im Kurvenkampf, er weiß ohnehin, wo du bist** | An. Kostet wenig, der Lock macht den Funnel genauer. |
+| **1v1 im Kurvenkampf, er weiß ohnehin, wo du bist** (auch der Ranked-Start: Head-on, 13.100 ft) | An. Kostet wenig, der Lock macht den Funnel genauer. |
 
 ::: info IM SPIEL PRÜFEN
 - Wie sieht das RWR-Display aus: Richtung auf einem Kreis, Unterschied zwischen Suche und Lock (Symbol, Ton)?

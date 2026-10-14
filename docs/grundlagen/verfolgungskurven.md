@@ -41,11 +41,15 @@ Definiert über die Richtung von **Nase und Lift Vector relativ zum Gegner**:
 | **Wofür** | Gun-Schuss, Abstand schließen | Fox-2-Schuss, Übergänge | Position, Turn Circle Entry, Overshoot vermeiden |
 | **Risiko** | Overshoot | Overshoot bei viel Speed-Überschuss | er entkommt, wenn du zu lange zu weit hinten bleibst |
 
-**Lead:** Die Kanone braucht Vorhalt, deshalb gibt es einen Gun-Schuss nur aus Lead. Nutze ihn, wenn die Schusslösung in kurzer Zeit wirklich kommt oder du kurz Abstand schließen musst – mit Blick auf die Closure.
+**Lead:** Die Kanone braucht Vorhalt, deshalb gibt es einen Gun-Schuss nur aus Lead. Die Geschosse fliegen mit 1.030 m/s und brauchen bis 3.000 ft ~0,75 s (*Spieldaten*); ein Gegner mit ~450 KIAS auf 10.000 ft fliegt in dieser Zeit gut 600 ft weiter (gerechnet). Nutze Lead, wenn die Schusslösung in kurzer Zeit wirklich kommt oder du kurz Abstand schließen musst – mit Blick auf die Closure.
 
-**Pure:** Die Nase direkt auf ihm – so sieht der IR-Suchkopf ihn am besten. Für den Fox-2-Schuss und für kurze Übergänge zwischen Lag und Lead.
+**Pure:** Die Nase direkt auf ihm – so sieht der IR-Suchkopf ihn am besten. Für den Fox-2-Schuss und für kurze Übergänge zwischen Lag und Lead. Im Ranked 1v1 (Guns-only) bleibt Pure vor allem der Übergang.
 
 **Lag:** Du fliegst um seinen Kreis herum statt hinein. Closure und AA sinken, und weil du weniger eng drehst als er, kostet Lag weniger G und Energie. Nutze Lag, wenn du in seinen Kreis hinein musst, wenn ein Overshoot droht oder wenn du in der [Control Zone](/grundlagen/geometrie#control-zone) warten willst, bis er Energie verliert oder einen Fehler macht.
+
+::: info SIMULATION
+Im Bot-Turnier ([Simulation](/flugzeuge/simulation#was-fur-alle-jets-gilt)) macht Pure oder Lag im Kreiskampf wenig Unterschied, Lag ist leicht besser. Bots zielen perfekt und schalten sofort auf den Schuss um, sobald der Gegner vor der Nase ist. Lag ist vor allem ein Werkzeug gegen menschliche Fehler: Overshoot aus Ungeduld, zu viel Closure. Umgekehrt verlieren Menschen, die zu lange in Lag bleiben, die Gelegenheit.
+:::
 
 ## Turn Circle Entry
 

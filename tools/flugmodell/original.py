@@ -81,6 +81,9 @@ class Jet:
     def __init__(self, typ, sd, kal=None):
         self.typ, intern = typ, JETS[typ]
         kal = kal or lade_kalibrierung()
+        if 'jets' in kal:   # Format von kalibrieren.py: Faktoren je Jet
+            k = kal['jets'][typ]
+            kal = {'KL': k['KL'], 'KD': k['KD'], 'KB': k['kB']}
         self.KL, self.KD, self.KB = kal['KL'], kal['KD'], kal['KB']
         name = lambda klasse, n: next(x for x in sd[klasse] if x['_name'] == n)
         s = name('JetSpecs', f'{intern}Specs')

@@ -14,7 +14,7 @@ Der Break ist die härteste Kurve, die dein Jet gerade fliegen kann. Er nimmt de
 ## Ausführung
 
 1. **Lift Vector auf den Angreifer.** Kabinendach auf ihn, damit seine AA so schnell wie möglich wächst.
-2. **Maximal ziehen**: über Corner Speed bis ans G-Limit (9 G), darunter bis ans AoA-Limit. Ausnahme T-18: α ~26° halten, nicht Knüppel voll (siehe unten).
+2. **Maximal ziehen**: über Corner Speed bis ans G-Limit (9 G), darunter bis ans AoA-Limit. Bei T-15 und T-16 sitzt der Limiter (HUD-α ~24–25° bzw. ~23°) knapp unter dem Auftriebsmaximum, Knüppel voll ist also richtig. Ausnahme T-18: α ~26° halten, nicht an den 35°-Anschlag (siehe unten).
 3. **Kopf drehen, Sicht halten** – du siehst ihn über das Kabinendach.
 4. **Leicht nose-low, wenn Höhe da ist.** Das hilft der Rate und bremst den Speedverlust: Übergang zum [Slice Turn](/grundlagen/defensiv/slice-turn).
 
@@ -28,13 +28,17 @@ An der [Corner Speed](/grundlagen/kurvenphysik#corner-speed) ist deine Instant R
 | T-16 Falchion | ~409–421 KIAS | 20–21 °/s |
 | T-18 Cutlass | ~385–409 KIAS | 21–22 °/s |
 
-Spannen jeweils 50 bis 100 % Treibstoff; voller Tank heißt höhere Corner Speed und weniger Rate. Mit fast leerem Tank liegt die Corner Speed rund 25 KIAS tiefer. Im Flug erreichst du die Diagrammwerte ohne Override nicht ganz, und bis die volle G anliegt, vergehen 2–3 s ([Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht)).
+Spannen jeweils 50 bis 100 % Treibstoff; voller Tank heißt höhere Corner Speed und weniger Rate. Mit fast leerem Tank liegt die Corner Speed rund 25 KIAS tiefer. Im Flug erreichst du die Diagrammwerte ohne Override nicht ganz – laut Spieldaten liegt das Lift-Limit der Diagramme 13–24 % über dem größten Auftrieb, den der Jet im Flug schafft –, und bis die volle G anliegt, vergehen 2–3 s ([Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht)).
+
+### Warum der Break so teuer ist
+
+Der Widerstand steigt mit dem Anstellwinkel steil an: Bei α 15° hat der Flügel ~4- bis 12-mal, bei α 25° ~12- bis 34-mal so viel Widerstand wie bei α 0 (*Spieldaten*; T-15 am stärksten, T-18 am wenigsten, die dafür den höchsten Grundwiderstand hat). Deshalb kostet voller Zug so viel Energie, und deshalb lohnt alles, was dich unter dem Anschlag hält, sobald der Break gewirkt hat.
 
 ## Danach: die sustained Defensivkurve
 
 Bei Corner Speed und max G verlierst du schnell Speed ([Ps](/grundlagen/energie-management#ps-wie-schnell-du-energie-gewinnst-oder-verlierst) stark negativ). Sobald der Break gewirkt hat – seine AA ist hoch, er hängt in Lag oder kommt nicht in deinen Kreis –, gehst du in die **sustained Defensivkurve**:
 
-- **Last zurücknehmen**, bis die Speed nicht weiter fällt. Ziel ist Best Sustained Speed (10.000 ft: T-15 ~495, T-16 und T-18 ~470 KIAS), mindestens aber nicht weiter unter Corner Speed.
+- **Last zurücknehmen**, bis die Speed nicht weiter fällt, und **zurück ins Kampfband ~360–440 KIAS** (Ziel: T-15 und T-16 ~400–420, T-18 ~440). Dort gewinnen laut Simulation alle drei Jets am meisten; wer auf ~280 KIAS absinkt, kommt aus dem Loch kaum noch heraus. Best Sustained laut Diagramm liegt höher (10.000 ft: T-15 ~495, T-16 und T-18 ~470 KIAS), aber das Plateau ist flach: Die T-16 dreht bei 420 statt 470 KIAS weniger als 2 % langsamer und fliegt einen ~9 % kleineren Kreis.
 - **Volle Leistung**, außer gegen eine IR-Rakete.
 - **Weiter beobachten:** Zieht er wieder Lead, wieder hart. Fällt er zurück, Energie halten.
 
@@ -44,13 +48,23 @@ Den Break kann jeder ziehen. Ihn im richtigen Moment wieder zu öffnen, trennt d
 
 ## Die Jets
 
-- **[T-15](/flugzeuge/t15):** Zieht bei gleicher Speed die meisten G und bricht am härtesten. Sie verliert im vollen Zug aber gut doppelt so schnell Energie wie die T-16: Break kurz halten.
-- **[T-16](/flugzeuge/t16):** Verliert im Zug am wenigsten Energie. Ihre Stärke ist die sustained Kurve bei ~420–500 KIAS; brich nicht tiefer unter dieses Band als nötig.
-- **[T-18](/flugzeuge/t18):** Zum Kurven α ~26° halten – dort hat sie die meisten G. Darüber (bis 35°) zieht sie weniger G bei extremem Widerstand; die vollen 35° nur für den [Snapshot](/grundlagen/begriffe#snapshot).
+- **[T-15](/flugzeuge/t15):** Zieht bei gleicher Speed die meisten G und bricht am härtesten. Sie verliert im vollen Zug aber gut doppelt so schnell Energie wie die T-16 (gemessen; passt zum steilsten Widerstandsanstieg in den Spieldaten): Break kurz halten.
+- **[T-16](/flugzeuge/t16):** Verliert im Zug am wenigsten Energie. Ihre Stärke ist die sustained Kurve; Ziel nach dem Break ~420 KIAS (geflogen ~420–440, Simulation). Brich nicht tiefer darunter als nötig.
+- **[T-18](/flugzeuge/t18):** Zum Kurven α ~26° halten – dort hat sie die meisten G (gemessen). Die Spieldaten erklären das: Bei allen drei Jets liegt das Auftriebsmaximum bei HUD-α ~27°, darüber fällt der Auftrieb. Bis 35° zieht sie also weniger G bei extremem Widerstand; die vollen 35° nur für den [Snapshot](/grundlagen/begriffe#snapshot).
+
+## Was der Break erreicht – und was nicht
+
+Das Szenario „Bandit an deiner Six“ im 3D-Simulator zeigt es (*Simulation*, T-16 gegen T-16, Start 3.000 ft hinter dir): Mit Break und anschließender Kurve im eigenen Band (~440 KIAS) verweigerst du ihm den Schuss über die ganze Runde. **Umdrehen gelingt aus dieser Lage aber nicht**, und bei Zeitablauf gewinnt im Ranked der Verfolger. Wer stattdessen bei ~360 KIAS nose-low bleibt – für die T-16 unter ihrem Band –, wird nach knapp 3 Minuten getroffen.
+
+- Der Break kauft dir Zeit, keinen Sieg. Gegen einen gleichwertigen Jet, der keinen Fehler macht, bleibst du hinten.
+- Umdrehen braucht seinen Fehler: einen [Overshoot](/grundlagen/offensiv/overshoot), zu viel Lead, eine Ebene, die er dir schenkt. Halt die Energie, damit du ihn nutzen kannst.
+- Die Bots zielen perfekt, sehen alles und planen nicht voraus. Gegen Menschen ist der Fehler wahrscheinlicher – darauf arbeitest du hin.
+
+**Im 3D-Simulator:** [Defensiv: Bandit an deiner Six](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}.
 
 ## Raketenabwehr: Kurzfassung
 
-Gegen eine IR-Rakete (Fox 2): **Idle + Flares + Break**, praktisch gleichzeitig. Ausführlich: [Gegenmaßnahmen](/avionik/gegenmassnahmen), Warnanzeigen: [RWR & MWS](/avionik/rwr).
+Nur in Custom-Lobbys mit Raketen; Ranked 1v1 ist Guns-only (*Replays*). Gegen eine IR-Rakete (Fox 2): **Idle + Flares + Break**, praktisch gleichzeitig. Ausführlich: [Gegenmaßnahmen](/avionik/gegenmassnahmen), Warnanzeigen: [RWR & MWS](/avionik/rwr).
 
 1. **Rakete erkennen:** MWS-Warnung, Rauchspur, Funkruf.
 2. **Gas auf Idle**, kein Nachbrenner.
@@ -76,7 +90,8 @@ VFM hat nur IR-Raketen. Chaff gibt es nicht und würde gegen einen Wärmesucher 
 ::: tip MERKE
 - Lift Vector auf den Angreifer, max ziehen (T-18: α ~26°), Sicht halten.
 - Max Instant Rate nahe Corner Speed: T-15 ~360–385, T-16 ~409–421, T-18 ~385–409 KIAS (10.000 ft).
-- Break so lange wie nötig, dann sustained Defensivkurve und Energie halten.
+- Break so lange wie nötig, dann sustained Defensivkurve zurück ins Band ~360–440 KIAS.
+- Der Break verweigert den Schuss, er dreht den Kampf nicht um. Dafür brauchst du seinen Fehler.
 - Gegen IR-Raketen: Break + Flares in kurzen Gruppen + Idle. Kein Chaff, kein Nachbrenner.
 :::
 

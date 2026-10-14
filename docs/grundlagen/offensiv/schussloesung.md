@@ -2,13 +2,37 @@
 
 > Position ist nur die Vorarbeit. Hier geht es darum, wann und wie du triffst.
 
-VFM hat zwei Waffen: die **Bordkanone** (Guns) und **einen Typ IR-Rakete** (Brevity beim Abschuss: **Fox 2**). Keine Radar-Raketen, kein Chaff. Was erlaubt ist, legt der Host fest. Bedienung und Anzeigen: [Waffen](/avionik/waffen) und [HUD](/avionik/hud).
+VFM hat zwei Waffen: die **Bordkanone** (Guns) und **einen Typ IR-Rakete** (Brevity beim Abschuss: **Fox 2**). Keine Radar-Raketen, kein Chaff. Was erlaubt ist, legt der Host fest. **Ranked 1v1 ist Guns-only:** In 71 eigenen Replays gab es 63 Abschüsse mit der Kanone, 9 Abstürze und keine Rakete (*Replays*). Bedienung und Anzeigen: [Waffen](/avionik/waffen) und [HUD](/avionik/hud).
 
 ## Grundregel: in seiner Ebene
 
 Der einfachste Schuss entsteht, wenn du **in seiner [Bewegungsebene](/grundlagen/geometrie#bewegungsebene-plane-of-motion)** fliegst: Dein Lift Vector liegt auf ihm, deine Kurve in derselben Ebene wie seine. Dann bewegt er sich relativ zu dir nur entlang deiner Nase, nicht seitlich, und du musst nur noch den richtigen Vorhalt ziehen. Außerhalb seiner Ebene korrigierst du in zwei Richtungen gleichzeitig, und die Geschosse laufen seitlich vorbei.
 
 ## Guns
+
+### Die Kanone in Zahlen
+
+| Kanone (alle Jets) | Wert | Quelle |
+|---|---|---|
+| Mündungsgeschwindigkeit | 1.030 m/s (~3.380 ft/s), relativ zu deinem Jet | *Spieldaten*, in Replays bestätigt |
+| Kadenz | 6.000 Schuss/min = 100 pro Sekunde | *Spieldaten* |
+| Schaden | 26 je Treffer | *Spieldaten* |
+| Geschossflug | ~6 s und ~4,5 km, am Ende noch ~600 m/s | *Replays* |
+| Flugzeit bis 3.000 ft (~900 m) | ~0,75 s | *Spieldaten*, *Replays* |
+
+Weil die Mündungsgeschwindigkeit zu deiner eigenen Speed dazukommt, sind die Geschosse auf kurze Distanz mit gut 1.200 m/s unterwegs. Wie viele Treffer ein Jet verträgt und wie stark die Kanone streut, ist nicht ausgewertet.
+
+### Vorhalt: Drehrate mal Flugzeit
+
+Während die Geschosse fliegen, dreht er weiter. Sitzt du in seiner Ebene und gehst seine Kurve mit, brauchst du grob **Vorhalt ≈ seine Drehrate × Geschossflugzeit**. Gerechnet für eine typische Kurve mit 15 °/s (sustained bei ~450 KIAS, gemessen 15–18 °/s):
+
+| Entfernung | Flugzeit (gerechnet) | Vorhalt bei 15 °/s |
+|---|---|---|
+| 1.000 ft (~300 m) | ~0,25 s | ~4° |
+| 1.500 ft (~450 m) | ~0,4 s | ~6° |
+| 3.000 ft (~900 m) | ~0,75 s | ~11° |
+
+Doppelte Entfernung heißt also doppelter Vorhalt – und doppelt so viel Zeit, in der er seine Kurve ändern kann, bevor die Geschosse ankommen. Der Funnel rechnet das für dich, aber nur, wenn er die Entfernung kennt und er seine Kurve beibehält.
 
 ### Das Visier: Funnel
 
@@ -27,14 +51,18 @@ Der Schusstyp hängt vom **Winkel und der Relativbewegung** ab, nicht von der En
 
 ### Reichweite und Munition
 
-- Je weiter weg er ist, desto länger fliegen die Geschosse und desto mehr Vorhalt brauchst du. Richtwert aus dem realen BFM: erst unter etwa 3.000 ft wirklich aussichtsreich, besser näher. VFM nennt keine offizielle Reichweite.
-- **Kurze Stöße.** Munition ist endlich, es gibt kein Nachladen, und mit leeren Stores startet ein Selbstzerstörungs-Countdown.
+- **Weit fliegen heißt nicht weit treffen.** Die Geschosse kommen ~4,5 km weit, aber auf 6.000 ft fliegen sie schon mindestens ~1,5 s (gerechnet) – gegen einen kurvenden Gegner reine Hoffnung. Richtwert aus dem realen BFM, mit den Flugzeiten oben gut begründet: erst unter etwa 3.000 ft wirklich aussichtsreich, besser näher. Eine offizielle effektive Reichweite gibt es nicht.
+- **Kurze Stöße.** Bei 100 Schuss pro Sekunde sind schon eine halbe Sekunde Feuer 50 Geschosse. Munition ist endlich, es gibt kein Nachladen, und mit leeren Stores startet ein Selbstzerstörungs-Countdown.
 
 ### Head-on Guns
 
-Frontalschüsse im Merge können in Custom-Lobbys erlaubt oder verboten sein; dazu kommt die Einstellung **Merge Safety** (standardmäßig an). Prüf vor dem Match, was gilt. Wenn erlaubt: Ein Frontalschuss ist ein Snapshot mit sehr hoher Closure – kurzer Stoß, dann aus seiner Schusslinie. Kommt er dir schussbereit entgegen, versetz dich vor dem Merge aus seiner Ebene. Siehe [Der Merge](/grundlagen/neutral/der-merge).
+**Ranked:** Vor dem ersten Pass fällt kein Schuss – in den Replays 0 von 7.314 Schüssen (*Replays*; Einstellung **Merge Safety**). Danach ist die Nase frei: **14 % aller Schüsse** fielen bei fast frontalem Aspect (160–180°), also an späteren Pässen Nase an Nase, typisch im [One-Circle](/grundlagen/neutral/one-two-circle). In Custom-Lobbys können Frontalschüsse erlaubt oder verboten sein; prüf vor dem Match, was gilt.
+
+Ein Frontalschuss ist ein Snapshot mit sehr hoher Closure: Bei ~1.000 kt Annäherung bist du aus 3.000 ft in unter 2 s am Pass. Kurzer Stoß, dann aus seiner Schusslinie. Kommt er dir an einem Pass schussbereit entgegen, versetz dich vorher aus seiner Ebene. Siehe [Der Merge](/grundlagen/neutral/der-merge) und [Guns Defense](/grundlagen/defensiv/guns-defense).
 
 ## Fox 2 (IR-Rakete)
+
+Nur in Custom-Lobbys mit Raketen relevant; im Ranked 1v1 gibt es keine.
 
 **Tone:** Der Suchkopf muss das Ziel erfassen, bevor du schießt; üblich ist ein Ton, der bei Aufschaltung lauter bzw. höher wird. Kein Tone, kein Schuss.
 
@@ -69,11 +97,14 @@ flowchart TD
 - **Nicht alle Raketen auf einmal.** Ein zweiter Schuss in seinen Flare-Strom ist meist verschwendet. Warte, bis er aus dem Break kommt.
 - Wer früh alles verschießt, hat später nur noch Guns.
 
-**Ranked 1v1** wird als **Guns-only** berichtet: Dort zählen nur Position, Ebene und Funnel. Siehe [Spielmodi](/einstieg/spielmodi).
+Im **Ranked 1v1** (Guns-only) zählen nur Position, Ebene und Funnel. Siehe [Spielmodi](/einstieg/spielmodi).
 
 ## Die Jets
 
-Die [T-18](/flugzeuge/t18) hat die meiste Nasenautorität: Ihr AoA-Limiter lässt α bis 35° zu, die Nase zeigt dann ~10° weiter in die Kurve als bei den anderen. Das ist ihr Werkzeug für den [Snapshot](/grundlagen/begriffe#snapshot) – kurz, denn es kostet extrem Energie. Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht).
+- **Kanone:** bei allen drei gleich (*Spieldaten*). Unterschiede entstehen nur dadurch, wie schnell du die Nase auf den Vorhalt bekommst.
+- **[T-18](/flugzeuge/t18):** die meiste Nasenautorität. Ihr AoA-Limiter lässt α bis 35° zu, die Nase zeigt dann ~10° weiter in die Kurve als bei den anderen. Das ist ihr Werkzeug für den [Snapshot](/grundlagen/begriffe#snapshot) – kurz, denn über HUD-α ~27° fällt der Auftrieb (*Spieldaten*), der Widerstand steigt weiter, und die Speed bricht ein. Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht). In der Simulation sind ihre 35° beim Schuss ~0,1 Spielwert wert.
+- **AoA-Override:** Ein gezielter Override-Snapshot kann einen Kampf entscheiden, als Gewohnheit kostet er laut Simulation mehr, als er bringt ([3D-Simulator: Snapshot mit Override](/VFM_Wiki/sim/?szenario=t18-override){target="_self"}, [Simulation](/flugzeuge/simulation#aoa-override-annahme)).
+- **Rollrate:** Laut Spieldaten rollt die [T-15](/flugzeuge/t15) am langsamsten (Vorgabe 325 °/s gegen 420 °/s bei T-16 und T-18; im Flug nicht gemessen). Für das Einrollen in seine Ebene macht das nur Zehntelsekunden aus.
 
 ## Typische Fehler
 
@@ -84,16 +115,17 @@ Die [T-18](/flugzeuge/t18) hat die meiste Nasenautorität: Ihr AoA-Limiter läss
 - **Nach dem Schuss nicht weiterfliegen.** Position und Sicht halten, auf seine Reaktion antworten.
 
 ::: info IM SPIEL PRÜFEN
-- Auf welche Entfernung die Kanone gegen einen kurvenden Bot noch zuverlässig trifft (Replay: Entfernung beim Treffer).
+- Effektive Reichweite und Streuung der Kanone: Auf welche Entfernung trifft sie gegen einen kurvenden Gegner noch zuverlässig (Replay: Entfernung beim Treffer)?
+- Wie viele Treffer zu 26 Schaden ein Jet verträgt.
 - Ob die IR-Rakete frontal trifft, dazu Minimalreichweite und maximaler Off-Boresight-Winkel.
-- Was „Merge Safety“ genau bewirkt.
 :::
 
 ::: tip MERKE
 - Erst in seine Ebene, dann schießen.
+- Vorhalt ≈ seine Drehrate × Flugzeit: auf 3.000 ft ~0,75 s, also ~11° bei 15 °/s. Näher ist besser.
 - Tracking: Funnel bleibt auf ihm. Snapshot: Funnel läuft durch ihn. Der Winkel entscheidet, nicht die Entfernung.
-- Fox 2 nur mit Tone, mitten in der WEZ, mit kleinem Off-Boresight.
-- Fox 2 zwingt ihn in Flares und Break, dann Guns.
+- Ranked: kein Schuss vor dem ersten Pass, danach rechne an jedem Pass Nase an Nase mit einem Frontalschuss.
+- Fox 2 (nur Custom-Lobbys): nur mit Tone, mitten in der WEZ, mit kleinem Off-Boresight. Sie zwingt ihn in Flares und Break, dann Guns.
 - Kurze Stöße. Leere Stores lösen den Selbstzerstörungs-Countdown aus.
 :::
 

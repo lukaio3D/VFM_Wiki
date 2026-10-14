@@ -50,6 +50,8 @@ Faustregel: **Kleine AA und kleine ATA = offensiv. Große AA und große ATA = de
 
 Range ist die Entfernung zum Gegner. Sie entscheidet, welche Waffe passt und wie viel Zeit du hast. Mit Radar-Lock liefert das Radar die Entfernung für den Gun Funnel ([Radar](/avionik/radar)). Ohne Lock rechnet der Funnel mit einer durchschnittlichen Spannweite: Füllen die Flügel des Gegners den Funnel aus, passt die Entfernung ungefähr ([HUD](/avionik/hud)).
 
+Range ist auch Zeit: Die Geschosse verlassen die Kanone mit **1.030 m/s (~3.380 ft/s)** relativ zu deinem Jet und brauchen bis **3.000 ft ~0,75 s** (*Spieldaten*, in Replays bestätigt). So lange fliegt der Gegner weiter, daher der Vorhalt. Sie fliegen ~6 s und ~4,5 km weit, am Ende noch mit ~600 m/s (*Replays*); wie weit sie sinnvoll treffen, ist nicht gemessen.
+
 ## Die 3/9-Linie
 
 Die gedachte Linie durch die Flügel des Gegners, von seiner 3- zu seiner 9-Uhr-Position. Sie teilt den Raum in **vor ihm** und **hinter ihm**.
@@ -69,7 +71,7 @@ Die **LOS-Rate** ist, wie schnell sich die Sichtlinie zum Gegner dreht – wie s
 - **Er wandert nach hinten:** Du verlierst Winkel.
 - **Er steht still:** Die Geometrie ändert sich nicht (im Anflug: Kollisionskurs).
 
-Vor dem Merge ist die LOS-Rate dein Signal für den **Lead Turn**: Steigt sie deutlich – grob, wenn sein seitlicher Versatz etwa einem Wenderadius entspricht –, ist der Moment da. Details: [Der Merge](/grundlagen/neutral/der-merge).
+Vor dem Merge ist die LOS-Rate dein Signal für den **Lead Turn**: Steigt sie deutlich – grob, wenn sein seitlicher Versatz etwa einem Wenderadius entspricht –, ist der Moment da. Im Ranked-Start ist der Versatz mit ~1.300 ft kleiner als ein Wenderadius, der Lead Turn bringt dort nur wenig (*Replays*). Details: [Der Merge](/grundlagen/neutral/der-merge#der-lead-turn).
 
 ## Bewegungsebene (Plane of Motion)
 
@@ -102,15 +104,15 @@ Die **WEZ** (Weapons Engagement Zone) ist der Raum, in dem eine Waffe treffen ka
 
 | | Bordkanone | IR-Rakete (Fox 2) |
 |---|---|---|
-| Reichweite | kurz | deutlich größer, mit Mindestreichweite |
+| Reichweite | kurz; ~0,75 s Geschossflugzeit bis 3.000 ft, effektive Reichweite nicht gemessen | deutlich größer, mit Mindestreichweite |
 | Nase | muss vor ihn zeigen (Lead) | Suchkopf muss ihn sehen, etwas Off-Boresight möglich |
-| Aspect | jeder Winkel, Tracking am einfachsten bei kleiner AA | von hinten am zuverlässigsten; Community berichtet auch frontale Treffer |
+| Aspect | jeder Winkel, Tracking am einfachsten bei kleiner AA; 14 % der Schüsse in eigenen 1v1-Replays fallen fast frontal (*Replays*) | von hinten am zuverlässigsten; Community berichtet auch frontale Treffer |
 | Gegenmittel | Jinken, aus der Ebene | Flares, Break, Idle |
 
-Die Logik: **Die Fox 2 zwingt ihn zu Flares und Defensive – damit gibt er Energie oder Position ab, und dann kommt die Gun.** Im engen One-Circle bist du oft unter der Mindestreichweite der Rakete; im Two-Circle bekommt der schneller drehende Jet den ersten Fox-2-Schuss. Im Ranked 1v1 und in vielen Lobbys sind Raketen aus (Guns-only) – dann ist die Gun-WEZ alles. Details: [Schusslösung](/grundlagen/offensiv/schussloesung), [Waffen](/avionik/waffen).
+Die Logik: **Die Fox 2 zwingt ihn zu Flares und Defensive – damit gibt er Energie oder Position ab, und dann kommt die Gun.** Im engen One-Circle bist du oft unter der Mindestreichweite der Rakete; im Two-Circle bekommt der schneller drehende Jet den ersten Fox-2-Schuss. Im Ranked 1v1 und in vielen Lobbys sind Raketen aus (Guns-only; in 71 eigenen 1v1-Replays fiel jeder Abschuss durch die Kanone) – dann ist die Gun-WEZ alles. Vor dem ersten Pass ist im Ranked kein Schuss möglich (Merge Safety). Details: [Schusslösung](/grundlagen/offensiv/schussloesung), [Waffen](/avionik/waffen).
 
 ::: info IM SPIEL PRÜFEN
-- Gun-Reichweite und Streuung: Bis zu welcher Entfernung bringt der Funnel sinnvoll Treffer?
+- Gun-Reichweite und Streuung: Bis zu welcher Entfernung bringt der Funnel sinnvoll Treffer? (Mündungsgeschwindigkeit und Flugzeit sind bekannt, Streuung und effektive Reichweite nicht.)
 - IR-Rakete: Mindest- und Maximalreichweite, maximaler Off-Boresight-Winkel, frontale Treffer.
 - Zeigt das HUD bei Lock Range und Closure als Zahl?
 :::

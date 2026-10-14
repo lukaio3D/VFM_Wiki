@@ -85,8 +85,8 @@ Der Engaged Fighter hält den Bandit in einer stabilen, vorhersehbaren Kurve. De
 - **Zieh den Kampf zu deinen Teamkameraden**, nicht weg von ihnen.
 - **Raus, wenn du kannst** ([Separation](/grundlagen/defensiv/separation)). Das hängt vom Jet ab:
   - **T-15:** beste Chancen – beschleunigt ~40 % schneller (300 → 500 KIAS ~8,4 s gegen ~11,5 / ~12,3 s), höchste Top-Speed.
-  - **T-16:** tief und im Band bleiben, Speed nie hergeben, langsamen Gegnern nicht folgen.
-  - **T-18:** kann kaum weglaufen. Kampf eng und langsam machen, die Gegner überschießen lassen und einander in die Quere bringen.
+  - **T-16:** tief und im Band bleiben (~420–440 KIAS), Speed nie hergeben, langsamen Gegnern nicht folgen.
+  - **T-18:** kann kaum weglaufen. Die Gegner überschießen lassen und einander in die Quere bringen, mit der Nase Snapshots suchen. Sehr langsam zu werden, kostet sie im 1v1 laut [Simulation](/flugzeuge/simulation) mehr, als es bringt.
 
 ## Drag & Bag
 
@@ -108,21 +108,23 @@ Wer geradeaus wegfliegt, zeigt dem Verfolger sein heißes Heck. Mit Raketen nur 
 
 ## Gemischte Paare
 
-Kein Stein-Schere-Papier: Ein Bandit kämpft gegen den, der ihn angreift. Der Vorteil eines gemischten Paares ist, dass **ihr wählt, wer gegen welchen Bandit Engaged Fighter wird**.
+Kein Stein-Schere-Papier: Im 1v1 gilt laut [Simulation](/flugzeuge/simulation) **T-15 > T-16 > T-18**, jeweils deutlich, und für alle drei ist der Two-Circle bei ~360–440 KIAS (nose-low oder flach) die beste Familie. Ein Bandit kämpft gegen den, der ihn angreift. Der Vorteil eines gemischten Paares ist, dass **ihr wählt, wer gegen welchen Bandit Engaged Fighter wird**.
+
+Die Empfehlungen unten übertragen die 1v1-Paarungen aufs Team. Team-Kämpfe selbst sind weder gemessen noch simuliert.
 
 | Bandit | Gute Wahl als Engaged Fighter | Siehe |
 |---|---|---|
-| **T-15** | T-15 (Spiegel) oder T-16 tief im Two-Circle bei 420–500 KIAS, erster Turn sustained. Die T-18 hat hier die schwerste Paarung. | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
-| **T-16** | T-15 oder T-18 im langsamen One-Circle; unter ~380 KIAS ist die T-16 der schwächste Jet. | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
-| **T-18** | T-15 schnell (> 500 KIAS) oder langsam, nicht bei ~450; T-16 im Two-Circle mit Speed. | [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
+| **T-15** | T-15 (Spiegel). Sonst die T-16 im Two-Circle bei ~420–440 KIAS, erster Turn sustained – sie ist aber unterlegen und braucht Hilfe. Die T-18 hat hier die schwerste Paarung. | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) |
+| **T-16** | T-15 im Two-Circle nose-low bei ~400–420 KIAS. Sonst T-16 (Spiegel). Die T-18 ist gegen die T-16 unterlegen, auch im langsamen Kreis. | [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
+| **T-18** | T-15 im Two-Circle nose-low bei 360–440 KIAS oder T-16 im Two-Circle bei ~420–440. Beide: nicht vor ihre Nase überschießen. | [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) |
 
 | Paar | Rollen-Tipp | Achtung |
 |---|---|---|
 | **T-15 + T-15** | Beide können draggen. High-Low-Split, wer die bessere Lage hat, ist Engaged. | Nicht beide in die Vertikale. |
-| **T-15 + T-16** | Die T-16 kämpft tief gegen T-18 (gegen T-15 nur im Band), die T-15 nimmt T-16-Bandits, unterstützt sonst von oben und ist der Dragger. | Die T-16 nicht hoch locken lassen. |
-| **T-15 + T-18** | Die T-18 bindet T-16-Bandits langsam und tief, die T-15 hilft von oben, draggt, die T-18 baggt. | Gegen T-15-Bandits kämpft die T-15. Die T-18 ist kein Köder. |
+| **T-15 + T-16** | Die T-16 kämpft tief gegen T-18, die T-15 nimmt T-15- und T-16-Bandits, unterstützt sonst von oben und ist der Dragger. | Die T-16 nicht hoch locken lassen. |
+| **T-15 + T-18** | Die T-15 nimmt T-15- und T-16-Bandits, die T-18 bindet T-18-Bandits oder baggt; die T-15 draggt. | Die T-18 ist kein Köder und gegen T-15 und T-16 allein unterlegen. |
 | **T-16 + T-16** | Beide tief, Rollen wechseln, sobald einer aus dem Band fällt. | Kein guter Dragger, keiner kämpft langsam. |
-| **T-16 + T-18** | Gegen T-18 die T-16, gegen T-16 die T-18. Beide tief. | Gegen T-15-Bandits Sandwich und Bracket, nicht einzeln. |
+| **T-16 + T-18** | Gegen T-18- und T-16-Bandits eher die T-16; die T-18 unterstützt und sucht Snapshots. Beide tief. | Gegen T-15-Bandits Sandwich und Bracket, nicht einzeln. |
 | **T-18 + T-18** | Nah beieinander, der Supporting Fighter bleibt bewusst schneller. | Keiner kann draggen, nie beide im selben langsamen Kreis. |
 
 ## High-Low-Split

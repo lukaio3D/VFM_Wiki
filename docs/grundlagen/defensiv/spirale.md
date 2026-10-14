@@ -27,14 +27,18 @@ Die Spirale ist für den Moment, in dem fast nichts mehr geht: Du bist **langsam
 1. **Abfanghöhe festlegen, bevor du anfängst**: [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) plus Abfangreserve. Darunter fängst du ab, egal was er tut.
 2. **Idle, Speedbrake.**
 3. **Rollen und ziehen**, bis die Nase steil nach unten zeigt.
-4. **Geladen bleiben**, damit der Radius klein bleibt. Kein Rhythmus; ist er in Kanonenlösung, Ebene wechseln wie bei der [Guns Defense](/grundlagen/defensiv/guns-defense).
+4. **Geladen bleiben**, damit der Radius klein bleibt – aber nicht über das Auftriebsmaximum: Das liegt bei allen Jets bei HUD-α ~27° (*Spieldaten*), darüber fällt der Auftrieb, und der Radius wird wieder größer. Für die T-18 heißt das ~26°, nicht 35°. Kein Rhythmus; ist er in Kanonenlösung, Ebene wechseln wie bei der [Guns Defense](/grundlagen/defensiv/guns-defense).
 5. **Ihn beobachten:**
    - **Er überschießt:** Sofort umkehren, Lift Vector auf ihn, in seine Richtung abfangen. Er ist jetzt schnell, tief und vor dir.
    - **Er fängt ab und geht hoch:** Er parkt Speed in Höhe. Du fängst ebenfalls ab – neutral, aber mit Energienachteil. Oft ist jetzt [Separation](/grundlagen/defensiv/separation) richtig.
    - **Er bleibt drin:** Spätestens an deiner Abfanghöhe abfangen. Er ist schneller und muss früher raus.
 
 ::: danger BODEN
-Der Boden schießt nicht vorbei. Auf Mountains und anderen Maps mit Gelände zählt die Höhe über Grund.
+Der Boden schießt nicht vorbei: ~12 % der Ranked-Runden in eigenen Replays endeten mit einem Absturz (*Replays*). Auf Mountains und anderen Maps mit Gelände zählt die Höhe über Grund.
+:::
+
+::: info SIMULATION
+Langsam und nose-low zu bleiben ist kein Plan, nur ein letzter Ausweg. Im Szenario „Bandit an deiner Six“ verweigert der Verteidiger mit Break und Kurve bei ~440 KIAS den Schuss über die ganze Runde; der Geist, der bei ~360 KIAS nose-low bleibt – für die T-16 unter ihrem Band –, wird nach knapp 3 Minuten getroffen ([3D-Simulator](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}). Über alle Paarungen gilt: Wer auf ~280 KIAS absinkt, kommt aus dem Loch kaum heraus.
 :::
 
 ## Typische Fehler
@@ -46,7 +50,7 @@ Der Boden schießt nicht vorbei. Auf Mountains und anderen Maps mit Gelände zä
 
 ## Die Jets
 
-- **[T-18](/flugzeuge/t18):** Hoher Widerstand – mit Gas raus wird sie fast doppelt so schnell langsam wie die anderen. Dass sie im sehr langsamen Bereich besonders stark ist, sagt der Entwickler; unter ~280 KIAS ist das nicht gemessen (Hypothese).
+- **[T-18](/flugzeuge/t18):** Hoher Widerstand – mit Gas raus wird sie fast doppelt so schnell langsam wie die anderen. Dass sie im sehr langsamen Bereich besonders stark ist, sagt der Entwickler; unter ~280 KIAS ist das nicht gemessen (*Hypothese*). Die Simulation stützt es nicht: Auch für die T-18 ist der langsame Kampf schwach.
 - **[T-16](/flugzeuge/t16):** Langsam ist ihr schwächstes Terrain. Landet eine T-16 in der Spirale, ist vorher etwas schiefgelaufen.
 - **[T-15](/flugzeuge/t15):** Kleinster Radius und meiste G bei gleicher Speed, aber mit wenig Widerstand wird sie im Sturz schnell schneller. Konsequent Idle und Last halten.
 

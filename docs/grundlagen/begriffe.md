@@ -56,7 +56,7 @@ Der Raum, in dem eine Waffe treffen kann, begrenzt durch Reichweite, Off-Boresig
 ## Flugphysik & Energie
 
 ### Anstellwinkel (AoA, α)
-Angle of Attack: Winkel zwischen Flügel und anströmender Luft. Mehr AoA gibt mehr Auftrieb, bis zum Stall. Das VFM-HUD zeigt ihn als Zahl.
+Angle of Attack: Winkel zwischen Flügel und anströmender Luft. Mehr AoA gibt mehr Auftrieb, bis zum Stall. Das VFM-HUD zeigt ihn als Zahl, etwa 2° mehr als der Flügel sieht; den größten Auftrieb haben alle drei Jets bei HUD-α ~27° (*Spieldaten*). → [HUD](/avionik/hud)
 
 ### AoA-Limiter und Override
 Der Limiter begrenzt den Anstellwinkel. Der Override („Cobra-Button“) hebt die Grenze auf, kostet extrem viel Energie; das G-Limit bleibt aktiv. → [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override)
@@ -89,7 +89,7 @@ Die höchste Turn Rate, die du in einem Moment erreichst, auch unter Speedverlus
 KIAS ist die angezeigte Speed in Knoten; sie bestimmt, wie viel G du ziehen kannst. TAS ist die wahre Speed durch die Luft, in der Höhe größer als KIAS; Turn Rate und Radius hängen von ihr ab. → [Kurvenphysik](/grundlagen/kurvenphysik#kias-vs-wahre-speed-in-der-hohe)
 
 ### Lift-Limit
-Die aerodynamische Grenze: Unterhalb der Corner Speed erzeugt der Flügel nicht genug Auftrieb für 9 G. Im E-M-Diagramm die steigende gestrichelte Linie.
+Die aerodynamische Grenze: Unterhalb der Corner Speed erzeugt der Flügel nicht genug Auftrieb für 9 G. Im E-M-Diagramm die steigende gestrichelte Linie. In VFM liegt sie 13–24 % über dem, was der Jet im Flug ohne Override erreicht (*Spieldaten*); die Instant-Werte der Diagramme sind also obere Grenzen.
 
 ### Lift Vector
 Der Auftriebsvektor, senkrecht aus den Flügeln Richtung Kabinendach. Wohin er zeigt, dorthin kurvst du, wenn du ziehst. → [Kurvenphysik](/grundlagen/kurvenphysik#der-lift-vector-das-zentrale-konzept)
@@ -130,7 +130,10 @@ Vereinbarte Mindesthöhe im Training, in diesem Wiki 2.000 ft über Grund. → [
 Einen Turn schon vor dem Merge beginnen, um Winkel zu gewinnen. Zu früh = Flight-Path-Overshoot, zu spät = er gewinnt Winkel. → [Der Merge](/grundlagen/neutral/der-merge)
 
 ### Merge
-Der Moment, in dem die Jets aneinander vorbeifliegen. Im Ranked startet ihr mit ~450 KIAS. → [Der Merge](/grundlagen/neutral/der-merge)
+Der Moment, in dem die Jets aneinander vorbeifliegen. Im Ranked startet ihr Head-on mit ~427 KIAS (Mach 0,75) und 13.100 ft Abstand, der Merge kommt nach ~8 s. → [Der Merge](/grundlagen/neutral/der-merge)
+
+### Merge Safety
+Lobby-Regel, seit v1.4.1 standardmäßig an: Vor dem ersten Pass fällt kein Schuss (in den eigenen Ranked-Replays 0 von 7.314). Danach sind auch Schüsse auf der Nase möglich. → [Spielmodi](/einstieg/spielmodi#ranked)
 
 ### Offensiv / Neutral / Defensiv
 Offensiv: kleine AA und ATA, du sitzt hinter ihm. Defensiv: große AA und ATA, er sitzt hinter dir. Neutral: keiner hat einen klaren Vorteil.
@@ -142,10 +145,13 @@ One-Circle: Die Jets drehen nach dem Merge entgegengesetzt und liegen auf einem 
 Observe – Orient – Decide – Act: der Entscheidungszyklus. Wer ihn schneller durchläuft, zwingt den Gegner zum Reagieren.
 
 ### Rate-Jet / Radius-Jet
-Rate = hohe Sustained Turn Rate, bevorzugt Two-Circle. Radius = enger Kreis, langsam stark, bevorzugt One-Circle. In VFM: T-16 = Rate-Spezialist, T-18 = Low-Speed-Brawler. → [Flugzeugvergleich](/flugzeuge/vergleich)
+Rate = hohe Sustained Turn Rate, bevorzugt Two-Circle. Radius = enger Kreis, langsam stark, bevorzugt One-Circle. In VFM nach den Diagrammen: T-16 = Rate-Spezialist, T-18 = Low-Speed-Brawler. Die [Simulation](/flugzeuge/simulation) relativiert das: Für alle drei Jets ist der Two-Circle bei ~360–440 KIAS am besten, auch für die T-18. → [Flugzeugvergleich](/flugzeuge/vergleich)
 
 ### Separation / Extend
 Abstand und Speed gewinnen, um den Kampf neu aufzusetzen oder zu verlassen. → [Separation](/grundlagen/defensiv/separation)
+
+### Spielwert
+Kennzahl der [Simulation](/flugzeuge/simulation): das mittlere Ergebnis einer Paarung (+1 Abschuss, −1 abgeschossen, 0 offen), wenn beide Seiten ihre beste Strategie wählen. 0 = ausgeglichen, +0,3 = deutlicher Vorteil.
 
 ## Manöver
 
