@@ -145,7 +145,7 @@ One-Circle: Die Jets drehen nach dem Merge entgegengesetzt und liegen auf einem 
 Observe – Orient – Decide – Act: der Entscheidungszyklus. Wer ihn schneller durchläuft, zwingt den Gegner zum Reagieren.
 
 ### Rate-Jet / Radius-Jet
-Rate = hohe Sustained Turn Rate, bevorzugt Two-Circle. Radius = enger Kreis, langsam stark, bevorzugt One-Circle. In VFM nach den Diagrammen: T-16 = Rate-Spezialist, T-18 = Low-Speed-Brawler. Die [Simulation](/flugzeuge/simulation) relativiert das: Für alle drei Jets ist der Two-Circle bei ~360–440 KIAS am besten, auch für die T-18. → [Flugzeugvergleich](/flugzeuge/vergleich)
+Rate = hohe Sustained Turn Rate, bevorzugt Two-Circle. Radius = enger Kreis, langsam stark, bevorzugt One-Circle. In VFM nach den Diagrammen: T-16 = Rate-Spezialist, T-18 = Low-Speed-Brawler. Die [Simulation](/flugzeuge/simulation) relativiert das: Für alle drei Jets ist ~440 KIAS die beste Kampf-Speed, und der Two-Circle schlägt den One-Circle, auch für die T-18. → [Flugzeugvergleich](/flugzeuge/vergleich)
 
 ### Separation / Extend
 Abstand und Speed gewinnen, um den Kampf neu aufzusetzen oder zu verlassen. → [Separation](/grundlagen/defensiv/separation)

@@ -47,7 +47,7 @@ Du tauschst die Schussgelegenheit im Moment gegen eine stabile Position. Weil du
 
 ## Die Jets
 
-Laut Spieldaten gibt das Fly-by-Wire als höchste Rollrate 325 °/s für die [T-15](/flugzeuge/t15) und 420 °/s für [T-16](/flugzeuge/t16) und [T-18](/flugzeuge/t18) vor. **Die T-15 rollt am langsamsten:** Für eine halbe Rolle braucht sie idealisiert ~0,55 statt ~0,43 s. Fang den Lag Roll mit ihr etwas früher an. Ob die Jets diese Werte im Flug erreichen, ist nicht gemessen.
+Laut Spieldaten gibt das Fly-by-Wire als höchste Rollrate 325 °/s für die [T-15](/flugzeuge/t15) und 420 °/s für [T-16](/flugzeuge/t16) und [T-18](/flugzeuge/t18) vor. **Die T-15 rollt am langsamsten:** Für eine halbe Rolle braucht sie idealisiert ~0,55 statt ~0,43 s. Fang den Lag Roll mit ihr etwas früher an. Ob die Jets diese Werte im Flug erreichen, ist nicht gemessen; die [Simulation](/flugzeuge/simulation) rechnet inzwischen mit ihnen.
 
 ::: info IM SPIEL PRÜFEN
 - Rollrate deines Jets mit und ohne Last im Flug. Je schneller du rollst, desto kleiner wird der Lag Roll.

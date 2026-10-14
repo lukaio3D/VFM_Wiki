@@ -42,7 +42,7 @@ In einer Horizontalkurve muss ein Teil des Auftriebs das Gewicht tragen, nur der
 **Speed:** Rechnung ohne Schub und Widerstand: Aus 400 kt wahrer Fahrt bringen 3.000 ft Höhenverlust nur rund **+77 kt**. Mit Schub ist es mehr, unter hoher G-Last weniger. Höhe ist ein begrenzter Vorrat.
 
 ::: info SIMULATION
-Im Bot-Turnier mit dem Originalmodell gilt in allen Paarungen: **nose-low schlägt flach, flach schlägt hoch, steil hoch ist am schlechtesten.** Die beste Familie für alle drei Jets ist der Two-Circle nose-low oder flach bei ~360–440 KIAS. Der Grund liegt im Flugmodell: Hoher Anstellwinkel kostet sehr viel Energie, und nose-low hilft die Schwerkraft beim Drehen, ohne dass du dafür mehr α brauchst. Im 3D-Simulator: [Nose-low gegen nose-high](/VFM_Wiki/sim/?szenario=nose-low){target="_self"}.
+Im Bot-Turnier mit dem Originalmodell ist in allen Paarungen **steil hoch die schlechteste Ebene.** Zwischen nose-low, flach und leicht hoch ist der Unterschied bei ~440 KIAS klein, solange die Jets so schnell rollen, wie die Spieldaten vorgeben; rollen sie langsamer, liegt nose-low klar vorn ([Rollrate](/flugzeuge/simulation#die-rollrate-entscheidet-mit), im Flug nicht gemessen). Die beste Familie für alle drei Jets ist der Two-Circle bei ~440 KIAS. Der Grund liegt im Flugmodell: Hoher Anstellwinkel kostet sehr viel Energie, und nose-low hilft die Schwerkraft beim Drehen, ohne dass du dafür mehr α brauchst. Im 3D-Simulator: [Nose-low gegen nose-high](/VFM_Wiki/sim/?szenario=nose-low){target="_self"} – nose-low gewinnt 5 von 9 Varianten, nose-high keine.
 :::
 
 ## Wann
@@ -62,7 +62,7 @@ Im Bot-Turnier mit dem Originalmodell gilt in allen Paarungen: **nose-low schlä
 
 1. **Überbanken**, bis der Lift Vector unter dem Horizont liegt: leicht darunter für einen flachen Slice, deutlich darunter für mehr Rate und Speed.
 2. **Hart ziehen**, nahe max G bzw. AoA-Limit. Ein Slice mit 2–4 G ist ein Sinkflug, in dem er dich in Ruhe abholt.
-3. **Speed steuern:** im Band ~360–440 KIAS bleiben, also nahe oder knapp über Corner Speed. Zu schnell: Lift Vector höher. Zu langsam: tiefer.
+3. **Speed steuern:** im Band ~380–440 KIAS bleiben, also nahe oder knapp über Corner Speed. Zu schnell: Lift Vector höher. Zu langsam: tiefer.
 4. **Sicht halten:** Kommt er in Lösung, [jinken](/grundlagen/defensiv/guns-defense). Fällt er zurück, Energie halten.
 5. **Rechtzeitig beenden**, mit Höhenreserve. Danach Defensivkurve, Reversal oder [Separation](/grundlagen/defensiv/separation).
 
@@ -76,9 +76,9 @@ Im Bot-Turnier mit dem Originalmodell gilt in allen Paarungen: **nose-low schlä
 
 ## Die Jets
 
-- **[T-16](/flugzeuge/t16):** Höchste Corner Speed, stärkste sustained Kurve laut Diagramm bei ~400–500 KIAS. Laut Simulation fliegt sie am besten mit Ziel ~420 KIAS (geflogen ~420–440). Für sie ist der Slice das natürliche Werkzeug, um dort zu bleiben.
-- **[T-18](/flugzeuge/t18):** Bricht ab ~510 KIAS (≈ Mach 0,9) ein. Lange, tiefe Slices, die sie dorthin beschleunigen, verschenken ihren Vorteil. Ihre beste Familie laut Simulation ist trotzdem der Kreis nose-low bei ~440 KIAS – kontrolliert, nicht tief.
-- **[T-15](/flugzeuge/t15):** Niedrigste Corner Speed. Auch für sie ist nose-low bei ~360–440 KIAS laut Simulation das beste Muster (Ziel ~400–420). Mit ihrem Schubüberschuss holt sie die Höhe danach am schnellsten zurück.
+- **[T-16](/flugzeuge/t16):** Höchste Corner Speed, stärkste sustained Kurve laut Diagramm bei ~400–500 KIAS. Laut Simulation fliegt sie am besten mit Ziel ~400–420 KIAS (geflogen ~400–440). Für sie ist der Slice das natürliche Werkzeug, um dort zu bleiben.
+- **[T-18](/flugzeuge/t18):** Bricht ab ~510 KIAS (≈ Mach 0,9) ein. Lange, tiefe Slices, die sie dorthin beschleunigen, verschenken ihren Vorteil. Laut Simulation kämpft sie trotzdem am besten bei ~440 KIAS (Two-Circle oder durchfliegen, nose-low abtauchen und mit Speed zurückkommen) – kontrolliert, nicht tief.
+- **[T-15](/flugzeuge/t15):** Niedrigste Corner Speed. Auch für sie ist der Two-Circle bei ~440 KIAS laut Simulation das beste Muster, nose-low, flach oder leicht hoch (Ziel ~380–420). Mit ihrem Schubüberschuss holt sie die Höhe danach am schnellsten zurück.
 
 ::: info IM SPIEL PRÜFEN
 - Denselben 180°-Turn einmal horizontal und einmal als Slice mit gleicher Last fliegen und im Replay Zeit, Speed und Höhenverlust vergleichen.
@@ -88,8 +88,8 @@ Im Bot-Turnier mit dem Originalmodell gilt in allen Paarungen: **nose-low schlä
 - Slice = überbankt, Lift Vector unter dem Horizont, nahe max G. Eine harte Kurve, kein sanfter Sinkflug.
 - Die Schwerkraft dreht mit und bremst den Speedverlust. Die Gesamtenergie sinkt trotzdem.
 - 3.000 ft bringen aus der Schwerkraft allein nur rund +77 kt.
-- Ziel ist das Band ~360–440 KIAS, nicht maximale Speed. Rechtzeitig mit Höhenreserve beenden.
-- Simulation: nose-low schlägt flach schlägt hoch – in allen Paarungen.
+- Ziel ist das Band ~380–440 KIAS, nicht maximale Speed. Rechtzeitig mit Höhenreserve beenden.
+- Simulation: Nose-low oder flach, leicht hoch geht auch – nur nicht steil hoch.
 :::
 
 Weiter: [Defensive Spirale](/grundlagen/defensiv/spirale)

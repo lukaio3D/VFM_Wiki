@@ -7,7 +7,7 @@
 - **Messflüge:** Oktober 2026, 10.000 ft, voller Tank, nur Guns, Werte aus dem HUD-Video.
 - **Spieldaten:** Oktober 2026, aus den Dateien der VFM-Installation gelesen (Massen, Schub über Mach, Auftrieb und Widerstand über α, Drehraten-Vorgaben, Kanone). Hier stehen nur Einzelwerte und qualitative Aussagen, keine Rohkurven.
 - **Replays:** 71 eigene 1v1-Replays (Ranked und Casual), Oktober 2026: Startbedingungen, Schüsse, Abschüsse.
-- **Simulation:** ~405.000 Bot-Kämpfe mit dem Originalmodell und dem echten Ranked-Start ([Simulation](/flugzeuge/simulation)).
+- **Simulation:** ~405.000 Bot-Kämpfe mit dem Originalmodell, dem echten Ranked-Start und den Rollraten aus den Spieldaten ([Simulation](/flugzeuge/simulation)).
 - **Info-Karten:** Dezember 2025.
 
 Kennzeichnung im ganzen Wiki: *Diagramm* (Ingame-Analyse), *gemessen* (Messflug), *Spieldaten*, *Replays*, *Simulation*, *Modell* (aus Diagrammen und Messungen gerechnet), *geschätzt*, *Hypothese*.
@@ -19,11 +19,11 @@ Es gibt kein Stein-Schere-Papier. Die **Diagramme** zeigen, wer in welchem Speed
 
 | Jet | Charakter | Spielplan (laut Simulation) |
 |---|---|---|
-| **[T-15 Excalibur](/flugzeuge/t15)** | Stärkster Jet: meiste G bei gleicher Speed, kleinster Radius, ~40 % mehr Beschleunigung, höchste Top-Speed. Rollt am langsamsten (*Spieldaten*). Bestraft unnötige Vollzüge. | Two-Circle nose-low bei ~400–420 KIAS, mit G statt mit Rate gewinnen. Nicht hochziehen, nicht schnell bleiben. |
-| **[T-16 Falchion](/flugzeuge/t16)** | Rate-Spezialist: leichtester Jet, beste Sustained Rate bei ~420–500 KIAS, verliert im Zug am wenigsten Energie | Two-Circle bei ~420 KIAS, flach oder nose-low. Nie hoch, nie langsam, nicht schneller als ~440. |
-| **[T-18 Cutlass](/flugzeuge/t18)** | Nasenautorität (α bis 35°), höchster Widerstand, über ~510 KIAS schwach | Two-Circle nose-low bei ~440 KIAS, α ~26° zum Kurven, 35° für den Snapshot. Den Kampf nicht langsam machen. |
+| **[T-15 Excalibur](/flugzeuge/t15)** | Stärkster Jet: meiste G bei gleicher Speed, kleinster Radius, ~40 % mehr Beschleunigung, höchste Top-Speed. Rollt am langsamsten (*Spieldaten*). Bestraft unnötige Vollzüge. | Two-Circle bei ~380–420 KIAS, nose-low oder flach, mit G statt mit Rate gewinnen. Nicht steil hoch, nicht schnell bleiben. |
+| **[T-16 Falchion](/flugzeuge/t16)** | Rate-Spezialist: leichtester Jet, beste Sustained Rate bei ~420–500 KIAS, verliert im Zug am wenigsten Energie | Two-Circle bei ~400–420 KIAS, flach oder nose-low. Nie steil hoch, nie langsam, nicht schneller als ~440. |
+| **[T-18 Cutlass](/flugzeuge/t18)** | Nasenautorität (α bis 35°), höchster Widerstand, über ~510 KIAS schwach | Durchfliegen und nose-low mit ~440 KIAS wieder einsteigen oder Two-Circle bei ~440, α ~26° zum Kurven, 35° für den Snapshot. Den Kampf nicht langsam machen. |
 
-Rangfolge in der Simulation: **T-15 > T-16 > T-18**, jeweils deutlich (Spielwerte +0,27 / +0,39 / +0,28, Details: [Simulation](/flugzeuge/simulation#die-paarungen)).
+Rangfolge in der Simulation: **T-15 vorn** (+0,41 gegen die T-16, +0,20 gegen die T-18), **T-16 gegen T-18 praktisch ausgeglichen** (+0,03). Je schneller die Jets wirklich rollen, desto besser für die T-18; die Rollrate ist nicht gemessen. Rollen sie langsamer als die Spieldaten vorgeben, schlägt die T-16 die T-18 klar (Details: [Simulation](/flugzeuge/simulation#die-paarungen)).
 
 Die Duelle: [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16) · [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18) · [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18) · [Team-Taktik](/flugzeuge/team)
 
@@ -167,15 +167,17 @@ Tief liegen die Jets enger beisammen: Auf Meereshöhe halten T-16 (~450–650 KI
 
 Aus den Bändern allein folgte bisher: Die T-16 zwingt den Kampf in 420–500 KIAS, die T-18 macht ihn langsam, die T-15 weicht in ein Band aus, in dem der Gegner schwach ist (schnell über 500 oder langsamer One-Circle). **Die Simulation deckt das nur für die T-16.** Über ganze Runden gewinnt für alle drei Jets dieselbe Familie:
 
-- **Two-Circle bei ~360–440 KIAS, nose-low oder flach.** Am Pass zum Gegner hin drehen schlägt Wegdrehen (One-Circle) und Durchfliegen deutlich. Nose-low > flach > hoch > steil hoch.
-- **Langsam (~280 KIAS) ist klar schlechter, schnell (~520) am schlechtesten.** Hoher α kostet im Originalmodell sehr viel Energie ([Voller Zug](#voller-zug-was-ohne-override-wirklich-geht)). Wer langsam kämpft, kommt aus dem Loch nicht mehr heraus. Wer schnell bleibt, fliegt große Kreise und hat am 9G-Limit keinen Rate-Vorteil.
+- **Two-Circle bei ~440 KIAS** (bestes Raster im Turnier; feiner gerechnet: Ziel T-15 ~380–420, T-16 ~400–420). **Nose-low oder flach, leicht hoch geht auch – nur nicht steil hoch.** Am Pass zum Gegner hin drehen schlägt Wegdrehen (One-Circle); durchfliegen und mit ~440 KIAS wieder einsteigen ist in Ordnung, ein Extend mit Speedverlust nicht.
+- **Langsam (~280 KIAS) und schnell (~520) verlieren**, 360 ist gut, aber schwächer als 440. Hoher α kostet im Originalmodell sehr viel Energie ([Voller Zug](#voller-zug-was-ohne-override-wirklich-geht)). Wer langsam kämpft, kommt aus dem Loch nicht mehr heraus. Wer schnell bleibt, fliegt große Kreise und hat am 9G-Limit keinen Rate-Vorteil.
 - **Die T-15 gewinnt den Two-Circle gegen die T-16 trotz 1–2 °/s weniger Sustained Rate.** Bei gleicher Speed zieht sie mehr G, fliegt den kleineren Radius und holt verlorene Energie mit mehr Schub schneller zurück.
 
 Daraus folgt die Grundlogik aller Matchups:
 
-- **T-15:** Two-Circle nose-low bei ~400–420 KIAS. Gewinnt mit G und Schub, nicht mit Ausweichen in andere Bänder.
-- **T-16:** Two-Circle bei ~420 KIAS, nie hoch, nie langsam. Gegen die T-15 unterlegen, gegen die T-18 klar vorn.
-- **T-18:** Two-Circle nose-low bei ~440 KIAS, α ~26° zum Kurven. Ihre Nase (35°) ist ~0,1 Spielwert wert und gleicht den Rückstand nicht aus.
+- **T-15:** Two-Circle bei ~380–420 KIAS, nose-low oder flach. Gewinnt mit G und Schub, nicht mit Ausweichen in andere Bänder.
+- **T-16:** Two-Circle bei ~400–420 KIAS, nie steil hoch, nie langsam. Gegen die T-15 unterlegen, gegen die T-18 praktisch ausgeglichen (+0,03), klar vorn nur, wenn die Jets langsamer rollen als vorgegeben.
+- **T-18:** Durchfliegen und nose-low abtauchen oder Two-Circle bei ~440 KIAS, α ~26° zum Kurven. Ihre Nase (35°) ist gegen die T-15 ~0,2 Spielwert wert, gegen die T-16 ~0,08.
+
+**Die Rollrate ist der größte offene Punkt.** Gerechnet wird mit den Vorgaben aus den Spieldaten (T-15 325, T-16 und T-18 420 °/s, über die Fahrt gedämpft). Je schneller die Jets wirklich rollen, desto besser für die T-18: Mit drei Vierteln der Rollrate liegt die T-16 gegen sie +0,36 vorn statt +0,03. Die T-15 bleibt in jeder Variante vorn. Gemessen ist die Rollrate nicht ([Messflug M6](/grundlagen/uebungen#b2-eigenen-jet-vermessen)).
 
 Einschränkung: Bots zielen perfekt, sehen alles und planen nicht voraus. Die Simulation zeigt, was die Physik begünstigt, nicht was gegen Menschen mit Fehlern funktioniert ([Simulation und Praxis](/flugzeuge/simulation#simulation-und-praxis)).
 
@@ -188,7 +190,7 @@ Einschränkung: Bots zielen perfekt, sehen alles und planen nicht voraus. Die Si
 - **T-15:** Hält auf 20.190 ft das flachste Plateau (~12–13 °/s von 350 bis ~600 KIAS). Die T-16 fällt dort ab ~470 KIAS unter sie (500 KIAS: 12,3 vs 11,3 °/s).
 - **T-18:** Einbruch in jeder Höhe bei ≈ Mach 0,9: ~600 KIAS auf 0 ft, ~510 auf 10.000 ft, ~450 auf 20.190 ft.
 
-Faustregel: **T-16 und T-18 wollen tief kämpfen, die T-15 kann den Kampf nach oben ziehen.** In der Simulation verliert „hoch“ trotzdem für jeden Jet: Höhe ist ein Ausweg, kein Plan.
+Faustregel: **T-16 und T-18 wollen tief kämpfen, die T-15 kann den Kampf nach oben ziehen.** In der Simulation verliert „steil hoch“ trotzdem für jeden Jet, leicht hoch geht gerade noch: Höhe ist ein Ausweg, kein Plan.
 
 ## Treibstoff
 
@@ -309,13 +311,13 @@ Die Info-Karten der Einzeljets zeigen MAX (Corner Speed), SUS (Best Sustained Sp
 
 - **Langsamflug:** Die Diagramme beginnen bei ~170–200 KIAS, die Messflüge reichen bis ~280 KIAS. Stall und Steuerbarkeit bei hohem α sind offen.
 - **AoA-Override:** Wie weit er α freigibt und was er an Energie kostet. Die Spieldaten nennen je Jet zwei α-Grenzen; der zweite Wert könnte das Override-Limit sein (*Hypothese*).
-- **Rollrate:** Die Spieldaten nennen die Fly-by-Wire-Vorgabe: bis **325 °/s (T-15), 420 °/s (T-16, T-18)**, Pitch-Rate 40 / 70 / 80 °/s. Die T-15 rollt also am langsamsten. Ob die Werte im Flug erreicht werden, ist nicht gemessen.
+- **Rollrate:** Die Spieldaten nennen die Fly-by-Wire-Vorgabe: bis **325 °/s (T-15), 420 °/s (T-16, T-18)**, Pitch-Rate 40 / 70 / 80 °/s. Die T-15 rollt also am langsamsten. Ob die Werte im Flug erreicht werden, ist nicht gemessen. Die Simulation rechnet mit ihnen; wie schnell die Jets wirklich rollen, entscheidet dort vor allem T-16 gegen T-18 ([Diagramm und Simulation](#diagramm-und-simulation)).
 - **Kanone:** bekannt aus Spieldaten und Replays: 1.030 m/s (~3.380 ft/s) Mündungsgeschwindigkeit, 6.000 Schuss/min, 26 Schaden je Treffer, bis 3.000 ft ~0,75 s Flugzeit. Offen sind Streuung und effektive Reichweite.
 - **Leerlaufschub:** laut Spieldaten ~5 % (bisher ≈ 0 angenommen).
 - **Außerdem offen:** Speedbrake-Wirkung, Greyout-Modell, wie das Spiel bei Zeitablauf den Verfolger bestimmt. Der Ranked-Start ist aus den Replays bekannt (siehe [Spielmodi](/einstieg/spielmodi#ranked)).
 
 ::: info IM SPIEL PRÜFEN
-- **Rollrate:** 10.000 ft, ~430 KIAS, 1 G, Stick voll zur Seite, Zeit für 360° stoppen. Kommen die Jets an 325 / 420 °/s heran?
+- **Rollrate:** 10.000 ft, ~430 KIAS, 1 G, Stick voll zur Seite, Zeit für 360° stoppen. Kommen die Jets an 325 / 420 °/s heran? Die wichtigste offene Messung: Sie entscheidet, ob die T-16 die T-18 klar schlägt.
 - **T-18 mit α ~26° aus 450 KIAS:** Der erste Turn ist bisher nur geschätzt (≥ ~138° nach 8 s).
 - **Unter ~280 KIAS und mit Override:** Test im [T-18-Profil](/flugzeuge/t18#hypothese-testen).
 - **Nach Balance-Patches** die Analyse in denselben neun Bedingungen neu ablesen.
@@ -323,7 +325,7 @@ Die Info-Karten der Einzeljets zeigen MAX (Corner Speed), SUS (Best Sustained Sp
 
 ::: tip MERKE
 - **Diagramm:** Wer in welchem Band dauerhaft schneller dreht: langsam T-15/T-18, 400–500 KIAS T-16, über ~520 KIAS T-15. Bei ~450 KIAS drehen T-15 und T-18 gleich.
-- **Simulation:** Wer den Kampf gewinnt: Two-Circle bei ~360–440 KIAS, nose-low oder flach, für alle drei Jets. Nicht langsam, nicht schnell, nicht hoch. T-15 > T-16 > T-18.
+- **Simulation:** Wer den Kampf gewinnt: Two-Circle bei ~440 KIAS (Ziel T-15 ~380–420, T-16 ~400–420), nose-low oder flach, für alle drei Jets. Nicht langsam, nicht schnell, nicht steil hoch. T-15 vorn, T-16 gegen T-18 fast ausgeglichen: Je schneller die Jets rollen, desto besser für die T-18.
 - **Corner Speed** (Instant, kleinster Radius) ist nicht **Best Sustained Speed** (~450–500 KIAS); gekämpft wird knapp darunter.
 - Die T-15 beschleunigt ~40 % schneller und zieht bei gleicher Speed die meisten G, bezahlt Vollzüge aber teuer: Widerstand steigt mit α steil.
 - Auftrieb ist bei HUD-α ~27° am größten. Die T-18 kurvt mit ~26°, 35° nur für den Snapshot.

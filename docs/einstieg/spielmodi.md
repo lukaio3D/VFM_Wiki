@@ -61,10 +61,10 @@ Die Regeln stammen aus Patchnotes; Start, Waffen und Rundendauer aus der Auswert
 
 ### Was das taktisch bedeutet
 
-- **~427 KIAS am Start** liegt nahe bis über der Diagramm-Corner-Speed aller drei Jets (im Flug erreicht aus dieser Speed nur die T-15 sicher 9 G) und schon im Band, in dem laut [Simulation](/flugzeuge/simulation) alle drei am besten kämpfen: **Two-Circle bei ~360–440 KIAS, nose-low oder flach.** Der erste Turn ist fast ausgeglichen; die T-15 gewinnt ihn knapp. Messung: [Der erste Turn (gemessen)](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen), Pläne je Paarung: [Merge-Strategien für Ranked](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias).
+- **~427 KIAS am Start** liegt nahe bis über der Diagramm-Corner-Speed aller drei Jets (im Flug erreicht aus dieser Speed nur die T-15 sicher 9 G) und schon im Band, in dem laut [Simulation](/flugzeuge/simulation) alle drei am besten kämpfen: **Two-Circle bei ~440 KIAS, nose-low oder flach – nur nicht steil hoch.** Der erste Turn ist fast ausgeglichen; die T-15 gewinnt ihn knapp. Messung: [Der erste Turn (gemessen)](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen), Pläne je Paarung: [Merge-Strategien für Ranked](/grundlagen/neutral/der-merge#merge-strategien-fur-ranked-start-450-kias).
 - **Nachbrenner bis zum Merge** bringt dich auf ~605 (T-15), ~550 (T-16) bzw. ~535 KIAS (T-18) (*Modell*), weit über dein Kampfband. In der Simulation ist das kein klarer Vorteil.
 - **Die Hälfte der Runden ist nach ~2,5 Minuten entschieden, 90 % nach 5 Minuten.** In den eigenen Replays kam keine Runde an die 8 Minuten heran. Plane deshalb nicht auf den Zeitablauf, sondern darauf, deinen ersten Vorteil umzusetzen.
-- **~12 % der Runden enden mit einem Absturz.** Nose-low ist die stärkste Ebene, aber ab 10.000 ft ist der Boden nach wenigen Kreisen nah. Höhe im Blick behalten.
+- **~12 % der Runden enden mit einem Absturz.** Nose-low ist eine der stärksten Ebenen, aber ab 10.000 ft ist der Boden nach wenigen Kreisen nah. Höhe im Blick behalten.
 - **Die Timeout-Regel belohnt Position, nicht Energie.** Bist du kurz vor Ablauf offensiv, sichere die Position: in Lag bleiben, keinen Overshoot riskieren. **Defensiv kurz vor Ablauf?** Dann musst du die Rollen umdrehen; Durchhalten verliert.
 - **Guns-only:** Flares und Raketenabwehr spielen keine Rolle, es zählen Merge, Kurvenkampf, Energie und Zielen. Nach dem ersten Pass kann ein Pass auf der Nase eine Schussgelegenheit sein.
 
@@ -80,7 +80,7 @@ Der 3D-Debrief-Raum (ähnlich Tacview) zeigt beide Flugbahnen frei drehbar, eine
 
 1. **Energie-Graph:** Wo hast du Energie verloren, ohne Winkel zu gewinnen?
 2. **Draufsicht beim Merge:** Wer hat wann gedreht, wer hat den ersten Winkel gewonnen? Hin zum Gegner (Two-Circle) oder weg (One-Circle)?
-3. **Speed im Kampf:** Warst du im Band (~360–440 KIAS) oder deutlich darunter bzw. darüber?
+3. **Speed im Kampf:** Warst du im Band (~380–440 KIAS) oder deutlich darunter bzw. darüber?
 4. **S-Cam beim Schuss:** Wo lag der Gegner im Funnel?
 5. **Rollentausch:** An welcher Stelle ist der Kampf gekippt, und was hättest du dort anders machen können?
 

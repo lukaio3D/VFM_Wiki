@@ -102,9 +102,9 @@ Im **Ranked 1v1** (Guns-only) zählen nur Position, Ebene und Funnel. Siehe [Spi
 ## Die Jets
 
 - **Kanone:** bei allen drei gleich (*Spieldaten*). Unterschiede entstehen nur dadurch, wie schnell du die Nase auf den Vorhalt bekommst.
-- **[T-18](/flugzeuge/t18):** die meiste Nasenautorität. Ihr AoA-Limiter lässt α bis 35° zu, die Nase zeigt dann ~10° weiter in die Kurve als bei den anderen. Das ist ihr Werkzeug für den [Snapshot](/grundlagen/begriffe#snapshot) – kurz, denn über HUD-α ~27° fällt der Auftrieb (*Spieldaten*), der Widerstand steigt weiter, und die Speed bricht ein. Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht). In der Simulation sind ihre 35° beim Schuss ~0,1 Spielwert wert.
+- **[T-18](/flugzeuge/t18):** die meiste Nasenautorität. Ihr AoA-Limiter lässt α bis 35° zu, die Nase zeigt dann ~10° weiter in die Kurve als bei den anderen. Das ist ihr Werkzeug für den [Snapshot](/grundlagen/begriffe#snapshot) – kurz, denn über HUD-α ~27° fällt der Auftrieb (*Spieldaten*), der Widerstand steigt weiter, und die Speed bricht ein. Details: [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht). In der Simulation sind ihre 35° beim Schuss gegen die T-15 ~0,2 Spielwert wert, gegen die T-16 ~0,08.
 - **AoA-Override:** Ein gezielter Override-Snapshot kann einen Kampf entscheiden, als Gewohnheit kostet er laut Simulation mehr, als er bringt ([3D-Simulator: Snapshot mit Override](/VFM_Wiki/sim/?szenario=t18-override){target="_self"}, [Simulation](/flugzeuge/simulation#aoa-override-annahme)).
-- **Rollrate:** Laut Spieldaten rollt die [T-15](/flugzeuge/t15) am langsamsten (Vorgabe 325 °/s gegen 420 °/s bei T-16 und T-18; im Flug nicht gemessen). Für das Einrollen in seine Ebene macht das nur Zehntelsekunden aus.
+- **Rollrate:** Laut Spieldaten rollt die [T-15](/flugzeuge/t15) am langsamsten (Vorgabe 325 °/s gegen 420 °/s bei T-16 und T-18; im Flug nicht gemessen, die Simulation rechnet inzwischen damit). Für das Einrollen in seine Ebene macht das nur Zehntelsekunden aus.
 
 ## Typische Fehler
 

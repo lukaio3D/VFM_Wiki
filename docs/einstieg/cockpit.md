@@ -53,7 +53,7 @@ Der Limiter begrenzt deinen Anstellwinkel (gemessen: T-15 ~24–25°, T-16 ~23°
 
 - **Kosten:** extrem viel Energie, denn über dem Auftriebsmaximum steigt nur noch der Widerstand. Danach bist du langsam.
 - **Das 9-G-Limit bleibt.** Strukturschaden durch G gibt es nicht.
-- **Einsatz:** gezielt für einen Schuss oder als letzte Abwehr, nie als Standard-Turn. In der Simulation schadet Override als Gewohnheit, am meisten gegen die stärksten Gegner (T-18 gegen T-15: −0,76 statt −0,54), siehe [AoA-Override](/flugzeuge/simulation#aoa-override-annahme).
+- **Einsatz:** gezielt für einen Schuss oder als letzte Abwehr, nie als Standard-Turn. In der Simulation schadet Override als Gewohnheit, am meisten gegen die stärksten Gegner (T-18 gegen T-15: −0,41 statt −0,24), siehe [AoA-Override](/flugzeuge/simulation#aoa-override-annahme).
 
 Details: [Das VFM-Flugmodell](/grundlagen/physik#anstellwinkel-aoa-limiter-und-override).
 

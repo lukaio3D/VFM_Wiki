@@ -41,7 +41,7 @@ Aus 71 eigenen 1v1-Replays (`../replays/vrb.py`), in allen gleich: 10.000 ft, Ma
 
 ## Nicht gemessene Annahmen (in `sim.ANNAHMEN`)
 
-Rollrate (180 °/s), Kanone (Reichweite, Treffer bis Abschuss; die Mündungsgeschwindigkeit 1.030 m/s stammt aus den Spieldaten), Verhalten über 20.190 ft und unter ~280 KIAS, Leerlaufschub 0 im Simulator (Kalibrierung: 5 % laut minOutput), keine Speedbrake. `varianten.py` prüft, ob die Ergebnisse davon abhängen.
+Rollrate: Vorgabe aus den Spieldaten (325 / 420 / 420 °/s), über die Fahrt gedämpft mit der Kurve `controlOutputScaleOverIAS`, deren Achse als IAS in m/s gelesen wird (im Kampfband ~310 / ~395 / ~395 °/s); ob der Jet das im Flug erreicht, ist nicht gemessen. Bis Oktober 2026 rollten alle Bots mit 180 °/s. Kanone (Reichweite, Treffer bis Abschuss; die Mündungsgeschwindigkeit 1.030 m/s stammt aus den Spieldaten), Verhalten über 20.190 ft und unter ~280 KIAS, Leerlaufschub 0 im Simulator (Kalibrierung: 5 % laut minOutput), keine Speedbrake. `varianten.py` prüft, ob die Ergebnisse davon abhängen.
 
 ## Grenzen
 

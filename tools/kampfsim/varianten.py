@@ -15,8 +15,9 @@ import auswertung as AW
 
 VARIANTEN = {
     'Basis': {},
-    'Rollrate 120 °/s': {'rollrate_dps': 120.0},
-    'Rollrate 270 °/s': {'rollrate_dps': 270.0},
+    'Rollrate × 0,75 (Dämpfungskurve in Knoten gelesen)': {'rollrate_faktor': 0.75},
+    'Rollrate × 0,5': {'rollrate_faktor': 0.5},
+    'Alle Jets 180 °/s (alte Annahme)': {'rollrate_fest_dps': 180.0},
     'Abschuss erst nach 1,0 s Treffern': {'treffer_s_bis_abschuss': 1.0},
     'Gun-Reichweite 600 m (~2.000 ft)': {'gun_r_max_m': 600.0},
     'T-16 Schub +5 % (Sustained wie im Messflug)': {'schub_T-16': 1.05},

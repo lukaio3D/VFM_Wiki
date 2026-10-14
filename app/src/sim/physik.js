@@ -103,6 +103,7 @@ export class Jet {
     this.m0 = m.mach[0]; this.dm = m.mach[1] - m.mach[0]
     this.r0 = m.rho[0]; this.dr = m.rho[1] - m.rho[0]
     this.delta = m.delta_hud_alpha
+    this.di = m.ias_ms[1] - m.ias_ms[0]
     this.stall = this.alpha_max > this.alpha_lim
     // aufsteigender Ast δ .. α beim Auftriebsmaximum
     const k0 = Math.round((this.delta - this.a0) / this.da)
@@ -139,6 +140,8 @@ export class Jet {
     const u = clip((sd - this.Dmin) / (this.Dpeak - this.Dmin), 0, 1) * INV
     return this.auftrieb(q, gleich(this.invD, 0, 1, u))
   }
+  // Größte Rollrate [°/s]: Vorgabe aus den Spieldaten, über IAS gedämpft (IAS ≈ KIAS in m/s)
+  rollrate(kias) { return this.rollrate_dps * gleich(this.roll_skala, 0, this.di, kias * KT) }
   winkelSchub(alpha) { return rad(alpha - this.delta) }
 }
 
@@ -195,7 +198,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
   let Nebene = [[0, 0, 0], [0, 0, 0]], dirPrev = null, dfirePrev = null, tCpaAlt = [0, 0]
   let treffer = [0, 0], nAkt = [1, 1], gas = [1, 1]
   const tTot = [Infinity, Infinity], absturz = [false, false]
-  const roll = rad(AN.rollrate_dps) * dt, u = AN.geschoss_mps
+  const u = AN.geschoss_mps
   const frames = []
   const schritte = Math.round(tMax / dt)
   let tEnde = tMax
@@ -341,6 +344,7 @@ export function simuliere(m, typA, typB, stratA, stratB, geo = {}, opt = {}) {
       // Rollen
       const ls = einheit(senkrecht(lSoll[i], Z.vh), l[i])
       const sinp = dot(cross(l[i], ls), Z.vh), cosp = dot(l[i], ls)
+      const roll = rad(AN.rollrate_fest_dps > 0 ? AN.rollrate_fest_dps : f.rollrate(Z.kias) * AN.rollrate_faktor) * dt
       const phi = clip(Math.atan2(sinp, cosp), -roll, roll)
       l[i] = add(mul(l[i], Math.cos(phi)), mul(cross(Z.vh, l[i]), Math.sin(phi)))
       const D = f.widerstand(Z.q, Z.M, Z.Vm, Z.mass, alpha[i])

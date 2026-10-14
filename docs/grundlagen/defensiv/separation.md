@@ -63,7 +63,7 @@ Schub/Gewicht auf 10.000 ft, ~Mach 0,75, voller Tank. Die Spieldaten bestätigen
 Eine Ranked-Runde dauert 8 Minuten. Läuft die Zeit ab, **gewinnt der Verfolger** – und wer wegläuft, ist der Verfolgte. Deshalb:
 
 - Separation ist im Ranked 1v1 **nur ein Zwischenschritt**: Energie holen, neu ansetzen, zurückkommen.
-- **Nicht am ersten Merge.** Laut Simulation kostet ein Extend direkt am Merge in allen Paarungen: Er bekommt die Winkel, der Abstand reicht nicht ([3D-Simulator: Extend am Merge](/VFM_Wiki/sim/?szenario=extend-merge){target="_self"}).
+- **Am ersten Merge: durchfliegen ja, weglaufen nein.** Laut Simulation ist Durchfliegen am Merge und mit ~440 KIAS wieder einsteigen kein klarer Nachteil, für die T-18 oft sogar ihre beste Wahl. Teuer wird ein langer Extend, bei dem du Speed verlierst oder den Kampf nicht wieder aufnimmst: Dreht er sofort nose-low herum, bekommt er die Winkel, und der Abstand reicht nicht ([3D-Simulator: Extend am Merge](/VFM_Wiki/sim/?szenario=extend-merge){target="_self"}).
 - Je näher das Rundenende, desto teurer jede Separation. Die meisten Runden sind aber lange vorher entschieden: Median 146 s bis zum Abschuss, 90 % unter 5 Minuten (*Replays*).
 - Separiert **er**, während du verfolgst, läuft die Uhr für dich. Du musst ihn nicht um jeden Preis einholen.
 - Ranked ist Guns-only (in 71 eigenen Replays nur Kanonen-Abschüsse und Abstürze): Es zählt nur die Kanonenreichweite, das macht Separation sicherer als mit Raketen.
@@ -78,7 +78,7 @@ Eine Ranked-Runde dauert 8 Minuten. Läuft die Zeit ab, **gewinnt der Verfolger*
 - Separieren, wenn kein Sieg drin ist, du langsam bist oder in Unterzahl – aber nur, wenn seine Nase weg zeigt.
 - Extend: Unload, volle Leistung, Nase leicht unter dem Horizont, geradeaus, hinten beobachten.
 - Auch die T-15 gewinnt aus gleicher Position nur langsam Abstand, aber schnell Speed. Die T-18 läuft am schlechtesten weg.
-- Kein Extend direkt am ersten Merge.
+- Am ersten Merge durchfliegen und mit ~440 KIAS wieder einsteigen ist in Ordnung, weglaufen nicht.
 - Re-Engage nur mit besserer Ausgangslage als vorher.
 - Ranked 1v1: Bei Zeitablauf gewinnt der Verfolger. Separation ist dort nur ein Zwischenschritt.
 :::

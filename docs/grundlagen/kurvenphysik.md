@@ -87,7 +87,7 @@ Das Spiel rechnet genauso: Die T-15 hat laut Ingame-Diagramm auf Meereshöhe (50
 
 Was die Tabelle zeigt:
 
-- **500 statt 360 KIAS** bei 9 G: ein Viertel weniger Rate, fast doppelter Radius. Deshalb ist schnell kämpfen teuer: In der [Simulation](/flugzeuge/simulation) ist 520 KIAS für alle drei Jets die schlechteste Kampf-Speed, ~360–440 KIAS die beste.
+- **500 statt 360 KIAS** bei 9 G: ein Viertel weniger Rate, fast doppelter Radius. Deshalb ist schnell kämpfen teuer: In der [Simulation](/flugzeuge/simulation) verliert 520 KIAS (wie 280) für alle drei Jets, ~440 KIAS ist die beste Kampf-Speed.
 - **5 statt 9 G** bei 360 KIAS: halbe Rate. Wer am Merge nicht zieht, verschenkt Winkel.
 
 ### KIAS vs. wahre Speed in der Höhe
@@ -117,7 +117,7 @@ Das Lift-Limit der Diagramme erreichst du im Flug nicht: Ohne Override kommst du
 
 Der **Ranked-Start** (~427 KIAS, voller Tank) liegt über der Diagramm-Corner aller drei Jets, aber an oder unter ihrer Corner im Flug. Ohne Nachbrenner bis zum Merge rechne eher mit etwas weniger als den Höchst-G, die aus 450 KIAS gemessen sind (9,1 / 8,4 / 8,7 G) ([Der Merge](/grundlagen/neutral/der-merge)).
 
-**Warum die Corner Speed wichtig ist:** Am Merge und im Break Turn willst du in kurzer Zeit maximal Winkel gewinnen – das geht nahe Corner Speed am besten. Darunter fehlen dir G, darüber wird der Radius groß. **Aber:** Bei Corner Speed und vollem Zug verlierst du sehr schnell Energie, weil der Widerstand mit dem Anstellwinkel steil steigt ([Warum voller Zug so teuer ist](/grundlagen/energie-management#warum-voller-zug-so-teuer-ist)). Dort kannst du nicht bleiben. Die schnellste Dauerkurve fliegst du bei der höheren **Best Sustained Speed**, gekämpft wird laut Simulation darunter, bei ~360–440 KIAS – [Corner Speed vs. Best Sustained Speed](/grundlagen/energie-management#corner-speed-vs-best-sustained-speed).
+**Warum die Corner Speed wichtig ist:** Am Merge und im Break Turn willst du in kurzer Zeit maximal Winkel gewinnen – das geht nahe Corner Speed am besten. Darunter fehlen dir G, darüber wird der Radius groß. **Aber:** Bei Corner Speed und vollem Zug verlierst du sehr schnell Energie, weil der Widerstand mit dem Anstellwinkel steil steigt ([Warum voller Zug so teuer ist](/grundlagen/energie-management#warum-voller-zug-so-teuer-ist)). Dort kannst du nicht bleiben. Die schnellste Dauerkurve fliegst du bei der höheren **Best Sustained Speed**, gekämpft wird laut Simulation darunter, bei ~440 KIAS (je nach Jet ~380–440) – [Corner Speed vs. Best Sustained Speed](/grundlagen/energie-management#corner-speed-vs-best-sustained-speed).
 
 ## Schwerkraft in schrägen und vertikalen Kurven
 
@@ -126,7 +126,7 @@ In der Horizontalkurve muss ein Teil des Lifts die Schwerkraft aufheben. Schräg
 - **Lift Vector unter dem Horizont (nose-low):** Die Schwerkraft zieht mit. Du drehst **schneller** und hältst Speed (Höhe wird zu Speed).
 - **Lift Vector über dem Horizont (nose-high):** Die Schwerkraft zieht dagegen. Du drehst **langsamer** und verlierst Speed (Speed wird zu Höhe).
 
-Die [Simulation](/flugzeuge/simulation#was-fur-alle-jets-gilt) bestätigt das für alle drei Jets: **nose-low schlägt flach, flach schlägt hoch, steil hoch ist am schlechtesten** – solange Höhe da ist.
+Die [Simulation](/flugzeuge/simulation#was-fur-alle-jets-gilt) zeigt für alle drei Jets: **Steil hoch ist am schlechtesten.** Nose-low, flach und leicht hoch (~25°) liegen bei ~440 KIAS nah beieinander; deutlich vorn ist nose-low nur, wenn die Jets langsam rollen (Rollrate im Flug nicht gemessen). Nose-low hilft nur, solange Höhe da ist.
 
 Im Looping wirkt Richtung Kurvenmitte:
 
@@ -157,7 +157,7 @@ Mehr zur Bewegungsebene: [Relative Geometrie](/grundlagen/geometrie#bewegungsebe
 - **Lift Vector platzieren, dann ziehen** – jedes Manöver ist das.
 - **Rate ~ 1/V, Radius ~ V²** bei gleicher G. Zu schnell heißt: großer Kreis, langsame Nase.
 - **Corner Speed** = niedrigste Speed mit 9 G = beste Instant Rate, aber hoher Energiepreis. Im Flug liegt sie ~5–10 % über dem Diagrammwert.
-- **Nose-low dreht schneller, nose-high langsamer** – je langsamer du bist, desto stärker. In der Simulation gewinnt nose-low.
+- **Nose-low dreht schneller, nose-high langsamer** – je langsamer du bist, desto stärker. In der Simulation verliert steil hoch; nose-low, flach und leicht hoch liegen nah beieinander.
 - **Raus aus der Ebene** gibt dir Schwerkraft, Closure-Kontrolle und macht dich schwerer zu treffen.
 :::
 

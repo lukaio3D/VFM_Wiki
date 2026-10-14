@@ -88,7 +88,8 @@ Das Fly-by-Wire begrenzt, wie schnell der Jet nickt und rollt (*Spieldaten*):
 
 - **Die T-15 rollt am langsamsten** und hat die kleinste Pitch-Vorgabe.
 - Die Pitch-Vorgaben liegen über den Kurvenraten der Diagramme (höchstens ~31 °/s). In normalen Kurven begrenzen also Auftrieb und 9 G, nicht das Fly-by-Wire.
-- **Ob die Jets diese Werte im Flug erreichen, ist nicht gemessen.** Die Simulation rechnet mit 180 °/s Rollrate für alle (Annahme). T-15 gegen T-18 hängt stark davon ab: mit 270 °/s ausgeglichen, mit 120 °/s +0,71. Rollen die Jets im Flug wirklich so schnell wie vorgegeben, ist der Vorsprung der T-15 gegen die T-18 eher kleiner (*Hypothese*).
+- **Ob die Jets diese Werte im Flug erreichen, ist nicht gemessen.** Die Simulation rollt mit dieser Vorgabe, über die Fahrt gedämpft (im Kampfband ~310 / ~395 / ~395 °/s; Annahme zur Dämpfung). Die frühere Annahme „180 °/s für alle“ ist damit ersetzt.
+- **Je schneller die Jets wirklich rollen, desto besser für die T-18** (*Simulation*): T-15 gegen T-18 +0,20 mit der Vorgabe, +0,39 mit 180 °/s für alle; T-16 gegen T-18 +0,03 (praktisch ausgeglichen) statt +0,28. Die T-15 bleibt in jeder Variante vorn. Weil die Rollrate im Flug nicht gemessen ist, ist sie die wichtigste offene Messung.
 
 ## Transsonischer Widerstand
 
@@ -179,7 +180,7 @@ Für [Simulation](/flugzeuge/simulation) und [3D-Simulator](/VFM_Wiki/sim/){targ
 ## Offene Fragen
 
 ::: info IM SPIEL PRÜFEN
-- **Rollrate im Flug:** Die Spieldaten nennen nur die Vorgabe (325 / 420 / 420 °/s). Erreichen die Jets sie, auch langsam?
+- **Rollrate im Flug:** Die Spieldaten nennen nur die Vorgabe (325 / 420 / 420 °/s). Erreichen die Jets sie, auch langsam? Davon hängt ab, ob die T-16 die T-18 klar schlägt oder es ausgeglichen ist.
 - **Override:** Wie weit geht α, wie viel G bringt das, wie viel Speed kostet es, und wie fängst du den Jet ab?
 - **Unter ~280 KIAS:** Steuerbarkeit und Stall-Verhalten sind nicht gemessen (die Diagramme beginnen bei ~170–200 KIAS).
 - **Greyout-Modell:** G-Schwelle, Zeitverhalten, Erholung.
@@ -192,7 +193,7 @@ Ebenfalls offen: die Wirkung der Speedbrake. Der **Leerlaufschub** liegt laut Sp
 - **Auftrieb ist bei HUD-α ~27° am größten, der Widerstand steigt mit α steil.** Die letzten Grad bis zum Anschlag sind teuer. Die T-18 kurvt mit α ~26°, 35° nur für den Snapshot.
 - **Im Flug gibt es ~10 % weniger G als im Diagramm**, bis die Höchst-G erreicht ist. Die Diagramm-Instant-Werte erreichst du nicht.
 - **Override** = Nase sofort, Energie weg. Nur für einen Schuss oder als letztes Mittel.
-- **Transsonischer Widerstand** setzt bei ~Mach 0,9 ein, auf 10.000 ft ab ~510 KIAS. Kämpf deutlich darunter, laut Simulation bei ~360–440 KIAS.
+- **Transsonischer Widerstand** setzt bei ~Mach 0,9 ein, auf 10.000 ft ab ~510 KIAS. Kämpf deutlich darunter, laut Simulation am besten bei ~440 KIAS (je nach Jet ~380–440).
 - **10 % leichter = 10 % mehr dauerhafte G** – tief und leicht dreht besser.
 :::
 

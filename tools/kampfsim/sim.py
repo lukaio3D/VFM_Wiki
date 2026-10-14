@@ -20,7 +20,8 @@ g, KT, LB, FT, RHO0 = 9.80665, 0.514444, 4.44822, 0.3048, 1.225
 UP = np.array([0.0, 0.0, 1.0])
 
 ANNAHMEN = {
-    'rollrate_dps': 180.0,        # nicht gemessen (Spiel: max. 325–420 °/s, im Kampf selten voll genutzt)
+    'rollrate_faktor': 1.0,       # Anteil der Spieldaten-Rollrate (325 / 420 / 420 °/s, gedämpft über IAS); nicht gemessen
+    'rollrate_fest_dps': 0.0,     # > 0: alle Jets mit dieser festen Rollrate (alte Annahme 180 °/s, für Vergleiche)
     'alpha_tau_s': 0.5,           # α-Verzögerung, mit alpha_rate so gewählt, dass der G-Aufbau zum vollen Zug passt
     'alpha_rate_ab_dps': 25.0,    # Entlasten
     'geschoss_mps': 1030.0,       # Mündungsgeschwindigkeit der Kanone (Spieldaten, in Replays bestätigt)
@@ -109,6 +110,8 @@ class Flotte:
         self.stall = self.alpha_max > self.alpha_lim
         self.W_voll, self.W_leer, self.burn = f('W_voll'), f('W_leer'), f('burn')
         self.alpha_rate = np.array([ALPHA_RATE_AUF[t] for t in typen])
+        self.roll_max, self.roll_skala = f('rollrate_dps'), f('roll_skala')
+        self.di = m['ias_ms'][1] - m['ias_ms'][0]
         # Umkehrtabellen auf dem aufsteigenden Ast (δ .. α beim Auftriebsmaximum)
         k0 = int(round((self.delta - self.a0) / self.da))
         self.L_max, self.alpha_peak = np.zeros(J), np.zeros(J)
@@ -150,6 +153,10 @@ class Flotte:
             np.maximum(q, 1.0) * _gleich(self.mf, self.m0, self.dm, M))
         u = np.clip((sd - self.D_min) / (self.D_peak - self.D_min), 0, 1) * self.INV
         return self.auftrieb(q, _gleich(self.inv_D, 0, 1, u))
+
+    def rollrate(self, kias):
+        """Größte Rollrate [°/s]: Vorgabe aus den Spieldaten, über IAS gedämpft (IAS hier ≈ KIAS in m/s)."""
+        return self.roll_max * _gleich(self.roll_skala, 0.0, self.di, np.asarray(kias, float) * KT)
 
     def winkel_schub(self, alpha):
         """Winkel zwischen Rumpfachse und Bahn [rad] (Flügel-α)."""
@@ -260,7 +267,6 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=RUNDENZEIT_S, dt=0.0
     tot = np.zeros(J, bool)
     t_tot = np.full(J, np.inf)
     absturz = np.zeros(J, bool)
-    roll = np.radians(AN['rollrate_dps']) * dt
     u = AN['geschoss_mps']
     spur = []
     n_akt = np.ones(J)
@@ -416,6 +422,8 @@ def simuliere(m, typ_a, typ_b, strat_a, strat_b, geo, t_max=RUNDENZEIT_S, dt=0.0
         ls = einheit(senkrecht(l_soll, vh), l)
         sinp = dot(np.cross(l, ls), vh)
         cosp = dot(l, ls)
+        roll = np.radians(AN['rollrate_fest_dps'] if AN['rollrate_fest_dps'] > 0
+                          else fl.rollrate(kias) * AN['rollrate_faktor']) * dt
         phi = np.clip(np.arctan2(sinp, cosp), -roll, roll)
         l = l * np.cos(phi)[:, None] + np.cross(vh, l) * np.sin(phi)[:, None]
 

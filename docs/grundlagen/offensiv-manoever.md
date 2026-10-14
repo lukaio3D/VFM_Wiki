@@ -61,8 +61,8 @@ flowchart TD
 
 ## VFM: offensiv im Ranked
 
-- **Die Uhr arbeitet für dich.** Bei Zeitablauf gewinnt der Verfolger. Die Simulation zeigt: Aus 3.000 ft an seiner Six kann ein guter Verteidiger den Schuss lange verweigern, aber den Kampf kaum umdrehen. Sitzt du hinten, musst du nichts erzwingen – ein Overshoot aus Ungeduld ist der einzige Weg, wie er zurückkommt.
-- **Im Band bleiben.** Laut Simulation kämpfen alle drei Jets bei ~360–440 KIAS am besten. Auch als Angreifer: lieber Lag und Speed halten als mit vollem Zug auf ~280 KIAS absinken.
+- **Die Uhr arbeitet für dich.** Bei Zeitablauf gewinnt der Verfolger. Die Simulation zeigt: Aus ~2.700 ft an seiner Six kann ein guter Verteidiger den Schuss oft verweigern, aber den Kampf selten umdrehen (Perch: 5 von 9 Varianten für den Angreifer, 2 für den Verteidiger). Sitzt du hinten, musst du nichts erzwingen – ein Overshoot aus Ungeduld ist der einzige Weg, wie er zurückkommt.
+- **Im Band bleiben.** Laut Simulation kämpfen alle drei Jets bei ~440 KIAS am besten; 360 geht, ~280 verliert. Auch als Angreifer: lieber Lag und Speed halten als mit vollem Zug auf ~280 KIAS absinken.
 - **Nur die Kanone.** Ranked 1v1 ist Guns-only (*Replays*); der gültige Schuss ist ein Kanonenschuss, meist unter ~3.000 ft ([Schusslösung](/grundlagen/offensiv/schussloesung)).
 
 **Im 3D-Simulator:** [Offensiver Perch: hinten bleiben](/VFM_Wiki/sim/?szenario=perch){target="_self"} – er bricht sofort ein, du hältst Lag, bleibst im Band und gehst erst dann in den Vorhalt.

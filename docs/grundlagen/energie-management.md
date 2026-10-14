@@ -84,15 +84,16 @@ Das Diagramm zeigt, wer in welchem Speedband **dauerhaft schneller dreht**. Die 
 
 | Kampf-Speed (*Simulation*, Ranked-Start, alle Jets) | Ergebnis |
 |---|---|
-| ~280 KIAS | klar schlechter: hoher α kostet zu viel Energie, aus dem Loch kommst du nicht mehr heraus |
-| **~360 und ~440 KIAS** | **am besten**, vor allem im Two-Circle nose-low oder flach |
-| ~520 KIAS | am schlechtesten: großer Kreis, langsame Nase |
+| ~280 KIAS | verliert: hoher α kostet zu viel Energie, aus dem Loch kommst du nicht mehr heraus |
+| ~360 KIAS | gut, aber schwächer als 440 |
+| **~440 KIAS** | **am besten** für alle drei Jets, vor allem im Two-Circle |
+| ~520 KIAS | verliert: großer Kreis, langsame Nase |
 
-**Warum knapp unter Best Sustained?** Das Sustained-Plateau ist flach, der Radius wächst aber mit V². Beispiel T-16 (10.000 ft, voller Tank): Ihr Sustained-Optimum liegt bei ~460–470 KIAS. Bei 420 KIAS gibt sie nur ~0,2–0,3 °/s her (< 2 %), fliegt aber einen ~9 % kleineren Kreis (3.250 → 2.940 ft). In der Simulation ist eine Ziel-Speed von ~420 KIAS für sie am besten, 470 deutlich schlechter. Mit sinkendem Fuel wächst der Vorteil der niedrigeren Speed – **mit weniger Fuel nicht schneller werden**. Details: [T-16, Speed nach Fuel](/flugzeuge/t16#speed-nach-fuel-und-hohe).
+**Warum knapp unter Best Sustained?** Das Sustained-Plateau ist flach, der Radius wächst aber mit V². Beispiel T-16 (10.000 ft, voller Tank): Ihr Sustained-Optimum liegt bei ~460–470 KIAS. Bei 420 KIAS gibt sie nur ~0,2–0,3 °/s her (< 2 %), fliegt aber einen ~9 % kleineren Kreis (3.250 → 2.940 ft). In der Simulation ist eine Ziel-Speed von ~400–420 KIAS für sie am besten, über ~440 fällt es ab (Mittel über alle Gegner und Fuel-Stände: 420 → +0,20, 470 → −0,25). Mit sinkendem Fuel wächst der Vorteil der niedrigeren Speed – **mit weniger Fuel nicht schneller werden**. Details: [T-16, Speed nach Fuel](/flugzeuge/t16#speed-nach-fuel-und-hohe).
 
-So passen Diagramm und Simulation zusammen: Bei ~360–440 KIAS stimmen Rate, Radius und Energie. Deshalb gewinnt dort die T-15 den Two-Circle sogar gegen die T-16, obwohl sie 1–2 °/s weniger Sustained Rate hat – sie zieht mehr G, fliegt den kleineren Radius und hat mehr Schub. Mehr: [Diagramm und Simulation](/flugzeuge/vergleich#diagramm-und-simulation).
+So passen Diagramm und Simulation zusammen: Bei ~400–440 KIAS stimmen Rate, Radius und Energie. Deshalb gewinnt dort die T-15 den Two-Circle sogar gegen die T-16, obwohl sie 1–2 °/s weniger Sustained Rate hat – sie zieht mehr G, fliegt den kleineren Radius und hat mehr Schub. Mehr: [Diagramm und Simulation](/flugzeuge/vergleich#diagramm-und-simulation).
 
-**Ziel-Speed im Kampf** (*Simulation*): T-15 ~400–420 KIAS, T-16 ~420 KIAS, T-18 ~440 KIAS. Spielpläne je Jet: [T-15](/flugzeuge/t15), [T-16](/flugzeuge/t16), [T-18](/flugzeuge/t18).
+**Ziel-Speed im Kampf** (*Simulation*): Im groben Turnier-Raster (280 / 360 / 440 / 520) ist ~440 KIAS für alle am besten; fein gerechnet T-15 ~380–420 KIAS, T-16 ~400–420 KIAS, T-18 ~440 KIAS. Spielpläne je Jet: [T-15](/flugzeuge/t15), [T-16](/flugzeuge/t16), [T-18](/flugzeuge/t18).
 
 ## Was Energie im Flug kostet
 
@@ -132,7 +133,7 @@ Im Kreis ziehst du nur so weit, wie es etwas bringt, und hältst ein paar Grad A
 4. **Erst wieder manövrieren**, wenn du in deinem Speedband bist – es sei denn, du musst einen Schuss verteidigen.
 
 ::: warning NICHT ZIEHEN
-Der Instinkt sagt „Nase hoch, zieh!“. Ohne Speed bringt Ziehen keine Rate, nur noch weniger Speed. In der Simulation verliert langsames Kämpfen (~280 KIAS) in allen Paarungen deutlich.
+Der Instinkt sagt „Nase hoch, zieh!“. Ohne Speed bringt Ziehen keine Rate, nur noch weniger Speed. In der Simulation schneidet langsames Kämpfen (~280 KIAS) in allen Paarungen deutlich schlechter ab.
 :::
 
 ## Unload richtig gemacht
@@ -170,7 +171,7 @@ flowchart TD
 - **Defensiv gibt es kein Sparen.** Wer stirbt, braucht keine Energie mehr.
 - **Parke Speed in Höhe**, wenn du sie gerade nicht brauchst (z. B. [High Yo-Yo](/grundlagen/offensiv/yo-yos)).
 - **Vergleich dich mit dem Gegner:** Schneller und höher heißt, du entscheidest, ob und wie gekämpft wird.
-- **Kenne dein Band:** Gekämpft wird bei ~360–440 KIAS. Eine T-16 unter ~380 KIAS hat ihren Rate-Vorteil verloren, eine T-18 über ~480 KIAS verschenkt Energie an den Widerstand.
+- **Kenne dein Band:** Gekämpft wird bei ~380–440 KIAS (T-15 ~380–420, T-16 ~400–420, T-18 ~440). Eine T-16 unter ~380 KIAS hat ihren Rate-Vorteil verloren, eine T-18 über ~480 KIAS verschenkt Energie an den Widerstand.
 
 **Den Gegner lesen:** Dreht seine Nase schnell, gibt er Energie aus. Wird sie über mehrere Sekunden langsamer oder steigt er nicht mehr, ist er langsam. Ein enger Kreis mit langsamer Nase heißt wenig Speed.
 
@@ -183,7 +184,7 @@ flowchart TD
 ::: tip MERKE
 - **Energie = Speed + Höhe.** Steigen wandelt um, nur Widerstand (vor allem G und α) vernichtet.
 - **Ps = 0 ist die Sustained-Linie.** Darüber verlierst du Energie, darunter gewinnst du.
-- **Corner Speed** für kurze Momente, **Best Sustained** (~470–495 KIAS) ist die schnellste Dauerkurve. **Gekämpft wird knapp darunter, bei ~360–440 KIAS** – nicht langsam, nicht schnell.
+- **Corner Speed** für kurze Momente, **Best Sustained** (~470–495 KIAS) ist die schnellste Dauerkurve. **Gekämpft wird knapp darunter, bei ~380–440 KIAS** – nicht langsam, nicht schnell.
 - **Die letzten Grad α sind die teuersten.** Unter dem Anschlag fliegen, voll ziehen nur für Schuss, Verteidigung oder den Merge.
 - **Unload = ≈ 0–0,5 G**, Nase am oder leicht unter dem Horizont, volle Leistung – nicht vor seiner Kanone.
 - **Gib Energie nur aus, wenn du dafür etwas bekommst.**

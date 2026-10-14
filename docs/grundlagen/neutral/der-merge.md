@@ -27,8 +27,8 @@ Aus den Diagrammen ergibt sich das Band zwischen **Corner Speed** (maximale Inst
 
 | Jet (10.000 ft) | Corner Speed | Best Sustained | Kampf-Speed laut *Simulation* |
 |---|---|---|---|
-| [T-15 Excalibur](/flugzeuge/t15) | ~360–385 KIAS | ~495 KIAS | **~400–420 KIAS**, nicht über ~460 |
-| [T-16 Falchion](/flugzeuge/t16) | ~409–421 KIAS | ~470 KIAS | **~420 KIAS** (geflogen ~420–440), nicht über ~460 |
+| [T-15 Excalibur](/flugzeuge/t15) | ~360–385 KIAS | ~495 KIAS | **~380–420 KIAS** (geflogen ~370–430), nicht über ~440 |
+| [T-16 Falchion](/flugzeuge/t16) | ~409–421 KIAS | ~470 KIAS | **~400–420 KIAS** (geflogen ~400–440), nicht über ~440 |
 | [T-18 Cutlass](/flugzeuge/t18) | ~385–409 KIAS | ~470 KIAS | **~440 KIAS**, nicht über ~480 |
 
 Corner Speed: 50–100 % Fuel aus den Diagrammen; tiefer liegen alle Werte etwas niedriger (T-15 Corner auf Meereshöhe ~337 KIAS). Daten: [Flugzeugvergleich](/flugzeuge/vergleich), Übung: [Corner Speed finden](/grundlagen/uebungen).
@@ -84,7 +84,7 @@ Die Winkel liegen niedriger als gemessen, weil das Modell ab Zugbeginn zählt un
 ### Was daraus folgt
 
 - **Der Instant-Vorteil aus den Diagrammen ist aus dem Ranked-Start klein.** Die G brauchen 2–3 s, T-16 und T-18 erreichen keine 9 G. Die Diagramm-Instant-Rate zählt erst nahe Corner Speed.
-- **T-15:** gewinnt den ersten Turn (gemessen ~5° gegen die T-16, ~8° gegen eine sauber geflogene T-18; im Modell gegen eine sustained fliegende T-16 ~17°), landet voll gezogen aber bei ~280 KIAS. Das ist laut Simulation eine schwache Kampf-Speed. Voll ziehen nur, solange es dir einen Schuss bringt, dann zurück ins Band ~400–420 (nose-low hilft).
+- **T-15:** gewinnt den ersten Turn (gemessen ~5° gegen die T-16, ~8° gegen eine sauber geflogene T-18; im Modell gegen eine sustained fliegende T-16 ~17°), landet voll gezogen aber bei ~280 KIAS. Das ist laut Simulation eine schwache Kampf-Speed. Voll ziehen nur, solange es dir einen Schuss bringt, dann zurück ins Band ~380–420 (nose-low hilft).
 - **T-16:** dreht ihn **sustained** und bleibt bei ~440–450 KIAS. Der volle Zug bringt höchstens ~12° und kostet ~85 KIAS.
 - **T-18:** fliegt ihn mit **α ~26°**. Voll durchgezogen verliert sie ihn (gemessen 127° gegen 141° der T-16; im Modell mit 35° nur 108° statt 123° mit 26°). Die vollen 35° sind für den Snapshot: Die Nase zeigt dann ~10° weiter in die Kurve als die Flugbahn.
 
@@ -92,16 +92,18 @@ Die Winkel liegen niedriger als gemessen, weil das Modell ab Zugbeginn zählt un
 
 ## Merge-Strategien für Ranked (Start ~430 KIAS) {#merge-strategien-fur-ranked-start-450-kias}
 
-Die Matrix folgt der [Simulation](/flugzeuge/simulation) (~405.000 Bot-Kämpfe, Originalmodell, echter Ranked-Start). Zahlen in Klammern: Wert der Strategie gegen ein breites Feld des Gegners (+1 = immer gewonnen, −1 = immer verloren).
+Die Matrix folgt der [Simulation](/flugzeuge/simulation) (~405.000 Bot-Kämpfe, Originalmodell, echter Ranked-Start, Rollraten aus den Spieldaten). Zahlen in Klammern: Wert der Strategie gegen ein breites Feld des Gegners (+1 = immer gewonnen, −1 = immer verloren).
 
 | Du fliegst | gegen T-15 | gegen T-16 | gegen T-18 |
 |---|---|---|---|
-| **T-15** | Spiegelkampf: Two-Circle nose-low bei ~400–420 KIAS. Wer unnötig voll zieht oder schnell bleibt (520 KIAS), verliert. Nicht vertikal. | **Am Pass zu ihr hin, Two-Circle nose-low bei ~400–440** (+0,88): Du ziehst bei gleicher Speed mehr G und fliegst den kleineren Kreis. Geht sie nose-low: **mitgehen, nicht hochziehen**. Langsamer One-Circle (+0,43) ist schwächer, schnell durchfliegen verliert (−0,31). | **Two-Circle bei ~360–440, nose-low oder flach** (+0,86). Fliegt sie durch und taucht ab: sofort zu ihr hin, nose-low. Nicht in Lag warten (siehe unten), nicht langsam (280) und nicht schnell kämpfen. Achte auf ihren Snapshot. |
-| **T-16** | Du bist unterlegen (−0,27). **Two-Circle bei ~420–440, flach** (+0,54) oder nose-low. Speed halten: bei ~360 nur noch ausgeglichen. Zieht sie hoch: **nose-low weiterkreisen**, nie hinterher. Vertikal verliert (−0,49). | Spiegelkampf: erster Turn sustained, Two-Circle bei ~420 KIAS, flach oder nose-low. Mit sinkendem Fuel nicht schneller werden: bei 15 % Fuel schlägt 420 KIAS 470 deutlich. | **Two-Circle bei ~420–440, flach oder nose-low** (+0,85). Erster Turn sustained. Dreht sie weg und taucht ab: in der [Bubble](/grundlagen/begriffe#bubble) bleiben (außerhalb ihres Kreises), nie langsam werden. Vorsicht vor ihrem Snapshot. |
-| **T-18** | Schwerste Paarung: Keine Strategie schlägt ein breites Feld klar. Am ehesten **durchfliegen, abtauchen, dann ~360** (+0,09) oder **flacher Two-Circle bei ~440** (+0,08). Langsamer One-Circle ist schwach (−0,19). 35° nur für den Snapshot. | **Two-Circle nose-low bei ~440** (+0,42, deine beste Familie). Erster Turn mit α ~26°. Nicht langsam machen: Der langsame One-Circle bringt nur +0,05. Snapshot mit vollem α. | Spiegelkampf: Two-Circle nose-low bei ~440. Wer α diszipliniert fliegt (~26° zum Kurven, 35° nur für den Schuss), behält die Energie. |
+| **T-15** | Spiegelkampf: Two-Circle nose-low bei ~380–420 KIAS. Wer unnötig voll zieht oder schnell bleibt (520 KIAS), verliert. Nicht steil hoch. | **Am Pass zu ihr hin, Two-Circle bei ~400–440, nose-low, flach oder leicht hoch** (+0,67 bis +0,77): Du ziehst bei gleicher Speed mehr G und fliegst den kleineren Kreis. Geht sie nose-low: **mitgehen, nicht steil hochziehen** (+0,58). Langsamer One-Circle (+0,29) ist schwächer, schnell bleiben (520) am schwächsten. | **Two-Circle bei ~400–440, flach, nose-low oder leicht hoch** (+0,62 bis +0,71). Fliegt sie durch und taucht ab: sofort zu ihr hin, nose-low. Nicht in Lag warten (siehe unten), nicht langsam (280: +0,11) und nicht schnell kämpfen. Achte auf ihren Snapshot. |
+| **T-16** | Du bist unterlegen (−0,41). **Two-Circle bei ~440, flach** (+0,21) oder nose-low (+0,19); durchfliegen und tief mit ~440 wieder einsteigen geht auch (+0,20). Speed halten: bei ~360 schon im Minus (−0,19). Zieht sie hoch: **nose-low weiterkreisen**, nie hinterher. Steil hoch verliert (−0,47). | Spiegelkampf: erster Turn sustained, Two-Circle bei ~400–420 KIAS, flach oder nose-low. Mit sinkendem Fuel nicht schneller werden: bei 15 % Fuel schlägt 420 KIAS 470 deutlich. | Fast ausgeglichen (+0,03). **Two-Circle bei ~440, leicht hoch, flach oder nose-low** (+0,47 bis +0,55), oder durchfliegen und tief wieder einsteigen (+0,49). Erster Turn sustained. Dreht sie weg und taucht ab: in der [Bubble](/grundlagen/begriffe#bubble) bleiben (außerhalb ihres Kreises), nie langsam werden. Vorsicht vor ihrem Snapshot. |
+| **T-18** | Schwerste Paarung (−0,20). Am besten **durchfliegen, abtauchen, mit ~440 wieder einsteigen** (+0,30) oder **flacher Two-Circle bei ~440** (+0,15). Langsamer One-Circle ist schwach (−0,35). 35° für den Snapshot: Sie sind hier ~0,2 Spielwert wert. | Fast ausgeglichen. **Durchfliegen, abtauchen, mit ~440 wieder einsteigen** (+0,35, deine beste Familie) oder **Two-Circle bei ~440**, leicht hoch (+0,30), flach oder nose-low (+0,16 bis +0,19). Erster Turn mit α ~26°. Nicht langsam machen: Der langsame One-Circle bringt −0,09. Snapshot mit vollem α. | Spiegelkampf: Two-Circle bei ~440 oder durchfliegen und tief wieder einsteigen. Wer α diszipliniert fliegt (~26° zum Kurven, 35° nur für den Schuss), behält die Energie. |
 
 ::: info SIMULATION
-**Für alle drei Jets ist der Two-Circle bei ~360–440 KIAS, nose-low oder flach, die beste Familie.** Am Pass zum Gegner hin drehen schlägt Wegdrehen (One-Circle) und Durchfliegen deutlich. Nose-low schlägt flach, flach schlägt hoch, steil hoch ist am schlechtesten. Pure oder Lag ist für Bots fast egal, Nachbrenner bis zum Merge kein klarer Vorteil.
+**~440 KIAS ist für alle drei Jets die beste Kampf-Speed.** Am Pass zum Gegner hin drehen (Two-Circle) schlägt Wegdrehen (One-Circle). Durchfliegen und mit ~440 KIAS wieder einsteigen ist in Ordnung; teuer wird es erst, wenn du dabei Speed verlierst. Nose-low, flach und leicht hoch (~25°) liegen nah beieinander, steil hoch ist am schlechtesten. Pure oder Lag ist für Bots fast egal, Nachbrenner bis zum Merge kein klarer Vorteil.
+
+Gerechnet mit den Rollraten aus den Spieldaten. **Je schneller die Jets wirklich rollen, desto besser für die T-18:** Mit der früheren Annahme 180 °/s für alle stand T-16 gegen T-18 bei +0,28, jetzt bei +0,03; T-15 gegen T-18 bei +0,39, jetzt bei +0,20. Die T-15 bleibt in jeder Variante vorn. Die Rollrate im Flug ist nicht gemessen ([Pitch- und Rollrate](/grundlagen/physik#pitch-und-rollrate)).
 
 Damit gelten die älteren Spielpläne „T-15: langsamen One-Circle erzwingen oder schnell (> 500) kämpfen“ und „T-18: Kampf langsam machen, One-Circle von unten“ nicht mehr. Sie kamen aus den Diagrammen, die nur zeigen, wer in welchem Band dauerhaft schneller dreht. Warum der ganze Kampf anders ausgeht: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle#flow-wahl-in-vfm). Grenzen: Bots zielen perfekt, sehen alles und planen nicht voraus.
 :::
@@ -111,7 +113,7 @@ Bei ~450 KIAS drehen beide dauerhaft gleich schnell (15,4 gegen 15,6 °/s, *geme
 :::
 
 ::: details Warum die T-15 gegen eine abtauchende T-16 nicht hochziehen sollte
-Zieht die T-15 hoch und die T-16 nose-low herum, entsteht ein vertikaler Two-Circle. Die T-15 verliert im harten Zug Energie ~2,3-mal so schnell (*gemessen*). Die T-16 tauscht Höhe gegen Speed, bleibt bei ~450 KIAS und dreht dort ~2 °/s schneller. Nach einem Kreis ist sie unten, schnell und vorn, du oben und langsam. In der Simulation kostet Hochziehen die T-15 die Hälfte ihres Vorteils (+0,47 statt +0,88). Gegenmittel: Nase auch runter, auf ihrer Höhe bleiben und im Two-Circle bei ~400–420 KIAS weiterkreisen ([Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)).
+Zieht die T-15 hoch und die T-16 nose-low herum, entsteht ein vertikaler Two-Circle. Die T-15 verliert im harten Zug Energie ~2,3-mal so schnell (*gemessen*). Die T-16 tauscht Höhe gegen Speed, bleibt bei ~450 KIAS und dreht dort ~2 °/s schneller. Nach einem Kreis ist sie unten, schnell und vorn, du oben und langsam. In der Simulation kostet steiles Hochziehen die T-15 einen Teil ihres Vorteils (+0,58 statt +0,76 nose-low); im 3D-Szenario bleibt der Kampf dann in 7 von 9 Varianten offen, nose-low gewinnt sie 6 von 9. Gegenmittel: Nase auch runter, auf ihrer Höhe bleiben und im Two-Circle bei ~380–420 KIAS weiterkreisen ([Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)).
 :::
 
 ## Dem Gegner den Turning Room verweigern
@@ -128,13 +130,13 @@ Nach dem Pass entscheidest du sofort, **in welche Ebene** du drehst. Wohin dein 
 
 | Zug | Lift Vector | Wirkung | in VFM (*Simulation*) |
 |---|---|---|---|
-| **Nose-low** | schräg nach unten | Schwerkraft hilft, Speed bleibt; kostet Höhe | **beste Ebene für alle Jets** |
-| **Level** | waagerecht | volle Rate in der Ebene, berechenbar | zweitbeste, Rate-Duell ([Two-Circle](/grundlagen/neutral/one-two-circle)) |
-| **Nose-high** | schräg nach oben | Speed wird zu Höhe, oben dreht es enger; du wirst langsam | schlechter als flach; nur, um Speed über dem Band abzubauen |
+| **Nose-low** | schräg nach unten | Schwerkraft hilft, Speed bleibt; kostet Höhe | **gut für alle Jets**, bei ~440 KIAS etwa gleichauf mit flach und leicht hoch |
+| **Level** | waagerecht | volle Rate in der Ebene, berechenbar | gut, Rate-Duell ([Two-Circle](/grundlagen/neutral/one-two-circle)) |
+| **Nose-high** | schräg nach oben | Speed wird zu Höhe, oben dreht es enger; du wirst langsam | leicht hoch (~25°) bei ~440 KIAS kein Nachteil; nur bei langsamem Rollen schlechter als flach |
 | **[Slice](/grundlagen/defensiv/slice-turn)** | deutlich unter dem Horizont, nahe max G | höchste Rate ohne Speedverlust; kostet Höhe | schneller erster Turn, wenn Höhe da ist |
-| **Pitch-back** | fast senkrecht hoch, oben auf ihn rollen | dreht über die Vertikale; braucht Einstiegsspeed | am schlechtesten, auch für die T-15 ([Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)) |
+| **Pitch-back** | fast senkrecht hoch, oben auf ihn rollen | dreht über die Vertikale; braucht Einstiegsspeed | **klar am schlechtesten**, auch für die T-15 ([Vertikal-Kampf](/grundlagen/neutral/vertikal-kampf)) |
 
-Die Reihenfolge **nose-low > flach > hoch > steil hoch** gilt in der Simulation in allen Paarungen. Im Nose-low-Turn arbeiten Auftrieb und Schwerkraft zusammen, und die Speed bleibt im Band.
+**Nose-low oder flach, leicht hoch geht auch – nur nicht steil hoch.** Mit den Rollraten aus den Spieldaten liegen tief, flach und leicht hoch bei ~440 KIAS in der Simulation nah beieinander; die alte Reihenfolge nose-low > flach > hoch zeigt sich deutlich nur, wenn die Jets langsam rollen. Steil hoch ist in allen Paarungen klar schlechter. Im Nose-low-Turn arbeiten Auftrieb und Schwerkraft zusammen, und die Speed bleibt im Band.
 
 ::: warning Höhe ist begrenzt
 Slice und Nose-low tauschen Höhe gegen Speed. 3.000 ft bringen allein durch die Schwerkraft nur grob 60–80 kt. Wer schon tief ist, kann nicht beliebig slicen. Im Training gilt das [Hard Deck](/grundlagen/golden-rules#hard-deck-2-000-ft) von 2.000 ft. Auch die Simulation (Start 10.000 ft, Hard Deck ~3.000 ft) bestätigt nose-low nur, solange Höhe da ist.
@@ -161,9 +163,9 @@ Nicht jeder Merge endet in einem Turn. Beim **Blow-Through** fliegst du ohne Tur
 - **Wie:** Unload (ca. 0–0,5 G), Nase am oder knapp unter dem Horizont, volle Leistung, geradeaus weg und nicht zu früh wieder eindrehen.
 - **Grenze:** Extend funktioniert nur, solange seine Nase von dir weg zeigt, etwa weil er noch in seiner Kurve gebunden ist. Selbst die T-15 hat nach 5 s erst ~200 ft mehr Abstand. Im Ranked kostet Abstand außerdem Zeit, siehe [Separation](/grundlagen/defensiv/separation#vfm-separation-im-ranked-1v1-hat-einen-preis).
 
-**Am ersten Merge** ist Durchfliegen in der Simulation im Mittel die schlechteste Drehrichtung: Wer sofort dreht, bekommt die Winkel, der Abstand reicht nicht. Einzige Ausnahme ist die T-18 gegen die T-15, die durchfliegen und abtauchen am ehesten hält (siehe Matrix).
+**Am ersten Merge** ist in der Simulation das Wegdrehen (One-Circle) die schlechteste Drehrichtung. Durchfliegen und mit ~440 KIAS nose-low wieder einsteigen ist in Ordnung, für die T-18 sogar ihre beste Familie (siehe Matrix). Teuer wird der Extend, wenn du dabei Speed verlierst oder zu lange geradeaus fliegst: Wer sofort dreht, bekommt die Winkel, der Abstand reicht nicht.
 
-**Im 3D-Simulator:** [Extend direkt am Merge kostet](/VFM_Wiki/sim/?szenario=extend-merge){target="_self"}.
+**Im 3D-Simulator:** [Extend gegen einen Gegner, der sofort dreht](/VFM_Wiki/sim/?szenario=extend-merge){target="_self"} (6 s geradeaus, während der Gegner sofort dreht).
 
 ## VFM: Lobby-Einstellungen und Ranked
 
@@ -185,9 +187,9 @@ Eine Runde dauert 8 Minuten. Läuft die Zeit ab, gewinnt der **Verfolger** (seit
 
 ::: tip MERKE
 - Im Ranked kommst du mit ~427 KIAS schon im richtigen Band an; Nachbrenner bis zum Merge bringt keinen klaren Vorteil.
-- Am Pass **zu ihm hin** drehen (Two-Circle), nose-low oder flach, bei ~360–440 KIAS. Das ist laut Simulation für jeden Jet die beste Familie.
+- Am Pass **zu ihm hin** drehen (Two-Circle) bei ~440 KIAS, nose-low oder flach (leicht hoch geht auch). Nicht wegdrehen; durchfliegen und mit ~440 wieder einsteigen ist in Ordnung.
 - Erster Turn: T-16 sustained, T-18 mit α ~26°, die T-15 gewinnt ihn mit vollem Zug, muss danach aber zurück ins Band.
-- Nicht langsam machen (280) und nicht schnell bleiben (520); nicht hochziehen; am ersten Merge nicht durchfliegen.
+- Nicht langsam machen (280) und nicht schnell bleiben (520); nicht steil hochziehen.
 - Lies nach dem Pass Drehrichtung, Ebene und Planform des Gegners, dann entscheide.
 :::
 

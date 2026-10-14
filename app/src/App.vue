@@ -80,7 +80,7 @@ function szenarioLaden(id) {
   if (!s) return
   szenarioId.value = id; eigen.value = false; panel.value = 'daten'
   cfg.a = s.a; cfg.b = s.b; cfg.sa = { ...STD, ...s.sa }; cfg.sb = { ...STD, ...s.sb }
-  cfg.geo = s.geo.lage ? lageZuGeo({ ...neueLage(s.geo.lage), a: s.a, b: s.b }) : { ...s.geo }
+  cfg.geo = s.geo.lage ? lageZuGeo({ ...neueLage(s.geo.lage), ...s.geo, a: s.a, b: s.b }) : { ...s.geo }
   cfg.vergleich = (s.vergleich || []).map(v => ({ sa: { ...STD, ...v.sa }, sb: { ...STD, ...(v.sb || s.sb) } }))
   haltZuruecksetzen()
   kameraReset = true

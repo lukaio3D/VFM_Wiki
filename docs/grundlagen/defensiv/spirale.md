@@ -38,7 +38,7 @@ Der Boden schießt nicht vorbei: ~12 % der Ranked-Runden in eigenen Replays ende
 :::
 
 ::: info SIMULATION
-Langsam und nose-low zu bleiben ist kein Plan, nur ein letzter Ausweg. Im Szenario „Bandit an deiner Six“ verweigert der Verteidiger mit Break und Kurve bei ~440 KIAS den Schuss über die ganze Runde; der Geist, der bei ~360 KIAS nose-low bleibt – für die T-16 unter ihrem Band –, wird nach knapp 3 Minuten getroffen ([3D-Simulator](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}). Über alle Paarungen gilt: Wer auf ~280 KIAS absinkt, kommt aus dem Loch kaum heraus.
+Langsam und nose-low zu bleiben ist kein Plan, nur ein letzter Ausweg. Im Szenario „Bandit an deiner Six“ verweigert der Verteidiger mit Break und Kurve bei ~440 KIAS meist den Schuss über die ganze Runde (7 von 9 Varianten offen); der Geist, der bei ~360 KIAS nose-low bleibt – für die T-16 unter ihrem Band –, wird öfter getroffen ([3D-Simulator](/VFM_Wiki/sim/?szenario=defensiv){target="_self"}). Über alle Paarungen gilt: Wer auf ~280 KIAS absinkt, kommt aus dem Loch kaum heraus.
 :::
 
 ## Typische Fehler

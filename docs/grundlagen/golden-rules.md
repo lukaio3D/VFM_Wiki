@@ -25,11 +25,11 @@ Im Gefecht hast du keine Zeit für Theorie. Diese fünf Regeln fassen zusammen, 
 
 | Jet | Dein Spiel | Meiden |
 |---|---|---|
-| **T-16 Falchion** | Rate-Kampf: Two-Circle bei ~420–440 KIAS, flach oder nose-low | langsam werden, hochziehen, schneller als ~460 KIAS |
-| **T-18 Cutlass** | Two-Circle nose-low bei ~440 KIAS, α ~26° zum Kurven, 35° für den Snapshot | über ~480–510 KIAS kämpfen; den Kampf auf ~280 KIAS bringen |
-| **T-15 Excalibur** | Two-Circle nose-low bei ~400–420 KIAS: mehr G, kleinerer Kreis, mehr Schub; sparsam ziehen | unnötige Vollzüge; gegen eine abtauchende T-16 hochziehen; schnell bleiben |
+| **T-16 Falchion** | Rate-Kampf: Two-Circle bei ~400–440 KIAS, flach oder nose-low | langsam werden, steil hochziehen, schneller als ~440 KIAS |
+| **T-18 Cutlass** | Two-Circle bei ~440 KIAS oder durchfliegen und nose-low mit ~440 wieder einsteigen; α ~26° zum Kurven, 35° für den Snapshot | über ~480–510 KIAS kämpfen; den Kampf auf ~280 KIAS bringen |
+| **T-15 Excalibur** | Two-Circle bei ~380–440 KIAS, nose-low oder flach: mehr G, kleinerer Kreis, mehr Schub; sparsam ziehen | unnötige Vollzüge; gegen eine abtauchende T-16 steil hochziehen; schnell bleiben |
 
-Laut [Simulation](/flugzeuge/simulation) liegt das beste Band für alle drei Jets bei ~360–440 KIAS; zu langsam (~280) und zu schnell (~520) verlieren. Die Unterschiede liegen darin, wo im Band du stark bist und welchen Fehler der Gegner dir anbietet. Zieht dich der Gegner in seine Stärke, verweigere es – über die Ebene, über Speed oder über [Separation](/grundlagen/defensiv/separation). Mehr: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle), [Flugzeugvergleich](/flugzeuge/vergleich).
+Laut [Simulation](/flugzeuge/simulation) liegt die beste Kampf-Speed für alle drei Jets bei ~440 KIAS (fein gerechnet T-15 ~380–420, T-16 ~400–420); ~360 ist schwächer, zu langsam (~280) und zu schnell (~520) verlieren. Die Unterschiede liegen darin, wo im Band du stark bist und welchen Fehler der Gegner dir anbietet. Zieht dich der Gegner in seine Stärke, verweigere es – über die Ebene, über Speed oder über [Separation](/grundlagen/defensiv/separation). Mehr: [One-Circle vs. Two-Circle](/grundlagen/neutral/one-two-circle), [Flugzeugvergleich](/flugzeuge/vergleich).
 
 ## 4. Position Before Kill
 

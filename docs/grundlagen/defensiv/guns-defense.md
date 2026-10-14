@@ -67,7 +67,7 @@ Im Ranked fällt vor dem ersten Pass kein Schuss (in den Replays 0 von 7.314). D
 
 ## VFM-Hinweise
 
-- **Rollrate:** Laut Spieldaten gibt das Fly-by-Wire bis 325 °/s (T-15) bzw. 420 °/s (T-16, T-18) vor; im Flug ist das nicht gemessen. Eine halbe Rolle dauert damit idealisiert ~0,55 s bzw. ~0,43 s. **Die T-15 rollt am langsamsten:** Als Verteidiger braucht sie für den Ebenenwechsel etwas länger, als Angreifer zielt sie etwas langsamer nach. Auf kurze Distanz ist das dieselbe Größenordnung wie die Geschossflugzeit.
+- **Rollrate:** Laut Spieldaten gibt das Fly-by-Wire bis 325 °/s (T-15) bzw. 420 °/s (T-16, T-18) vor; im Flug ist das nicht gemessen. Eine halbe Rolle dauert damit idealisiert ~0,55 s bzw. ~0,43 s. **Die T-15 rollt am langsamsten:** Als Verteidiger braucht sie für den Ebenenwechsel etwas länger, als Angreifer zielt sie etwas langsamer nach. Auf kurze Distanz ist das dieselbe Größenordnung wie die Geschossflugzeit. Die [Simulation](/flugzeuge/simulation#die-rollrate-entscheidet-mit) rechnet inzwischen mit diesen Werten: Schnelleres Rollen stärkt dort die Verteidigung, und weniger Kämpfe enden mit Abschuss.
 - **Greyout/Blackout** ist simuliert. Wiederholte Max-G-Pulls können dir die Sicht nehmen, und Sicht ist hier alles ([G-Awareness](/grundlagen/golden-rules#g-awareness-greyout-und-blackout)).
 - **AoA-Override** als allerletzte Option: versetzt die Nase schlagartig, kostet aber extrem Energie. Danach bist du langsam und hast kaum Optionen.
 

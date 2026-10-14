@@ -37,7 +37,7 @@
 **Ausführung:** Bei jedem Kreuzen Lift Vector auf ihn rollen und ziehen. Gas zurück, AoA hoch, aber nur so weit, dass der Jet noch rollt. Tally halten. Sobald er vor dir ist: Nase auf ihn, Guns ([Schusslösung](/grundlagen/offensiv/schussloesung)).
 
 ::: warning AoA-Override
-Der Override („Cobra-Button“) bringt die Nase sofort über das AoA-Limit hinaus herum, kostet aber extrem viel Energie. Setz ihn nur ein, wenn der Schuss danach sicher ist, sonst bist du danach wehrlos. In der Simulation schadet Override als Gewohnheit deutlich (T-18 gegen T-15 −0,76 statt −0,54), ein gezielter Snapshot kann trotzdem entscheiden ([AoA-Override](/flugzeuge/simulation#aoa-override-annahme)).
+Der Override („Cobra-Button“) bringt die Nase sofort über das AoA-Limit hinaus herum, kostet aber extrem viel Energie. Setz ihn nur ein, wenn der Schuss danach sicher ist, sonst bist du danach wehrlos. In der Simulation schadet Override als Gewohnheit deutlich (im 3D-Szenario verliert die T-18 mit Override gegen die T-15 in 7 von 9 Varianten, ohne gewinnt sie 5 von 9), ein gezielter Snapshot kann trotzdem entscheiden ([AoA-Override](/flugzeuge/simulation#aoa-override-annahme)).
 :::
 
 ## Rolling Scissors

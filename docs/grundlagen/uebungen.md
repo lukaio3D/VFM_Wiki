@@ -38,10 +38,10 @@ Such dir einen Punkt im Gelände. Roll so, dass dein **Lift Vector** (die Richtu
 | **M3 Sustained-Kurve** | Kurve bei ~450 KIAS mit Nachbrenner, G so dosieren, dass Speed und Höhe konstant bleiben. Blick geradeaus durchs HUD, nicht in die Kurve | G und Drehrate |
 | **M4 Voller Zug** | Aus ~450 KIAS Knüppel voll ziehen und halten, ohne Override | Zeit bis zur Höchst-G, Höchst-G, α am Anschlag, Winkel und Speed nach 4 und 8 s |
 | **M5 Override-Zug** | Wie M4, aber mit AoA-Override, einmal aus ~450 und einmal aus ~300 KIAS, ~4 s halten | Höchstes α, G und KIAS jede halbe Sekunde, Speed nach 2 und 4 s |
-| **M6 Rollrate** *(neu)* | Aus ~400 KIAS geradeaus, Knüppel voll zur Seite, zwei volle Rollen; je einmal links und rechts | Zeit für 360° (Videobilder zählen) |
+| **M6 Rollrate** *(neu, wichtigste offene Messung)* | Aus ~400 KIAS geradeaus, Knüppel voll zur Seite, zwei volle Rollen; je einmal links und rechts | Zeit für 360° (Videobilder zählen) |
 | **M7 Speedbrake** *(neu)* | Wie M2, aber mit ausgefahrener Speedbrake | Speedverlust bei ~450 KIAS, Unterschied zu M2 |
 
-**Auswertung:** M1 zeigt, wie schnell du nach einem Turn wieder ins Band kommst; M2 zusammen mit M1 trennt Schub und Widerstand; M3 ist deine dauerhafte Rate im Ranked-Startbereich; M4 zeigt, was der erste Turn bringt und was er kostet; M5 ersetzt die Annahmen zum Override im [3D-Simulator](/VFM_Wiki/sim/){target="_self"}. M6 und M7 sind bisher von niemandem gemessen: Die Spieldaten nennen als Vorgabe des Fly-by-Wire 325 °/s Roll für die T-15 und 420 °/s für T-16 und T-18, ob der Jet das im Flug schafft, ist offen ([Pitch- und Rollrate](/grundlagen/physik#pitch-und-rollrate)). Die Rollrate entscheidet laut [Simulation](/flugzeuge/simulation#die-paarungen) besonders T-15 gegen T-18. Referenzwerte: [Beschleunigung (gemessen)](/flugzeuge/vergleich#beschleunigung-gemessen), [Schub und Widerstand getrennt](/flugzeuge/vergleich#schub-und-widerstand-getrennt), [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht), [Der erste Turn (gemessen)](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen). Variante: M3 bei 420 und 520 KIAS wiederholen, dann siehst du, wie flach das Plateau deines Jets ist.
+**Auswertung:** M1 zeigt, wie schnell du nach einem Turn wieder ins Band kommst; M2 zusammen mit M1 trennt Schub und Widerstand; M3 ist deine dauerhafte Rate im Ranked-Startbereich; M4 zeigt, was der erste Turn bringt und was er kostet; M5 ersetzt die Annahmen zum Override im [3D-Simulator](/VFM_Wiki/sim/){target="_self"}. M6 und M7 sind bisher von niemandem gemessen. **M6 ist die wichtigste offene Messung:** Die Spieldaten nennen als Vorgabe des Fly-by-Wire 325 °/s Roll für die T-15 und 420 °/s für T-16 und T-18, und die Simulation rechnet inzwischen mit diesen Werten; ob der Jet das im Flug schafft, ist offen ([Pitch- und Rollrate](/grundlagen/physik#pitch-und-rollrate)). Davon hängt T-16 gegen T-18 ab: Mit den Rollraten der Spieldaten ist die Paarung fast ausgeglichen, rollen die Jets langsamer, schlägt die T-16 die T-18 klar ([Simulation](/flugzeuge/simulation#die-rollrate-entscheidet-mit)). Die T-15 bleibt in jeder Variante vorn. Referenzwerte: [Beschleunigung (gemessen)](/flugzeuge/vergleich#beschleunigung-gemessen), [Schub und Widerstand getrennt](/flugzeuge/vergleich#schub-und-widerstand-getrennt), [Voller Zug](/flugzeuge/vergleich#voller-zug-was-ohne-override-wirklich-geht), [Der erste Turn (gemessen)](/grundlagen/neutral/der-merge#der-erste-turn-aus-450-kias-gemessen). Variante: M3 bei 420 und 520 KIAS wiederholen, dann siehst du, wie flach das Plateau deines Jets ist.
 
 | | M1: 300 → 500 KIAS (s) | M2: Verlust bei 450 (kt/s) | M3: G / °/s | M4: Höchst-G / α | M6: s für 360° |
 |---|---|---|---|---|---|
@@ -115,14 +115,14 @@ Bots gibt es offline und in Lobbys („Fill with bots“), ohne Schwierigkeitsst
 
 | Drill | Aufgabe | Erfolgskriterium |
 |---|---|---|
-| **C1 Speed halten** | 10 Merges ohne Nachbrenner-Exzess; nach dem ersten Turn im Kampfband bleiben: ~360–440 KIAS, T-16 ~420–440 | im Replay 8 von 10 nach dem ersten Turn im Band |
-| **C2 Erster Turn** | 10 Merges aus ~430 KIAS, nur der erste Turn zählt: T-16 sustained, T-18 mit α ~26°, T-15 voll nur, bis der Winkel da ist, dann zurück ins Band ([Szene im 3D-Simulator](/VFM_Wiki/sim/?szenario=erster-turn){target="_self"}) | nach 90° bist du öfter vorn als er, ohne unnötig Speed zu verlieren |
-| **C3 Two-Circle nose-low** | am Pass zum Gegner hin drehen, Nase leicht unter dem Horizont, je 5 Kämpfe gegen jeden Bot-Jet ([Two-Circle](/VFM_Wiki/sim/?szenario=t16-two-circle){target="_self"}, [Nose-low](/VFM_Wiki/sim/?szenario=nose-low){target="_self"}) | du drehst in jedem Pass hin, bleibst im Band und über dem Hard Deck |
+| **C1 Speed halten** | 10 Merges ohne Nachbrenner-Exzess; nach dem ersten Turn im Kampfband bleiben: ~380–440 KIAS, T-16 ~400–440 | im Replay 8 von 10 nach dem ersten Turn im Band |
+| **C2 Erster Turn** | 10 Merges aus ~430 KIAS, nur der erste Turn zählt: T-16 sustained, T-18 mit α ~26°, T-15 voll nur, bis der Winkel da ist, dann zurück ins Band ([Szene im 3D-Simulator](/VFM_Wiki/sim/?szenario=erster-turn){target="_self"}: T-16 gegen T-15, sustained hält den Kampf offen, voll ziehen verliert 7 von 9) | nach 90° bist du öfter vorn als er, ohne unnötig Speed zu verlieren |
+| **C3 Two-Circle nose-low** | am Pass zum Gegner hin drehen, Nase leicht unter dem Horizont oder flach, nie steil hoch, je 5 Kämpfe gegen jeden Bot-Jet ([Two-Circle](/VFM_Wiki/sim/?szenario=t16-two-circle){target="_self"}: knapp, 5 von 9 für die T-16; [Nose-low](/VFM_Wiki/sim/?szenario=nose-low){target="_self"}) | du drehst in jedem Pass hin, bleibst im Band und über dem Hard Deck |
 | **C4 Guns** | Guns-only, Infinite Ammo, Tracking Shots aus dem Rear Quarter | Treffer ohne Overshoot ([Schusslösung](/grundlagen/offensiv/schussloesung)) |
 | **C5 Raketenabwehr** | Raketen an: Break, Flares, Gas auf Idle (nur für Lobbys mit Raketen; Ranked 1v1 ist Guns-only) | jede Rakete überlebt ([Break Turn](/grundlagen/defensiv/break-turn)) |
 | **C6 Schlechtes Matchup** | bewusst dein schwierigstes Matchup | du hältst dein Speedband trotz Druck |
 
-Warum C1 und C3 so aussehen: In ~405.000 simulierten Ranked-Kämpfen ist der **Two-Circle bei ~360–440 KIAS, nose-low oder flach,** für alle drei Jets die beste Familie; langsam (280) und schnell (520) verlieren ([Simulation](/flugzeuge/simulation)).
+Warum C1 und C3 so aussehen: In ~405.000 simulierten Ranked-Kämpfen ist der **Two-Circle bei ~440 KIAS** für alle drei Jets die beste Familie, nose-low oder flach, leicht hoch geht auch; steil hoch, langsam (280) und schnell (520) verlieren ([Simulation](/flugzeuge/simulation)).
 
 ::: info IM SPIEL PRÜFEN
 - Ob Lobby oder Offline-Modus offensive oder defensive Startpositionen gegen Bots anbieten (sonst beginnen alle Bot-Drills neutral).
@@ -151,7 +151,7 @@ Custom-Lobby, Push-to-Talk, Rollen abwechselnd tauschen. **Lobby:** Guns-only, I
 
 ### D3 Matchup-Abend
 
-Alle Paarungen aus beiden Cockpits, je 3 Kämpfe. Vorher die Matchup-Seite lesen: [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18). Fliegt jede Paarung einmal mit dem Plan der Simulation (Two-Circle bei ~360–440 KIAS, nose-low) und einmal mit eurem gewohnten Plan, dann vergleicht ihr im Replay.
+Alle Paarungen aus beiden Cockpits, je 3 Kämpfe. Vorher die Matchup-Seite lesen: [T-15 vs T-16](/flugzeuge/matchups/t15-vs-t16), [T-15 vs T-18](/flugzeuge/matchups/t15-vs-t18), [T-16 vs T-18](/flugzeuge/matchups/t16-vs-t18). Fliegt jede Paarung einmal mit dem Plan der Simulation (Two-Circle bei ~440 KIAS, nose-low oder flach) und einmal mit eurem gewohnten Plan, dann vergleicht ihr im Replay.
 
 ## Replay und Debrief
 
@@ -171,7 +171,7 @@ Für Zahlen statt Eindrücke: Das Skript `tools/replays/vrb.py` aus dem [Wiki-Re
 
 1. **Übersicht:** `python vrb.py` listet alle eigenen Replays mit Datum, Dauer, Jets, Elo und Abschüssen. Wie lange dauern deine Runden im Vergleich zum Median von 146 s (*Replays*)? Wie oft stürzt du ab?
 2. **Ein Replay:** `python vrb.py replayNN` zeigt KIAS- und Höhenbereich, höchste G und die Zeit über 7 G. Viel Zeit über 7 G heißt meist: zu oft am Anschlag.
-3. **Kampf-Speed** (`--csv`, Spalte `kias`): Wie viel Zeit verbringst du im Band ~360–440 KIAS, wie viel darunter? Langsam kämpfen (~280 KIAS) ist laut Simulation ein Loch, aus dem du schwer herauskommst.
+3. **Kampf-Speed** (`--csv`, Spalte `kias`): Wie viel Zeit verbringst du im Band ~380–440 KIAS, wie viel darunter? Langsam kämpfen (~280 KIAS) ist laut Simulation ein Loch, aus dem du schwer herauskommst.
 4. **Erster Turn:** KIAS, G (`n`) und Ps (`ps_fts`) in den ersten 20 s. Hast du bis zum Merge Nachbrenner gegeben? Wie schnell warst du nach dem ersten Turn?
 5. **Höhe** (`hoehe_ft`): Tiefster Punkt der Runde. Wie nah warst du am Boden?
 6. **Schüsse** (Geschoss-CSV): Wann hast du geschossen, und wie weit war der Gegner weg? Viele Schüsse aus großer Entfernung sind verschenkte Gelegenheiten.
@@ -200,12 +200,12 @@ Wo du „noch nicht“ sagst, lies die Seite und mach die Übung.
 - **Geometrie:** Ich schätze Aspect Angle und Closure ein und wähle Lead, Pure oder Lag bewusst. → [Verfolgungskurven](/grundlagen/verfolgungskurven)
 - **Offensiv:** Ich komme aus dem Perch in die Control Zone, ohne zu überschießen. → [Offensiv-Manöver](/grundlagen/offensiv-manoever)
 - **Defensiv:** Ich breake auf Call sofort richtig und weiß, wann Separation geht. → [Defensiv-Manöver](/grundlagen/defensiv-manoever)
-- **Neutral:** Ich drehe am Pass zum Gegner hin, bleibe nose-low oder flach im Band ~360–440 KIAS und weiß aus meinen Replays, wo ich wirklich lande. → [Der Merge](/grundlagen/neutral/der-merge), [Simulation](/flugzeuge/simulation)
+- **Neutral:** Ich drehe am Pass zum Gegner hin, bleibe nose-low oder flach im Band ~380–440 KIAS und weiß aus meinen Replays, wo ich wirklich lande. → [Der Merge](/grundlagen/neutral/der-merge), [Simulation](/flugzeuge/simulation)
 
 ::: tip MERKE
-- Erst den eigenen Jet vermessen (B2, B3), dann kämpfen. Rollrate und Speedbrake (M6, M7) sind noch offen.
+- Erst den eigenen Jet vermessen (B2, B3), dann kämpfen. Rollrate (M6) ist die wichtigste offene Messung, Speedbrake (M7) ist ebenfalls offen.
 - Ein Fokus pro Session, gleiche Bedingungen wie im Ranked (10.000 ft, voller Tank, ~427 KIAS), Werte aufschreiben.
-- Trainiere den Two-Circle bei ~360–440 KIAS, nose-low oder flach, und flieg knapp unter dem Anschlag.
+- Trainiere den Two-Circle bei ~440 KIAS, nose-low oder flach (nur nicht steil hoch), und flieg knapp unter dem Anschlag.
 - Bots für Wiederholung, Partner für klassische Setups, Ranked zum Anwenden.
 - Jede Session endet im Replay: Energie-Graph lesen, ersten Nachteil finden, einen Satz für das nächste Mal. Zahlen liefert `vrb.py`.
 - Nach Balance-Patches neu messen.

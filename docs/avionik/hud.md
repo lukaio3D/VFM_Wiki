@@ -20,7 +20,7 @@ Beobachtet, aber nicht bestätigt: Kursband oben, Steig-/Sinkanzeige rechts, gew
 
 Die Drehrate in °/s zeigt dir direkt, was die Leistungsdiagramme versprechen. Zusammen mit dem Beschleunigungs-Indikator findest du so deinen besten Sustained Turn: Indikator neutral, Drehrate ablesen. Bei ~450 KIAS auf 10.000 ft sind das gemessen 15,4 °/s (T-15), 17,6 °/s (T-16) und 15,6 °/s (T-18). Alle Werte: [Flugzeugvergleich](/flugzeuge/vergleich).
 
-Die schnellste Dauerkurve ist nicht automatisch die beste Kampf-Speed: Laut [Simulation](/flugzeuge/simulation) kämpfen alle drei Jets am besten bei ~360–440 KIAS, die T-16 mit Ziel ~420 statt ihres Sustained-Optimums bei ~460. Dort gibt sie kaum Rate her und fliegt den kleineren Kreis.
+Die schnellste Dauerkurve ist nicht automatisch die beste Kampf-Speed: Laut [Simulation](/flugzeuge/simulation) kämpfen alle drei Jets am besten bei ~440 KIAS, die T-16 mit Ziel ~400–420 statt ihres Sustained-Optimums bei ~460. Dort gibt sie kaum Rate her und fliegt den kleineren Kreis.
 
 Die G-Zahl zeigt, wie nah du am 9-G-Limit bist (9 G gilt für alle Jets, *Spieldaten*). Bei niedriger Speed sagt sie wenig über deinen Zug; dann schau auf α.
 

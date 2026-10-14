@@ -35,9 +35,10 @@ def main():
     MG = np.arange(0.0, 3.001, 0.05)
     RG = np.arange(0.0, 1.401, 0.02)
     HG = np.arange(0.0, 20000.1, 250.0)
+    IG = np.arange(0.0, 450.1, 10.0)   # IAS [m/s] für die Steuerdämpfung
     out = {'quelle': 'Originalkurven aus der VFM-Installation (v1.4.2), kalibriert mit kalibrieren.py',
            'atmosphaere': {'r': alt['r'], 'H_m': alt['H_m'], 'h_m': runden(HG), 'sigma': runden(atm.sigma(HG))},
-           'alpha': runden(A), 'mach': runden(MG), 'rho': runden(RG), 'delta_hud_alpha': delta, 'jets': {}}
+           'alpha': runden(A), 'mach': runden(MG), 'rho': runden(RG), 'ias_ms': runden(IG), 'delta_hud_alpha': delta, 'jets': {}}
     for t in O.JETS:
         k = kal['jets'][t]
         j = O.Jet(t, sd, {'KL': k['KL'], 'KD': k['KD'], 'KB': 1.0})
@@ -55,6 +56,8 @@ def main():
             'alpha_lim': ALPHA_LIM[t], 'alpha_max': ALPHA_MAX[t],
             'alpha_limiter_spiel': j.alpha_lim + delta, 'alpha_limit2_spiel': j.alpha_lim2 + delta,
             'drehraten_pyr': j.pyr, 'diagramm_lift_faktor': k['diagramm_lift_faktor'],
+            # Rollrate = Vorgabe aus den Spieldaten × Dämpfung über IAS (Achse als m/s angenommen)
+            'rollrate_dps': j.pyr[2], 'roll_skala': runden(j.steuer_skala(IG)),
         }
     ZIEL.write_text(json.dumps(out), encoding='utf-8')
     print(f'-> {ZIEL} ({ZIEL.stat().st_size // 1024} KB)')

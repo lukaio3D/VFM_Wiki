@@ -95,7 +95,8 @@ class Jet:
         self.m_leer = s['mass']                                   # t
         self.m_fuel = tank['maxFuel'] * tank['fuelDensity']       # t
         self.alpha_lim, self.alpha_lim2 = s['aoaLimit1'], s['aoaLimit2']
-        self.pyr = s['pyrRates']
+        self.pyr = s['pyrRates']                                  # max. Pitch-, Yaw-, Rollrate [°/s]
+        self.steuer_skala = Kurve(s['controlOutputScaleOverIAS'])  # Dämpfung über IAS (Annahme: m/s)
         self.g_limit = s['gLimitCurve'][0][1]
         self.mach_drag = Kurve(s['customMachWaveDrag']) if s['useCustomMachWaveDrag'] else None
         self.base_drag, self.brake_drag = jc['baseDrag'], jc['brakeDrag']
