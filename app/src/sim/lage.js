@@ -1,5 +1,6 @@
 // Lagebewertung für das Datenpanel: die drei BFM-Probleme (Winkel, Aspect, Abstand/Closure) mit Lösung,
 // dazu Kurvenkreis und Ps aus den Simulations-Frames.
+// Dateiname bewusst nicht „analyse.js“: Werbeblocker sperren ihn, dann bleibt die App lokal schwarz.
 import { vek, FT, KT } from './physik.js'
 
 const { norm, mul, add, einheit } = vek
